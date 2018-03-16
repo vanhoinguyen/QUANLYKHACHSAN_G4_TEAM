@@ -65,5 +65,11 @@ namespace QUANLYKHACHSAN_G4_TEAM
             DoanhThu.fDoanhThu revenue = new DoanhThu.fDoanhThu();
             revenue.Show();
         }
+
+        private void btnManagerCustomer_Click(object sender, EventArgs e)
+        {
+            QuanLiKhachHang.fQuanLiKhachHang customer = new QuanLiKhachHang.fQuanLiKhachHang();
+            customer.Show();
+        }
     }
 }

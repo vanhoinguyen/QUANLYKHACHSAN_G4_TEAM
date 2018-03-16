@@ -78,6 +78,24 @@
     <Compile Include="DoanhThu\fDoanhThu.Designer.cs">
       <DependentUpon>fDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLiKhachHang\fQuanLiKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiKhachHang\fQuanLiKhachHang.Designer.cs">
+      <DependentUpon>fQuanLiKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiKhachHang\fSuaThongTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiKhachHang\fSuaThongTinKhachHang.Designer.cs">
+      <DependentUpon>fSuaThongTinKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiKhachHang\fThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiKhachHang\fThemKhachHang.Designer.cs">
+      <DependentUpon>fThemKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="TraCuuPhong\fTraCuuPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +133,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoanhThu\fDoanhThu.resx">
       <DependentUpon>fDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiKhachHang\fQuanLiKhachHang.resx">
+      <DependentUpon>fQuanLiKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiKhachHang\fSuaThongTinKhachHang.resx">
+      <DependentUpon>fSuaThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiKhachHang\fThemKhachHang.resx">
+      <DependentUpon>fThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TraCuuPhong\fTraCuuPhong.resx">
       <DependentUpon>fTraCuuPhong.cs</DependentUpon>
