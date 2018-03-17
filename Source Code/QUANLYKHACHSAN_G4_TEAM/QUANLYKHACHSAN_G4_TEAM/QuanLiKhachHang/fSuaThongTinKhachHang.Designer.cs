@@ -46,7 +46,7 @@
             this.label4.Location = new System.Drawing.Point(16, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
-            this.label4.TabIndex = 18;
+            this.label4.TabIndex = 6;
             this.label4.Text = "CMND";
             // 
             // txtAddCMND
@@ -54,7 +54,7 @@
             this.txtAddCMND.Location = new System.Drawing.Point(110, 141);
             this.txtAddCMND.Name = "txtAddCMND";
             this.txtAddCMND.Size = new System.Drawing.Size(220, 20);
-            this.txtAddCMND.TabIndex = 17;
+            this.txtAddCMND.TabIndex = 7;
             // 
             // label3
             // 
@@ -62,7 +62,7 @@
             this.label3.Location = new System.Drawing.Point(16, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 16;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Địa Chỉ";
             // 
             // txtAddAdress
@@ -70,7 +70,7 @@
             this.txtAddAdress.Location = new System.Drawing.Point(110, 95);
             this.txtAddAdress.Name = "txtAddAdress";
             this.txtAddAdress.Size = new System.Drawing.Size(220, 20);
-            this.txtAddAdress.TabIndex = 15;
+            this.txtAddAdress.TabIndex = 5;
             // 
             // label2
             // 
@@ -78,7 +78,7 @@
             this.label2.Location = new System.Drawing.Point(16, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 14;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Số ĐT";
             // 
             // txtAddPhoneNumber
@@ -86,16 +86,19 @@
             this.txtAddPhoneNumber.Location = new System.Drawing.Point(110, 52);
             this.txtAddPhoneNumber.Name = "txtAddPhoneNumber";
             this.txtAddPhoneNumber.Size = new System.Drawing.Size(220, 20);
-            this.txtAddPhoneNumber.TabIndex = 13;
+            this.txtAddPhoneNumber.TabIndex = 3;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(110, 188);
+            this.btnSave.BackColor = System.Drawing.Color.Black;
+            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Red;
+            this.btnSave.Location = new System.Drawing.Point(110, 192);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(95, 48);
-            this.btnSave.TabIndex = 12;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Lưu";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -103,7 +106,7 @@
             this.label1.Location = new System.Drawing.Point(15, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 13);
-            this.label1.TabIndex = 11;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Tên Khách Hàng";
             // 
             // txtAddNameCustomer
@@ -111,23 +114,27 @@
             this.txtAddNameCustomer.Location = new System.Drawing.Point(110, 12);
             this.txtAddNameCustomer.Name = "txtAddNameCustomer";
             this.txtAddNameCustomer.Size = new System.Drawing.Size(220, 20);
-            this.txtAddNameCustomer.TabIndex = 10;
+            this.txtAddNameCustomer.TabIndex = 1;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(235, 188);
+            this.btnCancel.BackColor = System.Drawing.Color.Black;
+            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Red;
+            this.btnCancel.Location = new System.Drawing.Point(235, 192);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(95, 48);
-            this.btnCancel.TabIndex = 19;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // fSuaThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 254);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(362, 252);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAddCMND);
@@ -138,6 +145,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtAddNameCustomer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fSuaThongTinKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Thông Tin";

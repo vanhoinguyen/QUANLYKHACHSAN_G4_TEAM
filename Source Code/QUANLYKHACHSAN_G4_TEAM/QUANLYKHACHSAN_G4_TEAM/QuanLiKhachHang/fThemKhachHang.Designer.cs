@@ -45,7 +45,7 @@
             this.txtAddNameCustomer.Location = new System.Drawing.Point(117, 12);
             this.txtAddNameCustomer.Name = "txtAddNameCustomer";
             this.txtAddNameCustomer.Size = new System.Drawing.Size(220, 20);
-            this.txtAddNameCustomer.TabIndex = 0;
+            this.txtAddNameCustomer.TabIndex = 1;
             // 
             // label1
             // 
@@ -53,17 +53,20 @@
             this.label1.Location = new System.Drawing.Point(22, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Tên Khách Hàng";
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.Black;
+            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Red;
             this.btnSave.Location = new System.Drawing.Point(117, 188);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(95, 48);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Lưu";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -71,7 +74,7 @@
             this.label2.Location = new System.Drawing.Point(23, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 4;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Số ĐT";
             // 
             // txtAddPhoneNumber
@@ -87,7 +90,7 @@
             this.label3.Location = new System.Drawing.Point(23, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 6;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Địa Chỉ";
             // 
             // txtAddAdress
@@ -103,7 +106,7 @@
             this.label4.Location = new System.Drawing.Point(23, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
-            this.label4.TabIndex = 8;
+            this.label4.TabIndex = 6;
             this.label4.Text = "CMND";
             // 
             // txtAddCMND
@@ -115,19 +118,23 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Black;
+            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Red;
             this.btnCancel.Location = new System.Drawing.Point(242, 188);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(95, 48);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // fThemKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 264);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(359, 255);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAddCMND);
@@ -138,6 +145,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtAddNameCustomer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fThemKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Khách Hàng";

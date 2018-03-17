@@ -33,31 +33,31 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpCheckIn = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnOder = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtIdRoom = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtCMND = new System.Windows.Forms.TextBox();
-            this.txtAdress = new System.Windows.Forms.TextBox();
-            this.cmbTypeCustomer = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtNameCustomer = new System.Windows.Forms.TextBox();
-            this.numNumerCustomer = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.chkYes = new System.Windows.Forms.CheckBox();
-            this.chkNo = new System.Windows.Forms.CheckBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtTypeRoom = new System.Windows.Forms.TextBox();
+            this.ptbNameRoom = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.ptbNameRoom = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtTypeRoom = new System.Windows.Forms.TextBox();
+            this.chkNo = new System.Windows.Forms.CheckBox();
+            this.chkYes = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numNumerCustomer = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbTypeCustomer = new System.Windows.Forms.ComboBox();
+            this.txtAdress = new System.Windows.Forms.TextBox();
+            this.txtNameCustomer = new System.Windows.Forms.TextBox();
+            this.txtCMND = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtIdRoom = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnOder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numNumerCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNameRoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNumerCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +66,7 @@
             this.label1.Location = new System.Drawing.Point(12, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Phòng";
             // 
             // txtNameRoom
@@ -74,7 +74,7 @@
             this.txtNameRoom.Location = new System.Drawing.Point(137, 40);
             this.txtNameRoom.Name = "txtNameRoom";
             this.txtNameRoom.Size = new System.Drawing.Size(200, 20);
-            this.txtNameRoom.TabIndex = 1;
+            this.txtNameRoom.TabIndex = 3;
             // 
             // label2
             // 
@@ -82,7 +82,7 @@
             this.label2.Location = new System.Drawing.Point(12, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 13);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 8;
             this.label2.Text = "Ngày bắt đầu thuê ";
             // 
             // dtpCheckIn
@@ -90,10 +90,11 @@
             this.dtpCheckIn.Location = new System.Drawing.Point(137, 118);
             this.dtpCheckIn.Name = "dtpCheckIn";
             this.dtpCheckIn.Size = new System.Drawing.Size(200, 20);
-            this.dtpCheckIn.TabIndex = 4;
+            this.dtpCheckIn.TabIndex = 9;
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.ptbNameRoom);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.txtPrice);
@@ -124,147 +125,47 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(567, 391);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 0;
             // 
-            // btnCancel
+            // ptbNameRoom
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Red;
-            this.btnCancel.Location = new System.Drawing.Point(245, 311);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(92, 52);
-            this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.ptbNameRoom.Location = new System.Drawing.Point(361, 14);
+            this.ptbNameRoom.Name = "ptbNameRoom";
+            this.ptbNameRoom.Size = new System.Drawing.Size(187, 124);
+            this.ptbNameRoom.TabIndex = 27;
+            this.ptbNameRoom.TabStop = false;
             // 
-            // btnOder
+            // label11
             // 
-            this.btnOder.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOder.ForeColor = System.Drawing.Color.Red;
-            this.btnOder.Location = new System.Drawing.Point(137, 311);
-            this.btnOder.Name = "btnOder";
-            this.btnOder.Size = new System.Drawing.Size(92, 52);
-            this.btnOder.TabIndex = 5;
-            this.btnOder.Text = "Đặt";
-            this.btnOder.UseVisualStyleBackColor = true;
-            this.btnOder.Click += new System.EventHandler(this.btnOder_Click);
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 99);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(46, 13);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Đơn Giá";
             // 
-            // label3
+            // txtPrice
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Mã Phòng";
+            this.txtPrice.Location = new System.Drawing.Point(137, 92);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(200, 20);
+            this.txtPrice.TabIndex = 7;
             // 
-            // txtIdRoom
+            // label10
             // 
-            this.txtIdRoom.Location = new System.Drawing.Point(137, 14);
-            this.txtIdRoom.Name = "txtIdRoom";
-            this.txtIdRoom.Size = new System.Drawing.Size(200, 20);
-            this.txtIdRoom.TabIndex = 8;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 73);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 13);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Loại Phòng";
             // 
-            // label4
+            // txtTypeRoom
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 183);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Tên Khách Hàng";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 212);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Loại Khách";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 243);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "CMND";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 272);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Địa Chỉ";
-            // 
-            // txtCMND
-            // 
-            this.txtCMND.Location = new System.Drawing.Point(137, 236);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(200, 20);
-            this.txtCMND.TabIndex = 13;
-            // 
-            // txtAdress
-            // 
-            this.txtAdress.Location = new System.Drawing.Point(137, 265);
-            this.txtAdress.Name = "txtAdress";
-            this.txtAdress.Size = new System.Drawing.Size(200, 20);
-            this.txtAdress.TabIndex = 15;
-            // 
-            // cmbTypeCustomer
-            // 
-            this.cmbTypeCustomer.FormattingEnabled = true;
-            this.cmbTypeCustomer.Location = new System.Drawing.Point(137, 204);
-            this.cmbTypeCustomer.Name = "cmbTypeCustomer";
-            this.cmbTypeCustomer.Size = new System.Drawing.Size(200, 21);
-            this.cmbTypeCustomer.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(358, 178);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Số Lượng khách / phòng";
-            // 
-            // txtNameCustomer
-            // 
-            this.txtNameCustomer.Location = new System.Drawing.Point(137, 176);
-            this.txtNameCustomer.Name = "txtNameCustomer";
-            this.txtNameCustomer.Size = new System.Drawing.Size(200, 20);
-            this.txtNameCustomer.TabIndex = 14;
-            // 
-            // numNumerCustomer
-            // 
-            this.numNumerCustomer.Location = new System.Drawing.Point(491, 176);
-            this.numNumerCustomer.Name = "numNumerCustomer";
-            this.numNumerCustomer.Size = new System.Drawing.Size(38, 20);
-            this.numNumerCustomer.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(358, 212);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Có Khách Nước Ngoài";
-            // 
-            // chkYes
-            // 
-            this.chkYes.AutoSize = true;
-            this.chkYes.Location = new System.Drawing.Point(491, 211);
-            this.chkYes.Name = "chkYes";
-            this.chkYes.Size = new System.Drawing.Size(39, 17);
-            this.chkYes.TabIndex = 21;
-            this.chkYes.Text = "Có";
-            this.chkYes.UseVisualStyleBackColor = true;
+            this.txtTypeRoom.Location = new System.Drawing.Point(137, 66);
+            this.txtTypeRoom.Name = "txtTypeRoom";
+            this.txtTypeRoom.Size = new System.Drawing.Size(200, 20);
+            this.txtTypeRoom.TabIndex = 5;
             // 
             // chkNo
             // 
@@ -276,59 +177,179 @@
             this.chkNo.Text = "Không";
             this.chkNo.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // chkYes
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 73);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 13);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Loại Phòng";
+            this.chkYes.AutoSize = true;
+            this.chkYes.Location = new System.Drawing.Point(491, 211);
+            this.chkYes.Name = "chkYes";
+            this.chkYes.Size = new System.Drawing.Size(39, 17);
+            this.chkYes.TabIndex = 21;
+            this.chkYes.Text = "Có";
+            this.chkYes.UseVisualStyleBackColor = true;
             // 
-            // txtTypeRoom
+            // label9
             // 
-            this.txtTypeRoom.Location = new System.Drawing.Point(137, 66);
-            this.txtTypeRoom.Name = "txtTypeRoom";
-            this.txtTypeRoom.Size = new System.Drawing.Size(200, 20);
-            this.txtTypeRoom.TabIndex = 24;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(358, 212);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(114, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Có Khách Nước Ngoài";
             // 
-            // label11
+            // numNumerCustomer
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 99);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 13);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Đơn Giá";
+            this.numNumerCustomer.Location = new System.Drawing.Point(491, 176);
+            this.numNumerCustomer.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numNumerCustomer.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numNumerCustomer.Name = "numNumerCustomer";
+            this.numNumerCustomer.Size = new System.Drawing.Size(38, 20);
+            this.numNumerCustomer.TabIndex = 19;
+            this.numNumerCustomer.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // txtPrice
+            // label8
             // 
-            this.txtPrice.Location = new System.Drawing.Point(137, 92);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(200, 20);
-            this.txtPrice.TabIndex = 26;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(358, 178);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(127, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Số Lượng khách / phòng";
             // 
-            // ptbNameRoom
+            // cmbTypeCustomer
             // 
-            this.ptbNameRoom.Location = new System.Drawing.Point(361, 14);
-            this.ptbNameRoom.Name = "ptbNameRoom";
-            this.ptbNameRoom.Size = new System.Drawing.Size(187, 124);
-            this.ptbNameRoom.TabIndex = 27;
-            this.ptbNameRoom.TabStop = false;
+            this.cmbTypeCustomer.FormattingEnabled = true;
+            this.cmbTypeCustomer.Location = new System.Drawing.Point(137, 204);
+            this.cmbTypeCustomer.Name = "cmbTypeCustomer";
+            this.cmbTypeCustomer.Size = new System.Drawing.Size(200, 21);
+            this.cmbTypeCustomer.TabIndex = 13;
+            // 
+            // txtAdress
+            // 
+            this.txtAdress.Location = new System.Drawing.Point(137, 265);
+            this.txtAdress.Name = "txtAdress";
+            this.txtAdress.Size = new System.Drawing.Size(200, 20);
+            this.txtAdress.TabIndex = 17;
+            // 
+            // txtNameCustomer
+            // 
+            this.txtNameCustomer.Location = new System.Drawing.Point(137, 176);
+            this.txtNameCustomer.Name = "txtNameCustomer";
+            this.txtNameCustomer.Size = new System.Drawing.Size(200, 20);
+            this.txtNameCustomer.TabIndex = 11;
+            // 
+            // txtCMND
+            // 
+            this.txtCMND.Location = new System.Drawing.Point(137, 236);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(200, 20);
+            this.txtCMND.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 272);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Địa Chỉ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 243);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "CMND";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Loại Khách";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 183);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Tên Khách Hàng";
+            // 
+            // txtIdRoom
+            // 
+            this.txtIdRoom.Location = new System.Drawing.Point(137, 14);
+            this.txtIdRoom.Name = "txtIdRoom";
+            this.txtIdRoom.Size = new System.Drawing.Size(200, 20);
+            this.txtIdRoom.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Mã Phòng";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Red;
+            this.btnCancel.Location = new System.Drawing.Point(245, 311);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(92, 52);
+            this.btnCancel.TabIndex = 24;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnOder
+            // 
+            this.btnOder.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnOder.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOder.ForeColor = System.Drawing.Color.Red;
+            this.btnOder.Location = new System.Drawing.Point(137, 311);
+            this.btnOder.Name = "btnOder";
+            this.btnOder.Size = new System.Drawing.Size(92, 52);
+            this.btnOder.TabIndex = 23;
+            this.btnOder.Text = "Đặt";
+            this.btnOder.UseVisualStyleBackColor = false;
+            this.btnOder.Click += new System.EventHandler(this.btnOder_Click);
             // 
             // fDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(567, 391);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "fDatPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đặt Phòng";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numNumerCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNameRoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNumerCustomer)).EndInit();
             this.ResumeLayout(false);
 
         }
