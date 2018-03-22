@@ -31,8 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditRoom = new System.Windows.Forms.Button();
             this.btnExitCategory = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnAddRoom = new System.Windows.Forms.Button();
+            this.btnRemoveRoom = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvListRoom = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -44,8 +44,8 @@
             // 
             this.panel1.Controls.Add(this.btnEditRoom);
             this.panel1.Controls.Add(this.btnExitCategory);
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.btnRemove);
+            this.panel1.Controls.Add(this.btnAddRoom);
+            this.panel1.Controls.Add(this.btnRemoveRoom);
             this.panel1.Location = new System.Drawing.Point(51, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(539, 68);
@@ -77,31 +77,31 @@
             this.btnExitCategory.UseVisualStyleBackColor = false;
             this.btnExitCategory.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // btnAdd
+            // btnAddRoom
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Black;
-            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.Red;
-            this.btnAdd.Location = new System.Drawing.Point(3, 10);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(106, 49);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Thêm Phòng";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAddRoom.BackColor = System.Drawing.Color.Black;
+            this.btnAddRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRoom.ForeColor = System.Drawing.Color.Red;
+            this.btnAddRoom.Location = new System.Drawing.Point(3, 10);
+            this.btnAddRoom.Name = "btnAddRoom";
+            this.btnAddRoom.Size = new System.Drawing.Size(106, 49);
+            this.btnAddRoom.TabIndex = 0;
+            this.btnAddRoom.Text = "Thêm Phòng";
+            this.btnAddRoom.UseVisualStyleBackColor = false;
+            this.btnAddRoom.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnRemove
+            // btnRemoveRoom
             // 
-            this.btnRemove.BackColor = System.Drawing.Color.Black;
-            this.btnRemove.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.ForeColor = System.Drawing.Color.Red;
-            this.btnRemove.Location = new System.Drawing.Point(148, 10);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(106, 49);
-            this.btnRemove.TabIndex = 1;
-            this.btnRemove.Text = "Xóa Phòng";
-            this.btnRemove.UseVisualStyleBackColor = false;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.btnRemoveRoom.BackColor = System.Drawing.Color.Black;
+            this.btnRemoveRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveRoom.ForeColor = System.Drawing.Color.Red;
+            this.btnRemoveRoom.Location = new System.Drawing.Point(148, 10);
+            this.btnRemoveRoom.Name = "btnRemoveRoom";
+            this.btnRemoveRoom.Size = new System.Drawing.Size(106, 49);
+            this.btnRemoveRoom.TabIndex = 1;
+            this.btnRemoveRoom.Text = "Xóa Phòng";
+            this.btnRemoveRoom.UseVisualStyleBackColor = false;
+            this.btnRemoveRoom.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // panel2
             // 
@@ -144,8 +144,8 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnAddRoom;
+        private System.Windows.Forms.Button btnRemoveRoom;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnExitCategory;
         private System.Windows.Forms.Button btnEditRoom;

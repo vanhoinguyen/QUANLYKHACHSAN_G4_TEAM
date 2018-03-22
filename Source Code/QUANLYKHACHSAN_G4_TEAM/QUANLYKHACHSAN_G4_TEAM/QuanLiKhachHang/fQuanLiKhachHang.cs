@@ -20,13 +20,13 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiKhachHang
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             QuanLiKhachHang.fThemKhachHang addcustomer = new fThemKhachHang();
-            addcustomer.Show();
+            addcustomer.ShowDialog();
         }
 
         private void btnEditCustomer_Click(object sender, EventArgs e)
         {
             QuanLiKhachHang.fSuaThongTinKhachHang editcustomer = new fSuaThongTinKhachHang();
-            editcustomer.Show();
+            editcustomer.ShowDialog();
         }
     }
 }

@@ -144,9 +144,10 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvManageCustomer);
-            this.panel2.Location = new System.Drawing.Point(12, 133);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 133);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(745, 295);
+            this.panel2.Size = new System.Drawing.Size(769, 295);
             this.panel2.TabIndex = 1;
             // 
             // dgvManageCustomer
@@ -157,8 +158,8 @@
             this.dgvManageCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvManageCustomer.Location = new System.Drawing.Point(0, 0);
             this.dgvManageCustomer.Name = "dgvManageCustomer";
-            this.dgvManageCustomer.Size = new System.Drawing.Size(745, 295);
-            this.dgvManageCustomer.TabIndex = 0;
+            this.dgvManageCustomer.Size = new System.Drawing.Size(769, 295);
+            this.dgvManageCustomer.TabIndex = 1;
             // 
             // fQuanLiKhachHang
             // 

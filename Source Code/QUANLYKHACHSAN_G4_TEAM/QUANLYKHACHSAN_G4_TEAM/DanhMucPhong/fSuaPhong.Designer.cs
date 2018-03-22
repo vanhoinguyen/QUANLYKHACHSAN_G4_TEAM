@@ -34,8 +34,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSaveEditRoom = new System.Windows.Forms.Button();
+            this.btnExitEditRoom = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -88,30 +88,30 @@
             this.comboBox1.Size = new System.Drawing.Size(174, 21);
             this.comboBox1.TabIndex = 3;
             // 
-            // button1
+            // btnSaveEditRoom
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(97, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 47);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSaveEditRoom.BackColor = System.Drawing.Color.Black;
+            this.btnSaveEditRoom.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveEditRoom.ForeColor = System.Drawing.Color.Red;
+            this.btnSaveEditRoom.Location = new System.Drawing.Point(97, 189);
+            this.btnSaveEditRoom.Name = "btnSaveEditRoom";
+            this.btnSaveEditRoom.Size = new System.Drawing.Size(75, 47);
+            this.btnSaveEditRoom.TabIndex = 6;
+            this.btnSaveEditRoom.Text = "Lưu";
+            this.btnSaveEditRoom.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnExitEditRoom
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(196, 189);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 47);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Hủy";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnExitEditRoom.BackColor = System.Drawing.Color.Black;
+            this.btnExitEditRoom.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitEditRoom.ForeColor = System.Drawing.Color.Red;
+            this.btnExitEditRoom.Location = new System.Drawing.Point(196, 189);
+            this.btnExitEditRoom.Name = "btnExitEditRoom";
+            this.btnExitEditRoom.Size = new System.Drawing.Size(75, 47);
+            this.btnExitEditRoom.TabIndex = 7;
+            this.btnExitEditRoom.Text = "Hủy";
+            this.btnExitEditRoom.UseVisualStyleBackColor = false;
+            this.btnExitEditRoom.Click += new System.EventHandler(this.button2_Click);
             // 
             // fSuaPhong
             // 
@@ -119,8 +119,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(305, 265);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExitEditRoom);
+            this.Controls.Add(this.btnSaveEditRoom);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
@@ -144,7 +144,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSaveEditRoom;
+        private System.Windows.Forms.Button btnExitEditRoom;
     }
 }

@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddRoom = new System.Windows.Forms.Button();
+            this.btnSaveNewRoom = new System.Windows.Forms.Button();
             this.txtPriceRoom = new System.Windows.Forms.TextBox();
             this.txtNameRoom = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbTypeRoom = new System.Windows.Forms.ComboBox();
-            this.btnExitRoom = new System.Windows.Forms.Button();
+            this.btnExitNewoom = new System.Windows.Forms.Button();
             this.txtIdRoom = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnAddRoom
+            // btnSaveNewRoom
             // 
-            this.btnAddRoom.BackColor = System.Drawing.Color.Black;
-            this.btnAddRoom.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddRoom.ForeColor = System.Drawing.Color.Red;
-            this.btnAddRoom.Location = new System.Drawing.Point(97, 196);
-            this.btnAddRoom.Name = "btnAddRoom";
-            this.btnAddRoom.Size = new System.Drawing.Size(75, 47);
-            this.btnAddRoom.TabIndex = 8;
-            this.btnAddRoom.Text = "Lưu";
-            this.btnAddRoom.UseVisualStyleBackColor = false;
+            this.btnSaveNewRoom.BackColor = System.Drawing.Color.Black;
+            this.btnSaveNewRoom.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveNewRoom.ForeColor = System.Drawing.Color.Red;
+            this.btnSaveNewRoom.Location = new System.Drawing.Point(97, 196);
+            this.btnSaveNewRoom.Name = "btnSaveNewRoom";
+            this.btnSaveNewRoom.Size = new System.Drawing.Size(75, 47);
+            this.btnSaveNewRoom.TabIndex = 8;
+            this.btnSaveNewRoom.Text = "Lưu";
+            this.btnSaveNewRoom.UseVisualStyleBackColor = false;
             // 
             // txtPriceRoom
             // 
@@ -105,18 +105,18 @@
             this.cmbTypeRoom.Size = new System.Drawing.Size(189, 21);
             this.cmbTypeRoom.TabIndex = 5;
             // 
-            // btnExitRoom
+            // btnExitNewoom
             // 
-            this.btnExitRoom.BackColor = System.Drawing.Color.Black;
-            this.btnExitRoom.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitRoom.ForeColor = System.Drawing.Color.Red;
-            this.btnExitRoom.Location = new System.Drawing.Point(211, 196);
-            this.btnExitRoom.Name = "btnExitRoom";
-            this.btnExitRoom.Size = new System.Drawing.Size(75, 47);
-            this.btnExitRoom.TabIndex = 9;
-            this.btnExitRoom.Text = "Thoát";
-            this.btnExitRoom.UseVisualStyleBackColor = false;
-            this.btnExitRoom.Click += new System.EventHandler(this.btnExitRoom_Click_1);
+            this.btnExitNewoom.BackColor = System.Drawing.Color.Black;
+            this.btnExitNewoom.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitNewoom.ForeColor = System.Drawing.Color.Red;
+            this.btnExitNewoom.Location = new System.Drawing.Point(211, 196);
+            this.btnExitNewoom.Name = "btnExitNewoom";
+            this.btnExitNewoom.Size = new System.Drawing.Size(75, 47);
+            this.btnExitNewoom.TabIndex = 9;
+            this.btnExitNewoom.Text = "Hủy";
+            this.btnExitNewoom.UseVisualStyleBackColor = false;
+            this.btnExitNewoom.Click += new System.EventHandler(this.btnExitRoom_Click_1);
             // 
             // txtIdRoom
             // 
@@ -142,9 +142,9 @@
             this.ClientSize = new System.Drawing.Size(317, 255);
             this.Controls.Add(this.txtIdRoom);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnExitRoom);
+            this.Controls.Add(this.btnExitNewoom);
             this.Controls.Add(this.cmbTypeRoom);
-            this.Controls.Add(this.btnAddRoom);
+            this.Controls.Add(this.btnSaveNewRoom);
             this.Controls.Add(this.txtPriceRoom);
             this.Controls.Add(this.txtNameRoom);
             this.Controls.Add(this.label3);
@@ -160,14 +160,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnAddRoom;
+        private System.Windows.Forms.Button btnSaveNewRoom;
         private System.Windows.Forms.TextBox txtPriceRoom;
         private System.Windows.Forms.TextBox txtNameRoom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbTypeRoom;
-        private System.Windows.Forms.Button btnExitRoom;
+        private System.Windows.Forms.Button btnExitNewoom;
         private System.Windows.Forms.TextBox txtIdRoom;
         private System.Windows.Forms.Label label4;
     }

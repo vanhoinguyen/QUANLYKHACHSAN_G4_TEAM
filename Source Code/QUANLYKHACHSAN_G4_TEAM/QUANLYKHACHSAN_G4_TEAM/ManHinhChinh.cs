@@ -20,7 +20,7 @@ namespace QUANLYKHACHSAN_G4_TEAM
         private void btnCategoryRoom_Click(object sender, EventArgs e)
         {
             DanhMucPhong.fDanhMucPhong caterogy = new DanhMucPhong.fDanhMucPhong();
-            caterogy.Show();
+            caterogy.ShowDialog();
            
 
 
@@ -45,31 +45,37 @@ namespace QUANLYKHACHSAN_G4_TEAM
         private void btnListRoom_Click(object sender, EventArgs e)
         {
             DanhSachPhong.fDanhSachPhong listroom = new DanhSachPhong.fDanhSachPhong();
-            listroom.Show();
+            listroom.ShowDialog();
         }
 
         private void btnBookRoom_Click(object sender, EventArgs e)
         {
             DatPhong.fDatPhong oder = new DatPhong.fDatPhong();
-            oder.Show();
+            oder.ShowDialog();
         }
 
         private void btnBill_Click(object sender, EventArgs e)
         {
             TinhTien.fTinhTien payroom = new TinhTien.fTinhTien();
-            payroom.Show();
+            payroom.ShowDialog();
         }
 
         private void btnRevenue_Click(object sender, EventArgs e)
         {
             DoanhThu.fDoanhThu revenue = new DoanhThu.fDoanhThu();
-            revenue.Show();
+            revenue.ShowDialog();
         }
 
         private void btnManagerCustomer_Click(object sender, EventArgs e)
         {
             QuanLiKhachHang.fQuanLiKhachHang customer = new QuanLiKhachHang.fQuanLiKhachHang();
-            customer.Show();
+            customer.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DichVu.fDichVu service = new DichVu.fDichVu();
+            service.ShowDialog();
         }
     }
 }

@@ -72,6 +72,24 @@
     <Compile Include="DanhMucPhong\fThemPhong.Designer.cs">
       <DependentUpon>fThemPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="DichVu\fDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DichVu\fDichVu.Designer.cs">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu\fSuaDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DichVu\fSuaDichVu.Designer.cs">
+      <DependentUpon>fSuaDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu\fThemDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DichVu\fThemDichVu.Designer.cs">
+      <DependentUpon>fThemDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoanhThu\fDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +148,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMucPhong\fThemPhong.resx">
       <DependentUpon>fThemPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVu\fDichVu.resx">
+      <DependentUpon>fDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVu\fSuaDichVu.resx">
+      <DependentUpon>fSuaDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVu\fThemDichVu.resx">
+      <DependentUpon>fThemDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoanhThu\fDoanhThu.resx">
       <DependentUpon>fDoanhThu.cs</DependentUpon>

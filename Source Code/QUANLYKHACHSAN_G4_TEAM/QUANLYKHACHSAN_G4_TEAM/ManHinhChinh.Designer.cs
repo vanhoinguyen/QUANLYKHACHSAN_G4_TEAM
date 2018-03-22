@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManHinhChinh));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ptbHotel = new System.Windows.Forms.PictureBox();
             this.btnRevenue = new System.Windows.Forms.Button();
             this.btnSearchRoom = new System.Windows.Forms.Button();
             this.btnBookRoom = new System.Windows.Forms.Button();
@@ -40,10 +38,13 @@
             this.btnCategoryRoom = new System.Windows.Forms.Button();
             this.btnManageCustomer = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ptbHotel = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbHotel)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbHotel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,34 +53,15 @@
             this.panel1.Controls.Add(this.ptbHotel);
             this.panel1.Location = new System.Drawing.Point(12, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(644, 372);
+            this.panel1.Size = new System.Drawing.Size(644, 435);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(644, 372);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // ptbHotel
-            // 
-            this.ptbHotel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptbHotel.Location = new System.Drawing.Point(0, 0);
-            this.ptbHotel.Name = "ptbHotel";
-            this.ptbHotel.Size = new System.Drawing.Size(644, 372);
-            this.ptbHotel.TabIndex = 3;
-            this.ptbHotel.TabStop = false;
             // 
             // btnRevenue
             // 
             this.btnRevenue.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnRevenue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRevenue.ForeColor = System.Drawing.Color.Red;
-            this.btnRevenue.Location = new System.Drawing.Point(16, 284);
+            this.btnRevenue.Location = new System.Drawing.Point(16, 338);
             this.btnRevenue.Name = "btnRevenue";
             this.btnRevenue.Size = new System.Drawing.Size(213, 48);
             this.btnRevenue.TabIndex = 5;
@@ -118,7 +100,7 @@
             this.btnExitMain.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnExitMain.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExitMain.ForeColor = System.Drawing.Color.Red;
-            this.btnExitMain.Location = new System.Drawing.Point(16, 338);
+            this.btnExitMain.Location = new System.Drawing.Point(16, 392);
             this.btnExitMain.Name = "btnExitMain";
             this.btnExitMain.Size = new System.Drawing.Size(213, 48);
             this.btnExitMain.TabIndex = 6;
@@ -157,7 +139,7 @@
             this.btnManageCustomer.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnManageCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageCustomer.ForeColor = System.Drawing.Color.Red;
-            this.btnManageCustomer.Location = new System.Drawing.Point(16, 230);
+            this.btnManageCustomer.Location = new System.Drawing.Point(16, 284);
             this.btnManageCustomer.Name = "btnManageCustomer";
             this.btnManageCustomer.Size = new System.Drawing.Size(213, 48);
             this.btnManageCustomer.TabIndex = 4;
@@ -167,6 +149,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnManageCustomer);
             this.panel2.Controls.Add(this.btnCategoryRoom);
             this.panel2.Controls.Add(this.btnBill);
@@ -176,14 +159,46 @@
             this.panel2.Controls.Add(this.btnRevenue);
             this.panel2.Location = new System.Drawing.Point(662, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(243, 401);
+            this.panel2.Size = new System.Drawing.Size(243, 449);
             this.panel2.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(16, 230);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 48);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Dịch Vụ";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ptbHotel
+            // 
+            this.ptbHotel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbHotel.Location = new System.Drawing.Point(0, 0);
+            this.ptbHotel.Name = "ptbHotel";
+            this.ptbHotel.Size = new System.Drawing.Size(644, 435);
+            this.ptbHotel.TabIndex = 4;
+            this.ptbHotel.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(644, 435);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // ManHinhChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 422);
+            this.ClientSize = new System.Drawing.Size(915, 473);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -193,16 +208,15 @@
             this.Text = "QUẢN LÝ KHÁCH SẠN";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManHinhChinh_FormClosing);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbHotel)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbHotel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox ptbHotel;
         private System.Windows.Forms.Button btnRevenue;
         private System.Windows.Forms.Button btnSearchRoom;
         private System.Windows.Forms.Button btnBookRoom;
@@ -212,6 +226,8 @@
         private System.Windows.Forms.Button btnManageCustomer;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbHotel;
+        private System.Windows.Forms.Button button1;
     }
 }
 

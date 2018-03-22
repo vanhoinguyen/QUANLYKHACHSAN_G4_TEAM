@@ -20,7 +20,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.DanhMucPhong
         private void btnAdd_Click(object sender, EventArgs e)
         {
             fThemPhong addRoom = new fThemPhong();
-            addRoom.Show();
+            addRoom.ShowDialog();
             
            
         }
@@ -40,7 +40,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.DanhMucPhong
         private void btnEditRoom_Click(object sender, EventArgs e)
         {
             DanhMucPhong.fSuaPhong editRoom = new fSuaPhong();
-            editRoom.Show();
+            editRoom.ShowDialog();
         }
     }
 }
