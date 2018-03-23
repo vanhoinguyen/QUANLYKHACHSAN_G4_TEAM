@@ -92,3 +92,15 @@ C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACH
 C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\obj\Debug\QUANLYKHACHSAN_G4_TEAM.DichVu.fDichVu.resources
 C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\obj\Debug\QUANLYKHACHSAN_G4_TEAM.DichVu.fSuaDichVu.resources
 C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\obj\Debug\QUANLYKHACHSAN_G4_TEAM.DichVu.fThemDichVu.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\DevExpress.Sparkline.v16.1.Core.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\DevExpress.XtraEditors.v16.1.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\DevExpress.Sparkline.v16.1.Core.xml
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\DevExpress.XtraEditors.v16.1.xml
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\de\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\es\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\ja\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\ru\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\de\DevExpress.XtraEditors.v16.1.resources.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\es\DevExpress.XtraEditors.v16.1.resources.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\ja\DevExpress.XtraEditors.v16.1.resources.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QUANLYKHACHSAN_G4_TEAM\QUANLYKHACHSAN_G4_TEAM\bin\Debug\ru\DevExpress.XtraEditors.v16.1.resources.dll

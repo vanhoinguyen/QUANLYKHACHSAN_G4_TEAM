@@ -26,5 +26,10 @@ namespace QUANLYKHACHSAN_G4_TEAM.TinhTien
         {
             Close();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

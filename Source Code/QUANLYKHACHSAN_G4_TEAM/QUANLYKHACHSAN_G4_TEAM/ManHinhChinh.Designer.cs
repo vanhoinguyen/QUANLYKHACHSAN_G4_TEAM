@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManHinhChinh));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbHotel = new System.Windows.Forms.PictureBox();
             this.btnRevenue = new System.Windows.Forms.Button();
             this.btnSearchRoom = new System.Windows.Forms.Button();
             this.btnBookRoom = new System.Windows.Forms.Button();
@@ -39,12 +41,10 @@
             this.btnManageCustomer = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.ptbHotel = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbHotel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbHotel)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,6 +55,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(644, 435);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(644, 435);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ptbHotel
+            // 
+            this.ptbHotel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbHotel.Location = new System.Drawing.Point(0, 0);
+            this.ptbHotel.Name = "ptbHotel";
+            this.ptbHotel.Size = new System.Drawing.Size(644, 435);
+            this.ptbHotel.TabIndex = 4;
+            this.ptbHotel.TabStop = false;
             // 
             // btnRevenue
             // 
@@ -175,25 +194,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ptbHotel
-            // 
-            this.ptbHotel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptbHotel.Location = new System.Drawing.Point(0, 0);
-            this.ptbHotel.Name = "ptbHotel";
-            this.ptbHotel.Size = new System.Drawing.Size(644, 435);
-            this.ptbHotel.TabIndex = 4;
-            this.ptbHotel.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(644, 435);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // ManHinhChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,9 +208,9 @@
             this.Text = "QUẢN LÝ KHÁCH SẠN";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManHinhChinh_FormClosing);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbHotel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbHotel)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
