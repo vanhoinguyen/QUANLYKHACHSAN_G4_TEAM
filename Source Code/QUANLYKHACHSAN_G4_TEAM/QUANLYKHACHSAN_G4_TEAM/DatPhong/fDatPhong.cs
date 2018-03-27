@@ -26,5 +26,10 @@ namespace QUANLYKHACHSAN_G4_TEAM.DatPhong
         {
             Close();
         }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

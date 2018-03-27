@@ -31,5 +31,10 @@ namespace QUANLYKHACHSAN_G4_TEAM.TinhTien
         {
 
         }
+
+        private void btnCancelBill_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
