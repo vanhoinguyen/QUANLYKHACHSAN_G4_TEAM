@@ -26,11 +26,11 @@ CÔNG CỤ VÀ CÔNG NGHỆ SỬ DỤNG:
 + SQL Studio 2017.
 + Ngôn ngữ C#
 + Entity Framework
-- LinQ
++ LinQ
 
 
 THÔNG TIN SINH VIÊN:
-- Nguyễn Văn Hội - 16520456 
-- Võ Quốc Huy - 16520538
-- Huỳnh Trung Tuấn - 16521366
-- Trần Quốc Hoàn - 12520150
++ Nguyễn Văn Hội - 16520456 
++ Võ Quốc Huy - 16520538
++ Huỳnh Trung Tuấn - 16521366
++ Trần Quốc Hoàn - 12520150
