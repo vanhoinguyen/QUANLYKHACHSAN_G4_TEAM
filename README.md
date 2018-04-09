@@ -2,7 +2,7 @@
 Đồ án cuối kì môn nhập môn công nghệ phần mềm
 
 * MÔ TẢ:
-+ Phần mềm giúp cho quản lí khách sạn quản lí một cách dễ dàng và nhanh chóng.
+          + Phần mềm giúp cho quản lí khách sạn quản lí một cách dễ dàng và nhanh chóng.
 + Phần mềm ứng dụng cho máy tính cá nhân, chỉ có quản lí khách sạn được sử dụng.
 + Phần mềm lưu thông tin khách hàng, thông tin khách sạn.
 + Cho phép người quản lí tìm phòng trống theo yêu cầu khách hàng, đặt phòng, hủy phòng, đặt dịch vụ hoặc thanh toán
