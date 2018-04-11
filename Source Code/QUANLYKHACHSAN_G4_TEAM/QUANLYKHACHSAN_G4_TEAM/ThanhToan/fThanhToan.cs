@@ -3,23 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
-namespace QUANLYKHACHSAN_G4_TEAM.DichVu
+namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
 {
-    public partial class fSuaDichVu : Form
+    public partial class fThanhToan : DevExpress.XtraEditors.XtraForm
     {
-        public fSuaDichVu()
+        public fThanhToan()
         {
             InitializeComponent();
-        }
-
-        private void btnExitEditService_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

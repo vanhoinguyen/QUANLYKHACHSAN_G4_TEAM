@@ -56,7 +56,7 @@
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(641, 43);
@@ -77,9 +77,9 @@
             // 
             // btnSeeRevenue
             // 
-            this.btnSeeRevenue.BackColor = System.Drawing.Color.Black;
+            this.btnSeeRevenue.BackColor = System.Drawing.Color.Peru;
             this.btnSeeRevenue.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeeRevenue.ForeColor = System.Drawing.Color.Red;
+            this.btnSeeRevenue.ForeColor = System.Drawing.Color.Black;
             this.btnSeeRevenue.Location = new System.Drawing.Point(429, 3);
             this.btnSeeRevenue.Name = "btnSeeRevenue";
             this.btnSeeRevenue.Size = new System.Drawing.Size(87, 47);
@@ -89,9 +89,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Black;
+            this.btnCancel.BackColor = System.Drawing.Color.Peru;
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Red;
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Location = new System.Drawing.Point(540, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(87, 47);
@@ -146,7 +146,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "fDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

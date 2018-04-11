@@ -3,23 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
-namespace QUANLYKHACHSAN_G4_TEAM.DanhSachPhong
+namespace QUANLYKHACHSAN_G4_TEAM.TraCuuPhong
 {
-    public partial class fDanhSachPhong : Form
+    public partial class fTraCuuPhong : DevExpress.XtraEditors.XtraForm
     {
-        public fDanhSachPhong()
+        public fTraCuuPhong()
         {
             InitializeComponent();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

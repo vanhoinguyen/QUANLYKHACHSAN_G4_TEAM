@@ -17,14 +17,7 @@ namespace QUANLYKHACHSAN_G4_TEAM
             InitializeComponent();
         }
 
-        private void btnCategoryRoom_Click(object sender, EventArgs e)
-        {
-            DanhMucPhong.fDanhMucPhong caterogy = new DanhMucPhong.fDanhMucPhong();
-            caterogy.ShowDialog();
-           
-
-
-        }
+       
 
         private void btnExitMain_Click(object sender, EventArgs e)
         {
@@ -42,40 +35,58 @@ namespace QUANLYKHACHSAN_G4_TEAM
 
         }
 
-        private void btnListRoom_Click(object sender, EventArgs e)
+      
+
+        
+       
+
+       
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            DanhSachPhong.fDanhSachPhong listroom = new DanhSachPhong.fDanhSachPhong();
-            listroom.ShowDialog();
+
         }
 
-        private void btnBookRoom_Click(object sender, EventArgs e)
+        private void ptbBill_Click(object sender, EventArgs e)
         {
-            DatPhong.fDatPhong oder = new DatPhong.fDatPhong();
-            oder.ShowDialog();
+            ThanhToan.fThanhToan bill = new ThanhToan.fThanhToan();
+            bill.ShowDialog();
         }
 
-        private void btnBill_Click(object sender, EventArgs e)
+        private void ptbRoomManage_Click(object sender, EventArgs e)
         {
-            TinhTien.fTinhTien payroom = new TinhTien.fTinhTien();
-            payroom.ShowDialog();
+            QuanLiPhong.fQuanLiPhong roommanage = new QuanLiPhong.fQuanLiPhong();
+            roommanage.ShowDialog();
         }
 
-        private void btnRevenue_Click(object sender, EventArgs e)
+        private void ptbSearchRoom_Click(object sender, EventArgs e)
         {
-            DoanhThu.fDoanhThu revenue = new DoanhThu.fDoanhThu();
-            revenue.ShowDialog();
+            TraCuuPhong.fTraCuuPhong searchroom = new TraCuuPhong.fTraCuuPhong();
+            searchroom.ShowDialog();
         }
 
-        private void btnManagerCustomer_Click(object sender, EventArgs e)
+        private void ptbCustomerManage_Click(object sender, EventArgs e)
         {
             QuanLiKhachHang.fQuanLiKhachHang customer = new QuanLiKhachHang.fQuanLiKhachHang();
             customer.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ptbServiceManage_Click(object sender, EventArgs e)
         {
-            DichVu.fDichVu service = new DichVu.fDichVu();
+            QuanLiDichVu.fQuanLiDichVu service = new QuanLiDichVu.fQuanLiDichVu();
             service.ShowDialog();
+        }
+
+        private void ptbBookRoom_Click(object sender, EventArgs e)
+        {
+            DatPhong.fDatPhong oder = new DatPhong.fDatPhong();
+            oder.ShowDialog();
+        }
+
+        private void ptbRevenue_Click(object sender, EventArgs e)
+        {
+            DoanhThu.fDoanhThu revenue = new DoanhThu.fDoanhThu();
+            revenue.ShowDialog();
         }
     }
 }

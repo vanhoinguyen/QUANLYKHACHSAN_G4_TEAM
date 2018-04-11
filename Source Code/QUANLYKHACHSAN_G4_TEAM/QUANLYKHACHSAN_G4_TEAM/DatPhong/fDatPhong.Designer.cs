@@ -32,7 +32,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.ptbNameRoom = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -71,10 +70,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbNameRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNumerCustomer)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -94,8 +94,9 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.ptbNameRoom);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.txtPrice);
             this.panel3.Controls.Add(this.label10);
@@ -141,21 +142,13 @@
             // 
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.ForeColor = System.Drawing.Color.Maroon;
             this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(531, 66);
             this.label12.TabIndex = 0;
             this.label12.Text = "PHIẾU ĐẶT PHÒNG";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ptbNameRoom
-            // 
-            this.ptbNameRoom.Location = new System.Drawing.Point(323, 91);
-            this.ptbNameRoom.Name = "ptbNameRoom";
-            this.ptbNameRoom.Size = new System.Drawing.Size(187, 124);
-            this.ptbNameRoom.TabIndex = 53;
-            this.ptbNameRoom.TabStop = false;
             // 
             // label11
             // 
@@ -332,9 +325,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCancel.BackColor = System.Drawing.Color.Peru;
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Red;
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Location = new System.Drawing.Point(238, 388);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(68, 52);
@@ -345,9 +338,9 @@
             // 
             // btnOder
             // 
-            this.btnOder.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnOder.BackColor = System.Drawing.Color.Peru;
             this.btnOder.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOder.ForeColor = System.Drawing.Color.Red;
+            this.btnOder.ForeColor = System.Drawing.Color.Black;
             this.btnOder.Location = new System.Drawing.Point(140, 388);
             this.btnOder.Name = "btnOder";
             this.btnOder.Size = new System.Drawing.Size(68, 52);
@@ -422,6 +415,7 @@
             this.label13.Cursor = System.Windows.Forms.Cursors.Default;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Maroon;
             this.label13.Location = new System.Drawing.Point(0, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(369, 66);
@@ -549,6 +543,28 @@
             this.button1.Text = "A01";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Chiller", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Maroon;
+            this.label14.Location = new System.Drawing.Point(355, 147);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(145, 61);
+            this.label14.TabIndex = 56;
+            this.label14.Text = "HOTEL";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Chiller", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Maroon;
+            this.label15.Location = new System.Drawing.Point(386, 86);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(74, 62);
+            this.label15.TabIndex = 55;
+            this.label15.Text = "G4";
+            // 
             // fDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -556,7 +572,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(915, 473);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "fDatPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -565,7 +581,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbNameRoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNumerCustomer)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -589,7 +604,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox ptbNameRoom;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label10;
@@ -617,5 +631,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }

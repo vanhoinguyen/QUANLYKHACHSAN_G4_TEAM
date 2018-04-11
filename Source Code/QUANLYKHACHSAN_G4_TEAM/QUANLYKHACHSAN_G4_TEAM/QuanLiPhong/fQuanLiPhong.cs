@@ -3,23 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
-namespace QUANLYKHACHSAN_G4_TEAM.DichVu
+namespace QUANLYKHACHSAN_G4_TEAM.QuanLiPhong
 {
-    public partial class fThemDichVu : Form
+    public partial class fQuanLiPhong : DevExpress.XtraEditors.XtraForm
     {
-        public fThemDichVu()
+        public fQuanLiPhong()
         {
             InitializeComponent();
-        }
-
-        private void btnExitNewService_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

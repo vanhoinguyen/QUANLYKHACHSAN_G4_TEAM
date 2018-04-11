@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
-namespace QUANLYKHACHSAN_G4_TEAM.QuanLiKhachHang
+namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
 {
-    public partial class fSuaThongTinKhachHang : Form
+    public partial class fQuanLiDichVu : DevExpress.XtraEditors.XtraForm
     {
-        public fSuaThongTinKhachHang()
+        public fQuanLiDichVu()
         {
             InitializeComponent();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnAddService_Click(object sender, EventArgs e)
         {
-            Close();
+
         }
     }
 }
