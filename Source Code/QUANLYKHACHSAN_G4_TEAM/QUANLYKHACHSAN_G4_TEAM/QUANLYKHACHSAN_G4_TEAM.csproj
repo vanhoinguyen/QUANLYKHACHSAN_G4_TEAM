@@ -141,6 +141,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -160,6 +161,30 @@
       <Project>{f4d40957-6338-4460-857d-8b3d33c6b4d9}</Project>
       <Name>BUS</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICON\datphong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICON\doanhthu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICON\qldichvu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICON\qlkhachhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICON\quanliphong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICON\quydinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICON\thanhtoan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICON\tracuuphong.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
