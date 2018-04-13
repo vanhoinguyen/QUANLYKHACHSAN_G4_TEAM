@@ -32,11 +32,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtNewPriceService = new System.Windows.Forms.TextBox();
+            this.txtPriceService = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNewUnitService = new System.Windows.Forms.TextBox();
+            this.txtUnitService = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNewNameService = new System.Windows.Forms.TextBox();
+            this.txtNameService = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEditService = new System.Windows.Forms.Button();
             this.btnAddService = new System.Windows.Forms.Button();
@@ -55,11 +55,11 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtNewPriceService);
+            this.panel1.Controls.Add(this.txtPriceService);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtNewUnitService);
+            this.panel1.Controls.Add(this.txtUnitService);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtNewNameService);
+            this.panel1.Controls.Add(this.txtNameService);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnEditService);
             this.panel1.Controls.Add(this.btnAddService);
@@ -103,12 +103,12 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "G4";
             // 
-            // txtNewPriceService
+            // txtPriceService
             // 
-            this.txtNewPriceService.Location = new System.Drawing.Point(89, 107);
-            this.txtNewPriceService.Name = "txtNewPriceService";
-            this.txtNewPriceService.Size = new System.Drawing.Size(188, 21);
-            this.txtNewPriceService.TabIndex = 12;
+            this.txtPriceService.Location = new System.Drawing.Point(89, 107);
+            this.txtPriceService.Name = "txtPriceService";
+            this.txtPriceService.Size = new System.Drawing.Size(188, 21);
+            this.txtPriceService.TabIndex = 12;
             // 
             // label3
             // 
@@ -119,12 +119,12 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Đơn Giá";
             // 
-            // txtNewUnitService
+            // txtUnitService
             // 
-            this.txtNewUnitService.Location = new System.Drawing.Point(89, 79);
-            this.txtNewUnitService.Name = "txtNewUnitService";
-            this.txtNewUnitService.Size = new System.Drawing.Size(188, 21);
-            this.txtNewUnitService.TabIndex = 10;
+            this.txtUnitService.Location = new System.Drawing.Point(89, 79);
+            this.txtUnitService.Name = "txtUnitService";
+            this.txtUnitService.Size = new System.Drawing.Size(188, 21);
+            this.txtUnitService.TabIndex = 10;
             // 
             // label2
             // 
@@ -135,12 +135,12 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Đơn Vị Tính";
             // 
-            // txtNewNameService
+            // txtNameService
             // 
-            this.txtNewNameService.Location = new System.Drawing.Point(89, 52);
-            this.txtNewNameService.Name = "txtNewNameService";
-            this.txtNewNameService.Size = new System.Drawing.Size(188, 21);
-            this.txtNewNameService.TabIndex = 8;
+            this.txtNameService.Location = new System.Drawing.Point(89, 52);
+            this.txtNameService.Name = "txtNameService";
+            this.txtNameService.Size = new System.Drawing.Size(188, 21);
+            this.txtNameService.TabIndex = 8;
             // 
             // label1
             // 
@@ -233,11 +233,11 @@
         private System.Windows.Forms.Button btnAddService;
         private System.Windows.Forms.Button btnRemoveService;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtNewPriceService;
+        private System.Windows.Forms.TextBox txtPriceService;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNewUnitService;
+        private System.Windows.Forms.TextBox txtUnitService;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNewNameService;
+        private System.Windows.Forms.TextBox txtNameService;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvListService;
         private System.Windows.Forms.Label label5;

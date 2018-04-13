@@ -32,7 +32,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPriceService = new System.Windows.Forms.TextBox();
             this.btnCancelBill = new System.Windows.Forms.Button();
             this.btnSaveBill = new System.Windows.Forms.Button();
             this.lbTotal = new System.Windows.Forms.Label();
@@ -119,12 +119,12 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Phí Dịch Vụ";
             // 
-            // textBox1
+            // txtPriceService
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 169);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 21);
-            this.textBox1.TabIndex = 16;
+            this.txtPriceService.Location = new System.Drawing.Point(166, 169);
+            this.txtPriceService.Name = "txtPriceService";
+            this.txtPriceService.Size = new System.Drawing.Size(200, 21);
+            this.txtPriceService.TabIndex = 16;
             // 
             // btnCancelBill
             // 
@@ -402,7 +402,7 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtPriceService);
             this.panel3.Controls.Add(this.btnCancelBill);
             this.panel3.Controls.Add(this.btnSaveBill);
             this.panel3.Controls.Add(this.lbTotal);
@@ -515,7 +515,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPriceService;
         private System.Windows.Forms.Button btnCancelBill;
         private System.Windows.Forms.Button btnSaveBill;
         private System.Windows.Forms.Label lbTotal;
