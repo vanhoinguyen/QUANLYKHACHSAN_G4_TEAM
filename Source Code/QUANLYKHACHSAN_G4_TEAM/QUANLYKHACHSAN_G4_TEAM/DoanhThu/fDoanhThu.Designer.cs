@@ -31,16 +31,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSeeRevenue = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.txtMonth = new System.Windows.Forms.TextBox();
+            this.btnXem = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvRevenue = new System.Windows.Forms.DataGridView();
+            this.dgvDoanhThu = new System.Windows.Forms.DataGridView();
+            this.cmbThang = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRevenue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,46 +66,39 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnSeeRevenue);
-            this.panel2.Controls.Add(this.btnCancel);
-            this.panel2.Controls.Add(this.txtMonth);
+            this.panel2.Controls.Add(this.cmbThang);
+            this.panel2.Controls.Add(this.btnXem);
+            this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(641, 53);
             this.panel2.TabIndex = 0;
             // 
-            // btnSeeRevenue
+            // btnXem
             // 
-            this.btnSeeRevenue.BackColor = System.Drawing.Color.Peru;
-            this.btnSeeRevenue.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeeRevenue.ForeColor = System.Drawing.Color.Black;
-            this.btnSeeRevenue.Location = new System.Drawing.Point(429, 3);
-            this.btnSeeRevenue.Name = "btnSeeRevenue";
-            this.btnSeeRevenue.Size = new System.Drawing.Size(87, 47);
-            this.btnSeeRevenue.TabIndex = 2;
-            this.btnSeeRevenue.Text = "Xem";
-            this.btnSeeRevenue.UseVisualStyleBackColor = false;
+            this.btnXem.BackColor = System.Drawing.Color.Peru;
+            this.btnXem.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXem.ForeColor = System.Drawing.Color.Black;
+            this.btnXem.Location = new System.Drawing.Point(429, 3);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(87, 47);
+            this.btnXem.TabIndex = 2;
+            this.btnXem.Text = "Xem";
+            this.btnXem.UseVisualStyleBackColor = false;
             // 
-            // btnCancel
+            // btnHuy
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Peru;
-            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(540, 3);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(87, 47);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // txtMonth
-            // 
-            this.txtMonth.Location = new System.Drawing.Point(195, 17);
-            this.txtMonth.Name = "txtMonth";
-            this.txtMonth.Size = new System.Drawing.Size(200, 20);
-            this.txtMonth.TabIndex = 1;
+            this.btnHuy.BackColor = System.Drawing.Color.Peru;
+            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.Black;
+            this.btnHuy.Location = new System.Drawing.Point(540, 3);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(87, 47);
+            this.btnHuy.TabIndex = 3;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
             // 
@@ -119,23 +112,31 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dgvRevenue);
+            this.panel3.Controls.Add(this.dgvDoanhThu);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 105);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(641, 323);
             this.panel3.TabIndex = 2;
             // 
-            // dgvRevenue
+            // dgvDoanhThu
             // 
-            this.dgvRevenue.BackgroundColor = System.Drawing.Color.White;
-            this.dgvRevenue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvRevenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRevenue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRevenue.Location = new System.Drawing.Point(0, 0);
-            this.dgvRevenue.Name = "dgvRevenue";
-            this.dgvRevenue.Size = new System.Drawing.Size(641, 323);
-            this.dgvRevenue.TabIndex = 0;
+            this.dgvDoanhThu.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDoanhThu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDoanhThu.Location = new System.Drawing.Point(0, 0);
+            this.dgvDoanhThu.Name = "dgvDoanhThu";
+            this.dgvDoanhThu.Size = new System.Drawing.Size(641, 323);
+            this.dgvDoanhThu.TabIndex = 0;
+            // 
+            // cmbThang
+            // 
+            this.cmbThang.FormattingEnabled = true;
+            this.cmbThang.Location = new System.Drawing.Point(209, 18);
+            this.cmbThang.Name = "cmbThang";
+            this.cmbThang.Size = new System.Drawing.Size(133, 21);
+            this.cmbThang.TabIndex = 4;
             // 
             // fDoanhThu
             // 
@@ -155,7 +156,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRevenue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,11 +166,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtMonth;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dgvRevenue;
-        private System.Windows.Forms.Button btnSeeRevenue;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DataGridView dgvDoanhThu;
+        private System.Windows.Forms.Button btnXem;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.ComboBox cmbThang;
     }
 }

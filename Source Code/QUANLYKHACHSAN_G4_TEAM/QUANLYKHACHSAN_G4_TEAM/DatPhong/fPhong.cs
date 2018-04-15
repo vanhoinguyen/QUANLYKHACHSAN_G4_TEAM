@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace QUANLYKHACHSAN_G4_TEAM.DatPhong
 {
-    public partial class fDatPhong : Form
+    public partial class fPhong : Form
     {
-        public fDatPhong()
+        public fPhong()
         {
             InitializeComponent();
+        }
+
+        private void btnDatPhong_Click(object sender, EventArgs e)
+        {
+            DatPhong.fDatPhong datphong = new DatPhong.fDatPhong();
+            datphong.ShowDialog();
         }
     }
 }

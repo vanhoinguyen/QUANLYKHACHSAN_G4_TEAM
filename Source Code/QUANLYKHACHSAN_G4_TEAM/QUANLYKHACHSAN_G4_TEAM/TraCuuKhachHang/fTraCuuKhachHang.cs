@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace QUANLYKHACHSAN_G4_TEAM.QuanLiKhachHang
 {
-    public partial class fQuanLiKhachHang : Form
+    public partial class fTraCuuKhachHang : Form
     {
-        public fQuanLiKhachHang()
+        public fTraCuuKhachHang()
         {
             InitializeComponent();
-        }
-
-        private void btnAddCustomer_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnEditCustomer_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

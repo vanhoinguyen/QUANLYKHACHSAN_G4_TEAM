@@ -38,52 +38,52 @@ namespace QUANLYKHACHSAN_G4_TEAM
 
         }
 
-        private void ptbBill_Click(object sender, EventArgs e)
+        private void ptbThanhToan_Click(object sender, EventArgs e)
         {
-            ThanhToan.fThanhToan bill = new ThanhToan.fThanhToan();
-            bill.ShowDialog();
+            ThanhToan.fThanhToan thanhtoan = new ThanhToan.fThanhToan();
+            thanhtoan.ShowDialog();
         }
 
-        private void ptbRoomManage_Click(object sender, EventArgs e)
+        private void ptbQuanLiPhong_Click(object sender, EventArgs e)
         {
             QuanLiPhong.fQuanLiPhong roommanage = new QuanLiPhong.fQuanLiPhong();
             roommanage.ShowDialog();
         }
 
-        private void ptbSearchRoom_Click(object sender, EventArgs e)
+        private void ptbTraCuuPhong_Click(object sender, EventArgs e)
         {
-            TraCuuPhong.fTraCuuPhong searchroom = new TraCuuPhong.fTraCuuPhong();
-            searchroom.ShowDialog();
+            TraCuuPhong.fTraCuuPhong tracuuphong = new TraCuuPhong.fTraCuuPhong();
+            tracuuphong.ShowDialog();
         }
 
-        private void ptbCustomerManage_Click(object sender, EventArgs e)
+        private void ptbQuanLiKhachHang_Click(object sender, EventArgs e)
         {
-            QuanLiKhachHang.fQuanLiKhachHang customer = new QuanLiKhachHang.fQuanLiKhachHang();
-            customer.ShowDialog();
+            QuanLiKhachHang.fTraCuuKhachHang kh = new QuanLiKhachHang.fTraCuuKhachHang();
+            kh.ShowDialog();
         }
 
-        private void ptbServiceManage_Click(object sender, EventArgs e)
+        private void ptbQuanLiDichVu_Click(object sender, EventArgs e)
         {
-            QuanLiDichVu.fQuanLiDichVu service = new QuanLiDichVu.fQuanLiDichVu();
-            service.ShowDialog();
+            QuanLiDichVu.fQuanLiDichVu qldv = new QuanLiDichVu.fQuanLiDichVu();
+            qldv.ShowDialog();
         }
 
-        private void ptbBookRoom_Click(object sender, EventArgs e)
+        private void ptbDatPhong_Click(object sender, EventArgs e)
         {
-            DatPhong.fDatPhong oder = new DatPhong.fDatPhong();
-            oder.ShowDialog();
+            DatPhong.fPhong phong = new DatPhong.fPhong();
+            phong.ShowDialog();
         }
 
-        private void ptbRevenue_Click(object sender, EventArgs e)
+        private void ptbDoanhThu_Click(object sender, EventArgs e)
         {
-            DoanhThu.fDoanhThu revenue = new DoanhThu.fDoanhThu();
-            revenue.ShowDialog();
+            DoanhThu.fDoanhThu doanhthu = new DoanhThu.fDoanhThu();
+            doanhthu.ShowDialog();
         }
         #endregion
 
 
         #region ImagesEvent
-        private void ptbRoomManage_MouseHover(object sender, EventArgs e)
+        private void ptbQuanLiPhong_MouseHover(object sender, EventArgs e)
         {
            
 
@@ -92,118 +92,118 @@ namespace QUANLYKHACHSAN_G4_TEAM
             Bitmap bm = new Bitmap(x_Width, y_Height);
             Graphics g = Graphics.FromImage(bm);
             g.DrawImage(Resources.quanliphong, new Rectangle(Point.Empty, bm.Size));
-            ptbRoomManage.Image = bm;
+            ptbQuanLiPhong.Image = bm;
         }
 
-        private void ptbRoomManage_MouseLeave(object sender, EventArgs e)
+        private void ptbQuanLiPhong_MouseLeave(object sender, EventArgs e)
         {
-            ptbRoomManage.Image = Resources.quanliphong;
+            ptbQuanLiPhong.Image = Resources.quanliphong;
         }
 
-        private void ptbCustomerManage_MouseHover(object sender, EventArgs e)
+        private void ptbQuanLiKhachHang_MouseHover(object sender, EventArgs e)
         {
             int x_Width = Resources.qlkhachhang.Width + ((Resources.qlkhachhang.Width * 20) / 100);
             int y_Height = Resources.qlkhachhang.Height + ((Resources.qlkhachhang.Height * 20) / 100);
             Bitmap bm = new Bitmap(x_Width, y_Height);
             Graphics g = Graphics.FromImage(bm);
             g.DrawImage(Resources.qlkhachhang, new Rectangle(Point.Empty, bm.Size));
-            ptbCustomerManage.Image = bm;
+            ptbQuanLiKhachHang.Image = bm;
         }
 
-        private void ptbCustomerManage_MouseLeave(object sender, EventArgs e)
+        private void ptbQuanLiKhachHang_MouseLeave(object sender, EventArgs e)
         {
-            ptbCustomerManage.Image = Resources.qlkhachhang;
+            ptbQuanLiKhachHang.Image = Resources.qlkhachhang;
         }
 
-        private void ptbServiceManage_MouseHover(object sender, EventArgs e)
+        private void ptbQuanLiDichVu_MouseHover(object sender, EventArgs e)
         {
             int x_Width = Resources.qldichvu.Width + ((Resources.qldichvu.Width * 20) / 100);
             int y_Height = Resources.qldichvu.Height + ((Resources.qldichvu.Height * 20) / 100);
             Bitmap bm = new Bitmap(x_Width, y_Height);
             Graphics g = Graphics.FromImage(bm);
             g.DrawImage(Resources.qldichvu, new Rectangle(Point.Empty, bm.Size));
-            ptbServiceManage.Image = bm;
+            ptbQuanLiDichVu.Image = bm;
         }
 
-        private void ptbServiceManage_MouseLeave(object sender, EventArgs e)
+        private void ptbQuanLiDichVu_MouseLeave(object sender, EventArgs e)
         {
-            ptbServiceManage.Image = Resources.qldichvu;
+            ptbQuanLiDichVu.Image = Resources.qldichvu;
         }
 
-        private void ptbRegulations_MouseHover(object sender, EventArgs e)
+        private void ptbQuyDinh_MouseHover(object sender, EventArgs e)
         {
             int x_Width = Resources.quydinh.Width + ((Resources.quydinh.Width * 20) / 100);
             int y_Height = Resources.quydinh.Height + ((Resources.quydinh.Height * 20) / 100);
             Bitmap bm = new Bitmap(x_Width, y_Height);
             Graphics g = Graphics.FromImage(bm);
             g.DrawImage(Resources.quydinh, new Rectangle(Point.Empty, bm.Size));
-            ptbRegulations.Image = bm;
+            ptbQuyDinh.Image = bm;
         }
 
-        private void ptbRegulations_MouseLeave(object sender, EventArgs e)
+        private void ptbQuyDinh_MouseLeave(object sender, EventArgs e)
         {
-            ptbRegulations.Image = Resources.quydinh;
+            ptbQuyDinh.Image = Resources.quydinh;
         }
 
-        private void ptbBookRoom_MouseHover(object sender, EventArgs e)
+        private void ptbDatPhong_MouseHover(object sender, EventArgs e)
         {
             int x_Width = Resources.datphong.Width + ((Resources.datphong.Width * 20) / 100);
             int y_Height = Resources.datphong.Height + ((Resources.datphong.Height * 20) / 100);
             Bitmap bm = new Bitmap(x_Width, y_Height);
             Graphics g = Graphics.FromImage(bm);
             g.DrawImage(Resources.datphong, new Rectangle(Point.Empty, bm.Size));
-            ptbBookRoom.Image = bm;
+            ptbDatPhong.Image = bm;
         }
 
-        private void ptbBookRoom_MouseLeave(object sender, EventArgs e)
+        private void ptbDatPhong_MouseLeave(object sender, EventArgs e)
         {
-            ptbBookRoom.Image = Resources.datphong;
+            ptbDatPhong.Image = Resources.datphong;
         }
 
-        private void ptbSearchRoom_MouseHover(object sender, EventArgs e)
+        private void ptbTraCuuPhong_MouseHover(object sender, EventArgs e)
         {
             int x_Width = Resources.tracuuphong.Width + ((Resources.tracuuphong.Width * 20) / 100);
             int y_Height = Resources.tracuuphong.Height + ((Resources.tracuuphong.Height * 20) / 100);
             Bitmap bm = new Bitmap(x_Width, y_Height);
             Graphics g = Graphics.FromImage(bm);
             g.DrawImage(Resources.tracuuphong, new Rectangle(Point.Empty, bm.Size));
-            ptbSearchRoom.Image = bm;
+            ptbTraCuuPhong.Image = bm;
         }
 
-        private void ptbSearchRoom_MouseLeave(object sender, EventArgs e)
+        private void ptbTraCuuPhong_MouseLeave(object sender, EventArgs e)
         {
-            ptbSearchRoom.Image = Resources.tracuuphong;
+            ptbTraCuuPhong.Image = Resources.tracuuphong;
         }
 
-        private void ptbBill_MouseHover(object sender, EventArgs e)
+        private void ptbThanhToan_MouseHover(object sender, EventArgs e)
         {
             int x_Width = Resources.thanhtoan.Width + ((Resources.thanhtoan.Width * 20) / 100);
             int y_Height = Resources.thanhtoan.Height + ((Resources.thanhtoan.Height * 20) / 100);
             Bitmap bm = new Bitmap(x_Width, y_Height);
             Graphics g = Graphics.FromImage(bm);
             g.DrawImage(Resources.thanhtoan, new Rectangle(Point.Empty, bm.Size));
-            ptbBill.Image = bm;
+            ptbThanhToan.Image = bm;
         }
 
-        private void ptbBill_MouseLeave(object sender, EventArgs e)
+        private void ptbThanhToan_MouseLeave(object sender, EventArgs e)
         {
-            ptbBill.Image = Resources.thanhtoan;
+            ptbThanhToan.Image = Resources.thanhtoan;
         }
 
-        private void ptbRevenue_MouseHover(object sender, EventArgs e)
+        private void ptbDoanhThu_MouseHover(object sender, EventArgs e)
         {
             int x_Width = Resources.doanhthu.Width + ((Resources.doanhthu.Width * 20) / 100);
             int y_Height = Resources.doanhthu.Height + ((Resources.doanhthu.Height * 20) / 100);
             Bitmap bm = new Bitmap(x_Width, y_Height);
             Graphics g = Graphics.FromImage(bm);
             g.DrawImage(Resources.doanhthu, new Rectangle(Point.Empty, bm.Size));
-            ptbRevenue.Image = bm;
+            ptbDoanhThu.Image = bm;
 
         }
 
-        private void ptbRevenue_MouseLeave(object sender, EventArgs e)
+        private void ptbDoanhThu_MouseLeave(object sender, EventArgs e)
         {
-            ptbRevenue.Image = Resources.doanhthu;
+            ptbDoanhThu.Image = Resources.doanhthu;
         }
         #endregion
     }

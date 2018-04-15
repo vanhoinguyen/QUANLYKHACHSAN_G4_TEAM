@@ -30,31 +30,31 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.ptbDoanhThu = new System.Windows.Forms.PictureBox();
+            this.ptbQuanLiDichVu = new System.Windows.Forms.PictureBox();
+            this.ptbQuanLiKhachHang = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.ptbTraCuuPhong = new System.Windows.Forms.PictureBox();
+            this.ptbQuanLiPhong = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.ptbQuyDinh = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.ptbThanhToan = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ptbRevenue = new System.Windows.Forms.PictureBox();
-            this.ptbServiceManage = new System.Windows.Forms.PictureBox();
-            this.ptbCustomerManage = new System.Windows.Forms.PictureBox();
-            this.ptbSearchRoom = new System.Windows.Forms.PictureBox();
-            this.ptbRoomManage = new System.Windows.Forms.PictureBox();
-            this.ptbRegulations = new System.Windows.Forms.PictureBox();
-            this.ptbBill = new System.Windows.Forms.PictureBox();
-            this.ptbBookRoom = new System.Windows.Forms.PictureBox();
+            this.ptbDatPhong = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbRevenue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbServiceManage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCustomerManage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSearchRoom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbRoomManage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbRegulations)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbBill)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbBookRoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDoanhThu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbQuanLiDichVu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbQuanLiKhachHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTraCuuPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbQuanLiPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbQuyDinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbThanhToan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDatPhong)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,22 +62,22 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.ptbRevenue);
-            this.panel1.Controls.Add(this.ptbServiceManage);
-            this.panel1.Controls.Add(this.ptbCustomerManage);
+            this.panel1.Controls.Add(this.ptbDoanhThu);
+            this.panel1.Controls.Add(this.ptbQuanLiDichVu);
+            this.panel1.Controls.Add(this.ptbQuanLiKhachHang);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.ptbSearchRoom);
-            this.panel1.Controls.Add(this.ptbRoomManage);
+            this.panel1.Controls.Add(this.ptbTraCuuPhong);
+            this.panel1.Controls.Add(this.ptbQuanLiPhong);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.ptbRegulations);
+            this.panel1.Controls.Add(this.ptbQuyDinh);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.ptbBill);
+            this.panel1.Controls.Add(this.ptbThanhToan);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.ptbBookRoom);
+            this.panel1.Controls.Add(this.ptbDatPhong);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -97,6 +97,51 @@
             this.label9.Text = "G4 HOTEL";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ptbDoanhThu
+            // 
+            this.ptbDoanhThu.BackColor = System.Drawing.Color.Peru;
+            this.ptbDoanhThu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbDoanhThu.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.doanhthu;
+            this.ptbDoanhThu.Location = new System.Drawing.Point(559, 313);
+            this.ptbDoanhThu.Name = "ptbDoanhThu";
+            this.ptbDoanhThu.Size = new System.Drawing.Size(120, 120);
+            this.ptbDoanhThu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbDoanhThu.TabIndex = 15;
+            this.ptbDoanhThu.TabStop = false;
+            this.ptbDoanhThu.Click += new System.EventHandler(this.ptbDoanhThu_Click);
+            this.ptbDoanhThu.MouseLeave += new System.EventHandler(this.ptbDoanhThu_MouseLeave);
+            this.ptbDoanhThu.MouseHover += new System.EventHandler(this.ptbDoanhThu_MouseHover);
+            // 
+            // ptbQuanLiDichVu
+            // 
+            this.ptbQuanLiDichVu.BackColor = System.Drawing.Color.Peru;
+            this.ptbQuanLiDichVu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbQuanLiDichVu.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.qldichvu;
+            this.ptbQuanLiDichVu.Location = new System.Drawing.Point(385, 101);
+            this.ptbQuanLiDichVu.Name = "ptbQuanLiDichVu";
+            this.ptbQuanLiDichVu.Size = new System.Drawing.Size(120, 120);
+            this.ptbQuanLiDichVu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbQuanLiDichVu.TabIndex = 14;
+            this.ptbQuanLiDichVu.TabStop = false;
+            this.ptbQuanLiDichVu.Click += new System.EventHandler(this.ptbQuanLiDichVu_Click);
+            this.ptbQuanLiDichVu.MouseLeave += new System.EventHandler(this.ptbQuanLiDichVu_MouseLeave);
+            this.ptbQuanLiDichVu.MouseHover += new System.EventHandler(this.ptbQuanLiDichVu_MouseHover);
+            // 
+            // ptbQuanLiKhachHang
+            // 
+            this.ptbQuanLiKhachHang.BackColor = System.Drawing.Color.Peru;
+            this.ptbQuanLiKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbQuanLiKhachHang.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.qlkhachhang;
+            this.ptbQuanLiKhachHang.Location = new System.Drawing.Point(214, 101);
+            this.ptbQuanLiKhachHang.Name = "ptbQuanLiKhachHang";
+            this.ptbQuanLiKhachHang.Size = new System.Drawing.Size(120, 120);
+            this.ptbQuanLiKhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbQuanLiKhachHang.TabIndex = 13;
+            this.ptbQuanLiKhachHang.TabStop = false;
+            this.ptbQuanLiKhachHang.Click += new System.EventHandler(this.ptbQuanLiKhachHang_Click);
+            this.ptbQuanLiKhachHang.MouseLeave += new System.EventHandler(this.ptbQuanLiKhachHang_MouseLeave);
+            this.ptbQuanLiKhachHang.MouseHover += new System.EventHandler(this.ptbQuanLiKhachHang_MouseHover);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -107,6 +152,37 @@
             this.label8.Size = new System.Drawing.Size(69, 16);
             this.label8.TabIndex = 12;
             this.label8.Text = "Quy Định";
+            // 
+            // ptbTraCuuPhong
+            // 
+            this.ptbTraCuuPhong.BackColor = System.Drawing.Color.Peru;
+            this.ptbTraCuuPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbTraCuuPhong.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.tracuuphong;
+            this.ptbTraCuuPhong.Location = new System.Drawing.Point(219, 305);
+            this.ptbTraCuuPhong.Name = "ptbTraCuuPhong";
+            this.ptbTraCuuPhong.Size = new System.Drawing.Size(128, 128);
+            this.ptbTraCuuPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbTraCuuPhong.TabIndex = 11;
+            this.ptbTraCuuPhong.TabStop = false;
+            this.ptbTraCuuPhong.Click += new System.EventHandler(this.ptbTraCuuPhong_Click);
+            this.ptbTraCuuPhong.MouseLeave += new System.EventHandler(this.ptbTraCuuPhong_MouseLeave);
+            this.ptbTraCuuPhong.MouseHover += new System.EventHandler(this.ptbTraCuuPhong_MouseHover);
+            // 
+            // ptbQuanLiPhong
+            // 
+            this.ptbQuanLiPhong.BackColor = System.Drawing.Color.White;
+            this.ptbQuanLiPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbQuanLiPhong.ErrorImage = null;
+            this.ptbQuanLiPhong.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.quanliphong;
+            this.ptbQuanLiPhong.Location = new System.Drawing.Point(45, 101);
+            this.ptbQuanLiPhong.Name = "ptbQuanLiPhong";
+            this.ptbQuanLiPhong.Size = new System.Drawing.Size(128, 128);
+            this.ptbQuanLiPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbQuanLiPhong.TabIndex = 10;
+            this.ptbQuanLiPhong.TabStop = false;
+            this.ptbQuanLiPhong.Click += new System.EventHandler(this.ptbQuanLiPhong_Click);
+            this.ptbQuanLiPhong.MouseLeave += new System.EventHandler(this.ptbQuanLiPhong_MouseLeave);
+            this.ptbQuanLiPhong.MouseHover += new System.EventHandler(this.ptbQuanLiPhong_MouseHover);
             // 
             // label7
             // 
@@ -126,9 +202,9 @@
             this.label6.ForeColor = System.Drawing.Color.Maroon;
             this.label6.Location = new System.Drawing.Point(200, 254);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 16);
+            this.label6.Size = new System.Drawing.Size(149, 16);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Quản Lí Khách Hàng";
+            this.label6.Text = "Tra Cứu Khách Hàng";
             // 
             // label5
             // 
@@ -163,6 +239,20 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Quản Lí Phòng";
             // 
+            // ptbQuyDinh
+            // 
+            this.ptbQuyDinh.BackColor = System.Drawing.Color.Peru;
+            this.ptbQuyDinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbQuyDinh.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.quydinh;
+            this.ptbQuyDinh.Location = new System.Drawing.Point(559, 101);
+            this.ptbQuyDinh.Name = "ptbQuyDinh";
+            this.ptbQuyDinh.Size = new System.Drawing.Size(120, 120);
+            this.ptbQuyDinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbQuyDinh.TabIndex = 4;
+            this.ptbQuyDinh.TabStop = false;
+            this.ptbQuyDinh.MouseLeave += new System.EventHandler(this.ptbQuyDinh_MouseLeave);
+            this.ptbQuyDinh.MouseHover += new System.EventHandler(this.ptbQuyDinh_MouseHover);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -173,6 +263,21 @@
             this.label2.Size = new System.Drawing.Size(91, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Thanh Toán";
+            // 
+            // ptbThanhToan
+            // 
+            this.ptbThanhToan.BackColor = System.Drawing.Color.Peru;
+            this.ptbThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbThanhToan.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.thanhtoan;
+            this.ptbThanhToan.Location = new System.Drawing.Point(385, 313);
+            this.ptbThanhToan.Name = "ptbThanhToan";
+            this.ptbThanhToan.Size = new System.Drawing.Size(120, 120);
+            this.ptbThanhToan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbThanhToan.TabIndex = 2;
+            this.ptbThanhToan.TabStop = false;
+            this.ptbThanhToan.Click += new System.EventHandler(this.ptbThanhToan_Click);
+            this.ptbThanhToan.MouseLeave += new System.EventHandler(this.ptbThanhToan_MouseLeave);
+            this.ptbThanhToan.MouseHover += new System.EventHandler(this.ptbThanhToan_MouseHover);
             // 
             // label1
             // 
@@ -185,125 +290,20 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Đặt Phòng";
             // 
-            // ptbRevenue
+            // ptbDatPhong
             // 
-            this.ptbRevenue.BackColor = System.Drawing.Color.Peru;
-            this.ptbRevenue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptbRevenue.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.doanhthu;
-            this.ptbRevenue.Location = new System.Drawing.Point(559, 313);
-            this.ptbRevenue.Name = "ptbRevenue";
-            this.ptbRevenue.Size = new System.Drawing.Size(120, 120);
-            this.ptbRevenue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbRevenue.TabIndex = 15;
-            this.ptbRevenue.TabStop = false;
-            this.ptbRevenue.Click += new System.EventHandler(this.ptbRevenue_Click);
-            this.ptbRevenue.MouseLeave += new System.EventHandler(this.ptbRevenue_MouseLeave);
-            this.ptbRevenue.MouseHover += new System.EventHandler(this.ptbRevenue_MouseHover);
-            // 
-            // ptbServiceManage
-            // 
-            this.ptbServiceManage.BackColor = System.Drawing.Color.Peru;
-            this.ptbServiceManage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptbServiceManage.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.qldichvu;
-            this.ptbServiceManage.Location = new System.Drawing.Point(385, 101);
-            this.ptbServiceManage.Name = "ptbServiceManage";
-            this.ptbServiceManage.Size = new System.Drawing.Size(120, 120);
-            this.ptbServiceManage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbServiceManage.TabIndex = 14;
-            this.ptbServiceManage.TabStop = false;
-            this.ptbServiceManage.Click += new System.EventHandler(this.ptbServiceManage_Click);
-            this.ptbServiceManage.MouseLeave += new System.EventHandler(this.ptbServiceManage_MouseLeave);
-            this.ptbServiceManage.MouseHover += new System.EventHandler(this.ptbServiceManage_MouseHover);
-            // 
-            // ptbCustomerManage
-            // 
-            this.ptbCustomerManage.BackColor = System.Drawing.Color.Peru;
-            this.ptbCustomerManage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptbCustomerManage.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.qlkhachhang;
-            this.ptbCustomerManage.Location = new System.Drawing.Point(214, 101);
-            this.ptbCustomerManage.Name = "ptbCustomerManage";
-            this.ptbCustomerManage.Size = new System.Drawing.Size(120, 120);
-            this.ptbCustomerManage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbCustomerManage.TabIndex = 13;
-            this.ptbCustomerManage.TabStop = false;
-            this.ptbCustomerManage.Click += new System.EventHandler(this.ptbCustomerManage_Click);
-            this.ptbCustomerManage.MouseLeave += new System.EventHandler(this.ptbCustomerManage_MouseLeave);
-            this.ptbCustomerManage.MouseHover += new System.EventHandler(this.ptbCustomerManage_MouseHover);
-            // 
-            // ptbSearchRoom
-            // 
-            this.ptbSearchRoom.BackColor = System.Drawing.Color.Peru;
-            this.ptbSearchRoom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptbSearchRoom.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.tracuuphong;
-            this.ptbSearchRoom.Location = new System.Drawing.Point(219, 305);
-            this.ptbSearchRoom.Name = "ptbSearchRoom";
-            this.ptbSearchRoom.Size = new System.Drawing.Size(128, 128);
-            this.ptbSearchRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbSearchRoom.TabIndex = 11;
-            this.ptbSearchRoom.TabStop = false;
-            this.ptbSearchRoom.Click += new System.EventHandler(this.ptbSearchRoom_Click);
-            this.ptbSearchRoom.MouseLeave += new System.EventHandler(this.ptbSearchRoom_MouseLeave);
-            this.ptbSearchRoom.MouseHover += new System.EventHandler(this.ptbSearchRoom_MouseHover);
-            // 
-            // ptbRoomManage
-            // 
-            this.ptbRoomManage.BackColor = System.Drawing.Color.White;
-            this.ptbRoomManage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptbRoomManage.ErrorImage = null;
-            this.ptbRoomManage.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.quanliphong;
-            this.ptbRoomManage.Location = new System.Drawing.Point(45, 101);
-            this.ptbRoomManage.Name = "ptbRoomManage";
-            this.ptbRoomManage.Size = new System.Drawing.Size(128, 128);
-            this.ptbRoomManage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbRoomManage.TabIndex = 10;
-            this.ptbRoomManage.TabStop = false;
-            this.ptbRoomManage.Click += new System.EventHandler(this.ptbRoomManage_Click);
-            this.ptbRoomManage.MouseLeave += new System.EventHandler(this.ptbRoomManage_MouseLeave);
-            this.ptbRoomManage.MouseHover += new System.EventHandler(this.ptbRoomManage_MouseHover);
-            // 
-            // ptbRegulations
-            // 
-            this.ptbRegulations.BackColor = System.Drawing.Color.Peru;
-            this.ptbRegulations.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptbRegulations.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.quydinh;
-            this.ptbRegulations.Location = new System.Drawing.Point(559, 101);
-            this.ptbRegulations.Name = "ptbRegulations";
-            this.ptbRegulations.Size = new System.Drawing.Size(120, 120);
-            this.ptbRegulations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbRegulations.TabIndex = 4;
-            this.ptbRegulations.TabStop = false;
-            this.ptbRegulations.MouseLeave += new System.EventHandler(this.ptbRegulations_MouseLeave);
-            this.ptbRegulations.MouseHover += new System.EventHandler(this.ptbRegulations_MouseHover);
-            // 
-            // ptbBill
-            // 
-            this.ptbBill.BackColor = System.Drawing.Color.Peru;
-            this.ptbBill.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptbBill.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.thanhtoan;
-            this.ptbBill.Location = new System.Drawing.Point(385, 313);
-            this.ptbBill.Name = "ptbBill";
-            this.ptbBill.Size = new System.Drawing.Size(120, 120);
-            this.ptbBill.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbBill.TabIndex = 2;
-            this.ptbBill.TabStop = false;
-            this.ptbBill.Click += new System.EventHandler(this.ptbBill_Click);
-            this.ptbBill.MouseLeave += new System.EventHandler(this.ptbBill_MouseLeave);
-            this.ptbBill.MouseHover += new System.EventHandler(this.ptbBill_MouseHover);
-            // 
-            // ptbBookRoom
-            // 
-            this.ptbBookRoom.BackColor = System.Drawing.Color.Peru;
-            this.ptbBookRoom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptbBookRoom.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.datphong;
-            this.ptbBookRoom.Location = new System.Drawing.Point(45, 313);
-            this.ptbBookRoom.Name = "ptbBookRoom";
-            this.ptbBookRoom.Size = new System.Drawing.Size(120, 120);
-            this.ptbBookRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbBookRoom.TabIndex = 0;
-            this.ptbBookRoom.TabStop = false;
-            this.ptbBookRoom.Click += new System.EventHandler(this.ptbBookRoom_Click);
-            this.ptbBookRoom.MouseLeave += new System.EventHandler(this.ptbBookRoom_MouseLeave);
-            this.ptbBookRoom.MouseHover += new System.EventHandler(this.ptbBookRoom_MouseHover);
+            this.ptbDatPhong.BackColor = System.Drawing.Color.Peru;
+            this.ptbDatPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbDatPhong.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.datphong;
+            this.ptbDatPhong.Location = new System.Drawing.Point(45, 313);
+            this.ptbDatPhong.Name = "ptbDatPhong";
+            this.ptbDatPhong.Size = new System.Drawing.Size(120, 120);
+            this.ptbDatPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbDatPhong.TabIndex = 0;
+            this.ptbDatPhong.TabStop = false;
+            this.ptbDatPhong.Click += new System.EventHandler(this.ptbDatPhong_Click);
+            this.ptbDatPhong.MouseLeave += new System.EventHandler(this.ptbDatPhong_MouseLeave);
+            this.ptbDatPhong.MouseHover += new System.EventHandler(this.ptbDatPhong_MouseHover);
             // 
             // ManHinhChinh
             // 
@@ -319,36 +319,36 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManHinhChinh_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbRevenue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbServiceManage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCustomerManage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSearchRoom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbRoomManage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbRegulations)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbBill)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbBookRoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDoanhThu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbQuanLiDichVu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbQuanLiKhachHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTraCuuPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbQuanLiPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbQuyDinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbThanhToan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbDatPhong)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox ptbRevenue;
-        private System.Windows.Forms.PictureBox ptbServiceManage;
-        private System.Windows.Forms.PictureBox ptbCustomerManage;
+        private System.Windows.Forms.PictureBox ptbDoanhThu;
+        private System.Windows.Forms.PictureBox ptbQuanLiDichVu;
+        private System.Windows.Forms.PictureBox ptbQuanLiKhachHang;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox ptbSearchRoom;
-        private System.Windows.Forms.PictureBox ptbRoomManage;
+        private System.Windows.Forms.PictureBox ptbTraCuuPhong;
+        private System.Windows.Forms.PictureBox ptbQuanLiPhong;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox ptbRegulations;
+        private System.Windows.Forms.PictureBox ptbQuyDinh;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox ptbBill;
+        private System.Windows.Forms.PictureBox ptbThanhToan;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox ptbBookRoom;
+        private System.Windows.Forms.PictureBox ptbDatPhong;
         private System.Windows.Forms.Label label9;
     }
 }

@@ -28,49 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.cmbStatusRoom = new System.Windows.Forms.ComboBox();
-            this.cmbTypeRoom = new System.Windows.Forms.ComboBox();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.cmbTinhTrang = new System.Windows.Forms.ComboBox();
+            this.cmbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNameRoom = new System.Windows.Forms.TextBox();
+            this.txtTenPhong = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIdRoom = new System.Windows.Forms.TextBox();
-            this.btnSearchRoom = new System.Windows.Forms.Button();
+            this.txtMaPhong = new System.Windows.Forms.TextBox();
+            this.btnTim = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvSearchRoom = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchRoom)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnCancel
+            // btnHuy
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Peru;
-            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(505, 62);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(110, 38);
-            this.btnCancel.TabIndex = 20;
-            this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnHuy.BackColor = System.Drawing.Color.Peru;
+            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.Black;
+            this.btnHuy.Location = new System.Drawing.Point(505, 62);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(110, 38);
+            this.btnHuy.TabIndex = 20;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = false;
             // 
-            // cmbStatusRoom
+            // cmbTinhTrang
             // 
-            this.cmbStatusRoom.FormattingEnabled = true;
-            this.cmbStatusRoom.Location = new System.Drawing.Point(350, 58);
-            this.cmbStatusRoom.Name = "cmbStatusRoom";
-            this.cmbStatusRoom.Size = new System.Drawing.Size(121, 21);
-            this.cmbStatusRoom.TabIndex = 18;
+            this.cmbTinhTrang.FormattingEnabled = true;
+            this.cmbTinhTrang.Location = new System.Drawing.Point(350, 58);
+            this.cmbTinhTrang.Name = "cmbTinhTrang";
+            this.cmbTinhTrang.Size = new System.Drawing.Size(121, 21);
+            this.cmbTinhTrang.TabIndex = 18;
             // 
-            // cmbTypeRoom
+            // cmbLoaiPhong
             // 
-            this.cmbTypeRoom.FormattingEnabled = true;
-            this.cmbTypeRoom.Location = new System.Drawing.Point(350, 25);
-            this.cmbTypeRoom.Name = "cmbTypeRoom";
-            this.cmbTypeRoom.Size = new System.Drawing.Size(121, 21);
-            this.cmbTypeRoom.TabIndex = 16;
+            this.cmbLoaiPhong.FormattingEnabled = true;
+            this.cmbLoaiPhong.Location = new System.Drawing.Point(350, 25);
+            this.cmbLoaiPhong.Name = "cmbLoaiPhong";
+            this.cmbLoaiPhong.Size = new System.Drawing.Size(121, 21);
+            this.cmbLoaiPhong.TabIndex = 16;
             // 
             // label4
             // 
@@ -99,12 +99,12 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Tên Phòng";
             // 
-            // txtNameRoom
+            // txtTenPhong
             // 
-            this.txtNameRoom.Location = new System.Drawing.Point(78, 58);
-            this.txtNameRoom.Name = "txtNameRoom";
-            this.txtNameRoom.Size = new System.Drawing.Size(158, 21);
-            this.txtNameRoom.TabIndex = 14;
+            this.txtTenPhong.Location = new System.Drawing.Point(78, 58);
+            this.txtTenPhong.Name = "txtTenPhong";
+            this.txtTenPhong.Size = new System.Drawing.Size(158, 21);
+            this.txtTenPhong.TabIndex = 14;
             // 
             // label1
             // 
@@ -115,24 +115,24 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Mã Phòng";
             // 
-            // txtIdRoom
+            // txtMaPhong
             // 
-            this.txtIdRoom.Location = new System.Drawing.Point(78, 26);
-            this.txtIdRoom.Name = "txtIdRoom";
-            this.txtIdRoom.Size = new System.Drawing.Size(158, 21);
-            this.txtIdRoom.TabIndex = 12;
+            this.txtMaPhong.Location = new System.Drawing.Point(78, 26);
+            this.txtMaPhong.Name = "txtMaPhong";
+            this.txtMaPhong.Size = new System.Drawing.Size(158, 21);
+            this.txtMaPhong.TabIndex = 12;
             // 
-            // btnSearchRoom
+            // btnTim
             // 
-            this.btnSearchRoom.BackColor = System.Drawing.Color.Peru;
-            this.btnSearchRoom.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchRoom.ForeColor = System.Drawing.Color.Black;
-            this.btnSearchRoom.Location = new System.Drawing.Point(505, 18);
-            this.btnSearchRoom.Name = "btnSearchRoom";
-            this.btnSearchRoom.Size = new System.Drawing.Size(110, 38);
-            this.btnSearchRoom.TabIndex = 19;
-            this.btnSearchRoom.Text = "Tìm";
-            this.btnSearchRoom.UseVisualStyleBackColor = false;
+            this.btnTim.BackColor = System.Drawing.Color.Peru;
+            this.btnTim.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.ForeColor = System.Drawing.Color.Black;
+            this.btnTim.Location = new System.Drawing.Point(505, 18);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(110, 38);
+            this.btnTim.TabIndex = 19;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -159,16 +159,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 412);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.cmbStatusRoom);
-            this.Controls.Add(this.cmbTypeRoom);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.cmbTinhTrang);
+            this.Controls.Add(this.cmbLoaiPhong);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNameRoom);
+            this.Controls.Add(this.txtTenPhong);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtIdRoom);
-            this.Controls.Add(this.btnSearchRoom);
+            this.Controls.Add(this.txtMaPhong);
+            this.Controls.Add(this.btnTim);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fTraCuuPhong";
@@ -183,16 +183,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.ComboBox cmbStatusRoom;
-        private System.Windows.Forms.ComboBox cmbTypeRoom;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.ComboBox cmbTinhTrang;
+        private System.Windows.Forms.ComboBox cmbLoaiPhong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNameRoom;
+        private System.Windows.Forms.TextBox txtTenPhong;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIdRoom;
-        private System.Windows.Forms.Button btnSearchRoom;
+        private System.Windows.Forms.TextBox txtMaPhong;
+        private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvSearchRoom;
     }
