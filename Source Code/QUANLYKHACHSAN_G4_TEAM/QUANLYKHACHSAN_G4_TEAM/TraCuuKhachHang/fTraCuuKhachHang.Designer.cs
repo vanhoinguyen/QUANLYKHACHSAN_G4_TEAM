@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbPhong = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbLoaiKhach = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,9 +42,8 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvQuanLiKhachHang = new System.Windows.Forms.DataGridView();
-            this.cmbLoaiKhach = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbPhong = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtMaKhachHang = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLiKhachHang)).BeginInit();
@@ -50,6 +52,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.txtMaKhachHang);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.cmbPhong);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cmbLoaiKhach);
@@ -66,6 +70,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(678, 204);
             this.panel1.TabIndex = 2;
+            // 
+            // cmbPhong
+            // 
+            this.cmbPhong.FormattingEnabled = true;
+            this.cmbPhong.Location = new System.Drawing.Point(108, 162);
+            this.cmbPhong.Name = "cmbPhong";
+            this.cmbPhong.Size = new System.Drawing.Size(189, 21);
+            this.cmbPhong.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 165);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Phòng";
+            // 
+            // cmbLoaiKhach
+            // 
+            this.cmbLoaiKhach.FormattingEnabled = true;
+            this.cmbLoaiKhach.Location = new System.Drawing.Point(108, 79);
+            this.cmbLoaiKhach.Name = "cmbLoaiKhach";
+            this.cmbLoaiKhach.Size = new System.Drawing.Size(189, 21);
+            this.cmbLoaiKhach.TabIndex = 23;
             // 
             // label1
             // 
@@ -117,7 +146,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 54);
+            this.label6.Location = new System.Drawing.Point(13, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 8;
@@ -162,30 +191,21 @@
             this.dgvQuanLiKhachHang.Size = new System.Drawing.Size(678, 246);
             this.dgvQuanLiKhachHang.TabIndex = 7;
             // 
-            // cmbLoaiKhach
+            // label7
             // 
-            this.cmbLoaiKhach.FormattingEnabled = true;
-            this.cmbLoaiKhach.Location = new System.Drawing.Point(108, 79);
-            this.cmbLoaiKhach.Name = "cmbLoaiKhach";
-            this.cmbLoaiKhach.Size = new System.Drawing.Size(189, 21);
-            this.cmbLoaiKhach.TabIndex = 23;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Mã Khách Hàng";
             // 
-            // label5
+            // txtMaKhachHang
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 165);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Phòng";
-            // 
-            // cmbPhong
-            // 
-            this.cmbPhong.FormattingEnabled = true;
-            this.cmbPhong.Location = new System.Drawing.Point(108, 162);
-            this.cmbPhong.Name = "cmbPhong";
-            this.cmbPhong.Size = new System.Drawing.Size(189, 21);
-            this.cmbPhong.TabIndex = 25;
+            this.txtMaKhachHang.Location = new System.Drawing.Point(108, 10);
+            this.txtMaKhachHang.Name = "txtMaKhachHang";
+            this.txtMaKhachHang.Size = new System.Drawing.Size(189, 20);
+            this.txtMaKhachHang.TabIndex = 27;
             // 
             // fTraCuuKhachHang
             // 
@@ -222,5 +242,7 @@
         private System.Windows.Forms.ComboBox cmbPhong;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbLoaiKhach;
+        private System.Windows.Forms.TextBox txtMaKhachHang;
+        private System.Windows.Forms.Label label7;
     }
 }
