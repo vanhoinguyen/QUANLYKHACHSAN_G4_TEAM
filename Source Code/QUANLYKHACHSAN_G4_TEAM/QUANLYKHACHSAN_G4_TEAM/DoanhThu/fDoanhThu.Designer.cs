@@ -31,12 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbThang = new System.Windows.Forms.ComboBox();
             this.btnXem = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvDoanhThu = new System.Windows.Forms.DataGridView();
-            this.cmbThang = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,37 +67,34 @@
             // 
             this.panel2.Controls.Add(this.cmbThang);
             this.panel2.Controls.Add(this.btnXem);
-            this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(641, 53);
             this.panel2.TabIndex = 0;
             // 
+            // cmbThang
+            // 
+            this.cmbThang.FormattingEnabled = true;
+            this.cmbThang.Location = new System.Drawing.Point(209, 18);
+            this.cmbThang.Name = "cmbThang";
+            this.cmbThang.Size = new System.Drawing.Size(165, 21);
+            this.cmbThang.TabIndex = 4;
+            // 
             // btnXem
             // 
             this.btnXem.BackColor = System.Drawing.Color.Peru;
+            this.btnXem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnXem.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXem.ForeColor = System.Drawing.Color.Black;
-            this.btnXem.Location = new System.Drawing.Point(429, 3);
+            this.btnXem.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.xem;
+            this.btnXem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXem.Location = new System.Drawing.Point(451, 3);
             this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(87, 47);
+            this.btnXem.Size = new System.Drawing.Size(124, 46);
             this.btnXem.TabIndex = 2;
-            this.btnXem.Text = "Xem";
+            this.btnXem.Text = "   Xem";
             this.btnXem.UseVisualStyleBackColor = false;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.BackColor = System.Drawing.Color.Peru;
-            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ForeColor = System.Drawing.Color.Black;
-            this.btnHuy.Location = new System.Drawing.Point(540, 3);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(87, 47);
-            this.btnHuy.TabIndex = 3;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
             // 
@@ -129,14 +125,6 @@
             this.dgvDoanhThu.Name = "dgvDoanhThu";
             this.dgvDoanhThu.Size = new System.Drawing.Size(641, 323);
             this.dgvDoanhThu.TabIndex = 0;
-            // 
-            // cmbThang
-            // 
-            this.cmbThang.FormattingEnabled = true;
-            this.cmbThang.Location = new System.Drawing.Point(209, 18);
-            this.cmbThang.Name = "cmbThang";
-            this.cmbThang.Size = new System.Drawing.Size(133, 21);
-            this.cmbThang.TabIndex = 4;
             // 
             // fDoanhThu
             // 
@@ -170,7 +158,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgvDoanhThu;
         private System.Windows.Forms.Button btnXem;
-        private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.ComboBox cmbThang;
     }
 }

@@ -178,37 +178,46 @@
             // btnEditRoom
             // 
             this.btnEditRoom.BackColor = System.Drawing.Color.Peru;
-            this.btnEditRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditRoom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditRoom.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditRoom.ForeColor = System.Drawing.Color.Black;
-            this.btnEditRoom.Location = new System.Drawing.Point(382, 81);
+            this.btnEditRoom.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.sua;
+            this.btnEditRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditRoom.Location = new System.Drawing.Point(370, 81);
             this.btnEditRoom.Name = "btnEditRoom";
-            this.btnEditRoom.Size = new System.Drawing.Size(106, 34);
+            this.btnEditRoom.Size = new System.Drawing.Size(118, 34);
             this.btnEditRoom.TabIndex = 2;
-            this.btnEditRoom.Text = "Sửa";
+            this.btnEditRoom.Text = " Sửa";
             this.btnEditRoom.UseVisualStyleBackColor = false;
             // 
             // btnAddRoom
             // 
             this.btnAddRoom.BackColor = System.Drawing.Color.Peru;
-            this.btnAddRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRoom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddRoom.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRoom.ForeColor = System.Drawing.Color.Black;
-            this.btnAddRoom.Location = new System.Drawing.Point(382, 36);
+            this.btnAddRoom.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.themmoi;
+            this.btnAddRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddRoom.Location = new System.Drawing.Point(370, 36);
             this.btnAddRoom.Name = "btnAddRoom";
-            this.btnAddRoom.Size = new System.Drawing.Size(106, 36);
+            this.btnAddRoom.Size = new System.Drawing.Size(118, 36);
             this.btnAddRoom.TabIndex = 0;
-            this.btnAddRoom.Text = "Thêm";
+            this.btnAddRoom.Text = "    Thêm";
             this.btnAddRoom.UseVisualStyleBackColor = false;
             // 
             // btnRemoveRoom
             // 
             this.btnRemoveRoom.BackColor = System.Drawing.Color.Peru;
-            this.btnRemoveRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveRoom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRemoveRoom.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveRoom.ForeColor = System.Drawing.Color.Black;
-            this.btnRemoveRoom.Location = new System.Drawing.Point(382, 127);
+            this.btnRemoveRoom.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.xoa;
+            this.btnRemoveRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemoveRoom.Location = new System.Drawing.Point(370, 127);
             this.btnRemoveRoom.Name = "btnRemoveRoom";
-            this.btnRemoveRoom.Size = new System.Drawing.Size(106, 34);
+            this.btnRemoveRoom.Size = new System.Drawing.Size(118, 34);
             this.btnRemoveRoom.TabIndex = 1;
-            this.btnRemoveRoom.Text = "Xóa";
+            this.btnRemoveRoom.Text = "  Xóa";
             this.btnRemoveRoom.UseVisualStyleBackColor = false;
             // 
             // panel2

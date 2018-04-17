@@ -154,38 +154,47 @@
             // btnEditService
             // 
             this.btnEditService.BackColor = System.Drawing.Color.Peru;
-            this.btnEditService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditService.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditService.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditService.ForeColor = System.Drawing.Color.Black;
+            this.btnEditService.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.sua;
+            this.btnEditService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditService.Location = new System.Drawing.Point(308, 69);
             this.btnEditService.Name = "btnEditService";
             this.btnEditService.Size = new System.Drawing.Size(106, 33);
             this.btnEditService.TabIndex = 2;
-            this.btnEditService.Text = "Sửa ";
+            this.btnEditService.Text = "   Sửa ";
             this.btnEditService.UseVisualStyleBackColor = false;
             // 
             // btnAddService
             // 
             this.btnAddService.BackColor = System.Drawing.Color.Peru;
-            this.btnAddService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddService.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddService.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddService.ForeColor = System.Drawing.Color.Black;
+            this.btnAddService.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.themmoi;
+            this.btnAddService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddService.Location = new System.Drawing.Point(308, 30);
             this.btnAddService.Name = "btnAddService";
             this.btnAddService.Size = new System.Drawing.Size(106, 33);
             this.btnAddService.TabIndex = 0;
-            this.btnAddService.Text = "Thêm ";
+            this.btnAddService.Text = "    Thêm ";
             this.btnAddService.UseVisualStyleBackColor = false;
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
             // 
             // btnRemoveService
             // 
             this.btnRemoveService.BackColor = System.Drawing.Color.Peru;
-            this.btnRemoveService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveService.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRemoveService.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveService.ForeColor = System.Drawing.Color.Black;
+            this.btnRemoveService.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.xoa;
+            this.btnRemoveService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemoveService.Location = new System.Drawing.Point(308, 108);
             this.btnRemoveService.Name = "btnRemoveService";
             this.btnRemoveService.Size = new System.Drawing.Size(106, 33);
             this.btnRemoveService.TabIndex = 1;
-            this.btnRemoveService.Text = "Xóa ";
+            this.btnRemoveService.Text = "    Xóa ";
             this.btnRemoveService.UseVisualStyleBackColor = false;
             // 
             // panel2

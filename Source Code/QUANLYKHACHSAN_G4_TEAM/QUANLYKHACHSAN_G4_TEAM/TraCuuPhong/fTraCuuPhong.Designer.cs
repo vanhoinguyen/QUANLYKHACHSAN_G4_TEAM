@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnHuy = new System.Windows.Forms.Button();
             this.cmbTinhTrang = new System.Windows.Forms.ComboBox();
             this.cmbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,18 +42,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchRoom)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.BackColor = System.Drawing.Color.Peru;
-            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ForeColor = System.Drawing.Color.Black;
-            this.btnHuy.Location = new System.Drawing.Point(505, 62);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(110, 38);
-            this.btnHuy.TabIndex = 20;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = false;
             // 
             // cmbTinhTrang
             // 
@@ -125,13 +112,16 @@
             // btnTim
             // 
             this.btnTim.BackColor = System.Drawing.Color.Peru;
-            this.btnTim.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTim.ForeColor = System.Drawing.Color.Black;
-            this.btnTim.Location = new System.Drawing.Point(505, 18);
+            this.btnTim.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.timkiem;
+            this.btnTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTim.Location = new System.Drawing.Point(496, 33);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(110, 38);
+            this.btnTim.Size = new System.Drawing.Size(131, 38);
             this.btnTim.TabIndex = 19;
-            this.btnTim.Text = "Tìm";
+            this.btnTim.Text = "   Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = false;
             // 
             // panel1
@@ -159,7 +149,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 412);
-            this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.cmbTinhTrang);
             this.Controls.Add(this.cmbLoaiPhong);
             this.Controls.Add(this.label4);
@@ -182,8 +171,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.ComboBox cmbTinhTrang;
         private System.Windows.Forms.ComboBox cmbLoaiPhong;
         private System.Windows.Forms.Label label4;

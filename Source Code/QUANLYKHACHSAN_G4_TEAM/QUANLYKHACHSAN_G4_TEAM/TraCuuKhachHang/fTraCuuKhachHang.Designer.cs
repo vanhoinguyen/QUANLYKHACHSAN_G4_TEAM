@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMaKhachHang = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cmbPhong = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbLoaiKhach = new System.Windows.Forms.ComboBox();
@@ -42,8 +44,6 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvQuanLiKhachHang = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtMaKhachHang = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLiKhachHang)).BeginInit();
@@ -70,6 +70,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(678, 204);
             this.panel1.TabIndex = 2;
+            // 
+            // txtMaKhachHang
+            // 
+            this.txtMaKhachHang.Location = new System.Drawing.Point(108, 10);
+            this.txtMaKhachHang.Name = "txtMaKhachHang";
+            this.txtMaKhachHang.Size = new System.Drawing.Size(189, 20);
+            this.txtMaKhachHang.TabIndex = 27;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Mã Khách Hàng";
             // 
             // cmbPhong
             // 
@@ -162,13 +178,16 @@
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.Peru;
-            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btnTimKiem.Location = new System.Drawing.Point(325, 82);
+            this.btnTimKiem.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.timkiem;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(325, 65);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(97, 55);
+            this.btnTimKiem.Size = new System.Drawing.Size(127, 55);
             this.btnTimKiem.TabIndex = 0;
-            this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.Text = "    Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
             // panel2
@@ -190,22 +209,6 @@
             this.dgvQuanLiKhachHang.Name = "dgvQuanLiKhachHang";
             this.dgvQuanLiKhachHang.Size = new System.Drawing.Size(678, 246);
             this.dgvQuanLiKhachHang.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 13);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Mã Khách Hàng";
-            // 
-            // txtMaKhachHang
-            // 
-            this.txtMaKhachHang.Location = new System.Drawing.Point(108, 10);
-            this.txtMaKhachHang.Name = "txtMaKhachHang";
-            this.txtMaKhachHang.Size = new System.Drawing.Size(189, 20);
-            this.txtMaKhachHang.TabIndex = 27;
             // 
             // fTraCuuKhachHang
             // 

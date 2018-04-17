@@ -41,12 +41,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lvPhong = new System.Windows.Forms.ListView();
+            this.pnDanhSachPhong.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnDanhSachPhong
             // 
             this.pnDanhSachPhong.BackColor = System.Drawing.Color.White;
+            this.pnDanhSachPhong.Controls.Add(this.lvPhong);
             this.pnDanhSachPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnDanhSachPhong.Location = new System.Drawing.Point(277, 0);
             this.pnDanhSachPhong.Name = "pnDanhSachPhong";
@@ -75,10 +78,11 @@
             // btnLamMoi
             // 
             this.btnLamMoi.BackColor = System.Drawing.Color.Peru;
-            this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.Location = new System.Drawing.Point(140, 273);
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.Location = new System.Drawing.Point(100, 273);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(92, 42);
+            this.btnLamMoi.Size = new System.Drawing.Size(132, 42);
             this.btnLamMoi.TabIndex = 10;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
@@ -86,10 +90,11 @@
             // btnDatPhong
             // 
             this.btnDatPhong.BackColor = System.Drawing.Color.Peru;
-            this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatPhong.Location = new System.Drawing.Point(140, 225);
+            this.btnDatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDatPhong.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatPhong.Location = new System.Drawing.Point(100, 225);
             this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Size = new System.Drawing.Size(92, 42);
+            this.btnDatPhong.Size = new System.Drawing.Size(132, 42);
             this.btnDatPhong.TabIndex = 9;
             this.btnDatPhong.Text = "Đặt phòng";
             this.btnDatPhong.UseVisualStyleBackColor = false;
@@ -170,6 +175,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN PHÒNG";
             // 
+            // lvPhong
+            // 
+            this.lvPhong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvPhong.Location = new System.Drawing.Point(0, 0);
+            this.lvPhong.Name = "lvPhong";
+            this.lvPhong.Size = new System.Drawing.Size(454, 530);
+            this.lvPhong.TabIndex = 0;
+            this.lvPhong.UseCompatibleStateImageBehavior = false;
+            // 
             // fPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +195,7 @@
             this.Name = "fPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phòng";
+            this.pnDanhSachPhong.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -202,5 +217,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView lvPhong;
     }
 }
