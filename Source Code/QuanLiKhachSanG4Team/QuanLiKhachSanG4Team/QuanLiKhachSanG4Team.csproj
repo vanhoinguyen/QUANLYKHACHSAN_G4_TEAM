@@ -238,15 +238,5 @@
   <ItemGroup>
     <None Include="Icon\capnhat.png" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BUS\BUS.csproj">
-      <Project>{2b87c15c-a2b0-48a5-9304-c5f505c90387}</Project>
-      <Name>BUS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{15cd2e33-6580-40a8-99c6-e1e25a30ba40}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
