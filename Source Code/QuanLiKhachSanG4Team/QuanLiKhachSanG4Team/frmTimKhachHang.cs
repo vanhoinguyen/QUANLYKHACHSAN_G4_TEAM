@@ -12,9 +12,22 @@ namespace QuanLiKhachSanG4Team
 {
     public partial class frmTimKhachHang : Form
     {
+        
+
         public frmTimKhachHang()
         {
             InitializeComponent();
+        }
+
+
+        private void btnThuNho_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -22,5 +22,10 @@ namespace QuanLiKhachSanG4Team
             frmDatPhong dp = new frmDatPhong();
             dp.ShowDialog();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

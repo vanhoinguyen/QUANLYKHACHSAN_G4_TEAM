@@ -129,3 +129,29 @@ C:\Users\Tee Max\source\repos\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\bin\Debu
 C:\Users\Tee Max\source\repos\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\bin\Debug\DTO.pdb
 C:\Users\Tee Max\source\repos\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.exe.config
 C:\Users\Tee Max\source\repos\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.csproj.CopyComplete
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\bin\Debug\QuanLiKhachSanG4Team.exe.config
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\bin\Debug\QuanLiKhachSanG4Team.exe
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\bin\Debug\QuanLiKhachSanG4Team.pdb
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\bin\Debug\BUS.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\bin\Debug\BUS.pdb
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.csprojResolveAssemblyReference.cache
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.frmDatPhong.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.frmDoanhThu.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.frmPhong.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.frmQuanLiDichVu.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.frmQuanLiPhong.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.frmThanhToan.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.frmThayDoiQuyDinh.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.frmTimKhachHang.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.frmTimPhong.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.Main.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.Properties.Resources.resources
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.csproj.GenerateResource.cache
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.exe
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.pdb
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\bin\Debug\DTO.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\bin\Debug\DAO.dll
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\bin\Debug\DTO.pdb
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\bin\Debug\DAO.pdb
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.csproj.CoreCompileInputs.cache
+C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\Source Code\QuanLiKhachSanG4Team\QuanLiKhachSanG4Team\obj\Debug\QuanLiKhachSanG4Team.csproj.CopyComplete

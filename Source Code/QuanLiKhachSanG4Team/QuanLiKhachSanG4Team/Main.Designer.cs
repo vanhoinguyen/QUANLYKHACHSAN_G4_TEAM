@@ -271,7 +271,7 @@
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Image = global::QuanLiKhachSanG4Team.Properties.Resources.exit;
-            this.btnThoat.Location = new System.Drawing.Point(512, 3);
+            this.btnThoat.Location = new System.Drawing.Point(518, 0);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(47, 29);
             this.btnThoat.TabIndex = 10;
@@ -283,7 +283,7 @@
             this.btnThuNho.FlatAppearance.BorderSize = 0;
             this.btnThuNho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThuNho.Image = global::QuanLiKhachSanG4Team.Properties.Resources.minimize;
-            this.btnThuNho.Location = new System.Drawing.Point(459, 3);
+            this.btnThuNho.Location = new System.Drawing.Point(467, 3);
             this.btnThuNho.Name = "btnThuNho";
             this.btnThuNho.Size = new System.Drawing.Size(47, 29);
             this.btnThuNho.TabIndex = 9;

@@ -16,5 +16,15 @@ namespace QuanLiKhachSanG4Team
         {
             InitializeComponent();
         }
+
+        private void frmDoanhThu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
