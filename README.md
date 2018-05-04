@@ -1,6 +1,4 @@
 ﻿# QUANLYKHACHSAN_G4_TEAM
-[![N|Solid](https://i.imgur.com/co6SMdm.png)](https://www.uit.edu.vn/)
-
 
 **Đồ án cuối kì môn nhập môn công nghệ phần mềm**
 
@@ -27,3 +25,6 @@ _**THÔNG TIN SINH VIÊN**_:
 + Võ Quốc Huy - 16520538
 + Huỳnh Trung Tuấn - 16521366
 + Trần Quốc Hoàn - 12520150
+
+
+[![N|Solid](https://i.imgur.com/co6SMdm.png)](https://www.uit.edu.vn/)
