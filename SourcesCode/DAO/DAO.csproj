@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoDAO.cs" />
     <Compile Include="BAOCAO_DOANHTHUTHEOLOAIPHONG.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>
@@ -72,15 +73,11 @@
     <Compile Include="CHI_TIET_PHIEU_THUE.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DichVuDAO.cs" />
     <Compile Include="DICH_VU.cs">
       <DependentUpon>ModelQLKS.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="HoaDonDAO.cs" />
     <Compile Include="HOA_DON.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>
@@ -140,6 +137,7 @@
     <Compile Include="spDoanhThuTheoLoaiPhong_Result.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ThamSoDAO.cs" />
     <Compile Include="THAM_SO.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>

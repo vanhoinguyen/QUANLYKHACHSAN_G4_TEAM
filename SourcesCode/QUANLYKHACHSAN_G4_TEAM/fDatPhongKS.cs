@@ -160,28 +160,28 @@ namespace QUANLYKHACHSAN_G4_TEAM.DatPhong
                     {
                         if (!PhieuThueBUS.ThemCTPhieuThuePhong(ct, kh))
                         {
-                            MessageBox.Show("Khong them duoc chi tiet phieu thue", "loi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            MessageBox.Show("Không thêm được chi tiết phiếu thuê", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Khong them duoc thong tin cua khach hang" + kh.TenKhachHang + "", "loi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        MessageBox.Show("Không thêm được thông tin khách hàng" + kh.TenKhachHang + "", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
                 }
                 if (PhongBUS.CapNhatTinhTrangPhong(p))
                 {
-                    MessageBox.Show("Lap phieu thue phong thanh cong", "thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Lập phiếu thuê thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ((Form)this.TopLevelControl).Close();
 
                 }
                 else
                 {
-                    MessageBox.Show("Khong cap nhat duoc tinh trang phong", "loi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Không cập nhật được tình trạng phòng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }
             else
             {
-                MessageBox.Show("Khong them duoc phieu thue", "loi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Không thêm được phiếu thuê", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 

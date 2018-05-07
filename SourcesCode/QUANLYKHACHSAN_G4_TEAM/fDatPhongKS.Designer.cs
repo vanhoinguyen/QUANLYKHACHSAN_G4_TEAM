@@ -70,13 +70,13 @@
             this.label2.Location = new System.Drawing.Point(52, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(141, 20);
+            this.label1.Location = new System.Drawing.Point(288, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(270, 25);
             this.label1.TabIndex = 0;
@@ -149,10 +149,10 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 64);
+            this.groupBox1.Location = new System.Drawing.Point(42, 64);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(282, 167);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phiếu thuê";
             // 
@@ -163,7 +163,7 @@
             this.label8.Location = new System.Drawing.Point(10, 104);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 13);
-            this.label8.TabIndex = 30;
+            this.label8.TabIndex = 4;
             this.label8.Text = "Số CMND";
             // 
             // cmbLoaiKhach
@@ -173,7 +173,7 @@
             this.cmbLoaiKhach.Location = new System.Drawing.Point(121, 60);
             this.cmbLoaiKhach.Name = "cmbLoaiKhach";
             this.cmbLoaiKhach.Size = new System.Drawing.Size(142, 21);
-            this.cmbLoaiKhach.TabIndex = 29;
+            this.cmbLoaiKhach.TabIndex = 3;
             // 
             // txtCMND
             // 
@@ -181,7 +181,7 @@
             this.txtCMND.Location = new System.Drawing.Point(121, 97);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(142, 20);
-            this.txtCMND.TabIndex = 28;
+            this.txtCMND.TabIndex = 5;
             // 
             // txtDiaChi
             // 
@@ -189,7 +189,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(121, 132);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(142, 20);
-            this.txtDiaChi.TabIndex = 27;
+            this.txtDiaChi.TabIndex = 5;
             // 
             // label7
             // 
@@ -198,7 +198,7 @@
             this.label7.Location = new System.Drawing.Point(10, 139);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 13);
-            this.label7.TabIndex = 26;
+            this.label7.TabIndex = 6;
             this.label7.Text = "Địa Chỉ";
             // 
             // label6
@@ -208,7 +208,7 @@
             this.label6.Location = new System.Drawing.Point(10, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 13);
-            this.label6.TabIndex = 24;
+            this.label6.TabIndex = 2;
             this.label6.Text = "Loại khách hàng";
             // 
             // txtTenKhachHang
@@ -217,7 +217,7 @@
             this.txtTenKhachHang.Location = new System.Drawing.Point(121, 25);
             this.txtTenKhachHang.Name = "txtTenKhachHang";
             this.txtTenKhachHang.Size = new System.Drawing.Size(142, 20);
-            this.txtTenKhachHang.TabIndex = 23;
+            this.txtTenKhachHang.TabIndex = 1;
             // 
             // label11
             // 
@@ -226,7 +226,7 @@
             this.label11.Location = new System.Drawing.Point(10, 32);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(86, 13);
-            this.label11.TabIndex = 22;
+            this.label11.TabIndex = 0;
             this.label11.Text = "Tên khách hàng";
             // 
             // groupBox2
@@ -241,10 +241,10 @@
             this.groupBox2.Controls.Add(this.txtTenKhachHang);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(315, 64);
+            this.groupBox2.Location = new System.Drawing.Point(367, 64);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(282, 167);
-            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách thuê";
             // 
@@ -270,10 +270,10 @@
             this.btnThoat.Appearance.Options.UseFont = true;
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(617, 189);
+            this.btnThoat.Location = new System.Drawing.Point(674, 189);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(95, 31);
-            this.btnThoat.TabIndex = 17;
+            this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Quay lại";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -283,10 +283,10 @@
             this.btnLuu.Appearance.Options.UseFont = true;
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(617, 152);
+            this.btnLuu.Location = new System.Drawing.Point(674, 152);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(95, 31);
-            this.btnLuu.TabIndex = 16;
+            this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -296,10 +296,10 @@
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(617, 115);
+            this.btnXoa.Location = new System.Drawing.Point(674, 115);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(95, 31);
-            this.btnXoa.TabIndex = 15;
+            this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -311,10 +311,10 @@
             this.btnThem.Appearance.Options.UseForeColor = true;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(617, 78);
+            this.btnThem.Location = new System.Drawing.Point(674, 78);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(95, 31);
-            this.btnThem.TabIndex = 9;
+            this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
