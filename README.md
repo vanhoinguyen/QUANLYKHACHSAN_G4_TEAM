@@ -1,4 +1,4 @@
-﻿# QUANLYKHACHSAN_G4_TEAM
+﻿# QUẢN LÍ KHÁCH SẠN
 
 **Đồ án cuối kì môn nhập môn công nghệ phần mềm**
 
@@ -21,8 +21,7 @@ _**CÔNG CỤ VÀ CÔNG NGHỆ SỬ DỤNG**_:
 + DevExpress 17.1
 
 _**MÔI TRƯỜNG CÀI ĐẶT**_:
-+ Hệ điều hành Windows từ 7 trở về sau.
-+ SQL Sever 2017
++ Hệ điều hành Windows từ 7 trở về sau, phiên bản 32/64 bit.
 
 _**THÔNG TIN SINH VIÊN**_:
 + Nguyễn Văn Hội - 16520456 
