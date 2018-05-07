@@ -20,6 +20,10 @@ _**CÔNG CỤ VÀ CÔNG NGHỆ SỬ DỤNG**_:
 + Entity Framework
 + LinQ
 
+_**MÔI TRƯỜNG CÀI ĐẶT**_:
++ Hệ điều hành windown 10.
++ SQL Sever 2017
+
 _**THÔNG TIN SINH VIÊN**_:
 + Nguyễn Văn Hội - 16520456 
 + Võ Quốc Huy - 16520538
