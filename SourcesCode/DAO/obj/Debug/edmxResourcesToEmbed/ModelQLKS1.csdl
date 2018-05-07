@@ -408,21 +408,6 @@
     <FunctionImport Name="spXoaPhong">
       <Parameter Name="MaPhong" Mode="In" Type="Int32" />
     </FunctionImport>
-    <EntitySet Name="DICH_VU" EntityType="QUAN_LY_KHACH_SANModel.DICH_VU" />
-    <FunctionImport Name="spSuaThongDichVu">
-      <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
-      <Parameter Name="TenDichVu" Mode="In" Type="String" />
-      <Parameter Name="DonGia" Mode="In" Type="Decimal" />
-      <Parameter Name="DonViTinh" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="spThemDichVu">
-      <Parameter Name="TenDichVu" Mode="In" Type="String" />
-      <Parameter Name="DonGia" Mode="In" Type="Decimal" />
-      <Parameter Name="DonViTinh" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="spXoaDichVu">
-      <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
-    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
     <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />
@@ -432,13 +417,4 @@
     <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />
     <Property Type="Decimal" Name="DoanhThu" Nullable="true" Precision="19" />
   </ComplexType>
-  <EntityType Name="DICH_VU">
-    <Key>
-      <PropertyRef Name="MaDichVu" />
-    </Key>
-    <Property Name="MaDichVu" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="TenDichVu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-    <Property Name="DonViTinh" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-  </EntityType>
 </Schema>

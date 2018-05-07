@@ -16,7 +16,6 @@ namespace DAO
     {
         public string MaDichVu { get; set; }
         public string TenDichVu { get; set; }
-        public decimal DonGia { get; set; }
-        public string DonViTinh { get; set; }
+        public Nullable<decimal> DonGia { get; set; }
     }
 }

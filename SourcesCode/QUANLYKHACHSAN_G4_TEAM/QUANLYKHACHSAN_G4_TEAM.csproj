@@ -77,34 +77,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DATA_QUAN_LY_KHACH_SANDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DatPhong\fDatPhong.cs">
+    <Compile Include="fDatPhongKS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatPhong\fDatPhong.Designer.cs">
-      <DependentUpon>fDatPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DatPhong\fDatPhongKS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DatPhong\fDatPhongKS.Designer.cs">
+    <Compile Include="fDatPhongKS.Designer.cs">
       <DependentUpon>fDatPhongKS.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatPhong\fPhong.cs">
+    <Compile Include="fOderDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatPhong\fPhong.Designer.cs">
-      <DependentUpon>fPhong.cs</DependentUpon>
+    <Compile Include="fOderDichVu.Designer.cs">
+      <DependentUpon>fOderDichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatPhong\fPhongKS.cs">
+    <Compile Include="fPhongKS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatPhong\fPhongKS.Designer.cs">
+    <Compile Include="fPhongKS.Designer.cs">
       <DependentUpon>fPhongKS.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoanhThu\fQLDoanhThu.cs">
+    <Compile Include="fQLDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DoanhThu\fQLDoanhThu.Designer.cs">
+    <Compile Include="fQLDoanhThu.Designer.cs">
       <DependentUpon>fQLDoanhThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Formtest.cs">
@@ -113,40 +107,40 @@
     <Compile Include="Formtest.Designer.cs">
       <DependentUpon>Formtest.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThayDoiQuyDinh\fThayDoiQuyDinh.cs">
+    <Compile Include="fThayDoiQuyDinhKS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThayDoiQuyDinh\fThayDoiQuyDinh.Designer.cs">
-      <DependentUpon>fThayDoiQuyDinh.cs</DependentUpon>
+    <Compile Include="fThayDoiQuyDinhKS.Designer.cs">
+      <DependentUpon>fThayDoiQuyDinhKS.cs</DependentUpon>
     </Compile>
-    <Compile Include="TraCuuKhachHang\fTimKhachHang.cs">
+    <Compile Include="fTimKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TraCuuKhachHang\fTimKhachHang.Designer.cs">
+    <Compile Include="fTimKhachHang.Designer.cs">
       <DependentUpon>fTimKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiPhong\fQuanLiPhong.cs">
+    <Compile Include="fQuanLiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLiPhong\fQuanLiPhong.Designer.cs">
+    <Compile Include="fQuanLiPhong.Designer.cs">
       <DependentUpon>fQuanLiPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiDichVu\fQuanLiDichVu.cs">
+    <Compile Include="fQuanLiDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLiDichVu\fQuanLiDichVu.Designer.cs">
+    <Compile Include="fQuanLiDichVu.Designer.cs">
       <DependentUpon>fQuanLiDichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThanhToan\fThanhToan.cs">
+    <Compile Include="fThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThanhToan\fThanhToan.Designer.cs">
+    <Compile Include="fThanhToan.Designer.cs">
       <DependentUpon>fThanhToan.cs</DependentUpon>
     </Compile>
-    <Compile Include="TraCuuPhong\fTraCuuPhong.cs">
+    <Compile Include="fTraCuuPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TraCuuPhong\fTraCuuPhong.Designer.cs">
+    <Compile Include="fTraCuuPhong.Designer.cs">
       <DependentUpon>fTraCuuPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="ManHinhChinh.cs">
@@ -157,41 +151,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DatPhong\fDatPhong.resx">
-      <DependentUpon>fDatPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DatPhong\fDatPhongKS.resx">
+    <EmbeddedResource Include="fDatPhongKS.resx">
       <DependentUpon>fDatPhongKS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatPhong\fPhong.resx">
-      <DependentUpon>fPhong.cs</DependentUpon>
+    <EmbeddedResource Include="fOderDichVu.resx">
+      <DependentUpon>fOderDichVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatPhong\fPhongKS.resx">
+    <EmbeddedResource Include="fPhongKS.resx">
       <DependentUpon>fPhongKS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoanhThu\fQLDoanhThu.resx">
+    <EmbeddedResource Include="fQLDoanhThu.resx">
       <DependentUpon>fQLDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formtest.resx">
       <DependentUpon>Formtest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThayDoiQuyDinh\fThayDoiQuyDinh.resx">
-      <DependentUpon>fThayDoiQuyDinh.cs</DependentUpon>
+    <EmbeddedResource Include="fThayDoiQuyDinhKS.resx">
+      <DependentUpon>fThayDoiQuyDinhKS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TraCuuKhachHang\fTimKhachHang.resx">
+    <EmbeddedResource Include="fTimKhachHang.resx">
       <DependentUpon>fTimKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLiPhong\fQuanLiPhong.resx">
+    <EmbeddedResource Include="fQuanLiPhong.resx">
       <DependentUpon>fQuanLiPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="QuanLiDichVu\fQuanLiDichVu.resx">
+    <EmbeddedResource Include="fQuanLiDichVu.resx">
       <DependentUpon>fQuanLiDichVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThanhToan\fThanhToan.resx">
+    <EmbeddedResource Include="fThanhToan.resx">
       <DependentUpon>fThanhToan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TraCuuPhong\fTraCuuPhong.resx">
+    <EmbeddedResource Include="fTraCuuPhong.resx">
       <DependentUpon>fTraCuuPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManHinhChinh.resx">
@@ -359,6 +350,7 @@
   <ItemGroup>
     <None Include="Resources\xoanew.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

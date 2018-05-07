@@ -41,7 +41,6 @@ namespace DAO
         public DbSet<PHIEU_THUE_PHONG> PHIEU_THUE_PHONG { get; set; }
         public DbSet<PHONG> PHONGs { get; set; }
         public DbSet<THAM_SO> THAM_SO { get; set; }
-        public DbSet<DICH_VU> DICH_VU { get; set; }
     
         public virtual int spCapNhatTinhTrangPhong(Nullable<int> maPhong)
         {
@@ -411,53 +410,6 @@ namespace DAO
                 new ObjectParameter("MaPhong", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spXoaPhong", maPhongParameter);
-        }
-    
-        public virtual int spSuaThongDichVu(Nullable<int> maDichVu, string tenDichVu, Nullable<decimal> donGia, string donViTinh)
-        {
-            var maDichVuParameter = maDichVu.HasValue ?
-                new ObjectParameter("MaDichVu", maDichVu) :
-                new ObjectParameter("MaDichVu", typeof(int));
-    
-            var tenDichVuParameter = tenDichVu != null ?
-                new ObjectParameter("TenDichVu", tenDichVu) :
-                new ObjectParameter("TenDichVu", typeof(string));
-    
-            var donGiaParameter = donGia.HasValue ?
-                new ObjectParameter("DonGia", donGia) :
-                new ObjectParameter("DonGia", typeof(decimal));
-    
-            var donViTinhParameter = donViTinh != null ?
-                new ObjectParameter("DonViTinh", donViTinh) :
-                new ObjectParameter("DonViTinh", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spSuaThongDichVu", maDichVuParameter, tenDichVuParameter, donGiaParameter, donViTinhParameter);
-        }
-    
-        public virtual int spThemDichVu(string tenDichVu, Nullable<decimal> donGia, string donViTinh)
-        {
-            var tenDichVuParameter = tenDichVu != null ?
-                new ObjectParameter("TenDichVu", tenDichVu) :
-                new ObjectParameter("TenDichVu", typeof(string));
-    
-            var donGiaParameter = donGia.HasValue ?
-                new ObjectParameter("DonGia", donGia) :
-                new ObjectParameter("DonGia", typeof(decimal));
-    
-            var donViTinhParameter = donViTinh != null ?
-                new ObjectParameter("DonViTinh", donViTinh) :
-                new ObjectParameter("DonViTinh", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemDichVu", tenDichVuParameter, donGiaParameter, donViTinhParameter);
-        }
-    
-        public virtual int spXoaDichVu(Nullable<int> maDichVu)
-        {
-            var maDichVuParameter = maDichVu.HasValue ?
-                new ObjectParameter("MaDichVu", maDichVu) :
-                new ObjectParameter("MaDichVu", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spXoaDichVu", maDichVuParameter);
         }
     }
 }

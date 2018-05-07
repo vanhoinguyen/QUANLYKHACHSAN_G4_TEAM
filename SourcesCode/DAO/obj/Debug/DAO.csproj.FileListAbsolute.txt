@@ -60,18 +60,6 @@ C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Deb
 C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.csproj.GenerateResource.Cache
 C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.exe
 C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.pdb
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\bin\Debug\DAO.exe.config
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\bin\Debug\DAO.exe
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\bin\Debug\DAO.pdb
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\bin\Debug\DTO.exe
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\bin\Debug\EntityFramework.dll
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\bin\Debug\DTO.pdb
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\bin\Debug\DTO.exe.config
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\bin\Debug\EntityFramework.xml
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.Properties.Resources.resources
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.csproj.CopyComplete
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.exe
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.pdb
+C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\bin\Debug\DTO.exe.config
+C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DAO\obj\Debug\DAO.csproj.CopyComplete

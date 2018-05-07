@@ -38,12 +38,4 @@ C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\obj\Deb
 C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\obj\Debug\DTO.csproj.GenerateResource.Cache
 C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\obj\Debug\DTO.exe
 C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\obj\Debug\DTO.pdb
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\bin\Debug\DTO.exe.config
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\bin\Debug\DTO.exe
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\bin\Debug\DTO.pdb
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\obj\Debug\DTO.Properties.Resources.resources
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\obj\Debug\DTO.csproj.GenerateResource.cache
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\obj\Debug\DTO.exe
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\obj\Debug\DTO.pdb
+C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache

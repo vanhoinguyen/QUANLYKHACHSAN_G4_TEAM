@@ -72,9 +72,8 @@
     <Compile Include="CHI_TIET_PHIEU_THUE.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DichVuDAO.cs" />
     <Compile Include="DICH_VU.cs">
-      <DependentUpon>ModelQLKS1.tt</DependentUpon>
+      <DependentUpon>ModelQLKS.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

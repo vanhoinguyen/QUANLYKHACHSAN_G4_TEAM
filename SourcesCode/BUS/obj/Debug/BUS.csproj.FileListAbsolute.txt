@@ -72,21 +72,7 @@ C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Deb
 C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.csproj.GenerateResource.Cache
 C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.exe
 C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.pdb
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\BUS.exe.config
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\BUS.exe
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\BUS.pdb
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\DAO.exe
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\DTO.exe
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\EntityFramework.dll
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\DAO.pdb
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\DAO.exe.config
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\DTO.pdb
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\DTO.exe.config
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\EntityFramework.xml
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.Properties.Resources.resources
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.csproj.CopyComplete
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.exe
-C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.pdb
+C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\DAO.exe.config
+C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\bin\Debug\DTO.exe.config
+C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Tee Max\Desktop\HOTEL Booking\QUANLYKHACHSAN_G4_TEAM - Copy\BUS\obj\Debug\BUS.csproj.CopyComplete

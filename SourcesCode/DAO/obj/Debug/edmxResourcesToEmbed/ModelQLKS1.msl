@@ -170,18 +170,5 @@
     <FunctionImportMapping FunctionImportName="spXoaLoaiPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaLoaiPhong" />
     <FunctionImportMapping FunctionImportName="spXoaPhieuThue" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaPhieuThue" />
     <FunctionImportMapping FunctionImportName="spXoaPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaPhong" />
-    <EntitySetMapping Name="DICH_VU">
-      <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.DICH_VU">
-        <MappingFragment StoreEntitySet="DICH_VU">
-          <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
-          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-          <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
-          <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="spSuaThongDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spSuaThongDichVu" />
-    <FunctionImportMapping FunctionImportName="spThemDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemDichVu" />
-    <FunctionImportMapping FunctionImportName="spXoaDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaDichVu" />
   </EntityContainerMapping>
 </Mapping>

@@ -34,7 +34,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnTroGiup = new System.Windows.Forms.Button();
-            this.btnThongTinCaNhan = new System.Windows.Forms.Button();
             this.btnThongTinKhachSan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -127,7 +126,6 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnDangXuat);
             this.panel2.Controls.Add(this.btnTroGiup);
-            this.panel2.Controls.Add(this.btnThongTinCaNhan);
             this.panel2.Controls.Add(this.btnThongTinKhachSan);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.ForeColor = System.Drawing.Color.Black;
@@ -167,21 +165,6 @@
             this.btnTroGiup.Text = "              Trợ giúp";
             this.btnTroGiup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTroGiup.UseVisualStyleBackColor = true;
-            // 
-            // btnThongTinCaNhan
-            // 
-            this.btnThongTinCaNhan.FlatAppearance.BorderSize = 0;
-            this.btnThongTinCaNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongTinCaNhan.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongTinCaNhan.ForeColor = System.Drawing.Color.Black;
-            this.btnThongTinCaNhan.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.usernew;
-            this.btnThongTinCaNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongTinCaNhan.Location = new System.Drawing.Point(3, 499);
-            this.btnThongTinCaNhan.Name = "btnThongTinCaNhan";
-            this.btnThongTinCaNhan.Size = new System.Drawing.Size(182, 29);
-            this.btnThongTinCaNhan.TabIndex = 15;
-            this.btnThongTinCaNhan.Text = "    Thông tin cá nhân";
-            this.btnThongTinCaNhan.UseVisualStyleBackColor = true;
             // 
             // btnThongTinKhachSan
             // 
@@ -459,7 +442,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Button btnTroGiup;
-        private System.Windows.Forms.Button btnThongTinCaNhan;
         private System.Windows.Forms.Button btnThongTinKhachSan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;

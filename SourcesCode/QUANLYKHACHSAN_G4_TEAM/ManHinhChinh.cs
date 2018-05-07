@@ -32,58 +32,73 @@ namespace QUANLYKHACHSAN_G4_TEAM
         }
 
 
-        #region PictureBox
+ 
       
 
         private void ptbThanhToan_Click(object sender, EventArgs e)
         {
             ThanhToan.fThanhToan thanhtoan = new ThanhToan.fThanhToan();
+            this.Hide();
             thanhtoan.ShowDialog();
+            this.Show();
             
         }
 
         private void ptbQuanLiPhong_Click(object sender, EventArgs e)
         {
             QuanLiPhong.fQuanLiPhong roommanage = new QuanLiPhong.fQuanLiPhong();
+            this.Hide();
             roommanage.ShowDialog();
+            this.Show();
         }
 
         private void ptbTraCuuPhong_Click(object sender, EventArgs e)
         {
             TraCuuPhong.fTraCuuPhong tracuuphong = new TraCuuPhong.fTraCuuPhong();
+            this.Hide();
             tracuuphong.ShowDialog();
+            this.Show();
         }
 
         private void ptbQuanLiKhachHang_Click(object sender, EventArgs e)
         {
             TraCuuKhachHang.fTimKhachHang kh = new TraCuuKhachHang.fTimKhachHang();
+            this.Hide();
             kh.ShowDialog();
+            this.Show();
         }
 
         private void ptbQuanLiDichVu_Click(object sender, EventArgs e)
         {
             QuanLiDichVu.fQuanLiDichVu qldv = new QuanLiDichVu.fQuanLiDichVu();
+            this.Hide();
             qldv.ShowDialog();
+            this.Show();
         }
 
         private void ptbDatPhong_Click(object sender, EventArgs e)
         {
             DatPhong.fPhongKS phong = new DatPhong.fPhongKS();
+            this.Hide();
             phong.ShowDialog();
+            this.Show();
         }
 
         private void ptbDoanhThu_Click(object sender, EventArgs e)
         {
             DoanhThu.fQLDoanhThu doanhthu = new DoanhThu.fQLDoanhThu();
+            this.Hide();
             doanhthu.ShowDialog();
+            this.Show();
         }
 
 
-        #endregion
+   
 
         private void ptbQuyDinh_Click(object sender, EventArgs e)
         {
-            ThayDoiQuyDinh.fThayDoiQuyDinh qd = new ThayDoiQuyDinh.fThayDoiQuyDinh();
+            
+            fThayDoiQuyDinhKS qd = new fThayDoiQuyDinhKS();
             qd.ShowDialog();
         }
 
