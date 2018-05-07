@@ -16,12 +16,12 @@ _**CHỨC NĂNG CHÍNH**_:
 _**CÔNG CỤ VÀ CÔNG NGHỆ SỬ DỤNG**_: 
 + Visual studio 2015.
 + SQL Studio 2017.
-+ Ngôn ngữ C#
-+ Entity Framework
-+ LinQ
++ Ngôn ngữ C# trên nền tảng .NET Framework 4.5.2
++ Entity Framework 5.0.0
++ DevExpress 17.1
 
 _**MÔI TRƯỜNG CÀI ĐẶT**_:
-+ Hệ điều hành windown 10.
++ Hệ điều hành Windows từ 7 trở về sau.
 + SQL Sever 2017
 
 _**THÔNG TIN SINH VIÊN**_:
