@@ -102,6 +102,7 @@
     <EntitySetMapping Name="PHIEU_THUE_PHONG">
       <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.PHIEU_THUE_PHONG">
         <MappingFragment StoreEntitySet="PHIEU_THUE_PHONG">
+          <ScalarProperty Name="NgayTraPhongDK" ColumnName="NgayTraPhongDK" />
           <ScalarProperty Name="MaPhieuThue" ColumnName="MaPhieuThue" />
           <ScalarProperty Name="NgayBatDauThue" ColumnName="NgayBatDauThue" />
           <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
@@ -162,7 +163,6 @@
     <FunctionImportMapping FunctionImportName="spThemKhachHang" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemKhachHang" />
     <FunctionImportMapping FunctionImportName="spThemLoaiPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemLoaiPhong" />
     <FunctionImportMapping FunctionImportName="spThemPhieuThue" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhieuThue" />
-    <FunctionImportMapping FunctionImportName="spThemPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhong" />
     <FunctionImportMapping FunctionImportName="spThietLapTTrangPhongBanDau" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThietLapTTrangPhongBanDau" />
     <FunctionImportMapping FunctionImportName="spTruNgayThangNam" FunctionName="QUAN_LY_KHACH_SANModel.Store.spTruNgayThangNam" />
     <FunctionImportMapping FunctionImportName="spXoaCTPhieuThue" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaCTPhieuThue" />

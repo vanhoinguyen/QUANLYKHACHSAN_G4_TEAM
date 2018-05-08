@@ -12,5 +12,6 @@ namespace DTO
         public DateTime NgayThue { get; set; }
         public int? MaPT { get; set; }
         public int? MaCTPT { get; set; }
+        public DateTime NgayTraPhong { get; set; }
     }
 }

@@ -81,9 +81,9 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.CHITIET_BAOCAOMATDOSUDUNG' d
             <PropertyRef Name="MaKhachHang" />
           </Key>
           <Property Name="MaKhachHang" Type="int" Nullable="false" />
-          <Property Name="TenKhachHang" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenKhachHang" Type="nvarchar" MaxLength="50" />
           <Property Name="CMND" Type="nvarchar" MaxLength="15" Nullable="false" />
-          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
           <Property Name="MaLoaiKhach" Type="nvarchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="LOAI_KHACH_HANG">
@@ -109,6 +109,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.CHITIET_BAOCAOMATDOSUDUNG' d
           <Property Name="MaPhieuThue" Type="int" Nullable="false" />
           <Property Name="NgayBatDauThue" Type="date" Nullable="false" />
           <Property Name="MaPhong" Type="int" Nullable="false" />
+          <Property Name="NgayTraPhongDK" Type="date" />
         </EntityType>
         <EntityType Name="PHONG">
           <Key>
@@ -314,11 +315,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
           <Parameter Name="MaPT" Type="int" Mode="In" />
           <Parameter Name="NgayThue" Type="date" Mode="In" />
           <Parameter Name="MaPhong" Type="int" Mode="In" />
-        </Function>
-        <Function Name="spThemPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="TinhTrang" Type="nvarchar" Mode="In" />
-          <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
-          <Parameter Name="GhiChu" Type="ntext" Mode="In" />
+          <Parameter Name="NgayTraPhong" Type="date" Mode="In" />
         </Function>
         <Function Name="spThietLapTTrangPhongBanDau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MaPhong" Type="int" Mode="In" />
@@ -493,9 +490,9 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             <PropertyRef Name="MaKhachHang" />
           </Key>
           <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
-          <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CMND" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MaLoaiKhach" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="CHI_TIET_PHIEU_THUE" Relationship="Self.F_CHI_TIET_PHIEU_THUE_1" FromRole="KHACH_HANG" ToRole="CHI_TIET_PHIEU_THUE" />
           <NavigationProperty Name="LOAI_KHACH_HANG" Relationship="Self.F_KHACH_HANG" FromRole="KHACH_HANG" ToRole="LOAI_KHACH_HANG" />
@@ -527,6 +524,7 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <Property Name="MaPhong" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CHI_TIET_PHIEU_THUE" Relationship="Self.F_CHI_TIET_PHIEU_THUE_2" FromRole="PHIEU_THUE_PHONG" ToRole="CHI_TIET_PHIEU_THUE" />
           <NavigationProperty Name="PHONG" Relationship="Self.F_PHIEU_THUE_PHONG" FromRole="PHIEU_THUE_PHONG" ToRole="PHONG" />
+          <Property Name="NgayTraPhongDK" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="PHONG">
           <Key>
@@ -795,6 +793,7 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             <Parameter Name="MaPT" Mode="In" Type="Int32" />
             <Parameter Name="NgayThue" Mode="In" Type="DateTime" />
             <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+            <Parameter Name="NgayTraPhong" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="spThemPhong">
             <Parameter Name="TinhTrang" Mode="In" Type="String" />
@@ -938,6 +937,7 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <EntitySetMapping Name="PHIEU_THUE_PHONG">
             <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.PHIEU_THUE_PHONG">
               <MappingFragment StoreEntitySet="PHIEU_THUE_PHONG">
+                <ScalarProperty Name="NgayTraPhongDK" ColumnName="NgayTraPhongDK" />
                 <ScalarProperty Name="MaPhieuThue" ColumnName="MaPhieuThue" />
                 <ScalarProperty Name="NgayBatDauThue" ColumnName="NgayBatDauThue" />
                 <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
@@ -998,7 +998,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <FunctionImportMapping FunctionImportName="spThemKhachHang" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemKhachHang" />
           <FunctionImportMapping FunctionImportName="spThemLoaiPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemLoaiPhong" />
           <FunctionImportMapping FunctionImportName="spThemPhieuThue" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhieuThue" />
-          <FunctionImportMapping FunctionImportName="spThemPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhong" />
           <FunctionImportMapping FunctionImportName="spThietLapTTrangPhongBanDau" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThietLapTTrangPhongBanDau" />
           <FunctionImportMapping FunctionImportName="spTruNgayThangNam" FunctionName="QUAN_LY_KHACH_SANModel.Store.spTruNgayThangNam" />
           <FunctionImportMapping FunctionImportName="spXoaCTPhieuThue" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaCTPhieuThue" />

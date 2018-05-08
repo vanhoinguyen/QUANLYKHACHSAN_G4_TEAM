@@ -315,7 +315,7 @@ namespace DAO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemLoaiPhong", maLPParameter, tenLPParameter, donGiaParameter);
         }
     
-        public virtual int spThemPhieuThue(Nullable<int> maPT, Nullable<System.DateTime> ngayThue, Nullable<int> maPhong)
+        public virtual int spThemPhieuThue(Nullable<int> maPT, Nullable<System.DateTime> ngayThue, Nullable<int> maPhong, Nullable<System.DateTime> ngayTraPhong)
         {
             var maPTParameter = maPT.HasValue ?
                 new ObjectParameter("MaPT", maPT) :
@@ -329,7 +329,11 @@ namespace DAO
                 new ObjectParameter("MaPhong", maPhong) :
                 new ObjectParameter("MaPhong", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemPhieuThue", maPTParameter, ngayThueParameter, maPhongParameter);
+            var ngayTraPhongParameter = ngayTraPhong.HasValue ?
+                new ObjectParameter("NgayTraPhong", ngayTraPhong) :
+                new ObjectParameter("NgayTraPhong", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemPhieuThue", maPTParameter, ngayThueParameter, maPhongParameter, ngayTraPhongParameter);
         }
     
         public virtual int spThemPhong(string tinhTrang, string maLoaiPhong, string ghiChu)

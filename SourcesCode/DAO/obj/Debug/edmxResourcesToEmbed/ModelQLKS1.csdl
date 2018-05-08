@@ -79,9 +79,9 @@
       <PropertyRef Name="MaKhachHang" />
     </Key>
     <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
-    <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CMND" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MaLoaiKhach" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="CHI_TIET_PHIEU_THUE" Relationship="Self.F_CHI_TIET_PHIEU_THUE_1" FromRole="KHACH_HANG" ToRole="CHI_TIET_PHIEU_THUE" />
     <NavigationProperty Name="LOAI_KHACH_HANG" Relationship="Self.F_KHACH_HANG" FromRole="KHACH_HANG" ToRole="LOAI_KHACH_HANG" />
@@ -113,6 +113,7 @@
     <Property Name="MaPhong" Type="Int32" Nullable="false" />
     <NavigationProperty Name="CHI_TIET_PHIEU_THUE" Relationship="Self.F_CHI_TIET_PHIEU_THUE_2" FromRole="PHIEU_THUE_PHONG" ToRole="CHI_TIET_PHIEU_THUE" />
     <NavigationProperty Name="PHONG" Relationship="Self.F_PHIEU_THUE_PHONG" FromRole="PHIEU_THUE_PHONG" ToRole="PHONG" />
+    <Property Name="NgayTraPhongDK" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="PHONG">
     <Key>
@@ -381,6 +382,7 @@
       <Parameter Name="MaPT" Mode="In" Type="Int32" />
       <Parameter Name="NgayThue" Mode="In" Type="DateTime" />
       <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+      <Parameter Name="NgayTraPhong" Mode="In" Type="DateTime" />
     </FunctionImport>
     <FunctionImport Name="spThemPhong">
       <Parameter Name="TinhTrang" Mode="In" Type="String" />

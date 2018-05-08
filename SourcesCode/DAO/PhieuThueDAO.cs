@@ -64,9 +64,10 @@ namespace DAO
             SqlParameter mapt = new SqlParameter("@MaPT", ct.MaPT);
             SqlParameter ngaythue = new SqlParameter("@NgayThue", p.NgayThue);
             SqlParameter maphong = new SqlParameter("@MaPhong", p.MaPhong);
+            SqlParameter ngaytraphong = new SqlParameter("@NgayTraPhong", p.NgayTraPhong);
             try
             {
-                context.Database.ExecuteSqlCommand("spThemPhieuThue @MaPT , @NgayThue , @MaPhong", mapt, ngaythue, maphong);
+                context.Database.ExecuteSqlCommand("spThemPhieuThue @MaPT , @NgayThue , @MaPhong , @NgayTraPhong", mapt, ngaythue, maphong, ngaytraphong);
                 return true;
             }
             catch

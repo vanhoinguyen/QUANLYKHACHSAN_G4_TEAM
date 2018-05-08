@@ -22,6 +22,7 @@ namespace DAO
         public int MaPhieuThue { get; set; }
         public System.DateTime NgayBatDauThue { get; set; }
         public int MaPhong { get; set; }
+        public Nullable<System.DateTime> NgayTraPhongDK { get; set; }
     
         public virtual ICollection<CHI_TIET_PHIEU_THUE> CHI_TIET_PHIEU_THUE { get; set; }
         public virtual PHONG PHONG { get; set; }

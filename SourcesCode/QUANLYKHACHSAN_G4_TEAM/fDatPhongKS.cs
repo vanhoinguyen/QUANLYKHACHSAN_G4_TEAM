@@ -62,8 +62,8 @@ namespace QUANLYKHACHSAN_G4_TEAM.DatPhong
             txtLoaiPhong.Text = roomtype;
 
             cmbLoaiKhach.DataSource = KhachHangBUS.LayDSLoaiKhach();
-            cmbLoaiKhach.ValueMember = "MaLoaiKhach";
-            cmbLoaiKhach.DisplayMember = "TenLoaiKhach";
+            cmbLoaiKhach.ValueMember = "LoaiKhach";
+            //cmbLoaiKhach.DisplayMember = "TenLoaiKhach";
 
             #region
             List<ThamSoDTO> lstMaxCus = PhongBUS.SoLuongKhachToiDa();
@@ -103,6 +103,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.DatPhong
             PhieuThuePhongDTO p = new PhieuThuePhongDTO();
             p.MaPhong = int.Parse(txtMaPhong.Text);
             p.NgayThue = Convert.ToDateTime(dtpNgayThue.Text);
+            p.NgayTraPhong = Convert.ToDateTime(dtpNgayTraPhong.Text);
             return p;
         }
         private KhachHangDTO LayThongTinKhachHang(int i)
