@@ -43,6 +43,11 @@ namespace BUS
             return PhongDAO.LoaiPhong();
         }
 
+        public static List<PhieuThuePhongDTO> DanhSachPhongDangDuocThue()
+        {
+            return PhongDAO.DanhSachPhongDangDuocThue();
+        }
+
         public static List<PhongDTO> DanhSachPhong()
         {
             return PhongDAO.DanhSachPhong();

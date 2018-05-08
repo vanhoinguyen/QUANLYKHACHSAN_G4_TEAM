@@ -31,6 +31,18 @@ namespace DAO
             return query.ToList();
         }
 
+        public static List<PhieuThuePhongDTO> LayPhongTuongUng(int makh)
+        {
+            var query = (from pt in context.PHIEU_THUE_PHONG
+                         join ct in context.CHI_TIET_PHIEU_THUE on pt.MaPhieuThue equals ct.MaPhieuThue
+                         where ct.MaKhachHang == makh
+                         select new PhieuThuePhongDTO
+                         {
+                             MaPhong = pt.MaPhong,
+                         });
+            return query.ToList();
+        }
+
         public static bool ThemCTPhieuThuePhong(ChiTietPhieuThueDTO ct, KhachHangDTO kh)
         {
             SqlParameter mactpt = new SqlParameter("@MaCTPT", ct.MaCTPT);

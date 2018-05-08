@@ -41,6 +41,16 @@ namespace DAO
             return num;
         }
 
+        public static List<PhieuThuePhongDTO> DanhSachPhongDangDuocThue()
+        {
+            var query = (from p in context.PHIEU_THUE_PHONG
+                         select new PhieuThuePhongDTO
+                         {
+                             MaPhong = p.MaPhong,
+                         });
+            return query.ToList();
+        }
+
         public static bool SuaThongTinPhong(PhongDTO infor)
         {
             SqlParameter maphong = new SqlParameter("@MaPhong", infor.MaPhong);

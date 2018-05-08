@@ -94,3 +94,21 @@ C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Deb
 C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\DTO.exe.config
 C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\EntityFramework.xml
 C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\BUS.exe.config
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\BUS.exe
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\BUS.pdb
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\DAO.exe
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\DTO.exe
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\EntityFramework.dll
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\DAO.pdb
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\DAO.exe.config
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\DTO.pdb
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\DTO.exe.config
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\bin\Debug\EntityFramework.xml
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\obj\Debug\BUS.Properties.Resources.resources
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\obj\Debug\BUS.exe
+C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\BUS\obj\Debug\BUS.pdb

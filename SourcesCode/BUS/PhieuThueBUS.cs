@@ -34,5 +34,10 @@ namespace BUS
         {
             return PhieuThueDAO.ThemCTPhieuThuePhong(ct, kh);
         }
+
+        public static List<PhieuThuePhongDTO> LayPhongTuongUng(int makh)
+        {
+            return PhieuThueDAO.LayPhongTuongUng(makh);
+        }
     }
 }
