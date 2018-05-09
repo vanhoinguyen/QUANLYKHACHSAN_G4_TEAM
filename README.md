@@ -15,7 +15,7 @@ _**CHỨC NĂNG CHÍNH**_:
 
 _**CÔNG CỤ VÀ CÔNG NGHỆ SỬ DỤNG**_: 
 + Visual studio 2015.
-+ SQL Sever 2017
++ SQL Sever Windows NT
 + Microsoft SQL Sever Management Studio 2017
 + Ngôn ngữ C# trên nền tảng .NET Framework 4.5.2
 + Entity Framework 5.0.0
