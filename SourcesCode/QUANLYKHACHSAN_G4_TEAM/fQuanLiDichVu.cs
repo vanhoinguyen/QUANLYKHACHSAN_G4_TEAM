@@ -53,7 +53,6 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
                 btnThem.Text = "Ngừng";
                 btnSua.Enabled = false;
                 btnXoa.Enabled = false;
-                btnThoat.Enabled = false;
                 btnThem.Enabled = true;
                 //ThietLapTextbox(true);
                 gridControl1.Enabled = false;
@@ -86,7 +85,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
            
                 if (btnSua.Text == "Sửa")
                 {
-                    LamSachDL();
+                    
                     btnSua.Text = "Ngừng";
                     btnThem.Enabled = false;
                     btnXoa.Enabled = false;
@@ -97,7 +96,9 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
                 {
                     btnSua.Text = "Sửa";
                     fQuanLiDichVu_Load(sender, e);
-                    //KhoiTaoLai();
+                //KhoiTaoLai();
+                    btnThem.Enabled = true;
+                    btnXoa.Enabled = true;
                     gridControl1.Enabled = true;
                 }
             
@@ -106,10 +107,10 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
         {
             DichVuDTO infor = new DichVuDTO();
 
-
+            infor.MaDichVu =Convert.ToInt32( (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["MaDichVu"]).ToString()));
             infor.TenDichVu = txtNameService.Text;
             infor.DonViTinh = txtUnitService.Text;
-            infor.DonGia = Convert.ToInt16( txtPriceService.Text);
+            infor.DonGia = Convert.ToInt32( txtPriceService.Text);
             return infor;
         }
         private void btnLuu_Click(object sender, EventArgs e)
@@ -121,7 +122,8 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
                 {
                     MessageBox.Show("Bạn đã thêm dịch vụ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     fQuanLiDichVu_Load(sender, e);
-                    
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
                     gridControl1.Enabled = true;
                     btnThem.Text = "Thêm";
                 }
@@ -134,7 +136,8 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
                 {
                     MessageBox.Show("Bạn đã sửa thông tin dịch vụ " + txtNameService.Text + " thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     fQuanLiDichVu_Load(sender, e);
-                  
+                    btnThem.Enabled = true;
+                    btnXoa.Enabled = true;
                     gridControl1.Enabled = true;
                     btnSua.Text = "Sửa";
                 }
@@ -156,7 +159,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
             {
                 txtNameService.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["TenDichVu"]).ToString();
                 txtUnitService.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["DonViTinh"]).ToString();
-                txtUnitService.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["DonGia"]).ToString();
+                txtPriceService.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["DonGia"]).ToString();
             } 
         }
         private void btnThoat_Click(object sender, EventArgs e)
