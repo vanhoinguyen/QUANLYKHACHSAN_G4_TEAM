@@ -143,6 +143,8 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiPhong
                     gcDSPhong.Enabled = true;
                     btnThem.Text = "Thêm phòng";
                 }
+                else
+                    MessageBox.Show("Lỗi");
             }
             else if (btnSua.Text == "Ngừng")
             {
@@ -154,6 +156,8 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiPhong
                     gcDSPhong.Enabled = true;
                     btnSua.Text = "Cập nhật";
                 }
+                else
+                    MessageBox.Show("Lỗi");
             }
         }
 

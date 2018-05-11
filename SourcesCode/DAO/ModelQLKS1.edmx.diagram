@@ -28,6 +28,7 @@
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_PHONG" ManuallyRouted="false" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_PHIEU_THUE_PHONG" ManuallyRouted="false" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.DICH_VU" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.NGUOI_DUNG" Width="1.5" PointX="10.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -100,6 +100,14 @@
     <Property Name="TenLoaiPhong" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="DonGia" Type="money" />
   </EntityType>
+  <EntityType Name="NGUOI_DUNG">
+    <Key>
+      <PropertyRef Name="MaTaiKhoan" />
+    </Key>
+    <Property Name="MaTaiKhoan" Type="int" Nullable="false" />
+    <Property Name="TenTaiKhoan" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="MatKhau" Type="char" MaxLength="20" Nullable="false" />
+  </EntityType>
   <EntityType Name="PHIEU_THUE_PHONG">
     <Key>
       <PropertyRef Name="MaPhieuThue" />
@@ -107,6 +115,7 @@
     <Property Name="MaPhieuThue" Type="int" Nullable="false" />
     <Property Name="NgayBatDauThue" Type="date" Nullable="false" />
     <Property Name="MaPhong" Type="int" Nullable="false" />
+    <Property Name="NgayTraPhongDK" Type="date" />
   </EntityType>
   <EntityType Name="PHONG">
     <Key>
@@ -336,6 +345,11 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <Parameter Name="NgayThue" Type="date" Mode="In" />
     <Parameter Name="MaPhong" Type="int" Mode="In" />
   </Function>
+  <Function Name="spThemPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TinhTrang" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
+    <Parameter Name="GhiChu" Type="ntext" Mode="In" />
+  </Function>
   <Function Name="spThietLapTTrangPhongBanDau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaPhong" Type="int" Mode="In" />
   </Function>
@@ -372,6 +386,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <EntitySet Name="KHACH_HANG" EntityType="Self.KHACH_HANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LOAI_KHACH_HANG" EntityType="Self.LOAI_KHACH_HANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LOAI_PHONG" EntityType="Self.LOAI_PHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NGUOI_DUNG" EntityType="Self.NGUOI_DUNG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHIEU_THUE_PHONG" EntityType="Self.PHIEU_THUE_PHONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="THAM_SO" EntityType="Self.THAM_SO" store:Type="Tables" store:Schema="dbo">

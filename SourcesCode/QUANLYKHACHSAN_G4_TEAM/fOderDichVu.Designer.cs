@@ -35,7 +35,7 @@
             this.btnOder = new DevExpress.XtraEditors.SimpleButton();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbMaPhong = new System.Windows.Forms.ComboBox();
-            this.txtTenDichVu = new System.Windows.Forms.TextBox();
+            this.cmbTenDichVu = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label2
@@ -68,7 +68,7 @@
             this.btnOder.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.btnOder.Appearance.Options.UseFont = true;
             this.btnOder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
+            this.btnOder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOder.ImageOptions.Image")));
             this.btnOder.Location = new System.Drawing.Point(182, 128);
             this.btnOder.Name = "btnOder";
             this.btnOder.Size = new System.Drawing.Size(108, 34);
@@ -92,19 +92,20 @@
             this.cmbMaPhong.Size = new System.Drawing.Size(185, 21);
             this.cmbMaPhong.TabIndex = 22;
             // 
-            // txtTenDichVu
+            // cmbTenDichVu
             // 
-            this.txtTenDichVu.Location = new System.Drawing.Point(105, 62);
-            this.txtTenDichVu.Name = "txtTenDichVu";
-            this.txtTenDichVu.Size = new System.Drawing.Size(185, 21);
-            this.txtTenDichVu.TabIndex = 23;
+            this.cmbTenDichVu.FormattingEnabled = true;
+            this.cmbTenDichVu.Location = new System.Drawing.Point(105, 56);
+            this.cmbTenDichVu.Name = "cmbTenDichVu";
+            this.cmbTenDichVu.Size = new System.Drawing.Size(185, 21);
+            this.cmbTenDichVu.TabIndex = 23;
             // 
             // fOderDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 174);
-            this.Controls.Add(this.txtTenDichVu);
+            this.Controls.Add(this.cmbTenDichVu);
             this.Controls.Add(this.cmbMaPhong);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnOder);
@@ -115,6 +116,7 @@
             this.Name = "fOderDichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Oder dịch vụ";
+            this.Load += new System.EventHandler(this.fOderDichVu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,6 +130,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbMaPhong;
-        private System.Windows.Forms.TextBox txtTenDichVu;
+        private System.Windows.Forms.ComboBox cmbTenDichVu;
     }
 }
