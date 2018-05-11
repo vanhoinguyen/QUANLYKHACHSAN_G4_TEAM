@@ -75,7 +75,7 @@
     </Compile>
     <Compile Include="DichVuDAO.cs" />
     <Compile Include="DICH_VU.cs">
-      <DependentUpon>ModelQLKS.tt</DependentUpon>
+      <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>
     <Compile Include="HoaDonDAO.cs" />
     <Compile Include="HOA_DON.cs">

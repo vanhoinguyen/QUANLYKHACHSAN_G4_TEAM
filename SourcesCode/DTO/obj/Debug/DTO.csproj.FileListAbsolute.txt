@@ -57,3 +57,12 @@ C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\
 C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.exe
 C:\Users\Acer\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.pdb
+C:\Users\User\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\bin\Debug\DTO.exe.config
+C:\Users\User\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\bin\Debug\DTO.exe
+C:\Users\User\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\bin\Debug\DTO.pdb
+C:\Users\User\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.Properties.Resources.resources
+C:\Users\User\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.csproj.GenerateResource.cache
+C:\Users\User\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.exe
+C:\Users\User\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.pdb

@@ -14,8 +14,9 @@ namespace DAO
     
     public partial class DICH_VU
     {
-        public string MaDichVu { get; set; }
+        public int MaDichVu { get; set; }
         public string TenDichVu { get; set; }
-        public Nullable<decimal> DonGia { get; set; }
+        public string DonViTinh { get; set; }
+        public int DonGia { get; set; }
     }
 }
