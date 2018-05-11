@@ -28,21 +28,21 @@ namespace DAO
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<LOAI_PHONG> LOAI_PHONG { get; set; }
         public DbSet<BAOCAO_DOANHTHUTHEOLOAIPHONG> BAOCAO_DOANHTHUTHEOLOAIPHONG { get; set; }
         public DbSet<BAOCAO_MATDOSUDUNGPHONG> BAOCAO_MATDOSUDUNGPHONG { get; set; }
         public DbSet<CHI_TIET_HOA_DON> CHI_TIET_HOA_DON { get; set; }
         public DbSet<CHI_TIET_PHIEU_THUE> CHI_TIET_PHIEU_THUE { get; set; }
         public DbSet<CHITIET_BAOCAODOANHTHU> CHITIET_BAOCAODOANHTHU { get; set; }
         public DbSet<CHITIET_BAOCAOMATDOSUDUNG> CHITIET_BAOCAOMATDOSUDUNG { get; set; }
+        public DbSet<DICH_VU> DICH_VU { get; set; }
         public DbSet<HOA_DON> HOA_DON { get; set; }
         public DbSet<KHACH_HANG> KHACH_HANG { get; set; }
         public DbSet<LOAI_KHACH_HANG> LOAI_KHACH_HANG { get; set; }
-        public DbSet<LOAI_PHONG> LOAI_PHONG { get; set; }
+        public DbSet<NGUOI_DUNG> NGUOI_DUNG { get; set; }
         public DbSet<PHIEU_THUE_PHONG> PHIEU_THUE_PHONG { get; set; }
         public DbSet<PHONG> PHONGs { get; set; }
         public DbSet<THAM_SO> THAM_SO { get; set; }
-        public DbSet<DICH_VU> DICH_VU { get; set; }
-        public DbSet<NGUOI_DUNG> NGUOI_DUNG { get; set; }
     
         public virtual int spCapNhatTinhTrangPhong(Nullable<int> maPhong)
         {
@@ -317,7 +317,7 @@ namespace DAO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemLoaiPhong", maLPParameter, tenLPParameter, donGiaParameter);
         }
     
-        public virtual int spThemPhieuThue(Nullable<int> maPT, Nullable<System.DateTime> ngayThue, Nullable<int> maPhong)
+        public virtual int spThemPhieuThue(Nullable<int> maPT, Nullable<System.DateTime> ngayThue, Nullable<int> maPhong, Nullable<System.DateTime> ngayTraPhong)
         {
             var maPTParameter = maPT.HasValue ?
                 new ObjectParameter("MaPT", maPT) :
@@ -331,7 +331,11 @@ namespace DAO
                 new ObjectParameter("MaPhong", maPhong) :
                 new ObjectParameter("MaPhong", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemPhieuThue", maPTParameter, ngayThueParameter, maPhongParameter);
+            var ngayTraPhongParameter = ngayTraPhong.HasValue ?
+                new ObjectParameter("NgayTraPhong", ngayTraPhong) :
+                new ObjectParameter("NgayTraPhong", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemPhieuThue", maPTParameter, ngayThueParameter, maPhongParameter, ngayTraPhongParameter);
         }
     
         public virtual int spThemPhong(string tinhTrang, string maLoaiPhong, string ghiChu)

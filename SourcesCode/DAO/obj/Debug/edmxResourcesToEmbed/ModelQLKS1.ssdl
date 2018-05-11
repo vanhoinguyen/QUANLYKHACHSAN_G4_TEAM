@@ -57,6 +57,11 @@
     <Property Name="SoNgayThue" Type="int" />
     <Property Name="TiLe" Type="char" MaxLength="10" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'QUAN_LY_KHACH_SAN.dbo.DANH_MUC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="DANH_MUC">
+          <Property Name="DMLoaiPhong" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
   <EntityType Name="DICH_VU">
     <Key>
       <PropertyRef Name="MaDichVu" />
@@ -344,6 +349,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <Parameter Name="MaPT" Type="int" Mode="In" />
     <Parameter Name="NgayThue" Type="date" Mode="In" />
     <Parameter Name="MaPhong" Type="int" Mode="In" />
+    <Parameter Name="NgayTraPhong" Type="date" Mode="In" />
   </Function>
   <Function Name="spThemPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="TinhTrang" Type="nvarchar" Mode="In" />
