@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.CHI_TIET_PHIEU_THUE" Width="1.5" PointX="7.875" PointY="7.125" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.CHITIET_BAOCAODOANHTHU" Width="1.5" PointX="13" PointY="4.875" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.CHITIET_BAOCAOMATDOSUDUNG" Width="1.5" PointX="10" PointY="0.875" />
-        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.DICH_VU" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.HOA_DON" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.KHACH_HANG" Width="1.5" PointX="5.625" PointY="11" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.LOAI_KHACH_HANG" Width="1.5" PointX="3.375" PointY="11.25" />
@@ -29,6 +28,7 @@
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_KHACH_HANG" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_PHONG" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_PHIEU_THUE_PHONG" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.DICH_VU" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

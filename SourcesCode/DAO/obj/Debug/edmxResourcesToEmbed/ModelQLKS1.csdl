@@ -127,12 +127,12 @@
       <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
       <Parameter Name="TenDichVu" Mode="In" Type="String" />
       <Parameter Name="DonViTinh" Mode="In" Type="String" />
-      <Parameter Name="DonGia" Mode="In" Type="Int32" />
+      <Parameter Name="DonGia" Mode="In" Type="Decimal" />
     </FunctionImport>
     <FunctionImport Name="spThemDichVu">
       <Parameter Name="TenDichVu" Mode="In" Type="String" />
       <Parameter Name="DonViTinh" Mode="In" Type="String" />
-      <Parameter Name="DonGia" Mode="In" Type="Int32" />
+      <Parameter Name="DonGia" Mode="In" Type="Decimal" />
     </FunctionImport>
     <FunctionImport Name="spXoaDichVu">
       <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
@@ -148,7 +148,6 @@
     <EntitySet Name="CHI_TIET_PHIEU_THUE" EntityType="QUAN_LY_KHACH_SANModel.CHI_TIET_PHIEU_THUE" />
     <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="QUAN_LY_KHACH_SANModel.CHITIET_BAOCAODOANHTHU" />
     <EntitySet Name="CHITIET_BAOCAOMATDOSUDUNG" EntityType="QUAN_LY_KHACH_SANModel.CHITIET_BAOCAOMATDOSUDUNG" />
-    <EntitySet Name="DICH_VU" EntityType="QUAN_LY_KHACH_SANModel.DICH_VU" />
     <EntitySet Name="HOA_DON" EntityType="QUAN_LY_KHACH_SANModel.HOA_DON" />
     <EntitySet Name="KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.KHACH_HANG" />
     <EntitySet Name="LOAI_KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.LOAI_KHACH_HANG" />
@@ -192,6 +191,7 @@
       <End Role="PHONG" EntitySet="PHONGs" />
       <End Role="PHIEU_THUE_PHONG" EntitySet="PHIEU_THUE_PHONG" />
     </AssociationSet>
+    <EntitySet Name="DICH_VU" EntityType="QUAN_LY_KHACH_SANModel.DICH_VU" />
   </EntityContainer>
   <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
     <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />
@@ -265,15 +265,6 @@
     <Property Name="SoNgayThue" Type="Int32" />
     <Property Name="TiLe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <NavigationProperty Name="BAOCAO_MATDOSUDUNGPHONG" Relationship="QUAN_LY_KHACH_SANModel.F_CHITIET_BAOCAOMATDOSUDUNG" FromRole="CHITIET_BAOCAOMATDOSUDUNG" ToRole="BAOCAO_MATDOSUDUNGPHONG" />
-  </EntityType>
-  <EntityType Name="DICH_VU">
-    <Key>
-      <PropertyRef Name="MaDichVu" />
-    </Key>
-    <Property Name="MaDichVu" Type="Int32" Nullable="false" />
-    <Property Name="TenDichVu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="DonViTinh" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="DonGia" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="HOA_DON">
     <Key>
@@ -457,4 +448,13 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="DICH_VU">
+    <Key>
+      <PropertyRef Name="MaDichVu" />
+    </Key>
+    <Property Name="MaDichVu" Type="Int32" Nullable="false" />
+    <Property Name="TenDichVu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DonViTinh" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
 </Schema>

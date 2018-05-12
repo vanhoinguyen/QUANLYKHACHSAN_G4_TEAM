@@ -35,7 +35,6 @@ namespace DAO
         public DbSet<CHI_TIET_PHIEU_THUE> CHI_TIET_PHIEU_THUE { get; set; }
         public DbSet<CHITIET_BAOCAODOANHTHU> CHITIET_BAOCAODOANHTHU { get; set; }
         public DbSet<CHITIET_BAOCAOMATDOSUDUNG> CHITIET_BAOCAOMATDOSUDUNG { get; set; }
-        public DbSet<DICH_VU> DICH_VU { get; set; }
         public DbSet<HOA_DON> HOA_DON { get; set; }
         public DbSet<KHACH_HANG> KHACH_HANG { get; set; }
         public DbSet<LOAI_KHACH_HANG> LOAI_KHACH_HANG { get; set; }
@@ -43,6 +42,7 @@ namespace DAO
         public DbSet<PHIEU_THUE_PHONG> PHIEU_THUE_PHONG { get; set; }
         public DbSet<PHONG> PHONGs { get; set; }
         public DbSet<THAM_SO> THAM_SO { get; set; }
+        public DbSet<DICH_VU> DICH_VU { get; set; }
     
         public virtual int spCapNhatTinhTrangPhong(Nullable<int> maPhong)
         {
@@ -418,7 +418,7 @@ namespace DAO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spXoaPhong", maPhongParameter);
         }
     
-        public virtual int spSuaThongTinDichVu(Nullable<int> maDichVu, string tenDichVu, string donViTinh, Nullable<int> donGia)
+        public virtual int spSuaThongTinDichVu(Nullable<int> maDichVu, string tenDichVu, string donViTinh, Nullable<decimal> donGia)
         {
             var maDichVuParameter = maDichVu.HasValue ?
                 new ObjectParameter("MaDichVu", maDichVu) :
@@ -434,12 +434,12 @@ namespace DAO
     
             var donGiaParameter = donGia.HasValue ?
                 new ObjectParameter("DonGia", donGia) :
-                new ObjectParameter("DonGia", typeof(int));
+                new ObjectParameter("DonGia", typeof(decimal));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spSuaThongTinDichVu", maDichVuParameter, tenDichVuParameter, donViTinhParameter, donGiaParameter);
         }
     
-        public virtual int spThemDichVu(string tenDichVu, string donViTinh, Nullable<int> donGia)
+        public virtual int spThemDichVu(string tenDichVu, string donViTinh, Nullable<decimal> donGia)
         {
             var tenDichVuParameter = tenDichVu != null ?
                 new ObjectParameter("TenDichVu", tenDichVu) :
@@ -451,7 +451,7 @@ namespace DAO
     
             var donGiaParameter = donGia.HasValue ?
                 new ObjectParameter("DonGia", donGia) :
-                new ObjectParameter("DonGia", typeof(int));
+                new ObjectParameter("DonGia", typeof(decimal));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemDichVu", tenDichVuParameter, donViTinhParameter, donGiaParameter);
         }

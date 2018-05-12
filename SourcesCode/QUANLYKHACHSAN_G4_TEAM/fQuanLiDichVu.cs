@@ -107,10 +107,10 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
         {
             DichVuDTO infor = new DichVuDTO();
 
-            infor.MaDichVu =Convert.ToInt32( (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["MaDichVu"]).ToString()));
+            //infor.MaDichVu =Convert.ToInt32( (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["MaDichVu"]).ToString()));
             infor.TenDichVu = txtNameService.Text;
             infor.DonViTinh = txtUnitService.Text;
-            infor.DonGia = Convert.ToInt32( txtPriceService.Text);
+            infor.DonGia = Convert.ToDecimal( txtPriceService.Text);
             return infor;
         }
         private void btnLuu_Click(object sender, EventArgs e)

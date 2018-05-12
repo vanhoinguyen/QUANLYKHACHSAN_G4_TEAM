@@ -57,19 +57,14 @@
     <Property Name="SoNgayThue" Type="int" />
     <Property Name="TiLe" Type="char" MaxLength="10" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'QUAN_LY_KHACH_SAN.dbo.DANH_MUC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="DANH_MUC">
-          <Property Name="DMLoaiPhong" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
   <EntityType Name="DICH_VU">
     <Key>
       <PropertyRef Name="MaDichVu" />
     </Key>
     <Property Name="MaDichVu" Type="int" Nullable="false" />
     <Property Name="TenDichVu" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="DonViTinh" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="DonGia" Type="int" Nullable="false" />
+    <Property Name="DonViTinh" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DonGia" Type="money" Nullable="false" />
   </EntityType>
   <EntityType Name="HOA_DON">
     <Key>
@@ -275,7 +270,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <Parameter Name="MaDichVu" Type="int" Mode="In" />
     <Parameter Name="TenDichVu" Type="nvarchar" Mode="In" />
     <Parameter Name="DonViTinh" Type="nvarchar" Mode="In" />
-    <Parameter Name="DonGia" Type="int" Mode="In" />
+    <Parameter Name="DonGia" Type="money" Mode="In" />
   </Function>
   <Function Name="spSuaThongTinPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaPhong" Type="int" Mode="In" />
@@ -326,7 +321,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
   <Function Name="spThemDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="TenDichVu" Type="nvarchar" Mode="In" />
     <Parameter Name="DonViTinh" Type="nvarchar" Mode="In" />
-    <Parameter Name="DonGia" Type="int" Mode="In" />
+    <Parameter Name="DonGia" Type="money" Mode="In" />
   </Function>
   <Function Name="spThemHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaHoaDon" Type="int" Mode="In" />

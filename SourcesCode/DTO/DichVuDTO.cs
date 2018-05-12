@@ -11,7 +11,7 @@ namespace DTO
         public int MaDichVu { get; set; }
         public string TenDichVu { get; set; }
         public string DonViTinh { get; set; }
-        public int DonGia { get; set; }
+        public decimal DonGia { get; set; }
 
     }
 }

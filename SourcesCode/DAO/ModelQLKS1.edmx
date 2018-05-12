@@ -62,19 +62,14 @@
           <Property Name="SoNgayThue" Type="int" />
           <Property Name="TiLe" Type="char" MaxLength="10" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'QUAN_LY_KHACH_SAN.dbo.DANH_MUC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="DANH_MUC">
-          <Property Name="DMLoaiPhong" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
         <EntityType Name="DICH_VU">
           <Key>
             <PropertyRef Name="MaDichVu" />
           </Key>
           <Property Name="MaDichVu" Type="int" Nullable="false" />
           <Property Name="TenDichVu" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="DonViTinh" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="DonGia" Type="int" Nullable="false" />
+          <Property Name="DonViTinh" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DonGia" Type="money" Nullable="false" />
         </EntityType>
         <EntityType Name="HOA_DON">
           <Key>
@@ -280,7 +275,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
           <Parameter Name="MaDichVu" Type="int" Mode="In" />
           <Parameter Name="TenDichVu" Type="nvarchar" Mode="In" />
           <Parameter Name="DonViTinh" Type="nvarchar" Mode="In" />
-          <Parameter Name="DonGia" Type="int" Mode="In" />
+          <Parameter Name="DonGia" Type="money" Mode="In" />
         </Function>
         <Function Name="spSuaThongTinPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MaPhong" Type="int" Mode="In" />
@@ -331,7 +326,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
         <Function Name="spThemDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="TenDichVu" Type="nvarchar" Mode="In" />
           <Parameter Name="DonViTinh" Type="nvarchar" Mode="In" />
-          <Parameter Name="DonGia" Type="int" Mode="In" />
+          <Parameter Name="DonGia" Type="money" Mode="In" />
         </Function>
         <Function Name="spThemHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MaHoaDon" Type="int" Mode="In" />
@@ -578,12 +573,12 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
             <Parameter Name="TenDichVu" Mode="In" Type="String" />
             <Parameter Name="DonViTinh" Mode="In" Type="String" />
-            <Parameter Name="DonGia" Mode="In" Type="Int32" />
+            <Parameter Name="DonGia" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="spThemDichVu">
             <Parameter Name="TenDichVu" Mode="In" Type="String" />
             <Parameter Name="DonViTinh" Mode="In" Type="String" />
-            <Parameter Name="DonGia" Mode="In" Type="Int32" />
+            <Parameter Name="DonGia" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="spXoaDichVu">
           <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
@@ -599,7 +594,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <EntitySet Name="CHI_TIET_PHIEU_THUE" EntityType="QUAN_LY_KHACH_SANModel.CHI_TIET_PHIEU_THUE" />
           <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="QUAN_LY_KHACH_SANModel.CHITIET_BAOCAODOANHTHU" />
           <EntitySet Name="CHITIET_BAOCAOMATDOSUDUNG" EntityType="QUAN_LY_KHACH_SANModel.CHITIET_BAOCAOMATDOSUDUNG" />
-          <EntitySet Name="DICH_VU" EntityType="QUAN_LY_KHACH_SANModel.DICH_VU" />
           <EntitySet Name="HOA_DON" EntityType="QUAN_LY_KHACH_SANModel.HOA_DON" />
           <EntitySet Name="KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.KHACH_HANG" />
           <EntitySet Name="LOAI_KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.LOAI_KHACH_HANG" />
@@ -643,6 +637,7 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             <End Role="PHONG" EntitySet="PHONGs" />
             <End Role="PHIEU_THUE_PHONG" EntitySet="PHIEU_THUE_PHONG" />
           </AssociationSet>
+          <EntitySet Name="DICH_VU" EntityType="QUAN_LY_KHACH_SANModel.DICH_VU" />
         </EntityContainer>
         <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
           <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />
@@ -716,15 +711,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <Property Name="SoNgayThue" Type="Int32" />
           <Property Name="TiLe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="BAOCAO_MATDOSUDUNGPHONG" Relationship="QUAN_LY_KHACH_SANModel.F_CHITIET_BAOCAOMATDOSUDUNG" FromRole="CHITIET_BAOCAOMATDOSUDUNG" ToRole="BAOCAO_MATDOSUDUNGPHONG" />
-        </EntityType>
-        <EntityType Name="DICH_VU">
-          <Key>
-            <PropertyRef Name="MaDichVu" />
-          </Key>
-          <Property Name="MaDichVu" Type="Int32" Nullable="false" />
-          <Property Name="TenDichVu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DonViTinh" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="DonGia" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="HOA_DON">
           <Key>
@@ -908,6 +894,15 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="DICH_VU">
+          <Key>
+            <PropertyRef Name="MaDichVu" />
+          </Key>
+          <Property Name="MaDichVu" Type="Int32" Nullable="false" />
+          <Property Name="TenDichVu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DonViTinh" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1026,16 +1021,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DICH_VU">
-            <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.DICH_VU">
-              <MappingFragment StoreEntitySet="DICH_VU">
-                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
-                <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
-                <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="HOA_DON">
             <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.HOA_DON">
               <MappingFragment StoreEntitySet="HOA_DON">
@@ -1103,6 +1088,16 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
                 <ScalarProperty Name="HeSo" ColumnName="HeSo" />
                 <ScalarProperty Name="PhuThu" ColumnName="PhuThu" />
                 <ScalarProperty Name="SoKhachToiDa" ColumnName="SoKhachToiDa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DICH_VU">
+            <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.DICH_VU">
+              <MappingFragment StoreEntitySet="DICH_VU">
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+                <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
+                <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

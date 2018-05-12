@@ -113,16 +113,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DICH_VU">
-      <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.DICH_VU">
-        <MappingFragment StoreEntitySet="DICH_VU">
-          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-          <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
-          <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
-          <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="HOA_DON">
       <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.HOA_DON">
         <MappingFragment StoreEntitySet="HOA_DON">
@@ -190,6 +180,16 @@
           <ScalarProperty Name="HeSo" ColumnName="HeSo" />
           <ScalarProperty Name="PhuThu" ColumnName="PhuThu" />
           <ScalarProperty Name="SoKhachToiDa" ColumnName="SoKhachToiDa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DICH_VU">
+      <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.DICH_VU">
+        <MappingFragment StoreEntitySet="DICH_VU">
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+          <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
+          <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
