@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="QUAN_LY_KHACH_SANModelStoreContainer" CdmEntityContainer="QUAN_LY_KHACH_SANEntities">
-<<<<<<< HEAD
-=======
     <EntitySetMapping Name="LOAI_PHONG">
       <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.LOAI_PHONG">
         <MappingFragment StoreEntitySet="LOAI_PHONG">
@@ -12,7 +10,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
     <FunctionImportMapping FunctionImportName="spCapNhatTinhTrangPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spCapNhatTinhTrangPhong" />
     <FunctionImportMapping FunctionImportName="spCapNhatTSHeSo" FunctionName="QUAN_LY_KHACH_SANModel.Store.spCapNhatTSHeSo" />
     <FunctionImportMapping FunctionImportName="spCapNhatTSPhuThu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spCapNhatTSPhuThu" />
@@ -52,12 +49,9 @@
     <FunctionImportMapping FunctionImportName="spXoaLoaiPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaLoaiPhong" />
     <FunctionImportMapping FunctionImportName="spXoaPhieuThue" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaPhieuThue" />
     <FunctionImportMapping FunctionImportName="spXoaPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaPhong" />
-<<<<<<< HEAD
-=======
     <FunctionImportMapping FunctionImportName="spSuaThongTinDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spSuaThongTinDichVu" />
     <FunctionImportMapping FunctionImportName="spThemDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemDichVu" />
     <FunctionImportMapping FunctionImportName="spXoaDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaDichVu" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
     <FunctionImportMapping FunctionImportName="spThemPhong1" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhong" />
     <EntitySetMapping Name="BAOCAO_DOANHTHUTHEOLOAIPHONG">
       <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.BAOCAO_DOANHTHUTHEOLOAIPHONG">
@@ -148,18 +142,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-<<<<<<< HEAD
-    <EntitySetMapping Name="LOAI_PHONG">
-      <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.LOAI_PHONG">
-        <MappingFragment StoreEntitySet="LOAI_PHONG">
-          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-          <ScalarProperty Name="TenLoaiPhong" ColumnName="TenLoaiPhong" />
-          <ScalarProperty Name="MaLoaiPhong" ColumnName="MaLoaiPhong" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-=======
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
     <EntitySetMapping Name="NGUOI_DUNG">
       <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.NGUOI_DUNG">
         <MappingFragment StoreEntitySet="NGUOI_DUNG">
@@ -198,8 +180,6 @@
           <ScalarProperty Name="HeSo" ColumnName="HeSo" />
           <ScalarProperty Name="PhuThu" ColumnName="PhuThu" />
           <ScalarProperty Name="SoKhachToiDa" ColumnName="SoKhachToiDa" />
-<<<<<<< HEAD
-=======
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -210,7 +190,6 @@
           <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
           <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
           <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

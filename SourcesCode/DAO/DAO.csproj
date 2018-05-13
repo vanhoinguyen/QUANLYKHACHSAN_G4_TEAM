@@ -124,10 +124,7 @@
     <Compile Include="NGUOI_DUNG.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="OderDichVuDAO.cs" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
     <Compile Include="PhieuThueDAO.cs" />
     <Compile Include="PHIEU_THUE_PHONG.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>

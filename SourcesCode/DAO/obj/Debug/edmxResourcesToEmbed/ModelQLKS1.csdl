@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="QUAN_LY_KHACH_SANModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-<<<<<<< HEAD
-  <EntityContainer Name="QUAN_LY_KHACH_SANEntities" annotation:LazyLoadingEnabled="true">
-=======
   <EntityType Name="LOAI_PHONG">
     <Key>
       <PropertyRef Name="MaLoaiPhong" />
@@ -14,7 +11,6 @@
   </EntityType>
   <EntityContainer Name="QUAN_LY_KHACH_SANEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="LOAI_PHONG" EntityType="Self.LOAI_PHONG" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
     <FunctionImport Name="spCapNhatTinhTrangPhong">
       <Parameter Name="MaPhong" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -127,8 +123,6 @@
     <FunctionImport Name="spXoaPhong">
       <Parameter Name="MaPhong" Mode="In" Type="Int32" />
     </FunctionImport>
-<<<<<<< HEAD
-=======
     <FunctionImport Name="spSuaThongTinDichVu">
       <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
       <Parameter Name="TenDichVu" Mode="In" Type="String" />
@@ -143,7 +137,6 @@
     <FunctionImport Name="spXoaDichVu">
       <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
     </FunctionImport>
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
     <FunctionImport Name="spThemPhong1">
       <Parameter Name="TinhTrang" Mode="In" Type="String" />
       <Parameter Name="MaLoaiPhong" Mode="In" Type="String" />
@@ -158,10 +151,6 @@
     <EntitySet Name="HOA_DON" EntityType="QUAN_LY_KHACH_SANModel.HOA_DON" />
     <EntitySet Name="KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.KHACH_HANG" />
     <EntitySet Name="LOAI_KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.LOAI_KHACH_HANG" />
-<<<<<<< HEAD
-    <EntitySet Name="LOAI_PHONG" EntityType="QUAN_LY_KHACH_SANModel.LOAI_PHONG" />
-=======
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
     <EntitySet Name="NGUOI_DUNG" EntityType="QUAN_LY_KHACH_SANModel.NGUOI_DUNG" />
     <EntitySet Name="PHIEU_THUE_PHONG" EntityType="QUAN_LY_KHACH_SANModel.PHIEU_THUE_PHONG" />
     <EntitySet Name="PHONGs" EntityType="QUAN_LY_KHACH_SANModel.PHONG" />
@@ -202,10 +191,7 @@
       <End Role="PHONG" EntitySet="PHONGs" />
       <End Role="PHIEU_THUE_PHONG" EntitySet="PHIEU_THUE_PHONG" />
     </AssociationSet>
-<<<<<<< HEAD
-=======
     <EntitySet Name="DICH_VU" EntityType="QUAN_LY_KHACH_SANModel.DICH_VU" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
   </EntityContainer>
   <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
     <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />
@@ -294,15 +280,9 @@
       <PropertyRef Name="MaKhachHang" />
     </Key>
     <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
-<<<<<<< HEAD
-    <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CMND" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
-    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-=======
     <Property Name="TenKhachHang" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CMND" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
     <Property Name="MaLoaiKhach" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="CHI_TIET_PHIEU_THUE" Relationship="QUAN_LY_KHACH_SANModel.F_CHI_TIET_PHIEU_THUE_1" FromRole="KHACH_HANG" ToRole="CHI_TIET_PHIEU_THUE" />
     <NavigationProperty Name="LOAI_KHACH_HANG" Relationship="QUAN_LY_KHACH_SANModel.F_KHACH_HANG" FromRole="KHACH_HANG" ToRole="LOAI_KHACH_HANG" />
@@ -320,18 +300,6 @@
     <Key>
       <PropertyRef Name="MaTaiKhoan" />
     </Key>
-<<<<<<< HEAD
-    <Property Name="MaLoaiPhong" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="TenLoaiPhong" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
-    <NavigationProperty Name="PHONGs" Relationship="QUAN_LY_KHACH_SANModel.F_PHONG" FromRole="LOAI_PHONG" ToRole="PHONG" />
-  </EntityType>
-  <EntityType Name="NGUOI_DUNG">
-    <Key>
-      <PropertyRef Name="MaTaiKhoan" />
-    </Key>
-=======
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
     <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" />
     <Property Name="TenTaiKhoan" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
     <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
@@ -480,8 +448,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-<<<<<<< HEAD
-=======
   <EntityType Name="DICH_VU">
     <Key>
       <PropertyRef Name="MaDichVu" />
@@ -491,5 +457,4 @@
     <Property Name="DonViTinh" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
   </EntityType>
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
 </Schema>

@@ -38,8 +38,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpNgayTraPhong = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbLoaiKhach = new System.Windows.Forms.ComboBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
@@ -60,6 +58,8 @@
             this.colCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colXoa = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dtpNgayTraPhong = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -159,26 +159,6 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phiếu thuê";
-            // 
-            // dtpNgayTraPhong
-            // 
-            this.dtpNgayTraPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayTraPhong.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayTraPhong.Location = new System.Drawing.Point(113, 129);
-            this.dtpNgayTraPhong.Name = "dtpNgayTraPhong";
-            this.dtpNgayTraPhong.Size = new System.Drawing.Size(142, 20);
-            this.dtpNgayTraPhong.TabIndex = 11;
-            this.dtpNgayTraPhong.Value = new System.DateTime(2018, 5, 13, 0, 0, 0, 0);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 137);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Ngày trả phòng";
             // 
             // label8
             // 
@@ -395,6 +375,26 @@
             this.colXoa.Name = "colXoa";
             this.colXoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colXoa.Width = 70;
+            // 
+            // dtpNgayTraPhong
+            // 
+            this.dtpNgayTraPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayTraPhong.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayTraPhong.Location = new System.Drawing.Point(113, 129);
+            this.dtpNgayTraPhong.Name = "dtpNgayTraPhong";
+            this.dtpNgayTraPhong.Size = new System.Drawing.Size(142, 20);
+            this.dtpNgayTraPhong.TabIndex = 11;
+            this.dtpNgayTraPhong.Value = new System.DateTime(2018, 5, 10, 0, 0, 0, 0);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(15, 137);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Ngày trả phòng";
             // 
             // fDatPhongKS
             // 

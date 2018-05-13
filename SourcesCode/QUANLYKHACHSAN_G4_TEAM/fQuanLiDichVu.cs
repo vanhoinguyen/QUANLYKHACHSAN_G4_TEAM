@@ -49,7 +49,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
             if (btnThem.Text == "Thêm")
             {
                 LamSachDL();
-               
+                
                 btnThem.Text = "Ngừng";
                 btnSua.Enabled = false;
                 btnXoa.Enabled = false;
@@ -62,7 +62,11 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
                 btnThem.Text = "Thêm";
                 fQuanLiDichVu_Load(sender, e);
                 //KhoiTaoLai();
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
                 gridControl1.Enabled = true;
+                
+
             }
         }
         private void btnXoa_Click(object sender, EventArgs e)
@@ -107,15 +111,18 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
         {
             DichVuDTO infor = new DichVuDTO();
 
-            //infor.MaDichVu =Convert.ToInt32( (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["MaDichVu"]).ToString()));
+           
             infor.TenDichVu = txtNameService.Text;
             infor.DonViTinh = txtUnitService.Text;
             infor.DonGia = Convert.ToDecimal( txtPriceService.Text);
             return infor;
         }
+        
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
             DichVuDTO infor = LayThongTinDichVu();
+            infor.MaDichVu = int.Parse( gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["MaDichVu"]).ToString());
             if (btnThem.Text == "Ngừng")
             {
                 if (DichVuBUS.ThemDichVu(infor))
@@ -153,14 +160,12 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
         }
 
         private void gridControl1_Click(object sender, EventArgs e)
-        {
-            string tendichvu = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["TenDichVu"]).ToString();
-            if (tendichvu != null)
-            {
+        {    
                 txtNameService.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["TenDichVu"]).ToString();
                 txtUnitService.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["DonViTinh"]).ToString();
                 txtPriceService.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["DonGia"]).ToString();
-            } 
+                
+
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {

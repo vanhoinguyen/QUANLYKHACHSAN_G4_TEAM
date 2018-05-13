@@ -34,7 +34,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtPhiDichVu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.numSoNgayThue = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPhuThu = new System.Windows.Forms.TextBox();
@@ -58,10 +57,10 @@
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtSoNgayThue = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachHoaDon)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numSoNgayThue)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,9 +83,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtSoNgayThue);
             this.groupBox3.Controls.Add(this.txtPhiDichVu);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.numSoNgayThue);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.txtPhuThu);
@@ -114,13 +113,6 @@
             this.label5.Size = new System.Drawing.Size(74, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Số Ngày Thuê";
-            // 
-            // numSoNgayThue
-            // 
-            this.numSoNgayThue.Location = new System.Drawing.Point(106, 113);
-            this.numSoNgayThue.Name = "numSoNgayThue";
-            this.numSoNgayThue.Size = new System.Drawing.Size(47, 21);
-            this.numSoNgayThue.TabIndex = 7;
             // 
             // label6
             // 
@@ -353,6 +345,13 @@
             this.label1.Text = "HÓA ĐƠN THANH TOÁN ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtSoNgayThue
+            // 
+            this.txtSoNgayThue.Location = new System.Drawing.Point(106, 113);
+            this.txtSoNgayThue.Name = "txtSoNgayThue";
+            this.txtSoNgayThue.Size = new System.Drawing.Size(137, 21);
+            this.txtSoNgayThue.TabIndex = 25;
+            // 
             // fThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,7 +367,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachHoaDon)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numSoNgayThue)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -385,7 +383,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtPhiDichVu;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numSoNgayThue;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPhuThu;
@@ -409,5 +406,6 @@
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSoNgayThue;
     }
 }

@@ -115,10 +115,10 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(-2, 142);
+            this.gridControl1.Location = new System.Drawing.Point(-2, 184);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(733, 245);
+            this.gridControl1.Size = new System.Drawing.Size(733, 206);
             this.gridControl1.TabIndex = 24;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -188,7 +188,7 @@
             // 
             // txtPriceService
             // 
-            this.txtPriceService.Location = new System.Drawing.Point(177, 104);
+            this.txtPriceService.Location = new System.Drawing.Point(177, 140);
             this.txtPriceService.Name = "txtPriceService";
             this.txtPriceService.Size = new System.Drawing.Size(188, 21);
             this.txtPriceService.TabIndex = 12;
@@ -196,7 +196,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(100, 113);
+            this.label3.Location = new System.Drawing.Point(100, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 11;
@@ -204,7 +204,7 @@
             // 
             // txtUnitService
             // 
-            this.txtUnitService.Location = new System.Drawing.Point(177, 76);
+            this.txtUnitService.Location = new System.Drawing.Point(177, 99);
             this.txtUnitService.Name = "txtUnitService";
             this.txtUnitService.Size = new System.Drawing.Size(188, 21);
             this.txtUnitService.TabIndex = 10;
@@ -212,7 +212,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 85);
+            this.label2.Location = new System.Drawing.Point(100, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 9;
@@ -220,7 +220,7 @@
             // 
             // txtNameService
             // 
-            this.txtNameService.Location = new System.Drawing.Point(177, 49);
+            this.txtNameService.Location = new System.Drawing.Point(177, 59);
             this.txtNameService.Name = "txtNameService";
             this.txtNameService.Size = new System.Drawing.Size(188, 21);
             this.txtNameService.TabIndex = 8;
@@ -228,7 +228,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 57);
+            this.label1.Location = new System.Drawing.Point(98, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 7;

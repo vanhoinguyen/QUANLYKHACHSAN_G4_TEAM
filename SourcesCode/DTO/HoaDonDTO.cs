@@ -18,7 +18,8 @@ namespace DTO
         public double? HeSo { get; set; }
         public int? KhachPTThu { get; set; }
         public int? SLKhachNG { get; set; }
-        public string TenKH_CQ { get; set; }
+        public string TenKhachHang { get; set; }
+        public string DiaChi { get; set; }
         public decimal? TriGia { get; set; }
         public decimal? ThanhTien { get; set; }
         public DateTime NgayThanhToan { get; set; }

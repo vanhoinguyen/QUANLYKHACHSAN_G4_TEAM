@@ -387,10 +387,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
           <EntitySet Name="CHI_TIET_PHIEU_THUE" EntityType="Self.CHI_TIET_PHIEU_THUE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="Self.CHITIET_BAOCAODOANHTHU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CHITIET_BAOCAOMATDOSUDUNG" EntityType="Self.CHITIET_BAOCAOMATDOSUDUNG" Schema="dbo" store:Type="Tables" />
-<<<<<<< HEAD
-=======
           <EntitySet Name="DICH_VU" EntityType="Self.DICH_VU" Schema="dbo" store:Type="Tables" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
           <EntitySet Name="HOA_DON" EntityType="Self.HOA_DON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHACH_HANG" EntityType="Self.KHACH_HANG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOAI_KHACH_HANG" EntityType="Self.LOAI_KHACH_HANG" Schema="dbo" store:Type="Tables" />
@@ -449,9 +446,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QUAN_LY_KHACH_SANModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-<<<<<<< HEAD
-        <EntityContainer Name="QUAN_LY_KHACH_SANEntities" annotation:LazyLoadingEnabled="true">
-=======
         <EntityType Name="LOAI_PHONG">
           <Key>
             <PropertyRef Name="MaLoaiPhong" />
@@ -463,7 +457,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
         </EntityType>
         <EntityContainer Name="QUAN_LY_KHACH_SANEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="LOAI_PHONG" EntityType="Self.LOAI_PHONG" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
           <FunctionImport Name="spCapNhatTinhTrangPhong">
           <Parameter Name="MaPhong" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -576,8 +569,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <FunctionImport Name="spXoaPhong">
           <Parameter Name="MaPhong" Mode="In" Type="Int32" />
           </FunctionImport>
-<<<<<<< HEAD
-=======
           <FunctionImport Name="spSuaThongTinDichVu">
             <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
             <Parameter Name="TenDichVu" Mode="In" Type="String" />
@@ -592,7 +583,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <FunctionImport Name="spXoaDichVu">
           <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
           </FunctionImport>
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
           <FunctionImport Name="spThemPhong1">
             <Parameter Name="TinhTrang" Mode="In" Type="String" />
             <Parameter Name="MaLoaiPhong" Mode="In" Type="String" />
@@ -607,10 +597,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <EntitySet Name="HOA_DON" EntityType="QUAN_LY_KHACH_SANModel.HOA_DON" />
           <EntitySet Name="KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.KHACH_HANG" />
           <EntitySet Name="LOAI_KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.LOAI_KHACH_HANG" />
-<<<<<<< HEAD
-          <EntitySet Name="LOAI_PHONG" EntityType="QUAN_LY_KHACH_SANModel.LOAI_PHONG" />
-=======
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
           <EntitySet Name="NGUOI_DUNG" EntityType="QUAN_LY_KHACH_SANModel.NGUOI_DUNG" />
           <EntitySet Name="PHIEU_THUE_PHONG" EntityType="QUAN_LY_KHACH_SANModel.PHIEU_THUE_PHONG" />
           <EntitySet Name="PHONGs" EntityType="QUAN_LY_KHACH_SANModel.PHONG" />
@@ -651,10 +637,7 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             <End Role="PHONG" EntitySet="PHONGs" />
             <End Role="PHIEU_THUE_PHONG" EntitySet="PHIEU_THUE_PHONG" />
           </AssociationSet>
-<<<<<<< HEAD
-=======
           <EntitySet Name="DICH_VU" EntityType="QUAN_LY_KHACH_SANModel.DICH_VU" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
         </EntityContainer>
         <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
           <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />
@@ -743,15 +726,9 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             <PropertyRef Name="MaKhachHang" />
           </Key>
           <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
-<<<<<<< HEAD
-          <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CMND" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-=======
           <Property Name="TenKhachHang" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CMND" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
           <Property Name="MaLoaiKhach" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CHI_TIET_PHIEU_THUE" Relationship="QUAN_LY_KHACH_SANModel.F_CHI_TIET_PHIEU_THUE_1" FromRole="KHACH_HANG" ToRole="CHI_TIET_PHIEU_THUE" />
           <NavigationProperty Name="LOAI_KHACH_HANG" Relationship="QUAN_LY_KHACH_SANModel.F_KHACH_HANG" FromRole="KHACH_HANG" ToRole="LOAI_KHACH_HANG" />
@@ -769,18 +746,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <Key>
             <PropertyRef Name="MaTaiKhoan" />
           </Key>
-<<<<<<< HEAD
-          <Property Name="MaLoaiPhong" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="TenLoaiPhong" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="PHONGs" Relationship="QUAN_LY_KHACH_SANModel.F_PHONG" FromRole="LOAI_PHONG" ToRole="PHONG" />
-        </EntityType>
-        <EntityType Name="NGUOI_DUNG">
-          <Key>
-            <PropertyRef Name="MaTaiKhoan" />
-          </Key>
-=======
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
           <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" />
           <Property Name="TenTaiKhoan" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
           <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
@@ -929,9 +894,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-<<<<<<< HEAD
-        </Schema>
-=======
         <EntityType Name="DICH_VU">
           <Key>
             <PropertyRef Name="MaDichVu" />
@@ -942,14 +904,11 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
         </EntityType>
       </Schema>
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="QUAN_LY_KHACH_SANModelStoreContainer" CdmEntityContainer="QUAN_LY_KHACH_SANEntities">
-<<<<<<< HEAD
-=======
           <EntitySetMapping Name="LOAI_PHONG">
             <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.LOAI_PHONG">
               <MappingFragment StoreEntitySet="LOAI_PHONG">
@@ -959,7 +918,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
           <FunctionImportMapping FunctionImportName="spCapNhatTinhTrangPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spCapNhatTinhTrangPhong" />
           <FunctionImportMapping FunctionImportName="spCapNhatTSHeSo" FunctionName="QUAN_LY_KHACH_SANModel.Store.spCapNhatTSHeSo" />
           <FunctionImportMapping FunctionImportName="spCapNhatTSPhuThu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spCapNhatTSPhuThu" />
@@ -999,12 +957,9 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <FunctionImportMapping FunctionImportName="spXoaLoaiPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaLoaiPhong" />
           <FunctionImportMapping FunctionImportName="spXoaPhieuThue" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaPhieuThue" />
           <FunctionImportMapping FunctionImportName="spXoaPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaPhong" />
-<<<<<<< HEAD
-=======
           <FunctionImportMapping FunctionImportName="spSuaThongTinDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spSuaThongTinDichVu" />
           <FunctionImportMapping FunctionImportName="spThemDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemDichVu" />
           <FunctionImportMapping FunctionImportName="spXoaDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaDichVu" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
           <FunctionImportMapping FunctionImportName="spThemPhong1" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhong" />
           <EntitySetMapping Name="BAOCAO_DOANHTHUTHEOLOAIPHONG">
             <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.BAOCAO_DOANHTHUTHEOLOAIPHONG">
@@ -1095,18 +1050,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-<<<<<<< HEAD
-          <EntitySetMapping Name="LOAI_PHONG">
-            <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.LOAI_PHONG">
-              <MappingFragment StoreEntitySet="LOAI_PHONG">
-                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-                <ScalarProperty Name="TenLoaiPhong" ColumnName="TenLoaiPhong" />
-                <ScalarProperty Name="MaLoaiPhong" ColumnName="MaLoaiPhong" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-=======
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
           <EntitySetMapping Name="NGUOI_DUNG">
             <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.NGUOI_DUNG">
               <MappingFragment StoreEntitySet="NGUOI_DUNG">
@@ -1145,8 +1088,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
                 <ScalarProperty Name="HeSo" ColumnName="HeSo" />
                 <ScalarProperty Name="PhuThu" ColumnName="PhuThu" />
                 <ScalarProperty Name="SoKhachToiDa" ColumnName="SoKhachToiDa" />
-<<<<<<< HEAD
-=======
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1157,7 +1098,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
                 <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
                 <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
                 <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

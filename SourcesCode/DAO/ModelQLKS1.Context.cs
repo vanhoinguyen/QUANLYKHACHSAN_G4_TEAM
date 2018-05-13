@@ -38,10 +38,6 @@ namespace DAO
         public DbSet<HOA_DON> HOA_DON { get; set; }
         public DbSet<KHACH_HANG> KHACH_HANG { get; set; }
         public DbSet<LOAI_KHACH_HANG> LOAI_KHACH_HANG { get; set; }
-<<<<<<< HEAD
-        public DbSet<LOAI_PHONG> LOAI_PHONG { get; set; }
-=======
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
         public DbSet<NGUOI_DUNG> NGUOI_DUNG { get; set; }
         public DbSet<PHIEU_THUE_PHONG> PHIEU_THUE_PHONG { get; set; }
         public DbSet<PHONG> PHONGs { get; set; }
@@ -422,8 +418,6 @@ namespace DAO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spXoaPhong", maPhongParameter);
         }
     
-<<<<<<< HEAD
-=======
         public virtual int spSuaThongTinDichVu(Nullable<int> maDichVu, string tenDichVu, string donViTinh, Nullable<decimal> donGia)
         {
             var maDichVuParameter = maDichVu.HasValue ?
@@ -471,7 +465,6 @@ namespace DAO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spXoaDichVu", maDichVuParameter);
         }
     
->>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
         public virtual int spThemPhong1(string tinhTrang, string maLoaiPhong, string ghiChu)
         {
             var tinhTrangParameter = tinhTrang != null ?
