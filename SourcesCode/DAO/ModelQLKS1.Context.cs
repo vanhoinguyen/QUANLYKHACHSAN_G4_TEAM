@@ -38,6 +38,7 @@ namespace DAO
         public DbSet<KHACH_HANG> KHACH_HANG { get; set; }
         public DbSet<LOAI_KHACH_HANG> LOAI_KHACH_HANG { get; set; }
         public DbSet<LOAI_PHONG> LOAI_PHONG { get; set; }
+        public DbSet<NGUOI_DUNG> NGUOI_DUNG { get; set; }
         public DbSet<PHIEU_THUE_PHONG> PHIEU_THUE_PHONG { get; set; }
         public DbSet<PHONG> PHONGs { get; set; }
         public DbSet<THAM_SO> THAM_SO { get; set; }
@@ -414,6 +415,23 @@ namespace DAO
                 new ObjectParameter("MaPhong", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spXoaPhong", maPhongParameter);
+        }
+    
+        public virtual int spThemPhong1(string tinhTrang, string maLoaiPhong, string ghiChu)
+        {
+            var tinhTrangParameter = tinhTrang != null ?
+                new ObjectParameter("TinhTrang", tinhTrang) :
+                new ObjectParameter("TinhTrang", typeof(string));
+    
+            var maLoaiPhongParameter = maLoaiPhong != null ?
+                new ObjectParameter("MaLoaiPhong", maLoaiPhong) :
+                new ObjectParameter("MaLoaiPhong", typeof(string));
+    
+            var ghiChuParameter = ghiChu != null ?
+                new ObjectParameter("GhiChu", ghiChu) :
+                new ObjectParameter("GhiChu", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemPhong1", tinhTrangParameter, maLoaiPhongParameter, ghiChuParameter);
         }
     }
 }

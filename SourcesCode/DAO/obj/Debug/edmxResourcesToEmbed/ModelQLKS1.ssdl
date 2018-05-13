@@ -7,8 +7,6 @@
     <Property Name="MaBCDoanhThu" Type="int" Nullable="false" />
     <Property Name="ThangBaoCao" Type="int" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.BAOCAO_MATDOSUDUNGPHONG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="BAOCAO_MATDOSUDUNGPHONG">
     <Key>
       <PropertyRef Name="MaBCMatDoSuDung" />
@@ -48,8 +46,6 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.BAOCAO_MATDOSUDUNGPHONG' doe
     <Property Name="DoanhThuThang" Type="money" />
     <Property Name="TiLe" Type="char" MaxLength="10" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.CHITIET_BAOCAOMATDOSUDUNG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="CHITIET_BAOCAOMATDOSUDUNG">
     <Key>
       <PropertyRef Name="MaBCCTMatDoSuDung" />
@@ -94,6 +90,14 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.CHITIET_BAOCAOMATDOSUDUNG' d
     <Property Name="MaLoaiPhong" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="TenLoaiPhong" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="DonGia" Type="money" />
+  </EntityType>
+  <EntityType Name="NGUOI_DUNG">
+    <Key>
+      <PropertyRef Name="MaTaiKhoan" />
+    </Key>
+    <Property Name="MaTaiKhoan" Type="int" Nullable="false" />
+    <Property Name="TenTaiKhoan" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="MatKhau" Type="char" MaxLength="20" Nullable="false" />
   </EntityType>
   <EntityType Name="PHIEU_THUE_PHONG">
     <Key>
@@ -185,6 +189,18 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
       </Principal>
       <Dependent Role="CHITIET_BAOCAODOANHTHU">
         <PropertyRef Name="MaBCDoanhThu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_CHITIET_BAOCAOMATDOSUDUNG">
+    <End Role="BAOCAO_MATDOSUDUNGPHONG" Type="Self.BAOCAO_MATDOSUDUNGPHONG" Multiplicity="1" />
+    <End Role="CHITIET_BAOCAOMATDOSUDUNG" Type="Self.CHITIET_BAOCAOMATDOSUDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAOCAO_MATDOSUDUNGPHONG">
+        <PropertyRef Name="MaBCMatDoSuDung" />
+      </Principal>
+      <Dependent Role="CHITIET_BAOCAOMATDOSUDUNG">
+        <PropertyRef Name="MaBCMatDoSuDung" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -310,6 +326,11 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <Parameter Name="MaPhong" Type="int" Mode="In" />
     <Parameter Name="NgayTraPhong" Type="date" Mode="In" />
   </Function>
+  <Function Name="spThemPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TinhTrang" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
+    <Parameter Name="GhiChu" Type="ntext" Mode="In" />
+  </Function>
   <Function Name="spThietLapTTrangPhongBanDau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaPhong" Type="int" Mode="In" />
   </Function>
@@ -333,30 +354,18 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
   </Function>
   <EntityContainer Name="QUAN_LY_KHACH_SANModelStoreContainer">
     <EntitySet Name="BAOCAO_DOANHTHUTHEOLOAIPHONG" EntityType="Self.BAOCAO_DOANHTHUTHEOLOAIPHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BAOCAO_MATDOSUDUNGPHONG" EntityType="Self.BAOCAO_MATDOSUDUNGPHONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHI_TIET_HOA_DON" EntityType="Self.CHI_TIET_HOA_DON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHI_TIET_PHIEU_THUE" EntityType="Self.CHI_TIET_PHIEU_THUE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="Self.CHITIET_BAOCAODOANHTHU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHITIET_BAOCAOMATDOSUDUNG" EntityType="Self.CHITIET_BAOCAOMATDOSUDUNG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HOA_DON" EntityType="Self.HOA_DON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KHACH_HANG" EntityType="Self.KHACH_HANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LOAI_KHACH_HANG" EntityType="Self.LOAI_KHACH_HANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LOAI_PHONG" EntityType="Self.LOAI_PHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NGUOI_DUNG" EntityType="Self.NGUOI_DUNG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHIEU_THUE_PHONG" EntityType="Self.PHIEU_THUE_PHONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="BAOCAO_MATDOSUDUNGPHONG" EntityType="Self.BAOCAO_MATDOSUDUNGPHONG" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[BAOCAO_MATDOSUDUNGPHONG].[MaBCMatDoSuDung] AS [MaBCMatDoSuDung], 
-[BAOCAO_MATDOSUDUNGPHONG].[ThangBaoCao] AS [ThangBaoCao]
-FROM [dbo].[BAOCAO_MATDOSUDUNGPHONG] AS [BAOCAO_MATDOSUDUNGPHONG]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="CHITIET_BAOCAOMATDOSUDUNG" EntityType="Self.CHITIET_BAOCAOMATDOSUDUNG" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[CHITIET_BAOCAOMATDOSUDUNG].[MaBCCTMatDoSuDung] AS [MaBCCTMatDoSuDung], 
-[CHITIET_BAOCAOMATDOSUDUNG].[MaPhong] AS [MaPhong], 
-[CHITIET_BAOCAOMATDOSUDUNG].[MaBCMatDoSuDung] AS [MaBCMatDoSuDung], 
-[CHITIET_BAOCAOMATDOSUDUNG].[SoNgayThue] AS [SoNgayThue], 
-[CHITIET_BAOCAOMATDOSUDUNG].[TiLe] AS [TiLe]
-FROM [dbo].[CHITIET_BAOCAOMATDOSUDUNG] AS [CHITIET_BAOCAOMATDOSUDUNG]</DefiningQuery>
-    </EntitySet>
     <EntitySet Name="THAM_SO" EntityType="Self.THAM_SO" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
 [THAM_SO].[SoKhachToiDa] AS [SoKhachToiDa], 
@@ -386,6 +395,10 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
     <AssociationSet Name="F_CHITIET_BAOCAODOANHTHU" Association="Self.F_CHITIET_BAOCAODOANHTHU">
       <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" EntitySet="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
       <End Role="CHITIET_BAOCAODOANHTHU" EntitySet="CHITIET_BAOCAODOANHTHU" />
+    </AssociationSet>
+    <AssociationSet Name="F_CHITIET_BAOCAOMATDOSUDUNG" Association="Self.F_CHITIET_BAOCAOMATDOSUDUNG">
+      <End Role="BAOCAO_MATDOSUDUNGPHONG" EntitySet="BAOCAO_MATDOSUDUNGPHONG" />
+      <End Role="CHITIET_BAOCAOMATDOSUDUNG" EntitySet="CHITIET_BAOCAOMATDOSUDUNG" />
     </AssociationSet>
     <AssociationSet Name="F_KHACH_HANG" Association="Self.F_KHACH_HANG">
       <End Role="LOAI_KHACH_HANG" EntitySet="LOAI_KHACH_HANG" />

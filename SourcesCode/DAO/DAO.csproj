@@ -121,6 +121,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelQLKS1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="NGUOI_DUNG.cs">
+      <DependentUpon>ModelQLKS1.tt</DependentUpon>
+    </Compile>
     <Compile Include="PhieuThueDAO.cs" />
     <Compile Include="PHIEU_THUE_PHONG.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
