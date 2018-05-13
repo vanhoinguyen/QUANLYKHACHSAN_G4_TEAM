@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class DichVuDTO
+    public class OderDichVuDTO
     {
-        public int MaDichVu { get; set; }
+        public int MaPhong { get; set; }
         public string TenDichVu { get; set; }
-        public string DonViTinh { get; set; }
-        public decimal DonGia { get; set; }
-
+        public int SoLuong { get; set; }
     }
 }

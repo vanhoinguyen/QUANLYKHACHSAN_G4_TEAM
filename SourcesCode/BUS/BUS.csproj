@@ -50,6 +50,7 @@
     <Compile Include="DichVuBUS.cs" />
     <Compile Include="HoaDonBUS.cs" />
     <Compile Include="KhachHangBUS.cs" />
+    <Compile Include="OderDichVuBUS.cs" />
     <Compile Include="PhieuThueBUS.cs" />
     <Compile Include="PhongBUS.cs" />
     <Compile Include="Program.cs" />

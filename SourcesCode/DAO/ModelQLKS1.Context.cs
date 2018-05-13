@@ -28,6 +28,7 @@ namespace DAO
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<LOAI_PHONG> LOAI_PHONG { get; set; }
         public DbSet<BAOCAO_DOANHTHUTHEOLOAIPHONG> BAOCAO_DOANHTHUTHEOLOAIPHONG { get; set; }
         public DbSet<BAOCAO_MATDOSUDUNGPHONG> BAOCAO_MATDOSUDUNGPHONG { get; set; }
         public DbSet<CHI_TIET_HOA_DON> CHI_TIET_HOA_DON { get; set; }
@@ -37,11 +38,15 @@ namespace DAO
         public DbSet<HOA_DON> HOA_DON { get; set; }
         public DbSet<KHACH_HANG> KHACH_HANG { get; set; }
         public DbSet<LOAI_KHACH_HANG> LOAI_KHACH_HANG { get; set; }
+<<<<<<< HEAD
         public DbSet<LOAI_PHONG> LOAI_PHONG { get; set; }
+=======
+>>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
         public DbSet<NGUOI_DUNG> NGUOI_DUNG { get; set; }
         public DbSet<PHIEU_THUE_PHONG> PHIEU_THUE_PHONG { get; set; }
         public DbSet<PHONG> PHONGs { get; set; }
         public DbSet<THAM_SO> THAM_SO { get; set; }
+        public DbSet<DICH_VU> DICH_VU { get; set; }
     
         public virtual int spCapNhatTinhTrangPhong(Nullable<int> maPhong)
         {
@@ -417,6 +422,56 @@ namespace DAO
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spXoaPhong", maPhongParameter);
         }
     
+<<<<<<< HEAD
+=======
+        public virtual int spSuaThongTinDichVu(Nullable<int> maDichVu, string tenDichVu, string donViTinh, Nullable<decimal> donGia)
+        {
+            var maDichVuParameter = maDichVu.HasValue ?
+                new ObjectParameter("MaDichVu", maDichVu) :
+                new ObjectParameter("MaDichVu", typeof(int));
+    
+            var tenDichVuParameter = tenDichVu != null ?
+                new ObjectParameter("TenDichVu", tenDichVu) :
+                new ObjectParameter("TenDichVu", typeof(string));
+    
+            var donViTinhParameter = donViTinh != null ?
+                new ObjectParameter("DonViTinh", donViTinh) :
+                new ObjectParameter("DonViTinh", typeof(string));
+    
+            var donGiaParameter = donGia.HasValue ?
+                new ObjectParameter("DonGia", donGia) :
+                new ObjectParameter("DonGia", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spSuaThongTinDichVu", maDichVuParameter, tenDichVuParameter, donViTinhParameter, donGiaParameter);
+        }
+    
+        public virtual int spThemDichVu(string tenDichVu, string donViTinh, Nullable<decimal> donGia)
+        {
+            var tenDichVuParameter = tenDichVu != null ?
+                new ObjectParameter("TenDichVu", tenDichVu) :
+                new ObjectParameter("TenDichVu", typeof(string));
+    
+            var donViTinhParameter = donViTinh != null ?
+                new ObjectParameter("DonViTinh", donViTinh) :
+                new ObjectParameter("DonViTinh", typeof(string));
+    
+            var donGiaParameter = donGia.HasValue ?
+                new ObjectParameter("DonGia", donGia) :
+                new ObjectParameter("DonGia", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemDichVu", tenDichVuParameter, donViTinhParameter, donGiaParameter);
+        }
+    
+        public virtual int spXoaDichVu(Nullable<int> maDichVu)
+        {
+            var maDichVuParameter = maDichVu.HasValue ?
+                new ObjectParameter("MaDichVu", maDichVu) :
+                new ObjectParameter("MaDichVu", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spXoaDichVu", maDichVuParameter);
+        }
+    
+>>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
         public virtual int spThemPhong1(string tinhTrang, string maLoaiPhong, string ghiChu)
         {
             var tinhTrangParameter = tinhTrang != null ?

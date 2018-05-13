@@ -51,6 +51,7 @@
     <Compile Include="DichVuDTO.cs" />
     <Compile Include="HoaDonDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />
+    <Compile Include="OderDichVuDTO.cs" />
     <Compile Include="PhieuThuePhongDTO.cs" />
     <Compile Include="PhongDTO.cs" />
     <Compile Include="Program.cs" />

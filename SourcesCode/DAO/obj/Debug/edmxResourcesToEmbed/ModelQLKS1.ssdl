@@ -57,6 +57,15 @@
     <Property Name="SoNgayThue" Type="int" />
     <Property Name="TiLe" Type="char" MaxLength="10" />
   </EntityType>
+  <EntityType Name="DICH_VU">
+    <Key>
+      <PropertyRef Name="MaDichVu" />
+    </Key>
+    <Property Name="MaDichVu" Type="int" Nullable="false" />
+    <Property Name="TenDichVu" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DonViTinh" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DonGia" Type="money" Nullable="false" />
+  </EntityType>
   <EntityType Name="HOA_DON">
     <Key>
       <PropertyRef Name="MaHoaDon" />
@@ -70,9 +79,9 @@
       <PropertyRef Name="MaKhachHang" />
     </Key>
     <Property Name="MaKhachHang" Type="int" Nullable="false" />
-    <Property Name="TenKhachHang" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenKhachHang" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="CMND" Type="nvarchar" MaxLength="15" Nullable="false" />
-    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="MaLoaiKhach" Type="nvarchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="LOAI_KHACH_HANG">
@@ -257,6 +266,12 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <Parameter Name="Thang" Type="int" Mode="In" />
     <Parameter Name="Nam" Type="int" Mode="In" />
   </Function>
+  <Function Name="spSuaThongTinDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaDichVu" Type="int" Mode="In" />
+    <Parameter Name="TenDichVu" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonViTinh" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonGia" Type="money" Mode="In" />
+  </Function>
   <Function Name="spSuaThongTinPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaPhong" Type="int" Mode="In" />
     <Parameter Name="TinhTrang" Type="nvarchar" Mode="In" />
@@ -303,6 +318,11 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <Parameter Name="MaKH" Type="int" Mode="In" />
     <Parameter Name="MaPT" Type="int" Mode="In" />
   </Function>
+  <Function Name="spThemDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TenDichVu" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonViTinh" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonGia" Type="money" Mode="In" />
+  </Function>
   <Function Name="spThemHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaHoaDon" Type="int" Mode="In" />
     <Parameter Name="TenKhachHang" Type="nvarchar" Mode="In" />
@@ -340,6 +360,9 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
   <Function Name="spXoaCTPhieuThue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaPhieuThue" Type="int" Mode="In" />
   </Function>
+  <Function Name="spXoaDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaDichVu" Type="int" Mode="In" />
+  </Function>
   <Function Name="spXoaKhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaKhacHang" Type="int" Mode="In" />
   </Function>
@@ -359,6 +382,10 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <EntitySet Name="CHI_TIET_PHIEU_THUE" EntityType="Self.CHI_TIET_PHIEU_THUE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="Self.CHITIET_BAOCAODOANHTHU" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHITIET_BAOCAOMATDOSUDUNG" EntityType="Self.CHITIET_BAOCAOMATDOSUDUNG" Schema="dbo" store:Type="Tables" />
+<<<<<<< HEAD
+=======
+    <EntitySet Name="DICH_VU" EntityType="Self.DICH_VU" Schema="dbo" store:Type="Tables" />
+>>>>>>> 8c7cd0f762ba7d5cd0a9dc7ad13cfc8d2f6d65bc
     <EntitySet Name="HOA_DON" EntityType="Self.HOA_DON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KHACH_HANG" EntityType="Self.KHACH_HANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LOAI_KHACH_HANG" EntityType="Self.LOAI_KHACH_HANG" Schema="dbo" store:Type="Tables" />
