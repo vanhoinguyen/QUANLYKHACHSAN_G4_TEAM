@@ -17,14 +17,34 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
         public fThanhToan()
         {
             InitializeComponent();
-            cmbMaPhong.ValueMember = "MaPhong";
             cmbMaPhong.DisplayMember = "MaPhong";
+            cmbMaPhong.ValueMember = "MaPhong";
         }
         int numRow = 0;
 
-        private void fThanhToan_Load(object sender, EventArgs e)
+        public void ThietLapButton(bool value)
         {
-            cmbMaPhong.DataSource = HoaDonBUS.LoadMaPhong();
+            btnThanhToan.Enabled = value;
+            btnXoa.Enabled = value;
+        }
+
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnThoat_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
+
+        private void fThanhToan_Load_1(object sender, EventArgs e)
+        {
+            ThietLapButton(false);
+            cmbMaPhong.DataSource = HoaDonBUS.LayMaPhongDaThue();
         }
 
         private void cmbMaPhong_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,35 +91,189 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
                 txtHeSo.Text = "0";
             }
             bool flag = true;
-            for (int i = 0; i < gridView1.RowCount; i++)
+            /*for (int i = 0; i< dgvHoaDon.RowCount; i++)
             {
-                if (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["MaPhong"].ToString()) == cmbMaPhong.Text)
+                if( dgvHoaDon.Rows[i].Cells["colMaPhong"].Value.ToString() == cmbMaPhong.Text)
                 {
                     btnThem.Enabled = false;
                     flag = false;
                     break;
                 }
-            }
+            }*/
+
             if (flag == true)
             {
                 btnThem.Enabled = true;
             }
         }
-        private void btnThoat_Click(object sender, EventArgs e)
+
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
-            Close();
+
+            dgvHoaDon.Rows.Add();
+            dgvHoaDon.Rows[numRow].Cells["colSTT"].Value = numRow + 1;
+            dgvHoaDon.Rows[numRow].Cells["colMaPhong"].Value = cmbMaPhong.Text;
+            dgvHoaDon.Rows[numRow].Cells["colSoNgayThue"].Value = txtSoNgayThue.Text;
+            dgvHoaDon.Rows[numRow].Cells["colDonGia"].Value = txtDonGiaPhong.Text;
+            dgvHoaDon.Rows[numRow].Cells["colPhuThu"].Value = txtPhuThu.Text;
+            dgvHoaDon.Rows[numRow].Cells["colHeSo"].Value = txtHeSo.Text;
+
+            btnThem.Enabled = false;
+            decimal thanhtien = HoaDonBUS.ThanhTien(int.Parse(txtSoNgayThue.Text), Convert.ToDecimal(txtDonGiaPhong.Text), Convert.ToDecimal(txtPhuThu.Text), Convert.ToDecimal(txtHeSo.Text));
+            dgvHoaDon.Rows[numRow].Cells["colThanhTien"].Value = thanhtien.ToString();
+            numRow++;
+
+            txtTongTien.Text = (Convert.ToDecimal(txtTongTien.Text) + thanhtien).ToString();
+            ThietLapButton(true);
+            if (txtTenKhachHang.ToString() == "")
+            {
+                btnThanhToan.Enabled = false;
+            }
         }
 
-        private void btnThoat_Click_1(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
-            Close();
+            string kt = "false";
+            decimal thanhtien = 0;
+            for (int i = 0; i < dgvHoaDon.Rows.Count; i++)
+            {
+                try
+                {
+                    kt = dgvHoaDon.Rows[i].Cells["colXoa"].Value.ToString();
+                    thanhtien = Convert.ToDecimal(dgvHoaDon.Rows[i].Cells["colThanhTien"].Value.ToString());
+                }
+                catch { }
+                if (kt == "True")
+                {
+                    txtTongTien.Text = (Convert.ToDecimal(txtTongTien.Text) - thanhtien).ToString();
+                    if (!(Convert.ToDecimal(txtTongTien.Text) > 0))
+                    {
+                        txtTongTien.Text = "0";
+                    }
+                    dgvHoaDon.Rows.RemoveAt(i);
+                    kt = "false";
+                    numRow--;
+                    i = -1;
+                }
+            }
+
+            if (dgvHoaDon.RowCount == 0)
+            {
+                ThietLapButton(false);
+                btnThem.Enabled = true;
+            }
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void txtTenKhachHang_TextChanged(object sender, EventArgs e)
         {
-            gridView1.AddNewRow();
-            //gridView1.Rows[numRow]
+            if (txtTenKhachHang.Text != "")
+            {
+                if (dgvHoaDon.Rows.Count > 0)
+                {
+                    btnThanhToan.Enabled = true;
+                }
+            }
         }
-        
+        private HoaDonDTO ThongTinHoaDonThanhToan(int i)
+        {
+            HoaDonDTO infor = new HoaDonDTO();
+            int maphong = int.Parse(dgvHoaDon.Rows[i].Cells["colMaPhong"].Value.ToString());
+            infor.MaPhong = maphong;
+            List<HoaDonDTO> lst = new List<HoaDonDTO>();
+            lst = HoaDonBUS.LayMaPhieuThue(maphong);
+            infor.MaPhieuThue = lst[0].MaPhieuThue.Value;
+            infor.SoNgayDaThue = int.Parse(dgvHoaDon.Rows[i].Cells["colSoNgayThue"].Value.ToString());
+            infor.DonGia = Convert.ToDecimal(dgvHoaDon.Rows[i].Cells["colDonGia"].Value.ToString());
+            infor.ThanhTien = Convert.ToDecimal(dgvHoaDon.Rows[i].Cells["colThanhTien"].Value.ToString());
+            infor.NgayThanhToan = Convert.ToDateTime(dateTimePicker1.Text);
+            return infor;
+        }
+
+        private HoaDonDTO LayThongTinKhachHangThanhToan()
+        {
+            HoaDonDTO infor = new HoaDonDTO();
+            infor.MaHoaDon = HoaDonBUS.LayMaHDCuoiCung();
+            infor.MaHoaDon = infor.MaHoaDon + 1;
+            infor.TenKhachHang = txtTenKhachHang.Text;
+            infor.TongTien = Convert.ToDecimal(txtTongTien.Text);
+            return infor;
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            bool success = true;
+            HoaDonDTO infor = LayThongTinKhachHangThanhToan();
+            if (HoaDonBUS.LapHoaDon(infor))
+            {
+                for (int i = 0; i < dgvHoaDon.RowCount; i++)
+                {
+                    HoaDonDTO inforHD = ThongTinHoaDonThanhToan(i);
+                    if (!(HoaDonBUS.LapChiTietHoaDon(infor, inforHD)))
+                    {
+                        success = false;
+                        MessageBox.Show("Không lập được hóa đơn chi tiết thứ " + i + "", "Lỗi", MessageBoxButtons.OK,
+                            MessageBoxIcon.Stop);
+                    }
+                    List<KhachHangDTO> lstkh = new List<KhachHangDTO>();
+                    int? maphieuthue = inforHD.MaPhieuThue;
+                    lstkh = KhachHangBUS.LayMaKhachHangCanXoa(maphieuthue);
+                    if (!(HoaDonBUS.XoaChiTietPhieuThue(inforHD)))
+                    {
+                        success = false;
+                        MessageBox.Show("Không xóa được chi tiết phiếu thuê ", "Lỗi", MessageBoxButtons.OK,
+                            MessageBoxIcon.Stop);
+                    }
+                    int dem = lstkh.Count();
+                    for (int j = 0; j < dem; j++)
+                    {
+                        KhachHangDTO id = new KhachHangDTO();
+                        id.MaKH = lstkh[j].MaKH;
+                        if (!(KhachHangBUS.XoaKhachHang(id)))
+                        {
+                            success = false;
+                            MessageBox.Show("Không xóa được khách hàng ", "Lỗi", MessageBoxButtons.OK,
+                                MessageBoxIcon.Stop);
+                        }
+                    }
+                    if (!(HoaDonBUS.XoaPhieuThue(inforHD)))
+                    {
+                        success = false;
+                        MessageBox.Show("Không xóa được phiếu thuê ", "Lỗi", MessageBoxButtons.OK,
+                            MessageBoxIcon.Stop);
+                    }
+                    if (!(PhongBUS.ThietLapTrangThaiPhongBanDau(inforHD)))
+                    {
+                        success = false;
+                        MessageBox.Show("Không cập nhập được tình trạng phòng ", "Lỗi", MessageBoxButtons.OK,
+                            MessageBoxIcon.Stop);
+                    }
+
+                    if (success == true)
+                    {
+                        success = false;
+                        MessageBox.Show("Lập hóa đơn thanh toán thành công ", "Thông báo", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        for (int k = 0; k < dgvHoaDon.RowCount; k++)
+                        {
+                            dgvHoaDon.Rows.RemoveAt(k);
+                            k = -1;
+                            numRow = 0;
+                        }
+                        fThanhToan_Load_1(sender, e);
+                        ThietLapButton(false);
+                        txtTenKhachHang.Text = "";
+                        txtTongTien.Text = "0";
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không lập hóa đơn thanh toán được ", "Lỗi", MessageBoxButtons.OK,
+                        MessageBoxIcon.Stop);
+            }
+            ThietLapButton(false);
+        }
     }
 }
+           
+

@@ -28,21 +28,22 @@ namespace DAO
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<LOAI_PHONG> LOAI_PHONG { get; set; }
         public DbSet<BAOCAO_DOANHTHUTHEOLOAIPHONG> BAOCAO_DOANHTHUTHEOLOAIPHONG { get; set; }
         public DbSet<BAOCAO_MATDOSUDUNGPHONG> BAOCAO_MATDOSUDUNGPHONG { get; set; }
         public DbSet<CHI_TIET_HOA_DON> CHI_TIET_HOA_DON { get; set; }
         public DbSet<CHI_TIET_PHIEU_THUE> CHI_TIET_PHIEU_THUE { get; set; }
         public DbSet<CHITIET_BAOCAODOANHTHU> CHITIET_BAOCAODOANHTHU { get; set; }
         public DbSet<CHITIET_BAOCAOMATDOSUDUNG> CHITIET_BAOCAOMATDOSUDUNG { get; set; }
+        public DbSet<DICH_VU> DICH_VU { get; set; }
         public DbSet<HOA_DON> HOA_DON { get; set; }
         public DbSet<KHACH_HANG> KHACH_HANG { get; set; }
         public DbSet<LOAI_KHACH_HANG> LOAI_KHACH_HANG { get; set; }
+        public DbSet<LOAI_PHONG> LOAI_PHONG { get; set; }
         public DbSet<NGUOI_DUNG> NGUOI_DUNG { get; set; }
         public DbSet<PHIEU_THUE_PHONG> PHIEU_THUE_PHONG { get; set; }
         public DbSet<PHONG> PHONGs { get; set; }
         public DbSet<THAM_SO> THAM_SO { get; set; }
-        public DbSet<DICH_VU> DICH_VU { get; set; }
+        public DbSet<THUE_DICH_VU> THUE_DICH_VU { get; set; }
     
         public virtual int spCapNhatTinhTrangPhong(Nullable<int> maPhong)
         {
@@ -480,6 +481,23 @@ namespace DAO
                 new ObjectParameter("GhiChu", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemPhong1", tinhTrangParameter, maLoaiPhongParameter, ghiChuParameter);
+        }
+    
+        public virtual int spThemPhong2(string tinhTrang, string maLoaiPhong, string ghiChu)
+        {
+            var tinhTrangParameter = tinhTrang != null ?
+                new ObjectParameter("TinhTrang", tinhTrang) :
+                new ObjectParameter("TinhTrang", typeof(string));
+    
+            var maLoaiPhongParameter = maLoaiPhong != null ?
+                new ObjectParameter("MaLoaiPhong", maLoaiPhong) :
+                new ObjectParameter("MaLoaiPhong", typeof(string));
+    
+            var ghiChuParameter = ghiChu != null ?
+                new ObjectParameter("GhiChu", ghiChu) :
+                new ObjectParameter("GhiChu", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemPhong2", tinhTrangParameter, maLoaiPhongParameter, ghiChuParameter);
         }
     }
 }

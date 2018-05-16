@@ -20,7 +20,8 @@ namespace DTO
         public int? SLKhachNG { get; set; }
         public string TenKhachHang { get; set; }
         public string DiaChi { get; set; }
-        public decimal? TriGia { get; set; }
+        public decimal PhiDichVu { get; set; }
+        public decimal? TongTien { get; set; }
         public decimal? ThanhTien { get; set; }
         public DateTime NgayThanhToan { get; set; }
     }

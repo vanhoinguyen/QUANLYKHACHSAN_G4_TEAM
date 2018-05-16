@@ -29,6 +29,11 @@ namespace BUS
             return HoaDonDAO.LaySoNgayDaThue();
         }
 
+        public static object LayMaPhongDaThue()
+        {
+            return HoaDonDAO.LayMaPhongDaThue();
+        }
+
         public static int LaySoLuongKhach(int maphieuthue)
         {
             return HoaDonDAO.LaySoLuongKhach(maphieuthue);
@@ -52,6 +57,59 @@ namespace BUS
         public static List<HoaDonDTO> TinhHeSo()
         {
             return HoaDonDAO.TinhHeSo();
+        }
+
+        public static decimal ThanhTien(int snt, decimal dg, decimal pt, decimal hs)
+        {
+            decimal thanhtien = 0;
+            if(snt == 0)
+            {
+                return (thanhtien = dg );
+            }
+            else
+            {
+                thanhtien = dg * snt;
+                thanhtien = thanhtien+ dg * pt;
+                if(hs != 0)
+                {
+                    thanhtien *= hs;
+                    return thanhtien;
+                }
+                else
+                {
+                    return thanhtien;
+                }
+            }
+        }
+
+        public static int? LayMaHDCuoiCung()
+        {
+            return HoaDonDAO.LayMaHDCuoiCung();
+        }
+
+        public static bool LapHoaDon(HoaDonDTO infor)
+        {
+            return HoaDonDAO.LapHoaDon(infor);
+        }
+
+        public static List<HoaDonDTO> LayMaPhieuThue(int maphong)
+        {
+            return HoaDonDAO.LayMaPhieuThue(maphong);
+        }
+
+        public static bool LapChiTietHoaDon(HoaDonDTO infor, HoaDonDTO inforHD)
+        {
+            return HoaDonDAO.LapChiTietHoaDon(infor, inforHD);
+        }
+
+        public static bool XoaChiTietPhieuThue(HoaDonDTO inforHD)
+        {
+            return HoaDonDAO.XoaChiTietPhieuThue(inforHD);
+        }
+
+        public static bool XoaPhieuThue(HoaDonDTO inforHD)
+        {
+            return HoaDonDAO.XoaPhieuThue( inforHD);
         }
     }
 }

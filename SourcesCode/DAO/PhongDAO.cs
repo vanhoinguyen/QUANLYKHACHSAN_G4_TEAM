@@ -70,6 +70,20 @@ namespace DAO
             }
         }
 
+        public static bool ThietLapTrangThaiPhongBanDau(HoaDonDTO inforHD)
+        {
+            SqlParameter maphong = new SqlParameter("@MaPhong", inforHD.MaPhong);
+            try
+            {
+                context.Database.ExecuteSqlCommand("spThietLapTTrangPhongBanDau @MaPhong", maphong);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public static bool XoaPhong(PhongDTO infor)
         {
             SqlParameter maphong = new SqlParameter("@MaPhong", infor.MaPhong);

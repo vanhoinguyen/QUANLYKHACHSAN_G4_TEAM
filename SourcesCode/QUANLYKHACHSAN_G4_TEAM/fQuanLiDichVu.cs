@@ -72,6 +72,8 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
         private void btnXoa_Click(object sender, EventArgs e)
         {
             DichVuDTO infor = LayThongTinDichVu();
+            infor.MaDichVu = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["MaDichVu"]).ToString());
+
             DialogResult result = (MessageBox.Show("Bạn có muốn xóa dịch vị " + txtNameService.Text + " không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
             if (result == DialogResult.Yes)
             {
@@ -122,7 +124,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
         private void btnLuu_Click(object sender, EventArgs e)
         {
             DichVuDTO infor = LayThongTinDichVu();
-            infor.MaDichVu = int.Parse( gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["MaDichVu"]).ToString());
+            
             if (btnThem.Text == "Ngừng")
             {
                 if (DichVuBUS.ThemDichVu(infor))
@@ -139,6 +141,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
             }
             else if (btnSua.Text == "Ngừng")
             {
+                infor.MaDichVu = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["MaDichVu"]).ToString());
                 if (DichVuBUS.SuaThongTinDichVu(infor))
                 {
                     MessageBox.Show("Bạn đã sửa thông tin dịch vụ " + txtNameService.Text + " thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

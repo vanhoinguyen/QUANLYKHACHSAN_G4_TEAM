@@ -141,6 +141,18 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <Property Name="PhuThuKhachThu" Type="int" />
     <Property Name="SLKhachNuocNgoai" Type="int" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THUE_DICH_VU' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="THUE_DICH_VU">
+    <Key>
+      <PropertyRef Name="MaDichVu" />
+      <PropertyRef Name="MaKhachHang" />
+    </Key>
+    <Property Name="MaDichVu" Type="int" Nullable="false" />
+    <Property Name="MaKhachHang" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="PhiDichVu" Type="money" />
+  </EntityType>
   <Association Name="F_CHI_TIET_HOA_DON_1">
     <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="1" />
     <End Role="CHI_TIET_HOA_DON" Type="Self.CHI_TIET_HOA_DON" Multiplicity="*" />
@@ -249,6 +261,30 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__THUE_DICH__MaDic__02FC7413">
+    <End Role="DICH_VU" Type="Self.DICH_VU" Multiplicity="1" />
+    <End Role="THUE_DICH_VU" Type="Self.THUE_DICH_VU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DICH_VU">
+        <PropertyRef Name="MaDichVu" />
+      </Principal>
+      <Dependent Role="THUE_DICH_VU">
+        <PropertyRef Name="MaDichVu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__THUE_DICH__MaKha__03F0984C">
+    <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="1" />
+    <End Role="THUE_DICH_VU" Type="Self.THUE_DICH_VU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACH_HANG">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="THUE_DICH_VU">
+        <PropertyRef Name="MaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Function Name="spCapNhatTinhTrangPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaPhong" Type="int" Mode="In" />
   </Function>
@@ -346,11 +382,6 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <Parameter Name="MaPhong" Type="int" Mode="In" />
     <Parameter Name="NgayTraPhong" Type="date" Mode="In" />
   </Function>
-  <Function Name="spThemPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="TinhTrang" Type="nvarchar" Mode="In" />
-    <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
-    <Parameter Name="GhiChu" Type="ntext" Mode="In" />
-  </Function>
   <Function Name="spThietLapTTrangPhongBanDau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaPhong" Type="int" Mode="In" />
   </Function>
@@ -400,6 +431,14 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
 [THAM_SO].[SLKhachNuocNgoai] AS [SLKhachNuocNgoai]
 FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
     </EntitySet>
+    <EntitySet Name="THUE_DICH_VU" EntityType="Self.THUE_DICH_VU" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[THUE_DICH_VU].[MaDichVu] AS [MaDichVu], 
+[THUE_DICH_VU].[MaKhachHang] AS [MaKhachHang], 
+[THUE_DICH_VU].[SoLuong] AS [SoLuong], 
+[THUE_DICH_VU].[PhiDichVu] AS [PhiDichVu]
+FROM [dbo].[THUE_DICH_VU] AS [THUE_DICH_VU]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="F_CHI_TIET_HOA_DON_1" Association="Self.F_CHI_TIET_HOA_DON_1">
       <End Role="HOA_DON" EntitySet="HOA_DON" />
       <End Role="CHI_TIET_HOA_DON" EntitySet="CHI_TIET_HOA_DON" />
@@ -435,6 +474,14 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
     <AssociationSet Name="F_PHONG" Association="Self.F_PHONG">
       <End Role="LOAI_PHONG" EntitySet="LOAI_PHONG" />
       <End Role="PHONG" EntitySet="PHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__THUE_DICH__MaDic__02FC7413" Association="Self.FK__THUE_DICH__MaDic__02FC7413">
+      <End Role="DICH_VU" EntitySet="DICH_VU" />
+      <End Role="THUE_DICH_VU" EntitySet="THUE_DICH_VU" />
+    </AssociationSet>
+    <AssociationSet Name="FK__THUE_DICH__MaKha__03F0984C" Association="Self.FK__THUE_DICH__MaKha__03F0984C">
+      <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
+      <End Role="THUE_DICH_VU" EntitySet="THUE_DICH_VU" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

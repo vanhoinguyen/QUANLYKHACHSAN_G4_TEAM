@@ -14,9 +14,16 @@ namespace DAO
     
     public partial class DICH_VU
     {
+        public DICH_VU()
+        {
+            this.THUE_DICH_VU = new HashSet<THUE_DICH_VU>();
+        }
+    
         public int MaDichVu { get; set; }
         public string TenDichVu { get; set; }
         public string DonViTinh { get; set; }
         public decimal DonGia { get; set; }
+    
+        public virtual ICollection<THUE_DICH_VU> THUE_DICH_VU { get; set; }
     }
 }

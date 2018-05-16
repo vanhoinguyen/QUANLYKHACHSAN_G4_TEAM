@@ -90,6 +90,32 @@ namespace DAO
             return query.ToList();
         }
 
+        public static bool XoaKhachHang(KhachHangDTO id)
+        {
+            SqlParameter makh = new SqlParameter("@MaKH", id.MaKH);
+            try
+            {
+                context.Database.ExecuteSqlCommand("spXoaKhachHang @MaKH", makh);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static List<KhachHangDTO> LayMaKhachHangCanXoa(int? maphieuthue)
+        {
+            var query = (from kh in context.KHACH_HANG
+                         join ct in context.CHI_TIET_PHIEU_THUE on kh.MaKhachHang equals ct.MaKhachHang
+                         where ct.MaPhieuThue == maphieuthue
+                         select new KhachHangDTO
+                         {
+                             MaKH = kh.MaKhachHang,
+                         });
+            return query.ToList();
+        }
+
         public static List<KhachHangDTO> DSKHDiaChiCMND(KhachHangDTO thongtin)
         {
             var query = (from kh in context.KHACH_HANG

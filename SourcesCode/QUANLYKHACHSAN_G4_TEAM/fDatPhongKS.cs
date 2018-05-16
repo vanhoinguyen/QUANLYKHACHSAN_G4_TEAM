@@ -62,8 +62,9 @@ namespace QUANLYKHACHSAN_G4_TEAM.DatPhong
             txtLoaiPhong.Text = roomtype;
 
             cmbLoaiKhach.DataSource = KhachHangBUS.LayDSLoaiKhach();
-            cmbLoaiKhach.ValueMember = "LoaiKhach";
-            //cmbLoaiKhach.DisplayMember = "TenLoaiKhach";
+            cmbLoaiKhach.ValueMember = "MaLoaiKhach";
+         
+            cmbLoaiKhach.DisplayMember = "TenLoaiKhach";
 
             #region
             List<ThamSoDTO> lstMaxCus = PhongBUS.SoLuongKhachToiDa();

@@ -104,5 +104,15 @@ namespace BUS
         {
             return KhachHangDAO.DSKHDiaChiCMND(thongtin);
         }
+
+        public static List<KhachHangDTO> LayMaKhachHangCanXoa(int? maphieuthue)
+        {
+            return KhachHangDAO.LayMaKhachHangCanXoa(maphieuthue);
+        }
+
+        public static bool XoaKhachHang(KhachHangDTO id)
+        {
+            return KhachHangDAO.XoaKhachHang(id);
+        }
     }
 }

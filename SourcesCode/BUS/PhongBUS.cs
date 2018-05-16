@@ -67,5 +67,10 @@ namespace BUS
         {
             return PhongDAO.XoaPhong(infor);
         }
+
+        public static bool ThietLapTrangThaiPhongBanDau(HoaDonDTO inforHD)
+        {
+            return PhongDAO.ThietLapTrangThaiPhongBanDau(inforHD);
+        }
     }
 }
