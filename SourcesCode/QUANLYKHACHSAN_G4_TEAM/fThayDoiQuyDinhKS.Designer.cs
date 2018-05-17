@@ -48,10 +48,15 @@
             // cmbThamSo
             // 
             this.cmbThamSo.FormattingEnabled = true;
+            this.cmbThamSo.Items.AddRange(new object[] {
+            "Số lượng khách tối đa",
+            "Hệ số",
+            "Phụ thu"});
             this.cmbThamSo.Location = new System.Drawing.Point(84, 16);
             this.cmbThamSo.Name = "cmbThamSo";
             this.cmbThamSo.Size = new System.Drawing.Size(185, 21);
             this.cmbThamSo.TabIndex = 13;
+            this.cmbThamSo.SelectedIndexChanged += new System.EventHandler(this.cmbThamSo_SelectedIndexChanged);
             // 
             // txtGiaTri
             // 
@@ -59,6 +64,7 @@
             this.txtGiaTri.Name = "txtGiaTri";
             this.txtGiaTri.Size = new System.Drawing.Size(185, 21);
             this.txtGiaTri.TabIndex = 12;
+            this.txtGiaTri.TextChanged += new System.EventHandler(this.txtGiaTri_TextChanged);
             // 
             // label1
             // 
@@ -74,6 +80,7 @@
             this.btnSua.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSua.Enabled = false;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
             this.btnSua.Location = new System.Drawing.Point(151, 87);
             this.btnSua.Name = "btnSua";

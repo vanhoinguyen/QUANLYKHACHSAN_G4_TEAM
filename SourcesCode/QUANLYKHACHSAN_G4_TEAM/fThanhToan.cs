@@ -45,6 +45,8 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
         {
             ThietLapButton(false);
             cmbMaPhong.DataSource = HoaDonBUS.LayMaPhongDaThue();
+            if (cmbMaPhong.SelectedValue == null)
+                btnThem.Enabled = false;
         }
 
         private void cmbMaPhong_SelectedIndexChanged(object sender, EventArgs e)
@@ -109,7 +111,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
 
         private void btnThem_Click_1(object sender, EventArgs e)
         {
-
+            
             dgvHoaDon.Rows.Add();
             dgvHoaDon.Rows[numRow].Cells["colSTT"].Value = numRow + 1;
             dgvHoaDon.Rows[numRow].Cells["colMaPhong"].Value = cmbMaPhong.Text;
@@ -119,7 +121,8 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
             dgvHoaDon.Rows[numRow].Cells["colHeSo"].Value = txtHeSo.Text;
 
             btnThem.Enabled = false;
-            decimal thanhtien = HoaDonBUS.ThanhTien(int.Parse(txtSoNgayThue.Text), Convert.ToDecimal(txtDonGiaPhong.Text), Convert.ToDecimal(txtPhuThu.Text), Convert.ToDecimal(txtHeSo.Text));
+            decimal thanhtien = HoaDonBUS.ThanhTien(int.Parse(txtSoNgayThue.Text), Convert.ToDecimal(txtDonGiaPhong.Text), 
+                Convert.ToDecimal(txtPhuThu.Text), Convert.ToDecimal(txtHeSo.Text));
             dgvHoaDon.Rows[numRow].Cells["colThanhTien"].Value = thanhtien.ToString();
             numRow++;
 
@@ -178,6 +181,9 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
         {
             HoaDonDTO infor = new HoaDonDTO();
             int maphong = int.Parse(dgvHoaDon.Rows[i].Cells["colMaPhong"].Value.ToString());
+            //tai sao la null
+            //int maphong = int.Parse(cmbMaPhong.SelectedIndex.ToString());
+
             infor.MaPhong = maphong;
             List<HoaDonDTO> lst = new List<HoaDonDTO>();
             lst = HoaDonBUS.LayMaPhieuThue(maphong);
@@ -205,7 +211,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
             HoaDonDTO infor = LayThongTinKhachHangThanhToan();
             if (HoaDonBUS.LapHoaDon(infor))
             {
-                for (int i = 0; i < dgvHoaDon.RowCount; i++)
+                for (int i = 0; i < dgvHoaDon.RowCount - 1; i++)
                 {
                     HoaDonDTO inforHD = ThongTinHoaDonThanhToan(i);
                     if (!(HoaDonBUS.LapChiTietHoaDon(infor, inforHD)))
@@ -247,6 +253,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
                         MessageBox.Show("Không cập nhập được tình trạng phòng ", "Lỗi", MessageBoxButtons.OK,
                             MessageBoxIcon.Stop);
                     }
+                }
 
                     if (success == true)
                     {
@@ -264,7 +271,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
                         txtTenKhachHang.Text = "";
                         txtTongTien.Text = "0";
                     }
-                }
+                
             }
             else
             {
