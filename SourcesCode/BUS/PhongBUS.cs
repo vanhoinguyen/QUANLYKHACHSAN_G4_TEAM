@@ -38,6 +38,11 @@ namespace BUS
             return PhongDAO.CapNhatTinhTrangPhong(p);
         }
 
+        public static List<PhongDTO> DanhSachPhong1()
+        {
+            return PhongDAO.DanhSachPhong1();
+        }
+
         public static List<PhongDTO> LoaiPhong()
         {
             return PhongDAO.LoaiPhong();
@@ -71,6 +76,36 @@ namespace BUS
         public static bool ThietLapTrangThaiPhongBanDau(HoaDonDTO inforHD)
         {
             return PhongDAO.ThietLapTrangThaiPhongBanDau(inforHD);
+        }
+
+        public static List<PhongDTO> DanhSachPhongTheoLoai(PhongDTO thongtin)
+        {
+            return PhongDAO.DanhSachPhongTheoLoai(thongtin);
+        }
+
+        public static List<PhongDTO> DanhSachPhongYeuCau(PhongDTO thongtin)
+        {
+            return PhongDAO.DanhSachPhongYeuCau(thongtin);
+        }
+
+        public static List<PhongDTO> DanhSachPhongTheoLoaiTheoYeuCau(PhongDTO thongtin)
+        {
+            return PhongDAO.DanhSachPhongTheoLoaiTheoYeuCau(thongtin);
+        }
+
+        public static List<PhongDTO> DanhSachPhongTheoDGTu(decimal dgtu)
+        {
+            return PhongDAO.DanhSachPhongTheoDGTu(dgtu);
+        }
+
+        public static List<PhongDTO> DanhSachPhongTheoKhoangDG(decimal dgtu, decimal dgden)
+        {
+            return PhongDAO.DanhSachPhongTheoKhoangDG(dgtu, dgden);
+        }
+
+        public static List<PhongDTO> DanhSachPhongTheoDGDen(decimal dgden)
+        {
+            return PhongDAO.DanhSachPhongTheoDGDen(dgden);
         }
     }
 }
