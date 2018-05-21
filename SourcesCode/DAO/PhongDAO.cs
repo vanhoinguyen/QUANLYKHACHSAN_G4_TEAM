@@ -70,102 +70,6 @@ namespace DAO
             }
         }
 
-        public static List<PhongDTO> DanhSachPhongTheoDGTu(decimal dgtu)
-        {
-            var query = (from r in context.PHONGs
-                         join t in context.LOAI_PHONG on r.LOAI_PHONG.MaLoaiPhong equals t.MaLoaiPhong
-                         where t.DonGia >= dgtu
-                         select new PhongDTO
-                         {
-                             MaPhong = r.MaPhong,
-                             TinhTrang = r.TinhTrang,
-                             GhiChu = r.GhiChu,
-                             TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
-                             DonGia = r.LOAI_PHONG.DonGia,
-                         }).OrderByDescending(s => s.TinhTrang);
-            return query.ToList();
-        }
-
-        public static List<PhongDTO> DanhSachPhongTheoDGDen(decimal dgden)
-        {
-            var query = (from r in context.PHONGs
-                         join t in context.LOAI_PHONG on r.LOAI_PHONG.MaLoaiPhong equals t.MaLoaiPhong
-                         where t.DonGia <= dgden
-                         select new PhongDTO
-                         {
-                             MaPhong = r.MaPhong,
-                             TinhTrang = r.TinhTrang,
-                             GhiChu = r.GhiChu,
-                             TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
-                             DonGia = r.LOAI_PHONG.DonGia,
-                         }).OrderByDescending(s => s.TinhTrang);
-            return query.ToList();
-        }
-
-        public static List<PhongDTO> DanhSachPhongTheoKhoangDG(decimal dgtu, decimal dgden)
-        {
-            var query = (from r in context.PHONGs
-                         join t in context.LOAI_PHONG on r.LOAI_PHONG.MaLoaiPhong equals t.MaLoaiPhong
-                         where (t.DonGia >= dgtu) && (t.DonGia <= dgden)
-                         select new PhongDTO
-                         {
-                             MaPhong = r.MaPhong,
-                             TinhTrang = r.TinhTrang,
-                             GhiChu = r.GhiChu,
-                             TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
-                             DonGia = r.LOAI_PHONG.DonGia,
-                         }).OrderByDescending(s => s.TinhTrang);
-            return query.ToList();
-        }
-
-        public static List<PhongDTO> DanhSachPhongTheoLoaiTheoYeuCau(PhongDTO thongtin)
-        {
-            var query = (from r in context.PHONGs
-                         join t in context.LOAI_PHONG on r.LOAI_PHONG.MaLoaiPhong equals t.MaLoaiPhong
-                         where (t.TenLoaiPhong == thongtin.TenLoaiPhong) && (r.GhiChu.Contains(thongtin.GhiChu))
-                         select new PhongDTO
-                         {
-                             MaPhong = r.MaPhong,
-                             TinhTrang = r.TinhTrang,
-                             GhiChu = r.GhiChu,
-                             TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
-                             DonGia = r.LOAI_PHONG.DonGia,
-                         }).OrderByDescending(s => s.TinhTrang);
-            return query.ToList();
-        }
-
-
-        public static List<PhongDTO> DanhSachPhongYeuCau(PhongDTO thongtin)
-        {
-            var query = (from r in context.PHONGs
-                         join t in context.LOAI_PHONG on r.LOAI_PHONG.MaLoaiPhong equals t.MaLoaiPhong
-                         where r.GhiChu.Contains(thongtin.GhiChu)
-                         select new PhongDTO
-                         {
-                             MaPhong = r.MaPhong,
-                             TinhTrang = r.TinhTrang,
-                             GhiChu = r.GhiChu,
-                             TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
-                             DonGia = r.LOAI_PHONG.DonGia,
-                         }).OrderByDescending(s => s.TinhTrang);
-            return query.ToList();
-        }
-        public static List<PhongDTO> DanhSachPhongTheoLoai(PhongDTO thongtin)
-        {
-            var query = (from r in context.PHONGs
-                         join t in context.LOAI_PHONG on r.LOAI_PHONG.MaLoaiPhong equals t.MaLoaiPhong
-                         where t.TenLoaiPhong == thongtin.TenLoaiPhong
-                         select new PhongDTO
-                         {
-                             MaPhong = r.MaPhong,
-                             TinhTrang = r.TinhTrang,
-                             GhiChu = r.GhiChu,
-                             TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
-                             DonGia = r.LOAI_PHONG.DonGia,
-                         }).OrderByDescending(s => s.TinhTrang);
-            return query.ToList();
-        }
-
         public static bool ThietLapTrangThaiPhongBanDau(HoaDonDTO inforHD)
         {
             SqlParameter maphong = new SqlParameter("@MaPhong", inforHD.MaPhong);
@@ -211,6 +115,7 @@ namespace DAO
                 return false;
             }
         }
+
         public static List<PhongDTO> DanhSachPhong()
         {
             var query = (from r in context.PHONGs
@@ -222,22 +127,6 @@ namespace DAO
                              GhiChu = r.GhiChu,
                              TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
                              DonGia = r.LOAI_PHONG.DonGia,
-                         }).OrderByDescending(s => s.TinhTrang);
-            return query.ToList();
-        }
-        public static List<PhongDTO> DanhSachPhong1()
-        {
-            var query = (from t in context.LOAI_PHONG
-                         join r in context.PHONGs on t.MaLoaiPhong equals r.MaLoaiPhong
-                         join f in context.PHIEU_THUE_PHONG on r.MaPhong equals f.MaPhong
-                         select new PhongDTO
-                         {
-                             MaPhong = r.MaPhong,
-                             TinhTrang = r.TinhTrang,
-                             GhiChu = r.GhiChu,
-                             TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
-                             DonGia = r.LOAI_PHONG.DonGia,
-                             NgayTraPhongDK = f.NgayTraPhongDK,
                          }).OrderByDescending(s => s.TinhTrang);
             return query.ToList();
         }

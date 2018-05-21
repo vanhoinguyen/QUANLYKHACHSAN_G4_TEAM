@@ -17,7 +17,6 @@ namespace DAO
         public KHACH_HANG()
         {
             this.CHI_TIET_PHIEU_THUE = new HashSet<CHI_TIET_PHIEU_THUE>();
-            this.THUE_DICH_VU = new HashSet<THUE_DICH_VU>();
         }
     
         public int MaKhachHang { get; set; }
@@ -28,6 +27,5 @@ namespace DAO
     
         public virtual ICollection<CHI_TIET_PHIEU_THUE> CHI_TIET_PHIEU_THUE { get; set; }
         public virtual LOAI_KHACH_HANG LOAI_KHACH_HANG { get; set; }
-        public virtual ICollection<THUE_DICH_VU> THUE_DICH_VU { get; set; }
     }
 }

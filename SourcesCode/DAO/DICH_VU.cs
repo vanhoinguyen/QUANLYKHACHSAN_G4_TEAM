@@ -16,7 +16,7 @@ namespace DAO
     {
         public DICH_VU()
         {
-            this.THUE_DICH_VU = new HashSet<THUE_DICH_VU>();
+            this.DANG_KI_DICH_VU = new HashSet<DANG_KI_DICH_VU>();
         }
     
         public int MaDichVu { get; set; }
@@ -24,6 +24,6 @@ namespace DAO
         public string DonViTinh { get; set; }
         public decimal DonGia { get; set; }
     
-        public virtual ICollection<THUE_DICH_VU> THUE_DICH_VU { get; set; }
+        public virtual ICollection<DANG_KI_DICH_VU> DANG_KI_DICH_VU { get; set; }
     }
 }

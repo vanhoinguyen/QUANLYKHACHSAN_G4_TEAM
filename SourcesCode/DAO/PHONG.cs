@@ -18,6 +18,7 @@ namespace DAO
         {
             this.CHI_TIET_HOA_DON = new HashSet<CHI_TIET_HOA_DON>();
             this.PHIEU_THUE_PHONG = new HashSet<PHIEU_THUE_PHONG>();
+            this.DANG_KI_DICH_VU = new HashSet<DANG_KI_DICH_VU>();
         }
     
         public int MaPhong { get; set; }
@@ -28,5 +29,6 @@ namespace DAO
         public virtual ICollection<CHI_TIET_HOA_DON> CHI_TIET_HOA_DON { get; set; }
         public virtual LOAI_PHONG LOAI_PHONG { get; set; }
         public virtual ICollection<PHIEU_THUE_PHONG> PHIEU_THUE_PHONG { get; set; }
+        public virtual ICollection<DANG_KI_DICH_VU> DANG_KI_DICH_VU { get; set; }
     }
 }

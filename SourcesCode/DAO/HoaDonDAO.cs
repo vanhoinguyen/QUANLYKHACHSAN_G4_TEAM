@@ -30,8 +30,7 @@ namespace DAO
                          join lp in context.LOAI_PHONG on p.MaLoaiPhong equals lp.MaLoaiPhong
                          join ctpt in context.CHI_TIET_PHIEU_THUE on pt.MaPhieuThue equals ctpt.MaPhieuThue
                          join kh in context.KHACH_HANG on ctpt.MaKhachHang equals kh.MaKhachHang
-                         //join tdv in context.THUE_DICH_VU on kh.MaKhachHang equals tdv.MaKhachHang
-                        // join dv in context.DICH_VU on tdv.MaDichVu equals dv.MaDichVu
+                        
                          where pt.MaPhong == infor.MaPhong
                          select new HoaDonDTO
                          {

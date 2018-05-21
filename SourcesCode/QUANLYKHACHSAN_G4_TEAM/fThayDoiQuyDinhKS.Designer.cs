@@ -87,6 +87,7 @@
             this.btnSua.Size = new System.Drawing.Size(118, 31);
             this.btnSua.TabIndex = 15;
             this.btnSua.Text = "Cập nhật";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // fThayDoiQuyDinhKS
             // 

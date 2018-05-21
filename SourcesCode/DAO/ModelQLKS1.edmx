@@ -62,6 +62,15 @@
           <Property Name="SoNgayThue" Type="int" />
           <Property Name="TiLe" Type="char" MaxLength="10" />
         </EntityType>
+        <EntityType Name="DANG_KI_DICH_VU">
+          <Key>
+            <PropertyRef Name="MaDangKi" />
+          </Key>
+          <Property Name="MaDangKi" Type="int" Nullable="false" />
+          <Property Name="MaDichVu" Type="int" Nullable="false" />
+          <Property Name="MaPhong" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="DICH_VU">
           <Key>
             <PropertyRef Name="MaDichVu" />
@@ -145,18 +154,6 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
           <Property Name="SoNgayThue" Type="int" />
           <Property Name="PhuThuKhachThu" Type="int" />
           <Property Name="SLKhachNuocNgoai" Type="int" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THUE_DICH_VU' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="THUE_DICH_VU">
-          <Key>
-            <PropertyRef Name="MaDichVu" />
-            <PropertyRef Name="MaKhachHang" />
-          </Key>
-          <Property Name="MaDichVu" Type="int" Nullable="false" />
-          <Property Name="MaKhachHang" Type="int" Nullable="false" />
-          <Property Name="SoLuong" Type="int" />
-          <Property Name="PhiDichVu" Type="money" />
         </EntityType>
         <Association Name="F_CHI_TIET_HOA_DON_1">
           <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="1" />
@@ -266,27 +263,27 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THUE_DICH_VU' does not have 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__THUE_DICH__MaDic__02FC7413">
+        <Association Name="FK_DKDV_DV">
           <End Role="DICH_VU" Type="Self.DICH_VU" Multiplicity="1" />
-          <End Role="THUE_DICH_VU" Type="Self.THUE_DICH_VU" Multiplicity="*" />
+          <End Role="DANG_KI_DICH_VU" Type="Self.DANG_KI_DICH_VU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DICH_VU">
               <PropertyRef Name="MaDichVu" />
             </Principal>
-            <Dependent Role="THUE_DICH_VU">
+            <Dependent Role="DANG_KI_DICH_VU">
               <PropertyRef Name="MaDichVu" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__THUE_DICH__MaKha__03F0984C">
-          <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="1" />
-          <End Role="THUE_DICH_VU" Type="Self.THUE_DICH_VU" Multiplicity="*" />
+        <Association Name="FK_DKDV_P">
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+          <End Role="DANG_KI_DICH_VU" Type="Self.DANG_KI_DICH_VU" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="KHACH_HANG">
-              <PropertyRef Name="MaKhachHang" />
+            <Principal Role="PHONG">
+              <PropertyRef Name="MaPhong" />
             </Principal>
-            <Dependent Role="THUE_DICH_VU">
-              <PropertyRef Name="MaKhachHang" />
+            <Dependent Role="DANG_KI_DICH_VU">
+              <PropertyRef Name="MaPhong" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -301,6 +298,11 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THUE_DICH_VU' does not have 
         </Function>
         <Function Name="spCapNhatTSSoKhachToiDa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SoKhachToiDa" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spDangKiDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaDichVu" Type="int" Mode="In" />
+          <Parameter Name="MaPhong" Type="int" Mode="In" />
+          <Parameter Name="SoLuong" Type="int" Mode="In" />
         </Function>
         <Function Name="spDoanhThuTheoLoaiPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="spDoanhThuTheoLoaiPhongTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -418,6 +420,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THUE_DICH_VU' does not have 
           <EntitySet Name="CHI_TIET_PHIEU_THUE" EntityType="Self.CHI_TIET_PHIEU_THUE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="Self.CHITIET_BAOCAODOANHTHU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CHITIET_BAOCAOMATDOSUDUNG" EntityType="Self.CHITIET_BAOCAOMATDOSUDUNG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DANG_KI_DICH_VU" EntityType="Self.DANG_KI_DICH_VU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DICH_VU" EntityType="Self.DICH_VU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HOA_DON" EntityType="Self.HOA_DON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHACH_HANG" EntityType="Self.KHACH_HANG" Schema="dbo" store:Type="Tables" />
@@ -435,14 +438,6 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THUE_DICH_VU' does not have 
 [THAM_SO].[PhuThuKhachThu] AS [PhuThuKhachThu], 
 [THAM_SO].[SLKhachNuocNgoai] AS [SLKhachNuocNgoai]
 FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="THUE_DICH_VU" EntityType="Self.THUE_DICH_VU" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[THUE_DICH_VU].[MaDichVu] AS [MaDichVu], 
-[THUE_DICH_VU].[MaKhachHang] AS [MaKhachHang], 
-[THUE_DICH_VU].[SoLuong] AS [SoLuong], 
-[THUE_DICH_VU].[PhiDichVu] AS [PhiDichVu]
-FROM [dbo].[THUE_DICH_VU] AS [THUE_DICH_VU]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="F_CHI_TIET_HOA_DON_1" Association="Self.F_CHI_TIET_HOA_DON_1">
             <End Role="HOA_DON" EntitySet="HOA_DON" />
@@ -480,13 +475,13 @@ FROM [dbo].[THUE_DICH_VU] AS [THUE_DICH_VU]</DefiningQuery>
             <End Role="LOAI_PHONG" EntitySet="LOAI_PHONG" />
             <End Role="PHONG" EntitySet="PHONG" />
           </AssociationSet>
-          <AssociationSet Name="FK__THUE_DICH__MaDic__02FC7413" Association="Self.FK__THUE_DICH__MaDic__02FC7413">
+          <AssociationSet Name="FK_DKDV_DV" Association="Self.FK_DKDV_DV">
             <End Role="DICH_VU" EntitySet="DICH_VU" />
-            <End Role="THUE_DICH_VU" EntitySet="THUE_DICH_VU" />
+            <End Role="DANG_KI_DICH_VU" EntitySet="DANG_KI_DICH_VU" />
           </AssociationSet>
-          <AssociationSet Name="FK__THUE_DICH__MaKha__03F0984C" Association="Self.FK__THUE_DICH__MaKha__03F0984C">
-            <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
-            <End Role="THUE_DICH_VU" EntitySet="THUE_DICH_VU" />
+          <AssociationSet Name="FK_DKDV_P" Association="Self.FK_DKDV_P">
+            <End Role="PHONG" EntitySet="PHONG" />
+            <End Role="DANG_KI_DICH_VU" EntitySet="DANG_KI_DICH_VU" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -639,7 +634,6 @@ FROM [dbo].[THUE_DICH_VU] AS [THUE_DICH_VU]</DefiningQuery>
           <EntitySet Name="NGUOI_DUNG" EntityType="QUAN_LY_KHACH_SANModel.NGUOI_DUNG" />
           <EntitySet Name="PHIEU_THUE_PHONG" EntityType="QUAN_LY_KHACH_SANModel.PHIEU_THUE_PHONG" />
           <EntitySet Name="PHONGs" EntityType="QUAN_LY_KHACH_SANModel.PHONG" />
-          <EntitySet Name="THAM_SO" EntityType="QUAN_LY_KHACH_SANModel.THAM_SO" />
           <AssociationSet Name="F_CHITIET_BAOCAODOANHTHU" Association="QUAN_LY_KHACH_SANModel.F_CHITIET_BAOCAODOANHTHU">
             <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" EntitySet="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
             <End Role="CHITIET_BAOCAODOANHTHU" EntitySet="CHITIET_BAOCAODOANHTHU" />
@@ -681,15 +675,21 @@ FROM [dbo].[THUE_DICH_VU] AS [THUE_DICH_VU]</DefiningQuery>
             <Parameter Name="MaLoaiPhong" Mode="In" Type="String" />
             <Parameter Name="GhiChu" Mode="In" Type="String" />
           </FunctionImport>
-          <EntitySet Name="THUE_DICH_VU" EntityType="QUAN_LY_KHACH_SANModel.THUE_DICH_VU" />
-          <AssociationSet Name="FK__THUE_DICH__MaDic__02FC7413" Association="QUAN_LY_KHACH_SANModel.FK__THUE_DICH__MaDic__02FC7413">
+          <EntitySet Name="THAM_SO" EntityType="QUAN_LY_KHACH_SANModel.THAM_SO" />
+          <EntitySet Name="DANG_KI_DICH_VU" EntityType="QUAN_LY_KHACH_SANModel.DANG_KI_DICH_VU" />
+          <AssociationSet Name="FK_DKDV_DV" Association="QUAN_LY_KHACH_SANModel.FK_DKDV_DV">
             <End Role="DICH_VU" EntitySet="DICH_VU" />
-            <End Role="THUE_DICH_VU" EntitySet="THUE_DICH_VU" />
+            <End Role="DANG_KI_DICH_VU" EntitySet="DANG_KI_DICH_VU" />
           </AssociationSet>
-          <AssociationSet Name="FK__THUE_DICH__MaKha__03F0984C" Association="QUAN_LY_KHACH_SANModel.FK__THUE_DICH__MaKha__03F0984C">
-            <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
-            <End Role="THUE_DICH_VU" EntitySet="THUE_DICH_VU" />
+          <AssociationSet Name="FK_DKDV_P" Association="QUAN_LY_KHACH_SANModel.FK_DKDV_P">
+            <End Role="PHONG" EntitySet="PHONGs" />
+            <End Role="DANG_KI_DICH_VU" EntitySet="DANG_KI_DICH_VU" />
           </AssociationSet>
+          <FunctionImport Name="spDangKiDichVu">
+            <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
+            <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+            <Parameter Name="SoLuong" Mode="In" Type="Int32" />
+          </FunctionImport>
           </EntityContainer>
         <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
           <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />
@@ -772,7 +772,7 @@ FROM [dbo].[THUE_DICH_VU] AS [THUE_DICH_VU]</DefiningQuery>
           <Property Name="TenDichVu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DonViTinh" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DonGia" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-          <NavigationProperty Name="THUE_DICH_VU" Relationship="QUAN_LY_KHACH_SANModel.FK__THUE_DICH__MaDic__02FC7413" FromRole="DICH_VU" ToRole="THUE_DICH_VU" />
+          <NavigationProperty Name="DANG_KI_DICH_VU" Relationship="QUAN_LY_KHACH_SANModel.FK_DKDV_DV" FromRole="DICH_VU" ToRole="DANG_KI_DICH_VU" />
         </EntityType>
         <EntityType Name="HOA_DON">
           <Key>
@@ -794,7 +794,6 @@ FROM [dbo].[THUE_DICH_VU] AS [THUE_DICH_VU]</DefiningQuery>
           <Property Name="MaLoaiKhach" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CHI_TIET_PHIEU_THUE" Relationship="QUAN_LY_KHACH_SANModel.F_CHI_TIET_PHIEU_THUE_1" FromRole="KHACH_HANG" ToRole="CHI_TIET_PHIEU_THUE" />
           <NavigationProperty Name="LOAI_KHACH_HANG" Relationship="QUAN_LY_KHACH_SANModel.F_KHACH_HANG" FromRole="KHACH_HANG" ToRole="LOAI_KHACH_HANG" />
-          <NavigationProperty Name="THUE_DICH_VU" Relationship="QUAN_LY_KHACH_SANModel.FK__THUE_DICH__MaKha__03F0984C" FromRole="KHACH_HANG" ToRole="THUE_DICH_VU" />
         </EntityType>
         <EntityType Name="LOAI_KHACH_HANG">
           <Key>
@@ -844,19 +843,7 @@ FROM [dbo].[THUE_DICH_VU] AS [THUE_DICH_VU]</DefiningQuery>
           <NavigationProperty Name="CHI_TIET_HOA_DON" Relationship="QUAN_LY_KHACH_SANModel.F_CHI_TIET_HOA_DON_2" FromRole="PHONG" ToRole="CHI_TIET_HOA_DON" />
           <NavigationProperty Name="LOAI_PHONG" Relationship="QUAN_LY_KHACH_SANModel.F_PHONG" FromRole="PHONG" ToRole="LOAI_PHONG" />
           <NavigationProperty Name="PHIEU_THUE_PHONG" Relationship="QUAN_LY_KHACH_SANModel.F_PHIEU_THUE_PHONG" FromRole="PHONG" ToRole="PHIEU_THUE_PHONG" />
-        </EntityType>
-        <EntityType Name="THAM_SO">
-          <Key>
-            <PropertyRef Name="SoKhachToiDa" />
-            <PropertyRef Name="PhuThu" />
-            <PropertyRef Name="HeSo" />
-          </Key>
-          <Property Name="SoKhachToiDa" Type="Int32" Nullable="false" />
-          <Property Name="PhuThu" Type="Double" Nullable="false" />
-          <Property Name="HeSo" Type="Double" Nullable="false" />
-          <Property Name="SoNgayThue" Type="Int32" />
-          <Property Name="PhuThuKhachThu" Type="Int32" />
-          <Property Name="SLKhachNuocNgoai" Type="Int32" />
+          <NavigationProperty Name="DANG_KI_DICH_VU" Relationship="QUAN_LY_KHACH_SANModel.FK_DKDV_P" FromRole="PHONG" ToRole="DANG_KI_DICH_VU" />
         </EntityType>
         <Association Name="F_CHITIET_BAOCAODOANHTHU">
           <End Type="QUAN_LY_KHACH_SANModel.BAOCAO_DOANHTHUTHEOLOAIPHONG" Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" Multiplicity="1" />
@@ -966,39 +953,51 @@ FROM [dbo].[THUE_DICH_VU] AS [THUE_DICH_VU]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="THUE_DICH_VU">
+        <EntityType Name="THAM_SO">
           <Key>
-            <PropertyRef Name="MaDichVu" />
-            <PropertyRef Name="MaKhachHang" />
+            <PropertyRef Name="SoKhachToiDa" />
+            <PropertyRef Name="PhuThu" />
+            <PropertyRef Name="HeSo" />
           </Key>
-          <Property Name="MaDichVu" Type="Int32" Nullable="false" />
-          <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
-          <Property Name="SoLuong" Type="Int32" />
-          <Property Name="PhiDichVu" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="DICH_VU" Relationship="QUAN_LY_KHACH_SANModel.FK__THUE_DICH__MaDic__02FC7413" FromRole="THUE_DICH_VU" ToRole="DICH_VU" />
-          <NavigationProperty Name="KHACH_HANG" Relationship="QUAN_LY_KHACH_SANModel.FK__THUE_DICH__MaKha__03F0984C" FromRole="THUE_DICH_VU" ToRole="KHACH_HANG" />
+          <Property Name="SoKhachToiDa" Type="Int32" Nullable="false" />
+          <Property Name="PhuThu" Type="Double" Nullable="false" />
+          <Property Name="HeSo" Type="Double" Nullable="false" />
+          <Property Name="SoNgayThue" Type="Int32" />
+          <Property Name="PhuThuKhachThu" Type="Int32" />
+          <Property Name="SLKhachNuocNgoai" Type="Int32" />
         </EntityType>
-        <Association Name="FK__THUE_DICH__MaDic__02FC7413">
+        <EntityType Name="DANG_KI_DICH_VU">
+          <Key>
+            <PropertyRef Name="MaDangKi" />
+          </Key>
+          <Property Name="MaDangKi" Type="Int32" Nullable="false" />
+          <Property Name="MaDichVu" Type="Int32" Nullable="false" />
+          <Property Name="MaPhong" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DICH_VU" Relationship="QUAN_LY_KHACH_SANModel.FK_DKDV_DV" FromRole="DANG_KI_DICH_VU" ToRole="DICH_VU" />
+          <NavigationProperty Name="PHONG" Relationship="QUAN_LY_KHACH_SANModel.FK_DKDV_P" FromRole="DANG_KI_DICH_VU" ToRole="PHONG" />
+        </EntityType>
+        <Association Name="FK_DKDV_DV">
           <End Type="QUAN_LY_KHACH_SANModel.DICH_VU" Role="DICH_VU" Multiplicity="1" />
-          <End Type="QUAN_LY_KHACH_SANModel.THUE_DICH_VU" Role="THUE_DICH_VU" Multiplicity="*" />
+          <End Type="QUAN_LY_KHACH_SANModel.DANG_KI_DICH_VU" Role="DANG_KI_DICH_VU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DICH_VU">
               <PropertyRef Name="MaDichVu" />
             </Principal>
-            <Dependent Role="THUE_DICH_VU">
+            <Dependent Role="DANG_KI_DICH_VU">
               <PropertyRef Name="MaDichVu" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__THUE_DICH__MaKha__03F0984C">
-          <End Type="QUAN_LY_KHACH_SANModel.KHACH_HANG" Role="KHACH_HANG" Multiplicity="1" />
-          <End Type="QUAN_LY_KHACH_SANModel.THUE_DICH_VU" Role="THUE_DICH_VU" Multiplicity="*" />
+        <Association Name="FK_DKDV_P">
+          <End Type="QUAN_LY_KHACH_SANModel.PHONG" Role="PHONG" Multiplicity="1" />
+          <End Type="QUAN_LY_KHACH_SANModel.DANG_KI_DICH_VU" Role="DANG_KI_DICH_VU" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="KHACH_HANG">
-              <PropertyRef Name="MaKhachHang" />
+            <Principal Role="PHONG">
+              <PropertyRef Name="MaPhong" />
             </Principal>
-            <Dependent Role="THUE_DICH_VU">
-              <PropertyRef Name="MaKhachHang" />
+            <Dependent Role="DANG_KI_DICH_VU">
+              <PropertyRef Name="MaPhong" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1199,16 +1198,17 @@ FROM [dbo].[THUE_DICH_VU] AS [THUE_DICH_VU]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="THUE_DICH_VU">
-            <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.THUE_DICH_VU">
-              <MappingFragment StoreEntitySet="THUE_DICH_VU">
-                <ScalarProperty Name="PhiDichVu" ColumnName="PhiDichVu" />
+          <EntitySetMapping Name="DANG_KI_DICH_VU">
+            <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.DANG_KI_DICH_VU">
+              <MappingFragment StoreEntitySet="DANG_KI_DICH_VU">
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+                <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
                 <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
+                <ScalarProperty Name="MaDangKi" ColumnName="MaDangKi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spDangKiDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spDangKiDichVu" />
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

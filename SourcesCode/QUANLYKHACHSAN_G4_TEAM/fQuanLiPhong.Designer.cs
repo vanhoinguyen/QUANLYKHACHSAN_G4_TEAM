@@ -196,7 +196,6 @@
             // 
             // cmbLoaiPhong
             // 
-            this.cmbLoaiPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLoaiPhong.FormattingEnabled = true;
             this.cmbLoaiPhong.Items.AddRange(new object[] {
             "A",
@@ -287,7 +286,7 @@
             this.grcMaPhong.FieldName = "MaPhong";
             this.grcMaPhong.Name = "grcMaPhong";
             this.grcMaPhong.Visible = true;
-            this.grcMaPhong.VisibleIndex = 1;
+            this.grcMaPhong.VisibleIndex = 0;
             // 
             // grcLoaiPhong
             // 
@@ -295,7 +294,7 @@
             this.grcLoaiPhong.FieldName = "TenLoaiPhong";
             this.grcLoaiPhong.Name = "grcLoaiPhong";
             this.grcLoaiPhong.Visible = true;
-            this.grcLoaiPhong.VisibleIndex = 2;
+            this.grcLoaiPhong.VisibleIndex = 1;
             // 
             // grcTinhTrang
             // 
@@ -303,7 +302,7 @@
             this.grcTinhTrang.FieldName = "TinhTrang";
             this.grcTinhTrang.Name = "grcTinhTrang";
             this.grcTinhTrang.Visible = true;
-            this.grcTinhTrang.VisibleIndex = 3;
+            this.grcTinhTrang.VisibleIndex = 2;
             // 
             // grcDonGia
             // 
@@ -311,7 +310,7 @@
             this.grcDonGia.FieldName = "DonGia";
             this.grcDonGia.Name = "grcDonGia";
             this.grcDonGia.Visible = true;
-            this.grcDonGia.VisibleIndex = 4;
+            this.grcDonGia.VisibleIndex = 3;
             // 
             // grcGhiChu
             // 
@@ -319,7 +318,7 @@
             this.grcGhiChu.FieldName = "GhiChu";
             this.grcGhiChu.Name = "grcGhiChu";
             this.grcGhiChu.Visible = true;
-            this.grcGhiChu.VisibleIndex = 5;
+            this.grcGhiChu.VisibleIndex = 4;
             // 
             // fQuanLiPhong
             // 

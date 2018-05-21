@@ -73,6 +73,9 @@
     <Compile Include="CHI_TIET_PHIEU_THUE.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DANG_KI_DICH_VU.cs">
+      <DependentUpon>ModelQLKS1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DichVuDAO.cs" />
     <Compile Include="DICH_VU.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
@@ -143,9 +146,6 @@
     </Compile>
     <Compile Include="ThamSoDAO.cs" />
     <Compile Include="THAM_SO.cs">
-      <DependentUpon>ModelQLKS1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="THUE_DICH_VU.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">

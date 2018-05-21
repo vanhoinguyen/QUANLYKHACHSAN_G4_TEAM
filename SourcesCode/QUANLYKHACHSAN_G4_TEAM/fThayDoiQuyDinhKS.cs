@@ -17,13 +17,19 @@ namespace QUANLYKHACHSAN_G4_TEAM
         public fThayDoiQuyDinhKS()
         {
             InitializeComponent();
+           
             
+        }
+
+        private void txtGiaTri_TextChanged(object sender, EventArgs e)
+        {
+            btnSua.Enabled = true;
         }
 
         private void cmbThamSo_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<ThamSoDTO> lst = new List<ThamSoDTO>();
-            if(cmbThamSo.Text == "Số lượng khách tối đa")
+            if (cmbThamSo.Text == "Số lượng khách tối đa")
             {
                 lst = ThamSoBUS.LoadSoLuongKhach();
                 txtGiaTri.Text = lst[0].SLKhachToiDa.ToString();
@@ -40,9 +46,38 @@ namespace QUANLYKHACHSAN_G4_TEAM
             }
         }
 
-        private void txtGiaTri_TextChanged(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
-            btnSua.Enabled = true;
+            List<ThamSoDTO> lst = new List<ThamSoDTO>();
+             ThamSoDTO ts = new ThamSoDTO();
+
+            lst = ThamSoBUS.LayThongTinTS();
+            
+
+            if (cmbThamSo.Text == "Số lượng khách tối đa")
+            {
+                ts.SLKhachToiDa = Convert.ToInt32(txtGiaTri.Text);
+                if(ThamSoBUS.CapNhatTSSoKhachToiDa(ts) == true )
+                {
+                    MessageBox.Show("Cập nhập thành công số khách tối đa","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            if (cmbThamSo.Text == "Hệ số")
+            {
+                ts.HeSo = Convert.ToDouble(txtGiaTri.Text);
+                if (ThamSoBUS.CapNhatTSHeSo(ts) == true)
+                {
+                    MessageBox.Show("Cập nhập hệ số thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            if (cmbThamSo.Text == "Phụ thu")
+            {
+                ts.PhuThu = Convert.ToDouble(txtGiaTri.Text);
+                if (ThamSoBUS.CapNhatTSPhuThu(ts) == true )
+                {
+                    MessageBox.Show("Cập nhập phụ thu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

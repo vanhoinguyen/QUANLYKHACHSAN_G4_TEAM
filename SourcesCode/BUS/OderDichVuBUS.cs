@@ -18,5 +18,25 @@ namespace BUS
         {
             return OderDichVuDAO.LoadDanhSachDichVu();
         }
+
+        public static bool DangKiDichVu(OderDichVuDTO infor)
+        {
+            return OderDichVuDAO.DangKiDichVu(infor);
+        }
+
+        public static List<OderDichVuDTO> LayMaDichVuDangKi(string tendichvu)
+        {
+            return OderDichVuDAO.LayMaDichVuDangKi(tendichvu);
+        }
+
+        public static int LaySoLuongDichVuDK(int? maPhong)
+        {
+            return OderDichVuDAO.LaySoLuongDichVuDK(maPhong);
+        }
+
+        public static List<OderDichVuDTO> DanhSachDichVuDK(int? maPhong)
+        {
+            return OderDichVuDAO.DanhSachDichVuDK(maPhong);
+        }
     }
 }

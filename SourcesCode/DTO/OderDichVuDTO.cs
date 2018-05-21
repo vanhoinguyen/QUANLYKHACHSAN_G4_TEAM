@@ -9,9 +9,9 @@ namespace DTO
     public class OderDichVuDTO
     {
         public int MaPhong { get; set; }
-        public string TenDichVu { get; set; }
-        public int MaKhachHang { get; set; }
-        public int  MaDichVu { get; set; }
+        public int MaDichVu { get; set; }
+        public string TenDichVu { get; set; }      
         public int SoLuong { get; set; }
+        
     }
 }

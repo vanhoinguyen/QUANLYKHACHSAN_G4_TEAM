@@ -192,15 +192,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="THUE_DICH_VU">
-      <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.THUE_DICH_VU">
-        <MappingFragment StoreEntitySet="THUE_DICH_VU">
-          <ScalarProperty Name="PhiDichVu" ColumnName="PhiDichVu" />
+    <EntitySetMapping Name="DANG_KI_DICH_VU">
+      <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.DANG_KI_DICH_VU">
+        <MappingFragment StoreEntitySet="DANG_KI_DICH_VU">
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-          <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+          <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
           <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
+          <ScalarProperty Name="MaDangKi" ColumnName="MaDangKi" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spDangKiDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spDangKiDichVu" />
   </EntityContainerMapping>
 </Mapping>

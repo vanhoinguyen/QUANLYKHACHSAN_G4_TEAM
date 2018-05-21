@@ -19,7 +19,6 @@
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.NGUOI_DUNG" Width="1.5" PointX="7.75" PointY="10.5" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.PHIEU_THUE_PHONG" Width="1.5" PointX="5.25" PointY="7" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.PHONG" Width="1.5" PointX="3" PointY="3.5" />
-        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.THAM_SO" Width="1.5" PointX="9.75" PointY="9.5" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_CHITIET_BAOCAODOANHTHU" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_CHITIET_BAOCAOMATDOSUDUNG" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_CHI_TIET_HOA_DON_1" />
@@ -29,9 +28,10 @@
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_KHACH_HANG" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_PHONG" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_PHIEU_THUE_PHONG" />
-        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.THUE_DICH_VU" Width="1.5" PointX="10.5" PointY="12.5" />
-        <AssociationConnector Association="QUAN_LY_KHACH_SANModel.FK__THUE_DICH__MaDic__02FC7413" />
-        <AssociationConnector Association="QUAN_LY_KHACH_SANModel.FK__THUE_DICH__MaKha__03F0984C" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.THAM_SO" Width="1.5" PointX="10.375" PointY="8.75" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.DANG_KI_DICH_VU" Width="1.5" PointX="5.25" PointY="0.75" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel.FK_DKDV_DV" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel.FK_DKDV_P" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
