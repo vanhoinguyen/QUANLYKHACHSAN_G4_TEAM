@@ -28,5 +28,10 @@ namespace BUS
         {
             return DichVuDAO.ThemDichVu(infor);
         }
+
+        public static List<DichVuDTO> LayDonGia(int maDichVu)
+        {
+            return DichVuDAO.LayDonGia(maDichVu);
+        }
     }
 }

@@ -106,20 +106,32 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
                     List<OderDichVuDTO> lst2 = new List<OderDichVuDTO>();
                     OderDichVuDTO infor2 = new OderDichVuDTO();
                     lst2 = OderDichVuBUS.DanhSachDichVuDK(infor.MaPhong);
+                    infor2.MaDichVu = lst2[i].MaDichVu;
+                    infor2.SoLuong = lst2[i].SoLuong;
+                    List<DichVuDTO> lst3 = new List<DichVuDTO>();
+                    lst3 = DichVuBUS.LayDonGia(infor2.MaDichVu);
+                    DichVuDTO dongiadv = new DichVuDTO();
+                    dongiadv.DonGia = lst3[0].DonGia;
+                    decimal tiendv = dongiadv.DonGia;
+                    phidichvu += infor2.SoLuong * tiendv;
                 }
+                txtPhiDichVu.Text = phidichvu.ToString();
             }
              
             txtPhiDichVu.Text = phidichvu.ToString();
             bool flag = true;
-            /*for (int i = 0; i< dgvHoaDon.RowCount; i++)
+            for (int i = 0; i< dgvHoaDon.RowCount; i++)
             {
-                if( dgvHoaDon.Rows[i].Cells["colMaPhong"].Value.ToString() == cmbMaPhong.Text)
+                if (dgvHoaDon.Rows[i].Cells["colMaPhong"].Value.ToString() != null)
                 {
-                    btnThem.Enabled = false;
-                    flag = false;
-                    break;
+                    if (dgvHoaDon.Rows[i].Cells["colMaPhong"].Value.ToString() == cmbMaPhong.Text)
+                    {
+                        btnThem.Enabled = false;
+                        flag = false;
+                        break;
+                    }
                 }
-            }*/
+            }
 
             if (flag == true)
             {
@@ -139,10 +151,10 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
             dgvHoaDon.Rows[numRow].Cells["colHeSo"].Value = txtHeSo.Text;
 
             btnThem.Enabled = false;
-            /*decimal thanhtien = HoaDonBUS.ThanhTien(int.Parse(txtSoNgayThue.Text), Convert.ToDecimal(txtDonGiaPhong.Text), 
-                Convert.ToDecimal(txtPhuThu.Text), Convert.ToDecimal(txtHeSo.Text),Convert.ToDecimal(txtPhiDichVu.Text));*/
-            decimal thanhtien = HoaDonBUS.ThanhTien(int.Parse(txtSoNgayThue.Text), Convert.ToDecimal(txtDonGiaPhong.Text),
-               Convert.ToDecimal(txtPhuThu.Text), Convert.ToDecimal(txtHeSo.Text));
+            decimal thanhtien = HoaDonBUS.ThanhTien(int.Parse(txtSoNgayThue.Text), Convert.ToDecimal(txtDonGiaPhong.Text), 
+                Convert.ToDecimal(txtPhuThu.Text), Convert.ToDecimal(txtHeSo.Text),Convert.ToDecimal(txtPhiDichVu.Text));
+            /*decimal thanhtien = HoaDonBUS.ThanhTien(int.Parse(txtSoNgayThue.Text), Convert.ToDecimal(txtDonGiaPhong.Text),
+               Convert.ToDecimal(txtPhuThu.Text), Convert.ToDecimal(txtHeSo.Text));*/
             dgvHoaDon.Rows[numRow].Cells["colThanhTien"].Value = thanhtien.ToString();
             numRow++;
 
@@ -231,7 +243,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
             HoaDonDTO infor = LayThongTinKhachHangThanhToan();
             if (HoaDonBUS.LapHoaDon(infor))
             {
-                for (int i = 0; i < dgvHoaDon.RowCount - 1; i++)
+                for (int i = 0; i < dgvHoaDon.RowCount  ; i++)
                 {
                     HoaDonDTO inforHD = ThongTinHoaDonThanhToan(i);
                     if (!(HoaDonBUS.LapChiTietHoaDon(infor, inforHD)))

@@ -42,6 +42,17 @@ namespace DAO
             }
         }
 
+        public static List <DichVuDTO> LayDonGia(int maDichVu)
+        {
+            var query = (from t in context.DICH_VU
+                         where t.MaDichVu == maDichVu
+                         select new DichVuDTO
+                         {
+                             DonGia = t.DonGia,
+                         });
+            return query.ToList();
+        }
+
         public static bool SuaThongTinDichVu(DichVuDTO infor)
         {
             SqlParameter madichvu = new SqlParameter("@MaDichVu", infor.MaDichVu);
