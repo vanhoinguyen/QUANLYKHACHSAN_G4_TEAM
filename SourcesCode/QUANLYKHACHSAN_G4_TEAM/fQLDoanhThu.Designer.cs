@@ -29,34 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fQLDoanhThu));
-            this.gcDoanhThu = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpDTThang = new System.Windows.Forms.DateTimePicker();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnXem = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.gcDoanhThu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.dgvDoanhThu = new System.Windows.Forms.DataGridView();
+            this.cmbThang = new System.Windows.Forms.ComboBox();
+            this.txtNam = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gcDoanhThu
-            // 
-            this.gcDoanhThu.Location = new System.Drawing.Point(-6, 116);
-            this.gcDoanhThu.MainView = this.gridView1;
-            this.gcDoanhThu.Name = "gcDoanhThu";
-            this.gcDoanhThu.Size = new System.Drawing.Size(700, 282);
-            this.gcDoanhThu.TabIndex = 5;
-            this.gcDoanhThu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gcDoanhThu;
-            this.gridView1.Name = "gridView1";
             // 
             // label1
             // 
@@ -73,15 +58,17 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.txtNam);
+            this.panel2.Controls.Add(this.cmbThang);
             this.panel2.Controls.Add(this.btnThoat);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.dtpDTThang);
             this.panel2.Controls.Add(this.btnLuu);
             this.panel2.Controls.Add(this.btnXem);
             this.panel2.Location = new System.Drawing.Point(-6, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(700, 122);
+            this.panel2.Size = new System.Drawing.Size(700, 154);
             this.panel2.TabIndex = 6;
             // 
             // btnThoat
@@ -105,14 +92,6 @@
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Tháng:";
-            // 
-            // dtpDTThang
-            // 
-            this.dtpDTThang.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDTThang.Location = new System.Drawing.Point(123, 71);
-            this.dtpDTThang.Name = "dtpDTThang";
-            this.dtpDTThang.Size = new System.Drawing.Size(212, 21);
-            this.dtpDTThang.TabIndex = 7;
             // 
             // btnLuu
             // 
@@ -138,36 +117,81 @@
             this.btnXem.Size = new System.Drawing.Size(83, 36);
             this.btnXem.TabIndex = 5;
             this.btnXem.Text = "Xem";
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+            // 
+            // dgvDoanhThu
+            // 
+            this.dgvDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDoanhThu.Location = new System.Drawing.Point(-3, 151);
+            this.dgvDoanhThu.Name = "dgvDoanhThu";
+            this.dgvDoanhThu.Size = new System.Drawing.Size(694, 246);
+            this.dgvDoanhThu.TabIndex = 7;
+            // 
+            // cmbThang
+            // 
+            this.cmbThang.FormattingEnabled = true;
+            this.cmbThang.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cmbThang.Location = new System.Drawing.Point(141, 71);
+            this.cmbThang.Name = "cmbThang";
+            this.cmbThang.Size = new System.Drawing.Size(121, 21);
+            this.cmbThang.TabIndex = 20;
+            // 
+            // txtNam
+            // 
+            this.txtNam.Location = new System.Drawing.Point(141, 107);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.Size = new System.Drawing.Size(100, 21);
+            this.txtNam.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(76, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Năm";
             // 
             // fQLDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 392);
-            this.Controls.Add(this.gcDoanhThu);
+            this.Controls.Add(this.dgvDoanhThu);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fQLDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doanh Thu";
-            ((System.ComponentModel.ISupportInitialize)(this.gcDoanhThu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraGrid.GridControl gcDoanhThu;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtpDTThang;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnXem;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNam;
+        private System.Windows.Forms.ComboBox cmbThang;
+        private System.Windows.Forms.DataGridView dgvDoanhThu;
     }
 }
