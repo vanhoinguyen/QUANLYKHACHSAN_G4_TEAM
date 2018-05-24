@@ -107,5 +107,15 @@ namespace BUS
         {
             return PhongDAO.DanhSachPhongTheoDGDen(dgden);
         }
+
+        public static List<PhieuThuePhongDTO> NgayTraPhong()
+        {
+            return PhongDAO.NgayTraPhong();
+        }
+
+        public static object DanhSachPhongTraGanNhat()
+        {
+            return PhongDAO.DanhSachPhongTraGanNhat();
+        }
     }
 }

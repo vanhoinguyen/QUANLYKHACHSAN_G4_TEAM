@@ -86,6 +86,34 @@ namespace DAO
             return query.ToList();
         }
 
+        public static object DanhSachPhongTraGanNhat()
+        {
+            var query = (from t in context.LOAI_PHONG
+                         join r in context.PHONGs on t.MaLoaiPhong equals r.MaLoaiPhong
+                         join f in context.PHIEU_THUE_PHONG on r.MaPhong equals f.MaPhong
+                         select new PhongDTO
+                         {
+                             MaPhong = r.MaPhong,
+                             TinhTrang = r.TinhTrang,
+                             GhiChu = r.GhiChu,
+                             TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
+                             DonGia = r.LOAI_PHONG.DonGia,
+                             NgayTraPhongDK = f.NgayTraPhongDK,
+                         }).OrderByDescending(s => s.NgayTraPhongDK);
+            return query.ToList();
+        }
+
+        public static List<PhieuThuePhongDTO> NgayTraPhong()
+        {
+            var query = (from r in context.PHIEU_THUE_PHONG
+                         select new PhieuThuePhongDTO
+                         {
+                             NgayTraPhong = r.NgayTraPhongDK,
+                             MaPhong = r.MaPhong
+                         });
+            return query.ToList();
+        }
+
         public static List<PhongDTO> DanhSachPhongTheoDGDen(decimal dgden)
         {
             var query = (from r in context.PHONGs

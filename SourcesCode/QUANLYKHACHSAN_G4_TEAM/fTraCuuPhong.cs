@@ -27,7 +27,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.TraCuuPhong
         private void SuKienLoadForm()
         {
             cmbLoaiPhong.DataSource = PhongBUS.LoaiPhong();
-            gcPhong.DataSource = PhongBUS.DanhSachPhongTK();
+            gcPhong.DataSource = PhongBUS.DanhSachPhong();
             btnDatPhong.Enabled = false;
         }
 
@@ -204,6 +204,23 @@ namespace QUANLYKHACHSAN_G4_TEAM.TraCuuPhong
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnTimTraPhong_Click(object sender, EventArgs e)
+        {
+            List<PhieuThuePhongDTO> pt = new List<PhieuThuePhongDTO>();
+            pt = PhongBUS.NgayTraPhong();
+            int k = 0;
+            for (int i = 0; i < pt.Count; i++)
+            {
+                if (DateTime.Today == pt[i].NgayTraPhong)
+                {
+                    MessageBox.Show("Phong tra trong ngay hom nay(" + DateTime.Today.ToString("d") + "): " + pt[i].MaPhong);
+                }
+                else k++;
+            }
+            if (k == pt.Count) MessageBox.Show("Khong co phong duoc tra trong ngay hom nay! ");
+            gcPhong.DataSource = PhongBUS.DanhSachPhongTraGanNhat();
         }
     }
 }

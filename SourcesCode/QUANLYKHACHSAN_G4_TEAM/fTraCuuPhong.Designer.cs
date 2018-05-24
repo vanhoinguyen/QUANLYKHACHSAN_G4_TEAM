@@ -50,6 +50,7 @@
             this.cmbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnTimTraPhong = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gcPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPhong)).BeginInit();
             this.SuspendLayout();
@@ -102,10 +103,10 @@
             // gcPhong
             // 
             this.gcPhong.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gcPhong.Location = new System.Drawing.Point(0, 130);
+            this.gcPhong.Location = new System.Drawing.Point(0, 146);
             this.gcPhong.MainView = this.gvPhong;
             this.gcPhong.Name = "gcPhong";
-            this.gcPhong.Size = new System.Drawing.Size(815, 262);
+            this.gcPhong.Size = new System.Drawing.Size(815, 246);
             this.gcPhong.TabIndex = 48;
             this.gcPhong.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPhong});
@@ -266,6 +267,21 @@
             this.label3.TabIndex = 40;
             this.label3.Text = "Loại Phòng";
             // 
+            // btnTimTraPhong
+            // 
+            this.btnTimTraPhong.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimTraPhong.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnTimTraPhong.Appearance.Options.UseFont = true;
+            this.btnTimTraPhong.Appearance.Options.UseForeColor = true;
+            this.btnTimTraPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimTraPhong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnTimTraPhong.Location = new System.Drawing.Point(531, 109);
+            this.btnTimTraPhong.Name = "btnTimTraPhong";
+            this.btnTimTraPhong.Size = new System.Drawing.Size(196, 31);
+            this.btnTimTraPhong.TabIndex = 54;
+            this.btnTimTraPhong.Text = "Tìm phòng trả gần nhất";
+            this.btnTimTraPhong.Click += new System.EventHandler(this.btnTimTraPhong_Click);
+            // 
             // fTraCuuPhong
             // 
             this.Appearance.BackColor = System.Drawing.Color.Silver;
@@ -273,6 +289,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 392);
+            this.Controls.Add(this.btnTimTraPhong);
             this.Controls.Add(this.txtDonGiaDen);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDonGiaTu);
@@ -322,5 +339,6 @@
         private System.Windows.Forms.ComboBox cmbLoaiPhong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.SimpleButton btnTimTraPhong;
     }
 }
