@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fQLDoanhThu));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNam = new System.Windows.Forms.TextBox();
+            this.cmbThang = new System.Windows.Forms.ComboBox();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnXem = new DevExpress.XtraEditors.SimpleButton();
             this.dgvDoanhThu = new System.Windows.Forms.DataGridView();
-            this.cmbThang = new System.Windows.Forms.ComboBox();
-            this.txtNam = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,43 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(700, 154);
             this.panel2.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(76, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Năm";
+            // 
+            // txtNam
+            // 
+            this.txtNam.Location = new System.Drawing.Point(141, 107);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.Size = new System.Drawing.Size(100, 21);
+            this.txtNam.TabIndex = 21;
+            // 
+            // cmbThang
+            // 
+            this.cmbThang.FormattingEnabled = true;
+            this.cmbThang.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cmbThang.Location = new System.Drawing.Point(141, 71);
+            this.cmbThang.Name = "cmbThang";
+            this.cmbThang.Size = new System.Drawing.Size(121, 21);
+            this.cmbThang.TabIndex = 20;
             // 
             // btnThoat
             // 
@@ -105,6 +142,7 @@
             this.btnLuu.Size = new System.Drawing.Size(78, 36);
             this.btnLuu.TabIndex = 6;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXem
             // 
@@ -126,43 +164,6 @@
             this.dgvDoanhThu.Name = "dgvDoanhThu";
             this.dgvDoanhThu.Size = new System.Drawing.Size(694, 246);
             this.dgvDoanhThu.TabIndex = 7;
-            // 
-            // cmbThang
-            // 
-            this.cmbThang.FormattingEnabled = true;
-            this.cmbThang.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.cmbThang.Location = new System.Drawing.Point(141, 71);
-            this.cmbThang.Name = "cmbThang";
-            this.cmbThang.Size = new System.Drawing.Size(121, 21);
-            this.cmbThang.TabIndex = 20;
-            // 
-            // txtNam
-            // 
-            this.txtNam.Location = new System.Drawing.Point(141, 107);
-            this.txtNam.Name = "txtNam";
-            this.txtNam.Size = new System.Drawing.Size(100, 21);
-            this.txtNam.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Năm";
             // 
             // fQLDoanhThu
             // 

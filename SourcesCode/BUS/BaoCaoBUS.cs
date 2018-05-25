@@ -40,5 +40,25 @@ namespace BUS
             ntm_max = Convert.ToDateTime(ntmnew);
             return BaoCaoDAO.DoanhThuTheoLoaiPhongTheoThang(ntm_min, ntm_max);
         }
+
+        public static List<BCDoanhThuDTO> LayMaBCDoanhThuKeTiep()
+        {
+            return BaoCaoDAO.LayMaBCDoanhThuKeTiep();
+        }
+
+        public static List<BCDoanhThuDTO> LayMaBCCTDoanhThuKeTiep()
+        {
+            return BaoCaoDAO.LayMaBCCTDoanhThuKeTiep();
+        }
+
+        public static bool ThemBaoCaoDoanhThu(BCDoanhThuDTO infor)
+        {
+            return BaoCaoDAO.ThemBaoCaoDoanhThu(infor);
+        }
+
+        public static bool ThemCTBaoCaoDoanhThu(BCDoanhThuDTO infor)
+        {
+            return BaoCaoDAO.ThemCTBaoCaoDoanhThu(infor);
+        }
     }
 }

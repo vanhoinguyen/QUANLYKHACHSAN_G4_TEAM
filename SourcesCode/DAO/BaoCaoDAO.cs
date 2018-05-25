@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,64 @@ namespace DAO
                             TongDoanhThu = g.Sum(hd => hd.TriGia),
                         };
             return query.ToList();
+        }
+
+        public static List<BCDoanhThuDTO> LayMaBCDoanhThuKeTiep()
+        {
+            var query = (from t in context.BAOCAO_DOANHTHUTHEOLOAIPHONG
+                         select new BCDoanhThuDTO
+                         {
+                             
+                             MaBCDoanhThu = t.MaBCDoanhThu,
+                         }).OrderByDescending(x => x.MaBCDoanhThu).Take(1);
+            return query.ToList();
+        
+        }
+
+        public static List<BCDoanhThuDTO> LayMaBCCTDoanhThuKeTiep()
+        {
+        var query = (from t in context.BAOCAO_DOANHTHUTHEOLOAIPHONG
+                     select new BCDoanhThuDTO
+                     {
+
+                         MaBCDoanhThu = t.MaBCDoanhThu,
+                     }).OrderByDescending(x => x.MaBCDoanhThu).Take(1);
+        return query.ToList();
+        }
+
+        public static bool ThemBaoCaoDoanhThu(BCDoanhThuDTO infor)
+        {
+            SqlParameter mabc = new SqlParameter("@MaBCDoanhThu", infor.MaBCDoanhThu);
+            SqlParameter thang = new SqlParameter("@Thang", infor.Thang);
+            try
+            {
+                context.Database.ExecuteSqlCommand("spThemBCDoanhThuTheoLoaiPhongTheoThang @MaBCDoanhThu, @Thang", mabc, thang);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static bool ThemCTBaoCaoDoanhThu(BCDoanhThuDTO infor)
+        {
+            SqlParameter mabcct = new SqlParameter("@MaBCCTDoanhThu", infor.MaCTBCDoanhThu);
+            SqlParameter malp = new SqlParameter("@MaLP", infor.MaLoaiPhong);
+            SqlParameter mabc = new SqlParameter("@MaBCDoanhThu", infor.MaBCDoanhThu);
+            SqlParameter dt = new SqlParameter("@DoanhThu", infor.TongDoanhThu);
+            SqlParameter tl = new SqlParameter("@TiLe", infor.TiLe);
+
+            try
+            {
+                context.Database.ExecuteSqlCommand("spThemBCCTDTTheoLoaiPhongTheoThang @MaBCCTDoanhThu, @MaLP, @MaBCDoanhThu, @DoanhThu, @TiLe",
+                                mabcct, malp, mabc, dt, tl);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

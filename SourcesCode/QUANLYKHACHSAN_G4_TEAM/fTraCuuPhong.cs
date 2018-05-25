@@ -215,11 +215,11 @@ namespace QUANLYKHACHSAN_G4_TEAM.TraCuuPhong
             {
                 if (DateTime.Today == pt[i].NgayTraPhong)
                 {
-                    MessageBox.Show("Phong tra trong ngay hom nay(" + DateTime.Today.ToString("d") + "): " + pt[i].MaPhong);
+                    MessageBox.Show("Phòng trả  trong ngày hôm nay(" + DateTime.Today.ToString("d") + "): " + pt[i].MaPhong);
                 }
                 else k++;
             }
-            if (k == pt.Count) MessageBox.Show("Khong co phong duoc tra trong ngay hom nay! ");
+            if (k == pt.Count) MessageBox.Show("Không có phòng được trả trong ngày hôm nay! ");
             gcPhong.DataSource = PhongBUS.DanhSachPhongTraGanNhat();
         }
     }
