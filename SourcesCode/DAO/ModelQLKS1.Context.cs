@@ -516,5 +516,22 @@ namespace DAO
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spDangKiDichVu", maDichVuParameter, maPhongParameter, soLuongParameter);
         }
+    
+        public virtual int spThemPhong3(string tinhTrang, string maLoaiPhong, string ghiChu)
+        {
+            var tinhTrangParameter = tinhTrang != null ?
+                new ObjectParameter("TinhTrang", tinhTrang) :
+                new ObjectParameter("TinhTrang", typeof(string));
+    
+            var maLoaiPhongParameter = maLoaiPhong != null ?
+                new ObjectParameter("MaLoaiPhong", maLoaiPhong) :
+                new ObjectParameter("MaLoaiPhong", typeof(string));
+    
+            var ghiChuParameter = ghiChu != null ?
+                new ObjectParameter("GhiChu", ghiChu) :
+                new ObjectParameter("GhiChu", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemPhong3", tinhTrangParameter, maLoaiPhongParameter, ghiChuParameter);
+        }
     }
 }
