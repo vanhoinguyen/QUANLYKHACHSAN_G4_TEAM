@@ -300,10 +300,6 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <Parameter Name="SoLuong" Type="int" Mode="In" />
   </Function>
   <Function Name="spDoanhThuTheoLoaiPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-  <Function Name="spDoanhThuTheoLoaiPhongTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="Thang" Type="int" Mode="In" />
-    <Parameter Name="Nam" Type="int" Mode="In" />
-  </Function>
   <Function Name="spSuaThongTinDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaDichVu" Type="int" Mode="In" />
     <Parameter Name="TenDichVu" Type="nvarchar" Mode="In" />
@@ -383,6 +379,11 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <Parameter Name="NgayThue" Type="date" Mode="In" />
     <Parameter Name="MaPhong" Type="int" Mode="In" />
     <Parameter Name="NgayTraPhong" Type="date" Mode="In" />
+  </Function>
+  <Function Name="spThemPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TinhTrang" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
+    <Parameter Name="GhiChu" Type="ntext" Mode="In" />
   </Function>
   <Function Name="spThietLapTTrangPhongBanDau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaPhong" Type="int" Mode="In" />

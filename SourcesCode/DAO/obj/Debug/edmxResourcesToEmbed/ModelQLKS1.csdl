@@ -202,6 +202,11 @@
       <Parameter Name="MaPhong" Mode="In" Type="Int32" />
       <Parameter Name="SoLuong" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="spThemPhong3">
+      <Parameter Name="TinhTrang" Mode="In" Type="String" />
+      <Parameter Name="MaLoaiPhong" Mode="In" Type="String" />
+      <Parameter Name="GhiChu" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
     <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />

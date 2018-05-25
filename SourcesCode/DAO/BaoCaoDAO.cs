@@ -54,12 +54,12 @@ namespace DAO
 
         public static List<BCDoanhThuDTO> LayMaBCCTDoanhThuKeTiep()
         {
-        var query = (from t in context.BAOCAO_DOANHTHUTHEOLOAIPHONG
+        var query = (from t in context.CHITIET_BAOCAODOANHTHU
                      select new BCDoanhThuDTO
                      {
 
-                         MaBCDoanhThu = t.MaBCDoanhThu,
-                     }).OrderByDescending(x => x.MaBCDoanhThu).Take(1);
+                         MaCTBCDoanhThu = t.MaBCCTDoanhThu,
+                     }).OrderByDescending(x => x.MaCTBCDoanhThu).Take(1);
         return query.ToList();
         }
 

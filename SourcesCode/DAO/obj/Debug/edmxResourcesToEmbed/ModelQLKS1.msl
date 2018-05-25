@@ -13,14 +13,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="spDoanhThuTheoLoaiPhongTheoThang" FunctionName="QUAN_LY_KHACH_SANModel.Store.spDoanhThuTheoLoaiPhongTheoThang">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="QUAN_LY_KHACH_SANModel.spDoanhThuTheoLoaiPhongTheoThang_Result">
-          <ScalarProperty Name="MaLoaiPhong" ColumnName="MaLoaiPhong" />
-          <ScalarProperty Name="DoanhThu" ColumnName="DoanhThu" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="spSuaThongTinPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spSuaThongTinPhong" />
     <FunctionImportMapping FunctionImportName="spSuaTTLoaiPhong" FunctionName="QUAN_LY_KHACH_SANModel.Store.spSuaTTLoaiPhong" />
     <FunctionImportMapping FunctionImportName="spThemBCCTDTTheoLoaiPhongTheoThang" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemBCCTDTTheoLoaiPhongTheoThang" />
@@ -203,5 +195,6 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="spDangKiDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spDangKiDichVu" />
+    <FunctionImportMapping FunctionImportName="spThemPhong3" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhong" />
   </EntityContainerMapping>
 </Mapping>
