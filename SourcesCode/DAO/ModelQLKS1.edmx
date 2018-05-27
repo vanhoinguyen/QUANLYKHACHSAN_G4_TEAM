@@ -305,6 +305,10 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
           <Parameter Name="SoLuong" Type="int" Mode="In" />
         </Function>
         <Function Name="spDoanhThuTheoLoaiPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spDoanhThuTheoNamTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Thang" Type="int" Mode="In" />
+          <Parameter Name="Nam" Type="int" Mode="In" />
+        </Function>
         <Function Name="spSuaThongTinDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MaDichVu" Type="int" Mode="In" />
           <Parameter Name="TenDichVu" Type="nvarchar" Mode="In" />
@@ -385,7 +389,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
           <Parameter Name="MaPhong" Type="int" Mode="In" />
           <Parameter Name="NgayTraPhong" Type="date" Mode="In" />
         </Function>
-        <Function Name="spThemPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="spThemPhongMoi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="TinhTrang" Type="nvarchar" Mode="In" />
           <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
           <Parameter Name="GhiChu" Type="ntext" Mode="In" />
@@ -692,6 +696,15 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             <Parameter Name="SoLuong" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spThemPhong3">
+            <Parameter Name="TinhTrang" Mode="In" Type="String" />
+            <Parameter Name="MaLoaiPhong" Mode="In" Type="String" />
+            <Parameter Name="GhiChu" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spDoanhThuTheoNamTheoThang" ReturnType="Collection(Decimal)">
+            <Parameter Name="Thang" Mode="In" Type="Int32" />
+            <Parameter Name="Nam" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spThemPhongMoi">
             <Parameter Name="TinhTrang" Mode="In" Type="String" />
             <Parameter Name="MaLoaiPhong" Mode="In" Type="String" />
             <Parameter Name="GhiChu" Mode="In" Type="String" />
@@ -1207,7 +1220,8 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="spDangKiDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spDangKiDichVu" />
-          <FunctionImportMapping FunctionImportName="spThemPhong3" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhong" />
+          <FunctionImportMapping FunctionImportName="spDoanhThuTheoNamTheoThang" FunctionName="QUAN_LY_KHACH_SANModel.Store.spDoanhThuTheoNamTheoThang" />
+          <FunctionImportMapping FunctionImportName="spThemPhongMoi" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhongMoi" />
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

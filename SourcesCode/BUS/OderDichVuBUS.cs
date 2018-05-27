@@ -21,7 +21,9 @@ namespace BUS
 
         public static bool DangKiDichVu(OderDichVuDTO infor)
         {
-            return OderDichVuDAO.DangKiDichVu(infor);
+            if (infor.SoLuong > 0)
+                return OderDichVuDAO.DangKiDichVu(infor);
+            else return false;
         }
 
         public static List<OderDichVuDTO> LayMaDichVuDangKi(string tendichvu)

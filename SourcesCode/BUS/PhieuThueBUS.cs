@@ -27,7 +27,10 @@ namespace BUS
 
         public static bool ThemPhieuThuePhong(ChiTietPhieuThueDTO ct, PhieuThuePhongDTO p)
         {
-            return PhieuThueDAO.ThemPhieuThuePhong(ct, p);
+            int i =  DateTime.Compare (p.NgayThue, p.NgayTraPhong.Value);
+            if (i < 0)
+                return PhieuThueDAO.ThemPhieuThuePhong(ct, p);
+            else return false;
         }
 
         public static bool ThemCTPhieuThuePhong(ChiTietPhieuThueDTO ct, KhachHangDTO kh)

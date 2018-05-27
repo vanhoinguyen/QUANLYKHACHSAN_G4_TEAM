@@ -230,7 +230,7 @@ namespace DAO
 
             try
             {
-                context.Database.ExecuteSqlCommand("spThemPhong @TinhTrang, @MaLoaiPhong, @GhiChu",
+                context.Database.ExecuteSqlCommand("spThemPhongMoi @TinhTrang, @MaLoaiPhong, @GhiChu",
                                     tinhtrang, malp, ghichu);
                 return true;
             }

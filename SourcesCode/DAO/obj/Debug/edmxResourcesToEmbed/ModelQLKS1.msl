@@ -195,6 +195,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="spDangKiDichVu" FunctionName="QUAN_LY_KHACH_SANModel.Store.spDangKiDichVu" />
-    <FunctionImportMapping FunctionImportName="spThemPhong3" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhong" />
+    <FunctionImportMapping FunctionImportName="spDoanhThuTheoNamTheoThang" FunctionName="QUAN_LY_KHACH_SANModel.Store.spDoanhThuTheoNamTheoThang" />
+    <FunctionImportMapping FunctionImportName="spThemPhongMoi" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhongMoi" />
   </EntityContainerMapping>
 </Mapping>
