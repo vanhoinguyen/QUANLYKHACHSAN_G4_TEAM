@@ -64,6 +64,11 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
             HoaDonBUS.TinhSoNgayDaThue(infor);
             lst = HoaDonBUS.LaySoNgayDaThue();
             txtSoNgayThue.Text = lst[0].SoNgayDaThue.ToString();
+            if(Convert.ToInt32(txtSoNgayThue.Text) < 0)
+            {
+                btnThanhToan.Enabled = false;
+                MessageBox.Show("Chưa thể thanh toán khách hàng này", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             if (txtSoNgayThue.Text == "0")
             {
                 txtSoNgayThue.Text = "1";
