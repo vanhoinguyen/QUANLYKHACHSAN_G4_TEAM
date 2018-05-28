@@ -54,7 +54,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiPhong
                 txtMaPhong.Text = gvDSPhong.GetRowCellValue(gvDSPhong.FocusedRowHandle, gvDSPhong.Columns["MaPhong"]).ToString();
                 cmbLoaiPhong.Text = gvDSPhong.GetRowCellValue(gvDSPhong.FocusedRowHandle, gvDSPhong.Columns["TenLoaiPhong"]).ToString();
                 txtTinhTrang.Text = gvDSPhong.GetRowCellValue(gvDSPhong.FocusedRowHandle, gvDSPhong.Columns["TinhTrang"]).ToString();
-                txtDonGia.Text = gvDSPhong.GetRowCellValue(gvDSPhong.FocusedRowHandle, gvDSPhong.Columns["DonGia"]).ToString();
+                txtDonGia.Text = string.Format("{0:0,0}", gvDSPhong.GetRowCellValue(gvDSPhong.FocusedRowHandle, gvDSPhong.Columns["DonGia"]));
                 txtGhiChu.Text = gvDSPhong.GetRowCellValue(gvDSPhong.FocusedRowHandle, gvDSPhong.Columns["GhiChu"]).ToString();
             }
         }

@@ -51,7 +51,10 @@
             this.cmbThamSo.Items.AddRange(new object[] {
             "Số lượng khách tối đa",
             "Hệ số",
-            "Phụ thu"});
+            "Phụ thu",
+            "LP001",
+            "LP002",
+            "LP003"});
             this.cmbThamSo.Location = new System.Drawing.Point(84, 16);
             this.cmbThamSo.Name = "cmbThamSo";
             this.cmbThamSo.Size = new System.Drawing.Size(185, 21);

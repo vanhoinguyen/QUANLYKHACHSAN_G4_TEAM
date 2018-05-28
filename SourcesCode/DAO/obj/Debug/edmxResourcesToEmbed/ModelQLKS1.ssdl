@@ -285,6 +285,10 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
   <Function Name="spCapNhatTinhTrangPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaPhong" Type="int" Mode="In" />
   </Function>
+  <Function Name="spCapNhatTSDonGia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TenLoaiPhong" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonGia" Type="money" Mode="In" />
+  </Function>
   <Function Name="spCapNhatTSHeSo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="HeSo" Type="float" Mode="In" />
   </Function>

@@ -43,5 +43,17 @@ namespace BUS
         {
             return ThamSoDAO.LayThongTinTS();
         }
+
+        public static List<ThamSoDTO> LoadDonGia(string text)
+        {
+            return ThamSoDAO.LoadDonGia(text);
+        }
+
+        public static bool CapNhatTSDonGia(ThamSoDTO ts,string t)
+        {
+            if (ts.DonGia <= 0)
+                return false;
+            return ThamSoDAO.CapNhatTSDonGia(ts,t);
+        }
     }
 }

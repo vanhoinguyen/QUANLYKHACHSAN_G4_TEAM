@@ -29,6 +29,7 @@ namespace QUANLYKHACHSAN_G4_TEAM
         private void cmbThamSo_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<ThamSoDTO> lst = new List<ThamSoDTO>();
+            
             if (cmbThamSo.Text == "Số lượng khách tối đa")
             {
                 lst = ThamSoBUS.LoadSoLuongKhach();
@@ -43,6 +44,21 @@ namespace QUANLYKHACHSAN_G4_TEAM
             {
                 lst = ThamSoBUS.LoadPhuThu();
                 txtGiaTri.Text = lst[0].PhuThu.ToString();
+            }
+            if (cmbThamSo.Text == "LP001")
+            {
+                lst = ThamSoBUS.LoadDonGia(cmbThamSo.Text);
+                txtGiaTri.Text = string.Format( "{0:0,0}",lst[0].DonGia);
+            }
+            if (cmbThamSo.Text == "LP002")
+            {
+                lst = ThamSoBUS.LoadDonGia(cmbThamSo.Text);
+                txtGiaTri.Text = string.Format("{0:0,0}", lst[0].DonGia);
+            }
+            if (cmbThamSo.Text == "LP003")
+            {
+                lst = ThamSoBUS.LoadDonGia(cmbThamSo.Text);
+                txtGiaTri.Text = string.Format("{0:0,0}", lst[0].DonGia);
             }
         }
 
@@ -77,6 +93,36 @@ namespace QUANLYKHACHSAN_G4_TEAM
                 {
                     MessageBox.Show("Cập nhập phụ thu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+            if (cmbThamSo.Text == "LP001")
+            {
+                ts.DonGia = Convert.ToDecimal(txtGiaTri.Text);
+                if (ThamSoBUS.CapNhatTSDonGia(ts,cmbThamSo.Text) == true)
+                {
+                    MessageBox.Show("Cập nhập giá phòng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show("Lỗi hệ thống hoặc nhập sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (cmbThamSo.Text == "LP002")
+            {
+                ts.DonGia = Convert.ToDecimal(txtGiaTri.Text);
+                if (ThamSoBUS.CapNhatTSDonGia(ts,cmbThamSo.Text) == true)
+                {
+                    MessageBox.Show("Cập nhập giá phòng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show("Lỗi hệ thống hoặc nhập sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (cmbThamSo.Text == "LP003")
+            {
+                ts.DonGia = Convert.ToDecimal(txtGiaTri.Text);
+                if (ThamSoBUS.CapNhatTSDonGia(ts,cmbThamSo.Text) == true)
+                {
+                    MessageBox.Show("Cập nhập giá phòng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show("Lỗi hệ thống hoặc nhập sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

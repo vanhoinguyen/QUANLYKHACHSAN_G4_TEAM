@@ -55,7 +55,8 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
             infor.MaPhong = int.Parse(cmbMaPhong.Text);
             List<HoaDonDTO> lst = new List<HoaDonDTO>();
             lst = HoaDonBUS.LayThongTinPhongThue(infor);
-            txtDonGiaPhong.Text = lst[0].DonGia.ToString();
+            //txtDonGiaPhong.Text = lst[0].DonGia.ToString();
+            txtDonGiaPhong.Text = string.Format("{0:0,0}",lst[0].DonGia);
             txtTenKhachHang.Text = lst[0].TenKhachHang.ToString();
             txtDiaChi.Text = lst[0].DiaChi.ToString();
             int maphieuthue = lst[0].MaPhieuThue.Value;
@@ -120,10 +121,10 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
                     decimal tiendv = dongiadv.DonGia;
                     phidichvu += infor2.SoLuong * tiendv;
                 }
-                txtPhiDichVu.Text = phidichvu.ToString();
+                txtPhiDichVu.Text = string.Format("{0:0,0  }", phidichvu);
             }
-             
-            txtPhiDichVu.Text = phidichvu.ToString();
+
+            txtPhiDichVu.Text = string.Format("{0:0,0  }", phidichvu);
             bool flag = true;
             for (int i = 0; i< dgvHoaDon.RowCount; i++)
             {
@@ -151,7 +152,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
             dgvHoaDon.Rows[numRow].Cells["colSTT"].Value = numRow + 1;
             dgvHoaDon.Rows[numRow].Cells["colMaPhong"].Value = cmbMaPhong.Text;
             dgvHoaDon.Rows[numRow].Cells["colSoNgayThue"].Value = txtSoNgayThue.Text;
-            dgvHoaDon.Rows[numRow].Cells["colDonGia"].Value = txtDonGiaPhong.Text;
+            dgvHoaDon.Rows[numRow].Cells["colDonGia"].Value =  txtDonGiaPhong.Text;
             dgvHoaDon.Rows[numRow].Cells["colPhuThu"].Value = txtPhuThu.Text;
             dgvHoaDon.Rows[numRow].Cells["colHeSo"].Value = txtHeSo.Text;
 
@@ -160,10 +161,12 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
                 Convert.ToDecimal(txtPhuThu.Text), Convert.ToDecimal(txtHeSo.Text),Convert.ToDecimal(txtPhiDichVu.Text));
             /*decimal thanhtien = HoaDonBUS.ThanhTien(int.Parse(txtSoNgayThue.Text), Convert.ToDecimal(txtDonGiaPhong.Text),
                Convert.ToDecimal(txtPhuThu.Text), Convert.ToDecimal(txtHeSo.Text));*/
-            dgvHoaDon.Rows[numRow].Cells["colThanhTien"].Value = thanhtien.ToString();
+            //dgvHoaDon.Rows[numRow].Cells["colThanhTien"].Value = thanhtien.ToString();
+            dgvHoaDon.Rows[numRow].Cells["colThanhTien"].Value = string.Format("{0:0,0 VNĐ}", thanhtien);
             numRow++;
-
-            txtTongTien.Text = (Convert.ToDecimal(txtTongTien.Text) + thanhtien).ToString();
+            
+            txtTongTien.Text = string.Format("{0:0,0}", (Convert.ToDecimal(txtTongTien.Text) + thanhtien));
+            
             ThietLapButton(true);
             if (txtTenKhachHang.ToString() == "")
             {

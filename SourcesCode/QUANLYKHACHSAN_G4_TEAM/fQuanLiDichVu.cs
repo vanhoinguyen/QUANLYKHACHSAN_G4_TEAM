@@ -74,7 +74,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
             DichVuDTO infor = LayThongTinDichVu();
             infor.MaDichVu = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["MaDichVu"]).ToString());
 
-            DialogResult result = (MessageBox.Show("Bạn có muốn xóa dịch vị " + txtNameService.Text + " không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
+            DialogResult result = (MessageBox.Show("Bạn có muốn xóa dịch vụ " + txtNameService.Text + " không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
             if (result == DialogResult.Yes)
             {
                 if (DichVuBUS.XoaDichVu(infor))
@@ -166,7 +166,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
         {    
                 txtNameService.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["TenDichVu"]).ToString();
                 txtUnitService.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["DonViTinh"]).ToString();
-                txtPriceService.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["DonGia"]).ToString();
+                txtPriceService.Text = string.Format("{0:0,0}", gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["DonGia"]));
                 
 
         }

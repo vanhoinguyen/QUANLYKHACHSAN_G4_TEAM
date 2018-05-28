@@ -45,6 +45,33 @@ namespace DAO
             }
         }
 
+        public static List<ThamSoDTO> LoadDonGia(string text)
+        {
+            var query = (from t in context.LOAI_PHONG
+                         
+                         where t.MaLoaiPhong == text
+                         select new ThamSoDTO
+                         {
+                             DonGia = t.DonGia,
+                         });
+            return query.ToList();
+        }
+
+        public static bool CapNhatTSDonGia(ThamSoDTO ts,string t)
+        {
+            SqlParameter dongia = new SqlParameter("@DonGia", ts.DonGia);
+            SqlParameter tenloaiphong = new SqlParameter("@TenLoaiPhong", t);
+            try
+            {
+                context.Database.ExecuteSqlCommand("spCapNhatTSDonGia  @TenLoaiPhong ,@DonGia ", dongia,tenloaiphong);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public static List<ThamSoDTO> LayThongTinTS()
         {
             var query = (from t in context.THAM_SO
