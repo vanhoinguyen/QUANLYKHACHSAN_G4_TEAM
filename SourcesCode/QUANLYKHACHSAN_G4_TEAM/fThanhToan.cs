@@ -162,7 +162,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
             /*decimal thanhtien = HoaDonBUS.ThanhTien(int.Parse(txtSoNgayThue.Text), Convert.ToDecimal(txtDonGiaPhong.Text),
                Convert.ToDecimal(txtPhuThu.Text), Convert.ToDecimal(txtHeSo.Text));*/
             //dgvHoaDon.Rows[numRow].Cells["colThanhTien"].Value = thanhtien.ToString();
-            dgvHoaDon.Rows[numRow].Cells["colThanhTien"].Value = string.Format("{0:0,0 VNĐ}", thanhtien);
+            dgvHoaDon.Rows[numRow].Cells["colThanhTien"].Value = string.Format("{0:0,0}", thanhtien);
             numRow++;
             
             txtTongTien.Text = string.Format("{0:0,0}", (Convert.ToDecimal(txtTongTien.Text) + thanhtien));
