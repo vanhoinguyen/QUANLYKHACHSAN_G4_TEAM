@@ -101,12 +101,6 @@
     <Compile Include="fQLDoanhThu.Designer.cs">
       <DependentUpon>fQLDoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formtest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formtest.Designer.cs">
-      <DependentUpon>Formtest.cs</DependentUpon>
-    </Compile>
     <Compile Include="fThayDoiQuyDinhKS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fQLDoanhThu.resx">
       <DependentUpon>fQLDoanhThu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formtest.resx">
-      <DependentUpon>Formtest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThayDoiQuyDinhKS.resx">
       <DependentUpon>fThayDoiQuyDinhKS.cs</DependentUpon>

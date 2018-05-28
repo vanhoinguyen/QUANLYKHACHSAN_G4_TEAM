@@ -52,7 +52,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.btnOder);
             this.panel1.Controls.Add(this.btnLuu);
@@ -71,54 +71,54 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(733, 392);
+            this.panel1.Size = new System.Drawing.Size(1196, 582);
             this.panel1.TabIndex = 4;
             // 
             // btnOder
             // 
-            this.btnOder.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.btnOder.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOder.Appearance.Options.UseFont = true;
             this.btnOder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOder.ImageOptions.Image")));
-            this.btnOder.Location = new System.Drawing.Point(605, 49);
+            this.btnOder.Location = new System.Drawing.Point(287, 391);
             this.btnOder.Name = "btnOder";
-            this.btnOder.Size = new System.Drawing.Size(95, 31);
+            this.btnOder.Size = new System.Drawing.Size(107, 59);
             this.btnOder.TabIndex = 27;
             this.btnOder.Text = "Oder";
             this.btnOder.Click += new System.EventHandler(this.btnOder_Click);
             // 
             // btnLuu
             // 
-            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLuu.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Appearance.Options.UseFont = true;
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(492, 93);
+            this.btnLuu.Location = new System.Drawing.Point(287, 303);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(95, 31);
+            this.btnLuu.Size = new System.Drawing.Size(107, 59);
             this.btnLuu.TabIndex = 26;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.btnThoat.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Appearance.Options.UseFont = true;
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(605, 93);
+            this.btnThoat.Location = new System.Drawing.Point(287, 472);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(95, 31);
+            this.btnThoat.Size = new System.Drawing.Size(107, 59);
             this.btnThoat.TabIndex = 25;
             this.btnThoat.Text = "Quay lại";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(-2, 184);
+            this.gridControl1.Location = new System.Drawing.Point(421, 116);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(733, 206);
+            this.gridControl1.Size = new System.Drawing.Size(750, 415);
             this.gridControl1.TabIndex = 24;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -132,105 +132,111 @@
             // 
             // btnSua
             // 
-            this.btnSua.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.btnSua.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.Appearance.Options.UseForeColor = true;
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(379, 93);
+            this.btnSua.Location = new System.Drawing.Point(161, 472);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(95, 31);
+            this.btnSua.Size = new System.Drawing.Size(107, 59);
             this.btnSua.TabIndex = 23;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.btnXoa.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.Appearance.Options.UseForeColor = true;
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(492, 48);
+            this.btnXoa.Location = new System.Drawing.Point(161, 391);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(95, 31);
+            this.btnXoa.Size = new System.Drawing.Size(107, 59);
             this.btnXoa.TabIndex = 22;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.Appearance.Options.UseForeColor = true;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(379, 47);
+            this.btnThem.Location = new System.Drawing.Point(161, 303);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(95, 31);
+            this.btnThem.Size = new System.Drawing.Size(107, 59);
             this.btnThem.TabIndex = 21;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(136, 6);
+            this.label5.Location = new System.Drawing.Point(43, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(267, 35);
+            this.label5.Size = new System.Drawing.Size(1128, 82);
             this.label5.TabIndex = 17;
             this.label5.Text = "Thông Tin Dịch Vụ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtPriceService
             // 
-            this.txtPriceService.Location = new System.Drawing.Point(177, 140);
+            this.txtPriceService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPriceService.Location = new System.Drawing.Point(161, 233);
             this.txtPriceService.Name = "txtPriceService";
-            this.txtPriceService.Size = new System.Drawing.Size(188, 21);
+            this.txtPriceService.Size = new System.Drawing.Size(224, 26);
             this.txtPriceService.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(100, 148);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(69, 239);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "Đơn Giá";
             // 
             // txtUnitService
             // 
-            this.txtUnitService.Location = new System.Drawing.Point(177, 99);
+            this.txtUnitService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnitService.Location = new System.Drawing.Point(161, 177);
             this.txtUnitService.Name = "txtUnitService";
-            this.txtUnitService.Size = new System.Drawing.Size(188, 21);
+            this.txtUnitService.Size = new System.Drawing.Size(224, 26);
             this.txtUnitService.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 107);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(46, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(91, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Đơn Vị Tính";
             // 
             // txtNameService
             // 
-            this.txtNameService.Location = new System.Drawing.Point(177, 59);
+            this.txtNameService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameService.Location = new System.Drawing.Point(161, 116);
             this.txtNameService.Name = "txtNameService";
-            this.txtNameService.Size = new System.Drawing.Size(188, 21);
+            this.txtNameService.Size = new System.Drawing.Size(224, 26);
             this.txtNameService.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 67);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Tên Dịch Vụ";
             // 
@@ -238,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 392);
+            this.ClientSize = new System.Drawing.Size(1196, 582);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fQuanLiDichVu";

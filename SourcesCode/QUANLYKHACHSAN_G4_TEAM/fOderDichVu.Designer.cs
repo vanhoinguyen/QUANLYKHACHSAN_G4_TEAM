@@ -37,6 +37,7 @@
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbTenDichVu = new System.Windows.Forms.ComboBox();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // btnOder
@@ -45,9 +46,9 @@
             this.btnOder.Appearance.Options.UseFont = true;
             this.btnOder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOder.ImageOptions.Image")));
-            this.btnOder.Location = new System.Drawing.Point(239, 190);
+            this.btnOder.Location = new System.Drawing.Point(194, 191);
             this.btnOder.Name = "btnOder";
-            this.btnOder.Size = new System.Drawing.Size(108, 34);
+            this.btnOder.Size = new System.Drawing.Size(108, 43);
             this.btnOder.TabIndex = 20;
             this.btnOder.Text = "Oder";
             this.btnOder.Click += new System.EventHandler(this.btnOder_Click);
@@ -66,14 +67,14 @@
             this.cmbMaPhong.FormattingEnabled = true;
             this.cmbMaPhong.Location = new System.Drawing.Point(194, 89);
             this.cmbMaPhong.Name = "cmbMaPhong";
-            this.cmbMaPhong.Size = new System.Drawing.Size(182, 21);
+            this.cmbMaPhong.Size = new System.Drawing.Size(219, 21);
             this.cmbMaPhong.TabIndex = 22;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Tekton Pro Ext", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Green;
             this.label1.Location = new System.Drawing.Point(75, 9);
             this.label1.Name = "label1";
@@ -95,7 +96,7 @@
             // 
             this.txtSoLuong.Location = new System.Drawing.Point(194, 155);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(183, 21);
+            this.txtSoLuong.Size = new System.Drawing.Size(219, 21);
             this.txtSoLuong.TabIndex = 26;
             // 
             // label4
@@ -112,14 +113,30 @@
             this.cmbTenDichVu.FormattingEnabled = true;
             this.cmbTenDichVu.Location = new System.Drawing.Point(194, 123);
             this.cmbTenDichVu.Name = "cmbTenDichVu";
-            this.cmbTenDichVu.Size = new System.Drawing.Size(183, 21);
+            this.cmbTenDichVu.Size = new System.Drawing.Size(219, 21);
             this.cmbTenDichVu.TabIndex = 28;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.btnThoat.Appearance.Options.UseFont = true;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(318, 191);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(95, 43);
+            this.btnThoat.TabIndex = 29;
+            this.btnThoat.Text = "Quay lại";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // fOderDichVu
             // 
+            this.Appearance.BackColor = System.Drawing.Color.Gray;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 260);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.cmbTenDichVu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSoLuong);
@@ -148,5 +165,6 @@
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbTenDichVu;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
     }
 }

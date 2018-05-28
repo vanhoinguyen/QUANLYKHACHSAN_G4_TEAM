@@ -75,3 +75,12 @@ C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.csp
 C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.exe
 C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM\SourcesCode\DTO\obj\Debug\DTO.pdb
+C:\Users\Tee Max\Desktop\CNPM\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\bin\Debug\DTO.exe.config
+C:\Users\Tee Max\Desktop\CNPM\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\bin\Debug\DTO.exe
+C:\Users\Tee Max\Desktop\CNPM\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\bin\Debug\DTO.pdb
+C:\Users\Tee Max\Desktop\CNPM\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\Tee Max\Desktop\CNPM\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\obj\Debug\DTO.Properties.Resources.resources
+C:\Users\Tee Max\Desktop\CNPM\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\obj\Debug\DTO.csproj.GenerateResource.cache
+C:\Users\Tee Max\Desktop\CNPM\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Tee Max\Desktop\CNPM\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\obj\Debug\DTO.exe
+C:\Users\Tee Max\Desktop\CNPM\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\obj\Debug\DTO.pdb

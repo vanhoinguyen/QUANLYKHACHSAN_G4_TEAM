@@ -27,6 +27,8 @@ namespace QUANLYKHACHSAN_G4_TEAM
             {
                 e.Cancel = true;
             }
+
+    
                 
 
         }
@@ -111,5 +113,31 @@ namespace QUANLYKHACHSAN_G4_TEAM
         {
              this.WindowState = FormWindowState.Minimized;
         }
+
+
+        #region MoveForm
+        Boolean flag;
+        int x, y;
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            flag = true;
+            x = e.X;
+            y = e.Y;
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            flag = false;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (flag == true)
+            {
+                this.SetDesktopLocation(Cursor.Position.X - x, Cursor.Position.Y - y);
+            }
+        }
+        #endregion
     }
 }
