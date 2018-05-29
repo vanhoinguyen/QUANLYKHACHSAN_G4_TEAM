@@ -69,6 +69,8 @@
             this.panel1.Controls.Add(this.txtNameService);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1196, 582);
@@ -76,24 +78,30 @@
             // 
             // btnOder
             // 
-            this.btnOder.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOder.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOder.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnOder.Appearance.Options.UseFont = true;
+            this.btnOder.Appearance.Options.UseForeColor = true;
+            this.btnOder.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnOder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOder.ImageOptions.Image")));
-            this.btnOder.Location = new System.Drawing.Point(287, 391);
+            this.btnOder.Location = new System.Drawing.Point(161, 238);
             this.btnOder.Name = "btnOder";
-            this.btnOder.Size = new System.Drawing.Size(107, 59);
+            this.btnOder.Size = new System.Drawing.Size(233, 59);
             this.btnOder.TabIndex = 27;
             this.btnOder.Text = "Oder";
             this.btnOder.Click += new System.EventHandler(this.btnOder_Click);
             // 
             // btnLuu
             // 
-            this.btnLuu.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnLuu.Appearance.Options.UseFont = true;
+            this.btnLuu.Appearance.Options.UseForeColor = true;
+            this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(287, 303);
+            this.btnLuu.Location = new System.Drawing.Point(287, 314);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(107, 59);
             this.btnLuu.TabIndex = 26;
@@ -102,8 +110,11 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnThoat.Appearance.Options.UseFont = true;
+            this.btnThoat.Appearance.Options.UseForeColor = true;
+            this.btnThoat.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.Location = new System.Drawing.Point(287, 472);
@@ -115,10 +126,10 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(421, 116);
+            this.gridControl1.Location = new System.Drawing.Point(421, 96);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(750, 415);
+            this.gridControl1.Size = new System.Drawing.Size(750, 435);
             this.gridControl1.TabIndex = 24;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -132,13 +143,14 @@
             // 
             // btnSua
             // 
-            this.btnSua.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.Appearance.Options.UseForeColor = true;
+            this.btnSua.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(161, 472);
+            this.btnSua.Location = new System.Drawing.Point(287, 391);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(107, 59);
             this.btnSua.TabIndex = 23;
@@ -147,10 +159,11 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.Appearance.Options.UseForeColor = true;
+            this.btnXoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
             this.btnXoa.Location = new System.Drawing.Point(161, 391);
@@ -162,13 +175,14 @@
             // 
             // btnThem
             // 
-            this.btnThem.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.Appearance.Options.UseForeColor = true;
+            this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(161, 303);
+            this.btnThem.Location = new System.Drawing.Point(161, 314);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(107, 59);
             this.btnThem.TabIndex = 21;
@@ -181,7 +195,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(43, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1128, 82);
+            this.label5.Size = new System.Drawing.Size(1128, 69);
             this.label5.TabIndex = 17;
             this.label5.Text = "Thông Tin Dịch Vụ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -189,16 +203,16 @@
             // txtPriceService
             // 
             this.txtPriceService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceService.Location = new System.Drawing.Point(161, 233);
+            this.txtPriceService.Location = new System.Drawing.Point(161, 192);
             this.txtPriceService.Name = "txtPriceService";
-            this.txtPriceService.Size = new System.Drawing.Size(224, 26);
+            this.txtPriceService.Size = new System.Drawing.Size(233, 26);
             this.txtPriceService.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(69, 239);
+            this.label3.Location = new System.Drawing.Point(69, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 11;
@@ -207,16 +221,16 @@
             // txtUnitService
             // 
             this.txtUnitService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnitService.Location = new System.Drawing.Point(161, 177);
+            this.txtUnitService.Location = new System.Drawing.Point(161, 142);
             this.txtUnitService.Name = "txtUnitService";
-            this.txtUnitService.Size = new System.Drawing.Size(224, 26);
+            this.txtUnitService.Size = new System.Drawing.Size(233, 26);
             this.txtUnitService.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 180);
+            this.label2.Location = new System.Drawing.Point(51, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 20);
             this.label2.TabIndex = 9;
@@ -225,16 +239,16 @@
             // txtNameService
             // 
             this.txtNameService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameService.Location = new System.Drawing.Point(161, 116);
+            this.txtNameService.Location = new System.Drawing.Point(161, 96);
             this.txtNameService.Name = "txtNameService";
-            this.txtNameService.Size = new System.Drawing.Size(224, 26);
+            this.txtNameService.Size = new System.Drawing.Size(233, 26);
             this.txtNameService.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 122);
+            this.label1.Location = new System.Drawing.Point(46, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 7;
