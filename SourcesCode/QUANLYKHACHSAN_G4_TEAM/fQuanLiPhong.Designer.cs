@@ -59,10 +59,7 @@
             // btnThoat
             // 
             this.btnThoat.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnThoat.Appearance.Options.UseFont = true;
-            this.btnThoat.Appearance.Options.UseForeColor = true;
-            this.btnThoat.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.Location = new System.Drawing.Point(290, 512);
@@ -85,10 +82,7 @@
             // btnLuu
             // 
             this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.Appearance.Options.UseForeColor = true;
-            this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
             this.btnLuu.Location = new System.Drawing.Point(290, 367);
@@ -101,10 +95,7 @@
             // btnSua
             // 
             this.btnSua.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Appearance.Options.UseFont = true;
-            this.btnSua.Appearance.Options.UseForeColor = true;
-            this.btnSua.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
             this.btnSua.Location = new System.Drawing.Point(290, 441);
@@ -117,15 +108,12 @@
             // btnThem
             // 
             this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnThem.Appearance.Options.UseFont = true;
-            this.btnThem.Appearance.Options.UseForeColor = true;
-            this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(126, 367);
+            this.btnThem.Location = new System.Drawing.Point(136, 367);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(143, 58);
+            this.btnThem.Size = new System.Drawing.Size(133, 58);
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm phòng";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -133,15 +121,12 @@
             // btnXoa
             // 
             this.btnXoa.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.Appearance.Options.UseForeColor = true;
-            this.btnXoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(126, 441);
+            this.btnXoa.Location = new System.Drawing.Point(136, 441);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(143, 58);
+            this.btnXoa.Size = new System.Drawing.Size(133, 58);
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa phòng";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -149,10 +134,10 @@
             // txtGhiChu
             // 
             this.txtGhiChu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGhiChu.Location = new System.Drawing.Point(126, 284);
+            this.txtGhiChu.Location = new System.Drawing.Point(136, 284);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(278, 59);
+            this.txtGhiChu.Size = new System.Drawing.Size(268, 59);
             this.txtGhiChu.TabIndex = 6;
             // 
             // label5
@@ -170,9 +155,9 @@
             // 
             this.txtMaPhong.Enabled = false;
             this.txtMaPhong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaPhong.Location = new System.Drawing.Point(126, 73);
+            this.txtMaPhong.Location = new System.Drawing.Point(136, 73);
             this.txtMaPhong.Name = "txtMaPhong";
-            this.txtMaPhong.Size = new System.Drawing.Size(278, 27);
+            this.txtMaPhong.Size = new System.Drawing.Size(268, 27);
             this.txtMaPhong.TabIndex = 1;
             // 
             // label4
@@ -193,26 +178,26 @@
             "A",
             "B",
             "C"});
-            this.cmbLoaiPhong.Location = new System.Drawing.Point(126, 173);
+            this.cmbLoaiPhong.Location = new System.Drawing.Point(136, 173);
             this.cmbLoaiPhong.Name = "cmbLoaiPhong";
-            this.cmbLoaiPhong.Size = new System.Drawing.Size(278, 27);
+            this.cmbLoaiPhong.Size = new System.Drawing.Size(268, 27);
             this.cmbLoaiPhong.TabIndex = 3;
             // 
             // txtDonGia
             // 
             this.txtDonGia.Enabled = false;
             this.txtDonGia.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDonGia.Location = new System.Drawing.Point(126, 227);
+            this.txtDonGia.Location = new System.Drawing.Point(136, 227);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(278, 27);
+            this.txtDonGia.Size = new System.Drawing.Size(268, 27);
             this.txtDonGia.TabIndex = 5;
             // 
             // txtTinhTrang
             // 
             this.txtTinhTrang.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTinhTrang.Location = new System.Drawing.Point(126, 121);
+            this.txtTinhTrang.Location = new System.Drawing.Point(136, 121);
             this.txtTinhTrang.Name = "txtTinhTrang";
-            this.txtTinhTrang.Size = new System.Drawing.Size(278, 27);
+            this.txtTinhTrang.Size = new System.Drawing.Size(268, 27);
             this.txtTinhTrang.TabIndex = 4;
             // 
             // label3

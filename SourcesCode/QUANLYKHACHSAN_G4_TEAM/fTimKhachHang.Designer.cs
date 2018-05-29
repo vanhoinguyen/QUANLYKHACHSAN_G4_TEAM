@@ -68,20 +68,17 @@
             this.txtCMND.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Location = new System.Drawing.Point(169, 205);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(205, 27);
+            this.txtCMND.Size = new System.Drawing.Size(179, 27);
             this.txtCMND.TabIndex = 34;
             this.txtCMND.TextChanged += new System.EventHandler(this.txtCMND_TextChanged);
             // 
             // btnThoat
             // 
-            this.btnThoat.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnThoat.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Appearance.Options.UseFont = true;
-            this.btnThoat.Appearance.Options.UseForeColor = true;
-            this.btnThoat.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(249, 476);
+            this.btnThoat.Location = new System.Drawing.Point(223, 462);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(125, 58);
             this.btnThoat.TabIndex = 32;
@@ -101,14 +98,13 @@
             // 
             // btnTim
             // 
-            this.btnTim.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTim.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnTim.Appearance.Options.UseFont = true;
             this.btnTim.Appearance.Options.UseForeColor = true;
-            this.btnTim.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnTim.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTim.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.ImageOptions.Image")));
-            this.btnTim.Location = new System.Drawing.Point(249, 384);
+            this.btnTim.Location = new System.Drawing.Point(223, 374);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(125, 58);
             this.btnTim.TabIndex = 28;
@@ -120,7 +116,7 @@
             this.cmbPhong.FormattingEnabled = true;
             this.cmbPhong.Location = new System.Drawing.Point(169, 312);
             this.cmbPhong.Name = "cmbPhong";
-            this.cmbPhong.Size = new System.Drawing.Size(205, 27);
+            this.cmbPhong.Size = new System.Drawing.Size(179, 27);
             this.cmbPhong.TabIndex = 25;
             this.cmbPhong.SelectedIndexChanged += new System.EventHandler(this.cmbPhong_SelectedIndexChanged);
             // 
@@ -140,7 +136,7 @@
             this.cmbLoaiKhach.FormattingEnabled = true;
             this.cmbLoaiKhach.Location = new System.Drawing.Point(169, 256);
             this.cmbLoaiKhach.Name = "cmbLoaiKhach";
-            this.cmbLoaiKhach.Size = new System.Drawing.Size(205, 27);
+            this.cmbLoaiKhach.Size = new System.Drawing.Size(179, 27);
             this.cmbLoaiKhach.TabIndex = 23;
             this.cmbLoaiKhach.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiKhach_SelectedIndexChanged);
             // 
@@ -160,7 +156,7 @@
             this.txtDiaChi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(169, 152);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(205, 27);
+            this.txtDiaChi.Size = new System.Drawing.Size(179, 27);
             this.txtDiaChi.TabIndex = 15;
             this.txtDiaChi.TextChanged += new System.EventHandler(this.txtDiaChi_TextChanged);
             this.txtDiaChi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiaChi_KeyPress);
@@ -190,7 +186,7 @@
             this.txtTenKH.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH.Location = new System.Drawing.Point(169, 102);
             this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(205, 27);
+            this.txtTenKH.Size = new System.Drawing.Size(179, 27);
             this.txtTenKH.TabIndex = 9;
             this.txtTenKH.TextChanged += new System.EventHandler(this.txtTenKH_TextChanged);
             this.txtTenKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenKH_KeyPress);

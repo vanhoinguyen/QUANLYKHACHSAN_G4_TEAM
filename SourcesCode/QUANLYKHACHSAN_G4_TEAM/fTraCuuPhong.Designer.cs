@@ -58,9 +58,9 @@
             // txtDonGiaDen
             // 
             this.txtDonGiaDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDonGiaDen.Location = new System.Drawing.Point(343, 208);
+            this.txtDonGiaDen.Location = new System.Drawing.Point(356, 208);
             this.txtDonGiaDen.Name = "txtDonGiaDen";
-            this.txtDonGiaDen.Size = new System.Drawing.Size(132, 26);
+            this.txtDonGiaDen.Size = new System.Drawing.Size(119, 26);
             this.txtDonGiaDen.TabIndex = 51;
             this.txtDonGiaDen.TextChanged += new System.EventHandler(this.txtDonGiaDen_TextChanged);
             // 
@@ -68,7 +68,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(279, 214);
+            this.label6.Location = new System.Drawing.Point(292, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 20);
             this.label6.TabIndex = 53;
@@ -179,49 +179,40 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnThoat.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Appearance.Options.UseFont = true;
-            this.btnThoat.Appearance.Options.UseForeColor = true;
-            this.btnThoat.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(296, 492);
+            this.btnThoat.Location = new System.Drawing.Point(275, 493);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(131, 48);
+            this.btnThoat.Size = new System.Drawing.Size(118, 48);
             this.btnThoat.TabIndex = 47;
             this.btnThoat.Text = "Quay lại";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnLamMoi.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.Appearance.Options.UseFont = true;
-            this.btnLamMoi.Appearance.Options.UseForeColor = true;
-            this.btnLamMoi.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnLamMoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLamMoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.Image")));
-            this.btnLamMoi.Location = new System.Drawing.Point(296, 418);
+            this.btnLamMoi.Location = new System.Drawing.Point(275, 418);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(131, 48);
+            this.btnLamMoi.Size = new System.Drawing.Size(118, 48);
             this.btnLamMoi.TabIndex = 46;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnDatPhong
             // 
-            this.btnDatPhong.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatPhong.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnDatPhong.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatPhong.Appearance.Options.UseFont = true;
-            this.btnDatPhong.Appearance.Options.UseForeColor = true;
-            this.btnDatPhong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnDatPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDatPhong.Enabled = false;
             this.btnDatPhong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDatPhong.ImageOptions.Image")));
             this.btnDatPhong.Location = new System.Drawing.Point(121, 418);
             this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Size = new System.Drawing.Size(134, 48);
+            this.btnDatPhong.Size = new System.Drawing.Size(118, 48);
             this.btnDatPhong.TabIndex = 45;
             this.btnDatPhong.Text = "Đặt phòng";
             this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
@@ -239,16 +230,15 @@
             // 
             // btnTatCa
             // 
-            this.btnTatCa.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTatCa.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTatCa.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnTatCa.Appearance.Options.UseFont = true;
             this.btnTatCa.Appearance.Options.UseForeColor = true;
-            this.btnTatCa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnTatCa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTatCa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTatCa.ImageOptions.Image")));
             this.btnTatCa.Location = new System.Drawing.Point(121, 282);
             this.btnTatCa.Name = "btnTatCa";
-            this.btnTatCa.Size = new System.Drawing.Size(306, 48);
+            this.btnTatCa.Size = new System.Drawing.Size(272, 48);
             this.btnTatCa.TabIndex = 43;
             this.btnTatCa.Text = "Tìm tất cả";
             this.btnTatCa.Click += new System.EventHandler(this.btnTatCa_Click);
@@ -285,16 +275,15 @@
             // 
             // btnTimTraPhong
             // 
-            this.btnTimTraPhong.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimTraPhong.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimTraPhong.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnTimTraPhong.Appearance.Options.UseFont = true;
             this.btnTimTraPhong.Appearance.Options.UseForeColor = true;
-            this.btnTimTraPhong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnTimTraPhong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTimTraPhong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTimTraPhong.ImageOptions.Image")));
             this.btnTimTraPhong.Location = new System.Drawing.Point(121, 351);
             this.btnTimTraPhong.Name = "btnTimTraPhong";
-            this.btnTimTraPhong.Size = new System.Drawing.Size(306, 48);
+            this.btnTimTraPhong.Size = new System.Drawing.Size(272, 48);
             this.btnTimTraPhong.TabIndex = 54;
             this.btnTimTraPhong.Text = "Tìm phòng trả gần nhất";
             this.btnTimTraPhong.Click += new System.EventHandler(this.btnTimTraPhong_Click);
