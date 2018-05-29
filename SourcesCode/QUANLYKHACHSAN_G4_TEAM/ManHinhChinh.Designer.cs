@@ -31,10 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnThuNho = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnDangXuat = new System.Windows.Forms.Button();
-            this.btnTroGiup = new System.Windows.Forms.Button();
-            this.btnThongTinKhachSan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,8 +48,11 @@
             this.ptbQuyDinh = new System.Windows.Forms.PictureBox();
             this.ptbThanhToan = new System.Windows.Forms.PictureBox();
             this.ptbDatPhong = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnTroGiup = new System.Windows.Forms.Button();
+            this.btnThongTinKhachSan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDoanhThu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuanLiDichVu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuanLiKhachHang)).BeginInit();
@@ -62,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuyDinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbThanhToan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDatPhong)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,70 +122,6 @@
             this.btnThuNho.UseVisualStyleBackColor = false;
             this.btnThuNho.Click += new System.EventHandler(this.btnThuNho_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnDangXuat);
-            this.panel2.Controls.Add(this.btnTroGiup);
-            this.panel2.Controls.Add(this.btnThongTinKhachSan);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 604);
-            this.panel2.TabIndex = 25;
-            // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDangXuat.FlatAppearance.BorderSize = 0;
-            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangXuat.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.ForeColor = System.Drawing.Color.Black;
-            this.btnDangXuat.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.logoutnew;
-            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(3, 545);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(182, 46);
-            this.btnDangXuat.TabIndex = 17;
-            this.btnDangXuat.Text = "              Đăng xuất";
-            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.UseVisualStyleBackColor = false;
-            // 
-            // btnTroGiup
-            // 
-            this.btnTroGiup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTroGiup.FlatAppearance.BorderSize = 0;
-            this.btnTroGiup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTroGiup.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTroGiup.ForeColor = System.Drawing.Color.Black;
-            this.btnTroGiup.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.helpnew;
-            this.btnTroGiup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTroGiup.Location = new System.Drawing.Point(3, 493);
-            this.btnTroGiup.Name = "btnTroGiup";
-            this.btnTroGiup.Size = new System.Drawing.Size(182, 46);
-            this.btnTroGiup.TabIndex = 16;
-            this.btnTroGiup.Text = "              Trợ giúp";
-            this.btnTroGiup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTroGiup.UseVisualStyleBackColor = false;
-            // 
-            // btnThongTinKhachSan
-            // 
-            this.btnThongTinKhachSan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnThongTinKhachSan.FlatAppearance.BorderSize = 0;
-            this.btnThongTinKhachSan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongTinKhachSan.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongTinKhachSan.ForeColor = System.Drawing.Color.Black;
-            this.btnThongTinKhachSan.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.informationnew;
-            this.btnThongTinKhachSan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongTinKhachSan.Location = new System.Drawing.Point(5, 441);
-            this.btnThongTinKhachSan.Name = "btnThongTinKhachSan";
-            this.btnThongTinKhachSan.Size = new System.Drawing.Size(182, 46);
-            this.btnThongTinKhachSan.TabIndex = 12;
-            this.btnThongTinKhachSan.Text = "       Thông tin khách sạn";
-            this.btnThongTinKhachSan.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -232,7 +168,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(704, 367);
+            this.label6.Location = new System.Drawing.Point(723, 371);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 19);
             this.label6.TabIndex = 21;
@@ -406,6 +342,70 @@
             this.ptbDatPhong.TabStop = false;
             this.ptbDatPhong.Click += new System.EventHandler(this.ptbDatPhong_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnDangXuat);
+            this.panel2.Controls.Add(this.btnTroGiup);
+            this.panel2.Controls.Add(this.btnThongTinKhachSan);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.ForeColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(194, 604);
+            this.panel2.TabIndex = 25;
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuat.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.Black;
+            this.btnDangXuat.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.logoutnew;
+            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.Location = new System.Drawing.Point(3, 545);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(182, 46);
+            this.btnDangXuat.TabIndex = 17;
+            this.btnDangXuat.Text = "              Đăng xuất";
+            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.UseVisualStyleBackColor = false;
+            // 
+            // btnTroGiup
+            // 
+            this.btnTroGiup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTroGiup.FlatAppearance.BorderSize = 0;
+            this.btnTroGiup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTroGiup.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTroGiup.ForeColor = System.Drawing.Color.Black;
+            this.btnTroGiup.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.helpnew;
+            this.btnTroGiup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTroGiup.Location = new System.Drawing.Point(3, 493);
+            this.btnTroGiup.Name = "btnTroGiup";
+            this.btnTroGiup.Size = new System.Drawing.Size(182, 46);
+            this.btnTroGiup.TabIndex = 16;
+            this.btnTroGiup.Text = "              Trợ giúp";
+            this.btnTroGiup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTroGiup.UseVisualStyleBackColor = false;
+            // 
+            // btnThongTinKhachSan
+            // 
+            this.btnThongTinKhachSan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThongTinKhachSan.FlatAppearance.BorderSize = 0;
+            this.btnThongTinKhachSan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongTinKhachSan.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongTinKhachSan.ForeColor = System.Drawing.Color.Black;
+            this.btnThongTinKhachSan.Image = global::QUANLYKHACHSAN_G4_TEAM.Properties.Resources.informationnew;
+            this.btnThongTinKhachSan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongTinKhachSan.Location = new System.Drawing.Point(5, 441);
+            this.btnThongTinKhachSan.Name = "btnThongTinKhachSan";
+            this.btnThongTinKhachSan.Size = new System.Drawing.Size(182, 46);
+            this.btnThongTinKhachSan.TabIndex = 12;
+            this.btnThongTinKhachSan.Text = "       Thông tin khách sạn";
+            this.btnThongTinKhachSan.UseVisualStyleBackColor = false;
+            // 
             // ManHinhChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,7 +421,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManHinhChinh_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbDoanhThu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuanLiDichVu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuanLiKhachHang)).EndInit();
@@ -430,6 +429,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuyDinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbThanhToan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDatPhong)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
