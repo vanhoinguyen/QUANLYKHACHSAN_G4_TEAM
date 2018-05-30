@@ -128,12 +128,12 @@ namespace DAO
 
         public static bool LapHoaDon(HoaDonDTO infor)
         {
-            SqlParameter mahoadon = new SqlParameter("@MaHD", infor.MaHoaDon);
-            SqlParameter tenkh = new SqlParameter("@MaKH", infor.TenKhachHang);
+            SqlParameter mahoadon = new SqlParameter("@MaHoaDon", infor.MaHoaDon);
+            SqlParameter tenkh = new SqlParameter("@TenKhachHang", infor.TenKhachHang);
             SqlParameter trigia = new SqlParameter("@TriGia", infor.TongTien);
             try
             {
-                context.Database.ExecuteSqlCommand("spThemHoaDon @MaHD, @MaKH, @TriGia", mahoadon, tenkh, trigia);
+                context.Database.ExecuteSqlCommand("spThemHoaDon @MaHoaDon , @TenKhachHang , @TriGia", mahoadon, tenkh, trigia);
                 return true;
             }
             catch

@@ -166,7 +166,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
             numRow++;
             
             txtTongTien.Text = string.Format("{0:0,0}", (Convert.ToDecimal(txtTongTien.Text) + thanhtien));
-            
+            //txtTongTien.Text = Convert.ToDecimal(txtTongTien.Text) + thanhtien;
             ThietLapButton(true);
             if (txtTenKhachHang.ToString() == "")
             {
