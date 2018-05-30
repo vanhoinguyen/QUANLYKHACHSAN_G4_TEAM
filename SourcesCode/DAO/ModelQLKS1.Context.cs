@@ -576,5 +576,14 @@ namespace DAO
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spCapNhatTSDonGia", tenLoaiPhongParameter, donGiaParameter);
         }
+    
+        public virtual int spXoaDichVuPhongDK(Nullable<int> maPhong)
+        {
+            var maPhongParameter = maPhong.HasValue ?
+                new ObjectParameter("MaPhong", maPhong) :
+                new ObjectParameter("MaPhong", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spXoaDichVuPhongDK", maPhongParameter);
+        }
     }
 }

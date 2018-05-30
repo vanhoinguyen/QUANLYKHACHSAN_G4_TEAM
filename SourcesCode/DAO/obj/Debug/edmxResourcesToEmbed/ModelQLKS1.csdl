@@ -220,6 +220,9 @@
       <Parameter Name="TenLoaiPhong" Mode="In" Type="String" />
       <Parameter Name="DonGia" Mode="In" Type="Decimal" />
     </FunctionImport>
+    <FunctionImport Name="spXoaDichVuPhongDK">
+      <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
     <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />

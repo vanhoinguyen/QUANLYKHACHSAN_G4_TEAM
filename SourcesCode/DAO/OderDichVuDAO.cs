@@ -40,7 +40,19 @@ namespace DAO
             }
         }
 
-        
+        public static bool XoaDichVuPhongDK(HoaDonDTO inforHD)
+        {
+            SqlParameter maphong = new SqlParameter("@MaPhong", inforHD.MaPhong);
+            try
+            {
+                context.Database.ExecuteSqlCommand("spXoaDichVuPhongDK  @MaPhong ",  maphong);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         public static List<OderDichVuDTO> DanhSachDichVuDK(int? maPhong)
         {

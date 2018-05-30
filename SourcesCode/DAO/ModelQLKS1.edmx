@@ -71,11 +71,6 @@
           <Property Name="MaPhong" Type="int" Nullable="false" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'QUAN_LY_KHACH_SAN.dbo.DANH_MUC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="DANH_MUC">
-          <Property Name="DMLoaiPhong" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
         <EntityType Name="DICH_VU">
           <Key>
             <PropertyRef Name="MaDichVu" />
@@ -415,6 +410,9 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
         <Function Name="spXoaDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MaDichVu" Type="int" Mode="In" />
         </Function>
+        <Function Name="spXoaDichVuPhongDK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaPhong" Type="int" Mode="In" />
+        </Function>
         <Function Name="spXoaKhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MaKhacHang" Type="int" Mode="In" />
         </Function>
@@ -721,6 +719,9 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <FunctionImport Name="spCapNhatTSDonGia">
             <Parameter Name="TenLoaiPhong" Mode="In" Type="String" />
             <Parameter Name="DonGia" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="spXoaDichVuPhongDK">
+            <Parameter Name="MaPhong" Mode="In" Type="Int32" />
           </FunctionImport>
           </EntityContainer>
         <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
@@ -1236,6 +1237,7 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <FunctionImportMapping FunctionImportName="spDoanhThuTheoNamTheoThang" FunctionName="QUAN_LY_KHACH_SANModel.Store.spDoanhThuTheoNamTheoThang" />
           <FunctionImportMapping FunctionImportName="spThemPhongMoi" FunctionName="QUAN_LY_KHACH_SANModel.Store.spThemPhongMoi" />
           <FunctionImportMapping FunctionImportName="spCapNhatTSDonGia" FunctionName="QUAN_LY_KHACH_SANModel.Store.spCapNhatTSDonGia" />
+          <FunctionImportMapping FunctionImportName="spXoaDichVuPhongDK" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaDichVuPhongDK" />
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -66,11 +66,6 @@
     <Property Name="MaPhong" Type="int" Nullable="false" />
     <Property Name="SoLuong" Type="int" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'QUAN_LY_KHACH_SAN.dbo.DANH_MUC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="DANH_MUC">
-          <Property Name="DMLoaiPhong" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
   <EntityType Name="DICH_VU">
     <Key>
       <PropertyRef Name="MaDichVu" />
@@ -409,6 +404,9 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
   </Function>
   <Function Name="spXoaDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaDichVu" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spXoaDichVuPhongDK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPhong" Type="int" Mode="In" />
   </Function>
   <Function Name="spXoaKhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaKhacHang" Type="int" Mode="In" />

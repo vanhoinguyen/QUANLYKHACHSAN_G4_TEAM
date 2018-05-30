@@ -41,6 +41,9 @@ namespace BUS
             return OderDichVuDAO.DanhSachDichVuDK(maPhong);
         }
 
-        
+        public static bool XoaDichVuPhongDK(HoaDonDTO inforHD)
+        {
+            return OderDichVuDAO.XoaDichVuPhongDK(inforHD);
+        }
     }
 }

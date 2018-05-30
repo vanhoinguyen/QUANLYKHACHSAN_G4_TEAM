@@ -124,7 +124,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
                 txtPhiDichVu.Text = string.Format("{0:0,0  }", phidichvu);
             }
 
-            txtPhiDichVu.Text = string.Format("{0:0,0  }", phidichvu);
+            
             bool flag = true;
             for (int i = 0; i< dgvHoaDon.RowCount; i++)
             {
@@ -242,6 +242,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
             infor.MaHoaDon = infor.MaHoaDon + 1;
             infor.TenKhachHang = txtTenKhachHang.Text;
             infor.TongTien = Convert.ToDecimal(txtTongTien.Text);
+            //infor.MaPhong
             return infor;
         }
 
@@ -291,6 +292,12 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
                     {
                         success = false;
                         MessageBox.Show("Không cập nhập được tình trạng phòng ", "Lỗi", MessageBoxButtons.OK,
+                            MessageBoxIcon.Stop);
+                    }
+                    if (!(OderDichVuBUS.XoaDichVuPhongDK(inforHD)))
+                    {
+                        success = false;
+                        MessageBox.Show("Không xóa được dich vụ phòng đã đăng kí ", "Lỗi", MessageBoxButtons.OK,
                             MessageBoxIcon.Stop);
                     }
                 }
