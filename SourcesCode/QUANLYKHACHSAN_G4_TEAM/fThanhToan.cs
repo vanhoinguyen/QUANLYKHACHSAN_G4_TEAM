@@ -316,7 +316,14 @@ namespace QUANLYKHACHSAN_G4_TEAM.ThanhToan
                         fThanhToan_Load_1(sender, e);
                         ThietLapButton(false);
                         txtTenKhachHang.Text = "";
+                        txtDiaChi.Text = "";
+                        txtPhiDichVu.Text = "";
+                        txtPhuThu.Text = "";
+                        txtSoNgayThue.Text = "";
+                        txtHeSo.Text = "";
+                        txtDonGiaPhong.Text = "0";
                         txtTongTien.Text = "0";
+                        cmbMaPhong.Text = "";
                     }
                 
             }
