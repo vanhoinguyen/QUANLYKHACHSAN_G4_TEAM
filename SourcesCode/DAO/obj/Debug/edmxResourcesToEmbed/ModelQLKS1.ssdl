@@ -420,6 +420,9 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
   <Function Name="spXoaPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaPhong" Type="int" Mode="In" />
   </Function>
+  <Function Name="spXoaPhongTrongCTHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPhong" Type="int" Mode="In" />
+  </Function>
   <EntityContainer Name="QUAN_LY_KHACH_SANModelStoreContainer">
     <EntitySet Name="BAOCAO_DOANHTHUTHEOLOAIPHONG" EntityType="Self.BAOCAO_DOANHTHUTHEOLOAIPHONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BAOCAO_MATDOSUDUNGPHONG" EntityType="Self.BAOCAO_MATDOSUDUNGPHONG" Schema="dbo" store:Type="Tables" />

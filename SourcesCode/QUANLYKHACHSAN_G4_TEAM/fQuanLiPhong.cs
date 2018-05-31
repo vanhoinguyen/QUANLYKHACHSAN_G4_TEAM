@@ -44,7 +44,16 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiPhong
             cmbLoaiPhong.DataSource = PhongBUS.LoaiPhong();
             ThietLapTextbox(false);
             ThietLapButton(false);
-            gcDSPhong.DataSource = PhongBUS.DanhSachPhong();
+            List<PhongDTO> lstt = new List<PhongDTO>();
+            lstt = PhongBUS.DanhSachPhong();
+            for(int i=0;i<lstt.Count;i++)
+            {
+                lstt[i].DonGia = Convert.ToDecimal(string.Format("{0:0,0}", lstt[i].DonGia));
+            }
+            
+            gcDSPhong.DataSource = lstt;
+            
+            
             
             
         }
@@ -172,12 +181,13 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiPhong
                 DialogResult result = (MessageBox.Show("Bạn có muốn xóa phòng " + txtMaPhong.Text + " không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
                 if (result == DialogResult.Yes)
                 {
-                    if (PhongBUS.XoaPhong(infor))
-                    {
-                        MessageBox.Show("Bạn đã xóa phòng " + txtMaPhong.Text + " thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        fQuanLiPhong_Load(sender, e);
-                        KhoiTaoLai();
-                    }
+                    if(PhongBUS.XoaPhongTrongCTHoaDon(infor))
+                        if (PhongBUS.XoaPhong(infor) )
+                        {
+                             MessageBox.Show("Bạn đã xóa phòng " + txtMaPhong.Text + " thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            fQuanLiPhong_Load(sender, e);
+                            KhoiTaoLai();
+                        }
                 }
             }
         }

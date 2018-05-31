@@ -38,6 +38,8 @@
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnXem = new DevExpress.XtraEditors.SimpleButton();
             this.dgvDoanhThu = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,10 +152,28 @@
             // 
             this.dgvDoanhThu.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvDoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDoanhThu.Location = new System.Drawing.Point(46, 183);
+            this.dgvDoanhThu.Location = new System.Drawing.Point(46, 206);
             this.dgvDoanhThu.Name = "dgvDoanhThu";
             this.dgvDoanhThu.Size = new System.Drawing.Size(743, 202);
             this.dgvDoanhThu.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(344, 160);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 19);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Tổng tiền";
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.txtTongTien.Location = new System.Drawing.Point(437, 152);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(228, 27);
+            this.txtTongTien.TabIndex = 24;
             // 
             // fQLDoanhThu
             // 
@@ -162,6 +182,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 420);
+            this.Controls.Add(this.txtTongTien);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvDoanhThu);
             this.Controls.Add(this.txtNam);
@@ -175,7 +197,6 @@
             this.Name = "fQLDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doanh Thu";
-            this.Load += new System.EventHandler(this.fQLDoanhThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoanhThu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -192,5 +213,7 @@
         private System.Windows.Forms.TextBox txtNam;
         private System.Windows.Forms.ComboBox cmbThang;
         private System.Windows.Forms.DataGridView dgvDoanhThu;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtTongTien;
     }
 }

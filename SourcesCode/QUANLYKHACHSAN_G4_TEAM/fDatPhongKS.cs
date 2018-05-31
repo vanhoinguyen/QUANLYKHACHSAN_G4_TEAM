@@ -36,6 +36,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.DatPhong
                     dataGridView1.Rows.Add();
                     dataGridView1.Rows[numRow].Cells["colTenKhachHang"].Value = txtTenKhachHang.Text;
                     dataGridView1.Rows[numRow].Cells["colLoaiKhach"].Value = cmbLoaiKhach.SelectedValue;
+                    dataGridView1.Rows[numRow].Cells["colTenLoaiKhach"].Value = cmbLoaiKhach.Text;
                     dataGridView1.Rows[numRow].Cells["colCMND"].Value = txtCMND.Text;
                     dataGridView1.Rows[numRow].Cells["colDiaChi"].Value = txtDiaChi.Text;
                     numRow++;

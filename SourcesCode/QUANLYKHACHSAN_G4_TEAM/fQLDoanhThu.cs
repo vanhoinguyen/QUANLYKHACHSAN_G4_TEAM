@@ -34,6 +34,10 @@ namespace QUANLYKHACHSAN_G4_TEAM.DoanhThu
             {
                 decimal sum = 0;
                 lst = BaoCaoBUS.TinhTongDoanhThuTheoLoaiPhong();
+                for(int i =0;i<lst.Count;i++)
+                {
+                    lst[i].TongDoanhThu = Convert.ToDecimal(string.Format("{0:0,0}", lst[i].TongDoanhThu));
+                }
                 dgvDoanhThu.DataSource = lst;
                 for( int i =0; i< dgvDoanhThu.RowCount;i++)
                 {
@@ -48,8 +52,10 @@ namespace QUANLYKHACHSAN_G4_TEAM.DoanhThu
 
                 }
                 btnLuu.Enabled = false;
+                txtTongTien.Text = string.Format("{0:0,0 VNĐ}", sum);
 
-            }
+            } 
+
             else if(txtNam.Text != "" && cmbThang.Text != "")
             {
                 decimal sum = 0;
@@ -68,6 +74,10 @@ namespace QUANLYKHACHSAN_G4_TEAM.DoanhThu
                     infor.MaCTBCDoanhThu = 1;
                 }
                 lst = BaoCaoBUS.DoanhThuTheoLoaiPhongTheoThang(infor);
+                for (int i = 0; i < lst.Count; i++)
+                {
+                    lst[i].TongDoanhThu = Convert.ToDecimal(string.Format("{0:0,0}", lst[i].TongDoanhThu));
+                }
                 dgvDoanhThu.DataSource = lst;
                 for (int i = 0; i < dgvDoanhThu.RowCount; i++)
                 {
@@ -84,6 +94,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.DoanhThu
                     lst[i].MaCTBCDoanhThu = infor.MaCTBCDoanhThu;
 
                 }
+                txtTongTien.Text = string.Format("{0:0,0 VNĐ}", sum);
                 btnLuu.Enabled = true;
             }
         }
@@ -135,12 +146,6 @@ namespace QUANLYKHACHSAN_G4_TEAM.DoanhThu
                 MessageBox.Show("Không thêm được báo cáo doanh thu cho tháng " + infor.Thang + "", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
-        }
-
-        private void fQLDoanhThu_Load(object sender, EventArgs e)
-        {
-        
-
         }
     }
 }

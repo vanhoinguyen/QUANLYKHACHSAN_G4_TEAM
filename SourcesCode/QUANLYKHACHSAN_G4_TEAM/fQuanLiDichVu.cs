@@ -179,7 +179,7 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
         {
             List<DichVuDTO> lstt = new List<DichVuDTO>();
             lstt = DichVuBUS.LoadDanhSach();
-            for(int i =0;i<gridView1.RowCount;i++)
+            for(int i =0;i<lstt.Count;i++)
             {
                 lstt[i].DonGia = Convert.ToDecimal(string.Format("{0:0,0}", lstt[i].DonGia));
             }

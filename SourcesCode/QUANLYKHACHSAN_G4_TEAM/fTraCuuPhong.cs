@@ -23,11 +23,16 @@ namespace QUANLYKHACHSAN_G4_TEAM.TraCuuPhong
             cmbLoaiPhong.DisplayMember = "TenLoaiPhong";
             cmbLoaiPhong.ValueMember = "MaLoaiPhong";
         }
-
+        List<PhongDTO> lstt = new List<PhongDTO>();
         private void SuKienLoadForm()
         {
             cmbLoaiPhong.DataSource = PhongBUS.LoaiPhong();
-            gcPhong.DataSource = PhongBUS.DanhSachPhong();
+            lstt = PhongBUS.DanhSachPhong();
+            for (int i = 0; i < lstt.Count; i++)
+            {
+                lstt[i].DonGia = Convert.ToDecimal(string.Format("{0:0,0}", lstt[i].DonGia));
+            }
+            gcPhong.DataSource = lstt;
             btnDatPhong.Enabled = false;
         }
 
@@ -61,37 +66,68 @@ namespace QUANLYKHACHSAN_G4_TEAM.TraCuuPhong
 
             return thongtin;
         }
-
+        
         private void TimKiemTheoYeuCau(int s)
         {
             PhongDTO thongtin = LayThongTinTimKiem();
             if (s == 1)
             {
-                gcPhong.DataSource = PhongBUS.DanhSachPhongYeuCau(thongtin);
+                lstt = PhongBUS.DanhSachPhongYeuCau(thongtin);
+                for (int i = 0; i < lstt.Count; i++)
+                {
+                    lstt[i].DonGia = Convert.ToDecimal(string.Format("{0:0,0}", lstt[i].DonGia));
+                }
+                gcPhong.DataSource = lstt;
             }
             else if (s == 2)
             {
-                gcPhong.DataSource = PhongBUS.DanhSachPhongTheoLoai(thongtin);
+                lstt = PhongBUS.DanhSachPhongTheoLoai(thongtin);
+                for (int i = 0; i < lstt.Count; i++)
+                {
+                    lstt[i].DonGia = Convert.ToDecimal(string.Format("{0:0,0}", lstt[i].DonGia));
+                }
+                gcPhong.DataSource = lstt;
             }
             else if (s == 3)
             {
-                gcPhong.DataSource = PhongBUS.DanhSachPhongTheoLoaiTheoYeuCau(thongtin);
+                lstt = PhongBUS.DanhSachPhongTheoLoaiTheoYeuCau(thongtin);
+                for (int i = 0; i < lstt.Count; i++)
+                {
+                    lstt[i].DonGia = Convert.ToDecimal(string.Format("{0:0,0}", lstt[i].DonGia));
+                }
+                gcPhong.DataSource = lstt;
             }
             else if (s == 4)
             {
                 decimal dgtu = Convert.ToDecimal(txtDonGiaTu.Text);
-                gcPhong.DataSource = PhongBUS.DanhSachPhongTheoDGTu(dgtu);
+                lstt = PhongBUS.DanhSachPhongTheoDGTu(dgtu);
+                for (int i = 0; i < lstt.Count; i++)
+                {
+                    lstt[i].DonGia = Convert.ToDecimal(string.Format("{0:0,0}", lstt[i].DonGia));
+                }
+                gcPhong.DataSource = lstt;
             }
             else if (s == 5)
             {
                 decimal dgtu = Convert.ToDecimal(txtDonGiaTu.Text);
                 decimal dgden = Convert.ToDecimal(txtDonGiaDen.Text);
-                gcPhong.DataSource = PhongBUS.DanhSachPhongTheoKhoangDG(dgtu, dgden);
+                lstt = PhongBUS.DanhSachPhongTheoKhoangDG(dgtu, dgden);
+                for (int i = 0; i < lstt.Count; i++)
+                {
+                    lstt[i].DonGia = Convert.ToDecimal(string.Format("{0:0,0}", lstt[i].DonGia));
+                }
+                gcPhong.DataSource = lstt;
             }
             else if (s == 6)
             {
                 decimal dgden = Convert.ToDecimal(txtDonGiaDen.Text);
-                gcPhong.DataSource = PhongBUS.DanhSachPhongTheoDGDen(dgden);
+                
+                lstt = PhongBUS.DanhSachPhongTheoDGDen(dgden);
+                for(int i =0;i<lstt.Count;i++)
+                {
+                    lstt[i].DonGia = Convert.ToDecimal(string.Format("{0:0,0}", lstt[i].DonGia));
+                }
+                gcPhong.DataSource = lstt;
             }
         }
 

@@ -223,6 +223,9 @@
     <FunctionImport Name="spXoaDichVuPhongDK">
       <Parameter Name="MaPhong" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="spXoaPhongTrongCTHoaDon">
+      <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
     <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />

@@ -24,6 +24,7 @@ namespace DAO
                              TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
                              GhiChu = r.GhiChu,
                              DonGia = r.LOAI_PHONG.DonGia,
+                             
                          }).OrderBy(r => r.TenLoaiPhong);
             return query.ToList();
         }
@@ -101,6 +102,21 @@ namespace DAO
                              NgayTraPhongDK = f.NgayTraPhongDK,
                          }).OrderByDescending(s => s.NgayTraPhongDK);
             return query.ToList();
+        }
+
+        public static bool XoaPhongTrongCTHoaDon(PhongDTO infor)
+        {
+            SqlParameter maphong = new SqlParameter("@MaPhong", infor.MaPhong);
+            try
+            {
+                context.Database.ExecuteSqlCommand("spXoaPhongTrongCTHoaDon @MaPhong", maphong);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
         }
 
         public static List<PhieuThuePhongDTO> NgayTraPhong()
@@ -251,6 +267,7 @@ namespace DAO
                              GhiChu = r.GhiChu,
                              TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
                              DonGia =  r.LOAI_PHONG.DonGia,
+                             
                          }).OrderByDescending(s => s.TinhTrang);
             return query.ToList();
         }

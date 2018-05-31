@@ -55,6 +55,7 @@
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colTenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenLoaiKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLoaiKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -338,6 +339,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTenKhachHang,
+            this.colTenLoaiKhach,
             this.colLoaiKhach,
             this.colCMND,
             this.colDiaChi,
@@ -354,6 +356,11 @@
             this.colTenKhachHang.Name = "colTenKhachHang";
             this.colTenKhachHang.ReadOnly = true;
             this.colTenKhachHang.Width = 220;
+            // 
+            // colTenLoaiKhach
+            // 
+            this.colTenLoaiKhach.HeaderText = "Tên Loại Khách";
+            this.colTenLoaiKhach.Name = "colTenLoaiKhach";
             // 
             // colLoaiKhach
             // 
@@ -442,12 +449,13 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dtpNgayTraPhong;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenKhachHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenLoaiKhach;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLoaiKhach;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCMND;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colXoa;
-        private System.Windows.Forms.DateTimePicker dtpNgayTraPhong;
-        private System.Windows.Forms.Label label9;
     }
 }

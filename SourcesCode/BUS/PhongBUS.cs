@@ -122,5 +122,10 @@ namespace BUS
         {
             return PhongDAO.DanhSachPhongTraGanNhat();
         }
+
+        public static bool XoaPhongTrongCTHoaDon(PhongDTO infor)
+        {
+            return PhongDAO.XoaPhongTrongCTHoaDon(infor);
+        }
     }
 }
