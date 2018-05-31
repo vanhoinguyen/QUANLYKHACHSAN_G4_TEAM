@@ -1562,3 +1562,5 @@ C:\Users\Tee Max\Desktop\CNPM\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\QUANLYKH
 C:\Users\Tee Max\Desktop\CNPM\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\QUANLYKHACHSAN_G4_TEAM\obj\Debug\QUANLYKHACHSAN_G4_TEAM.fTroGiup.resources
 C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\QUANLYKHACHSAN_G4_TEAM\obj\Debug\QUANLYKHACHSAN_G4_TEAM.fDangNhap.resources
 C:\Users\Tee Max\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\QUANLYKHACHSAN_G4_TEAM\obj\Debug\QUANLYKHACHSAN_G4_TEAM.fTroGiup.resources
+C:\Users\User\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\QUANLYKHACHSAN_G4_TEAM\obj\Debug\QUANLYKHACHSAN_G4_TEAM.fDangNhap.resources
+C:\Users\User\Documents\GitHub\QUANLYKHACHSAN_G4_TEAM\SourcesCode\QUANLYKHACHSAN_G4_TEAM\obj\Debug\QUANLYKHACHSAN_G4_TEAM.fTroGiup.resources

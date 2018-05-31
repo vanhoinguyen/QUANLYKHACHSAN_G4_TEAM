@@ -721,7 +721,7 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             <Parameter Name="DonGia" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="spXoaDichVuPhongDK">
-            <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+          <Parameter Name="MaPhong" Mode="In" Type="Int32" />
           </FunctionImport>
           </EntityContainer>
         <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
