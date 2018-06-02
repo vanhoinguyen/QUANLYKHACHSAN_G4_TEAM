@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fOderDichVu));
             this.btnOder = new DevExpress.XtraEditors.SimpleButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,6 +39,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbTenDichVu = new System.Windows.Forms.ComboBox();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOder
@@ -103,6 +106,7 @@
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(242, 27);
             this.txtSoLuong.TabIndex = 26;
+            this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             // 
             // label4
             // 
@@ -137,6 +141,10 @@
             this.btnThoat.Text = "Quay lại";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // fOderDichVu
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gray;
@@ -158,6 +166,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Oder dịch vụ";
             this.Load += new System.EventHandler(this.fOderDichVu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +183,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbTenDichVu;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

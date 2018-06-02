@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
 using DTO;
+using System.Text.RegularExpressions;
 
 namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
 {
@@ -186,6 +187,67 @@ namespace QUANLYKHACHSAN_G4_TEAM.QuanLiDichVu
             gridControl1.DataSource = lstt;
         }
 
-        
+        private void txtNameService_TextChanged(object sender, EventArgs e)
+        {
+            Regex regex, regex1, regex2, regex3;
+            regex = new Regex(@"^\w{2,6}\s\w{2,6}$");
+            regex1 = new Regex(@"^\w{2,6}\s\w{2,6}\s\w{2,6}$");
+            regex2 = new Regex(@"^\w{2,6}\s\w{2,6}\s\w{2,6}\s\w{2,6}$");
+            regex3 = new Regex(@"^\w{2,6}\s\w{2,6}\s\w{2,6}\s\w{2,6}\s\w{2,6}$");
+            
+            Control ctrl = (Control)sender;
+            
+            
+                if (regex.IsMatch(ctrl.Text) || regex1.IsMatch(ctrl.Text)
+              || regex2.IsMatch(ctrl.Text) || regex3.IsMatch(ctrl.Text))
+                {
+                    errorProvider1.SetError(ctrl, "");
+                }
+                else
+                {
+                    errorProvider1.SetError(ctrl,
+                      "Tên không hợp lệ");
+                }
+            
+        }
+
+        private void txtUnitService_TextChanged(object sender, EventArgs e)
+        {
+            Regex regex, regex1, regex2, regex3;
+            regex = new Regex(@"^\w{2,6}\s\w{2,6}$");
+            regex1 = new Regex(@"^\w{2,6}\s\w{2,6}\s\w{2,6}$");
+            regex2 = new Regex(@"^\w{2,6}\s\w{2,6}\s\w{2,6}\s\w{2,6}$");
+            regex3 = new Regex(@"^\w{2,6}\s\w{2,6}\s\w{2,6}\s\w{2,6}\s\w{2,6}$");
+
+            Control ctrl = (Control)sender;
+
+
+            if (regex.IsMatch(ctrl.Text) || regex1.IsMatch(ctrl.Text)
+          || regex2.IsMatch(ctrl.Text) || regex3.IsMatch(ctrl.Text))
+            {
+                errorProvider2.SetError(ctrl, "");
+            }
+            else
+            {
+                errorProvider2.SetError(ctrl,
+                  "Tên không hợp lệ");
+            }
+        }
+
+        private void txtPriceService_TextChanged(object sender, EventArgs e)
+        {
+            Regex regex;
+            regex = new Regex(@"^\d{4,12}$");
+            Control ctrl = (Control)sender;
+            if (regex.IsMatch(ctrl.Text))
+            {
+                errorProvider3.SetError(ctrl, "");
+            }
+            else
+            {
+                errorProvider3.SetError(ctrl,
+                  "Gía không hợp lệ");
+            }
+        }
     }
 }

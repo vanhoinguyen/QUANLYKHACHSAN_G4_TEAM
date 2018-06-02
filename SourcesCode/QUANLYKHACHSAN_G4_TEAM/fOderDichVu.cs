@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BUS;
 using DTO;
+using System.Text.RegularExpressions;
+
 namespace QUANLYKHACHSAN_G4_TEAM
 {
     public partial class fOderDichVu : DevExpress.XtraEditors.XtraForm
@@ -51,6 +53,22 @@ namespace QUANLYKHACHSAN_G4_TEAM
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            Regex regex;
+            regex = new Regex(@"^\d{4,12}$");
+            Control ctrl = (Control)sender;
+            if (regex.IsMatch(ctrl.Text))
+            {
+                errorProvider1.SetError(ctrl, "");
+            }
+            else
+            {
+                errorProvider1.SetError(ctrl,
+                  "Gía không hợp lệ");
+            }
         }
     }
 }

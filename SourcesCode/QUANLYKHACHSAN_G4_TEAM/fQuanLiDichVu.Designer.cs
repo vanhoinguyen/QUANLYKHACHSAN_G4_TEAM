@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fQuanLiDichVu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnOder = new DevExpress.XtraEditors.SimpleButton();
@@ -45,9 +46,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNameService = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -199,6 +206,7 @@
             this.txtPriceService.Name = "txtPriceService";
             this.txtPriceService.Size = new System.Drawing.Size(233, 26);
             this.txtPriceService.TabIndex = 12;
+            this.txtPriceService.TextChanged += new System.EventHandler(this.txtPriceService_TextChanged);
             // 
             // label3
             // 
@@ -217,6 +225,7 @@
             this.txtUnitService.Name = "txtUnitService";
             this.txtUnitService.Size = new System.Drawing.Size(233, 26);
             this.txtUnitService.TabIndex = 10;
+            this.txtUnitService.TextChanged += new System.EventHandler(this.txtUnitService_TextChanged);
             // 
             // label2
             // 
@@ -235,6 +244,7 @@
             this.txtNameService.Name = "txtNameService";
             this.txtNameService.Size = new System.Drawing.Size(233, 26);
             this.txtNameService.TabIndex = 8;
+            this.txtNameService.TextChanged += new System.EventHandler(this.txtNameService_TextChanged);
             // 
             // label1
             // 
@@ -245,6 +255,18 @@
             this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Tên Dịch Vụ";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
             // 
             // fQuanLiDichVu
             // 
@@ -261,6 +283,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -283,5 +308,8 @@
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private DevExpress.XtraEditors.SimpleButton btnOder;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
     }
 }

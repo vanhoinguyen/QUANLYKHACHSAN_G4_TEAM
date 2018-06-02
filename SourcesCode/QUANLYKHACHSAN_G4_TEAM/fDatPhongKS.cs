@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -191,6 +192,76 @@ namespace QUANLYKHACHSAN_G4_TEAM.DatPhong
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtTenKhachHang_TextChanged(object sender, EventArgs e)
+        {
+            Regex regex , regex1,regex2,regex3,regex4,regex5,regex6,regex7;
+            regex = new Regex(@"^\w{2,6}\s\w{2,6}$");
+            regex1 = new Regex(@"^\w{2,6}\s\w{2,6}\s\w{2,6}$");
+            regex2 = new Regex(@"^\w{2,6}\s\w{2,6}\s\w{2,6}\s\w{2,6}$");
+            regex3 = new Regex(@"^\w{2,6}\s\w{2,6}\s\w{2,6}\s\w{2,6}\s\w{2,6}$");
+            regex4 = new Regex(@"^\d+$");
+            regex5 = new Regex(@"^\d+\s\d+$");
+            regex6 = new Regex(@"^\d+\s\d+\s\d+$");
+            regex7 = new Regex(@"^\d+\s\d+\s\d+\s\d+$");
+            Control ctrl = (Control)sender;
+            if (regex4.IsMatch(ctrl.Text)|| regex5.IsMatch(ctrl.Text) 
+                || regex6.IsMatch(ctrl.Text) || regex7.IsMatch(ctrl.Text) )
+                errorProvider4.SetError(ctrl,
+                  "Không được chứa số");
+            else
+            {
+                errorProvider4.SetError(ctrl, "");
+                if (regex.IsMatch(ctrl.Text) || regex1.IsMatch(ctrl.Text)
+              || regex2.IsMatch(ctrl.Text) || regex3.IsMatch(ctrl.Text))
+                {
+                    errorProvider1.SetError(ctrl, "");
+                }
+                else
+                {
+                    errorProvider1.SetError(ctrl,
+                      "Tên không hợp lệ");
+                }
+            }
+        }
+
+        
+
+        
+
+        private void txtCMND_TextChanged(object sender, EventArgs e)
+        {
+            Regex regex;
+            regex = new Regex(@"^\w{9,12}$");
+            Control ctrl = (Control)sender;
+            if (regex.IsMatch(ctrl.Text))
+            {
+                errorProvider2.SetError(ctrl, "");
+            }
+            else
+            {
+                errorProvider2.SetError(ctrl,
+                  "CMND không hợp lệ");
+            }
+        }
+
+        private void txtDiaChi_TextChanged(object sender, EventArgs e)
+        {
+            Regex regex,regex1;
+            regex = new Regex(@"^\w{2,6}\s\w{2,6}$");
+            regex1 = new Regex(@"^\w{2,6}\s\w{2,6}\s\w{2,6}");
+
+            Control ctrl = (Control)sender;
+            if (regex.IsMatch(ctrl.Text) )
+            {
+                errorProvider1.SetError(ctrl, "");
+            }
+            else
+            {
+                errorProvider1.SetError(ctrl,
+                  "Địa chỉ  không hợp lệ");
+            }
         }
     }
 }
