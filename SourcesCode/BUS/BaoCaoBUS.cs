@@ -16,8 +16,8 @@ namespace BUS
 
         public static List<BCDoanhThuDTO> DoanhThuTheoLoaiPhongTheoThang(BCDoanhThuDTO infor)
         {
-            DateTime ntm_min = Convert.ToDateTime("1990-01-01");
-            DateTime ntm_max = Convert.ToDateTime("1990-01-31");
+            DateTime ntm_min = Convert.ToDateTime("2000-01-01");
+            DateTime ntm_max = Convert.ToDateTime("2000-01-31");
             string n1 = "-01"; string n2 = "-31"; string t = (infor.Thang).ToString(); string nam = (infor.Nam).ToString();
             if (infor.Thang == 2)
             {

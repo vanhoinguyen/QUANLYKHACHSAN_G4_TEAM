@@ -63,6 +63,16 @@ namespace QUANLYKHACHSAN_G4_TEAM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1413hinh_nen_khach_san_5_sao_ben_bo_bien_xanh_biec {
+            get {
+                object obj = ResourceManager.GetObject("1413hinh-nen-khach-san-5-sao-ben-bo-bien-xanh-biec", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap billnew {
             get {
                 object obj = ResourceManager.GetObject("billnew", resourceCulture);

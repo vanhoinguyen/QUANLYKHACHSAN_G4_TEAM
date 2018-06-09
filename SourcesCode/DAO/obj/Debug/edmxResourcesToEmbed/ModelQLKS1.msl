@@ -143,15 +143,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NGUOI_DUNG">
-      <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.NGUOI_DUNG">
-        <MappingFragment StoreEntitySet="NGUOI_DUNG">
-          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
-          <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
-          <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="PHIEU_THUE_PHONG">
       <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.PHIEU_THUE_PHONG">
         <MappingFragment StoreEntitySet="PHIEU_THUE_PHONG">
@@ -200,5 +191,14 @@
     <FunctionImportMapping FunctionImportName="spCapNhatTSDonGia" FunctionName="QUAN_LY_KHACH_SANModel.Store.spCapNhatTSDonGia" />
     <FunctionImportMapping FunctionImportName="spXoaDichVuPhongDK" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaDichVuPhongDK" />
     <FunctionImportMapping FunctionImportName="spXoaPhongTrongCTHoaDon" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaPhongTrongCTHoaDon" />
+    <EntitySetMapping Name="NGUOI_DUNG">
+      <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.NGUOI_DUNG">
+        <MappingFragment StoreEntitySet="NGUOI_DUNG">
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+          <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

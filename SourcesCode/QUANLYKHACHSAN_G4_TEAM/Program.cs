@@ -16,7 +16,7 @@ namespace QUANLYKHACHSAN_G4_TEAM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManHinhChinh());
+            Application.Run(new fDangNhap());
         }
     }
 }

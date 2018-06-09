@@ -39,11 +39,11 @@ namespace DAO
         public DbSet<KHACH_HANG> KHACH_HANG { get; set; }
         public DbSet<LOAI_KHACH_HANG> LOAI_KHACH_HANG { get; set; }
         public DbSet<LOAI_PHONG> LOAI_PHONG { get; set; }
-        public DbSet<NGUOI_DUNG> NGUOI_DUNG { get; set; }
         public DbSet<PHIEU_THUE_PHONG> PHIEU_THUE_PHONG { get; set; }
         public DbSet<PHONG> PHONGs { get; set; }
         public DbSet<THAM_SO> THAM_SO { get; set; }
         public DbSet<DANG_KI_DICH_VU> DANG_KI_DICH_VU { get; set; }
+        public DbSet<NGUOI_DUNG> NGUOI_DUNG { get; set; }
     
         public virtual int spCapNhatTinhTrangPhong(Nullable<int> maPhong)
         {

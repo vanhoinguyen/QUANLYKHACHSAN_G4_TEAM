@@ -178,7 +178,7 @@
             this.dtpNgayTraPhong.Name = "dtpNgayTraPhong";
             this.dtpNgayTraPhong.Size = new System.Drawing.Size(153, 27);
             this.dtpNgayTraPhong.TabIndex = 11;
-            this.dtpNgayTraPhong.Value = new System.DateTime(2018, 5, 29, 22, 33, 12, 0);
+            this.dtpNgayTraPhong.Value = new System.DateTime(2018, 6, 2, 16, 17, 32, 0);
             // 
             // label9
             // 

@@ -646,7 +646,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <EntitySet Name="KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.KHACH_HANG" />
           <EntitySet Name="LOAI_KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.LOAI_KHACH_HANG" />
           <EntitySet Name="LOAI_PHONG" EntityType="QUAN_LY_KHACH_SANModel.LOAI_PHONG" />
-          <EntitySet Name="NGUOI_DUNG" EntityType="QUAN_LY_KHACH_SANModel.NGUOI_DUNG" />
           <EntitySet Name="PHIEU_THUE_PHONG" EntityType="QUAN_LY_KHACH_SANModel.PHIEU_THUE_PHONG" />
           <EntitySet Name="PHONGs" EntityType="QUAN_LY_KHACH_SANModel.PHONG" />
           <AssociationSet Name="F_CHITIET_BAOCAODOANHTHU" Association="QUAN_LY_KHACH_SANModel.F_CHITIET_BAOCAODOANHTHU">
@@ -727,8 +726,9 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <Parameter Name="MaPhong" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spXoaPhongTrongCTHoaDon">
-            <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+          <Parameter Name="MaPhong" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="NGUOI_DUNG" EntityType="QUAN_LY_KHACH_SANModel.NGUOI_DUNG" />
           </EntityContainer>
         <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
           <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />
@@ -851,14 +851,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <Property Name="TenLoaiPhong" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="PHONGs" Relationship="QUAN_LY_KHACH_SANModel.F_PHONG" FromRole="LOAI_PHONG" ToRole="PHONG" />
-        </EntityType>
-        <EntityType Name="NGUOI_DUNG">
-          <Key>
-            <PropertyRef Name="MaTaiKhoan" />
-          </Key>
-          <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" />
-          <Property Name="TenTaiKhoan" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
-          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="PHIEU_THUE_PHONG">
           <Key>
@@ -1040,6 +1032,14 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="NGUOI_DUNG">
+          <Key>
+            <PropertyRef Name="MaTaiKhoan" />
+          </Key>
+          <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" />
+          <Property Name="TenTaiKhoan" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1188,15 +1188,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="NGUOI_DUNG">
-            <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.NGUOI_DUNG">
-              <MappingFragment StoreEntitySet="NGUOI_DUNG">
-                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
-                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
-                <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="PHIEU_THUE_PHONG">
             <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.PHIEU_THUE_PHONG">
               <MappingFragment StoreEntitySet="PHIEU_THUE_PHONG">
@@ -1245,6 +1236,15 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <FunctionImportMapping FunctionImportName="spCapNhatTSDonGia" FunctionName="QUAN_LY_KHACH_SANModel.Store.spCapNhatTSDonGia" />
           <FunctionImportMapping FunctionImportName="spXoaDichVuPhongDK" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaDichVuPhongDK" />
           <FunctionImportMapping FunctionImportName="spXoaPhongTrongCTHoaDon" FunctionName="QUAN_LY_KHACH_SANModel.Store.spXoaPhongTrongCTHoaDon" />
+          <EntitySetMapping Name="NGUOI_DUNG">
+            <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel.NGUOI_DUNG">
+              <MappingFragment StoreEntitySet="NGUOI_DUNG">
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+                <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

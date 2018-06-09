@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BCDoanhThuDTO.cs" />
     <Compile Include="ChiTietPhieuThueDTO.cs" />
+    <Compile Include="DangNhapDTO.cs" />
     <Compile Include="DichVuDTO.cs" />
     <Compile Include="HoaDonDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />

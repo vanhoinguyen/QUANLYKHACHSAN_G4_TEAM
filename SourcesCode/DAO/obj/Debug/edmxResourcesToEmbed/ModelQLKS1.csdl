@@ -143,7 +143,6 @@
     <EntitySet Name="KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.KHACH_HANG" />
     <EntitySet Name="LOAI_KHACH_HANG" EntityType="QUAN_LY_KHACH_SANModel.LOAI_KHACH_HANG" />
     <EntitySet Name="LOAI_PHONG" EntityType="QUAN_LY_KHACH_SANModel.LOAI_PHONG" />
-    <EntitySet Name="NGUOI_DUNG" EntityType="QUAN_LY_KHACH_SANModel.NGUOI_DUNG" />
     <EntitySet Name="PHIEU_THUE_PHONG" EntityType="QUAN_LY_KHACH_SANModel.PHIEU_THUE_PHONG" />
     <EntitySet Name="PHONGs" EntityType="QUAN_LY_KHACH_SANModel.PHONG" />
     <AssociationSet Name="F_CHITIET_BAOCAODOANHTHU" Association="QUAN_LY_KHACH_SANModel.F_CHITIET_BAOCAODOANHTHU">
@@ -226,6 +225,7 @@
     <FunctionImport Name="spXoaPhongTrongCTHoaDon">
       <Parameter Name="MaPhong" Mode="In" Type="Int32" />
     </FunctionImport>
+    <EntitySet Name="NGUOI_DUNG" EntityType="QUAN_LY_KHACH_SANModel.NGUOI_DUNG" />
   </EntityContainer>
   <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
     <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />
@@ -348,14 +348,6 @@
     <Property Name="TenLoaiPhong" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="PHONGs" Relationship="QUAN_LY_KHACH_SANModel.F_PHONG" FromRole="LOAI_PHONG" ToRole="PHONG" />
-  </EntityType>
-  <EntityType Name="NGUOI_DUNG">
-    <Key>
-      <PropertyRef Name="MaTaiKhoan" />
-    </Key>
-    <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" />
-    <Property Name="TenTaiKhoan" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
-    <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
   </EntityType>
   <EntityType Name="PHIEU_THUE_PHONG">
     <Key>
@@ -537,4 +529,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="NGUOI_DUNG">
+    <Key>
+      <PropertyRef Name="MaTaiKhoan" />
+    </Key>
+    <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" />
+    <Property Name="TenTaiKhoan" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+  </EntityType>
 </Schema>

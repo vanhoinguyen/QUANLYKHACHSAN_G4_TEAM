@@ -73,6 +73,7 @@
     <Compile Include="CHI_TIET_PHIEU_THUE.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DangNhapDAO.cs" />
     <Compile Include="DANG_KI_DICH_VU.cs">
       <DependentUpon>ModelQLKS1.tt</DependentUpon>
     </Compile>
