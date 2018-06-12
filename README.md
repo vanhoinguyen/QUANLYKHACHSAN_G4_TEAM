@@ -14,8 +14,7 @@ _**CHỨC NĂNG CHÍNH**_:
 + Tính tổng doanh thu theo tháng của từng loại phòng
 
 _**CÔNG CỤ VÀ CÔNG NGHỆ SỬ DỤNG**_: 
-+ Visual studio 2015.
-+ SQL Sever Windows NT
++ Visual studio 2017.
 + Microsoft SQL Sever Management Studio 2017
 + Ngôn ngữ C# trên nền tảng .NET Framework 4.5.2
 + Entity Framework 5.0.0
