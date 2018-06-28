@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using System.Data.SqlClient;
 
 namespace DAO
 {
@@ -45,7 +45,7 @@ namespace DAO
             SqlParameter maphong = new SqlParameter("@MaPhong", inforHD.MaPhong);
             try
             {
-                context.Database.ExecuteSqlCommand("spXoaDichVuPhongDK  @MaPhong ",  maphong);
+                context.Database.ExecuteSqlCommand("spXoaDichVuPhongDK  @MaPhong ", maphong);
                 return true;
             }
             catch
@@ -90,11 +90,11 @@ namespace DAO
         public static List<OderDichVuDTO> LoadDanhSachDichVu()
         {
             var query = (from t in context.DICH_VU
-                        
+
                          select new OderDichVuDTO
                          {
                              TenDichVu = t.TenDichVu,
-                            
+
                          });
             return query.ToList();
         }

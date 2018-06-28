@@ -1,11 +1,10 @@
-﻿using DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
+using DTO;
+using System.Data.SqlClient;
 
 namespace DAO
 {
@@ -24,7 +23,7 @@ namespace DAO
                          });
             return query.ToList();
         }
-        
+
         public static bool ThemKhachHang(KhachHangDTO kh)
         {
             SqlParameter makh = new SqlParameter("@MaKH", kh.MaKH);

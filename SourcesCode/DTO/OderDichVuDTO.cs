@@ -10,8 +10,7 @@ namespace DTO
     {
         public int MaPhong { get; set; }
         public int MaDichVu { get; set; }
-        public string TenDichVu { get; set; }      
+        public string TenDichVu { get; set; }
         public int SoLuong { get; set; }
-        
     }
 }

@@ -9,6 +9,8 @@ namespace DTO
     public class BCDoanhThuDTO
     {
         public string MaLoaiPhong { get; set; }
+        public string MaPhong { get; set; }
+
         public decimal? TongDoanhThu { get; set; }
         public int? Thang { get; set; }
         public int? Nam { get; set; }

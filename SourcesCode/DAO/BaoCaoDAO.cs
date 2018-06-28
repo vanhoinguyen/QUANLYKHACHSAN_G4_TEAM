@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using System.Data.SqlClient;
 namespace DAO
 {
     public class BaoCaoDAO
@@ -16,10 +16,10 @@ namespace DAO
             var query = (from p in context.PHONGs
                          join cthd in context.CHI_TIET_HOA_DON on p.MaPhong equals cthd.MaPhong
                          join hd in context.HOA_DON on cthd.MaHoaDon equals hd.MaHoaDon
-                         group hd by p.MaLoaiPhong into g
+                         group hd by p.LOAI_PHONG.TenLoaiPhong into g
                          select new BCDoanhThuDTO
                          {
-                             MaLoaiPhong = g.Key,
+                             MaPhong = g.Key,
                              TongDoanhThu = g.Sum(hd => hd.TriGia),
                          });
             return query.ToList();
@@ -31,10 +31,10 @@ namespace DAO
                         join ct in context.CHI_TIET_HOA_DON on p.MaPhong equals ct.MaPhong
                         join hd in context.HOA_DON on ct.MaHoaDon equals hd.MaHoaDon
                         where ct.NgayThanhToan >= ntm_min && ct.NgayThanhToan <= ntm_max
-                        group hd by p.MaLoaiPhong into g
+                        group hd by p.LOAI_PHONG.TenLoaiPhong into g
                         select new BCDoanhThuDTO
                         {
-                            MaLoaiPhong = g.Key,
+                            MaPhong = g.Key,
                             TongDoanhThu = g.Sum(hd => hd.TriGia),
                         };
             return query.ToList();
@@ -45,22 +45,22 @@ namespace DAO
             var query = (from t in context.BAOCAO_DOANHTHUTHEOLOAIPHONG
                          select new BCDoanhThuDTO
                          {
-                             
+
                              MaBCDoanhThu = t.MaBCDoanhThu,
                          }).OrderByDescending(x => x.MaBCDoanhThu).Take(1);
             return query.ToList();
-        
+
         }
 
         public static List<BCDoanhThuDTO> LayMaBCCTDoanhThuKeTiep()
         {
-        var query = (from t in context.CHITIET_BAOCAODOANHTHU
-                     select new BCDoanhThuDTO
-                     {
+            var query = (from t in context.CHITIET_BAOCAODOANHTHU
+                         select new BCDoanhThuDTO
+                         {
 
-                         MaCTBCDoanhThu = t.MaBCCTDoanhThu,
-                     }).OrderByDescending(x => x.MaCTBCDoanhThu).Take(1);
-        return query.ToList();
+                             MaCTBCDoanhThu = t.MaBCCTDoanhThu,
+                         }).OrderByDescending(x => x.MaCTBCDoanhThu).Take(1);
+            return query.ToList();
         }
 
         public static bool ThemBaoCaoDoanhThu(BCDoanhThuDTO infor)

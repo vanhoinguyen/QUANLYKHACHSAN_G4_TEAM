@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QUAN_LY_KHACH_SANModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BAOCAO_DOANHTHUTHEOLOAIPHONG">
+    <Key>
+      <PropertyRef Name="MaBCDoanhThu" />
+    </Key>
+    <Property Name="MaBCDoanhThu" Type="int" Nullable="false" />
+    <Property Name="ThangBaoCao" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BAOCAO_MATDOSUDUNGPHONG">
+    <Key>
+      <PropertyRef Name="MaBCMatDoSuDung" />
+    </Key>
+    <Property Name="MaBCMatDoSuDung" Type="int" Nullable="false" />
+    <Property Name="ThangBaoCao" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CHI_TIET_HOA_DON">
+    <Key>
+      <PropertyRef Name="MaChiTietHD" />
+    </Key>
+    <Property Name="MaChiTietHD" Type="int" Nullable="false" />
+    <Property Name="MaHoaDon" Type="int" Nullable="false" />
+    <Property Name="SoNgayThue" Type="int" Nullable="false" />
+    <Property Name="DonGia" Type="money" />
+    <Property Name="ThanhTien" Type="money" />
+    <Property Name="NgayThanhToan" Type="date" />
+    <Property Name="MaPhong" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CHI_TIET_PHIEU_THUE">
+    <Key>
+      <PropertyRef Name="MaChiTietPT" />
+      <PropertyRef Name="MaKhachHang" />
+    </Key>
+    <Property Name="MaChiTietPT" Type="int" Nullable="false" />
+    <Property Name="MaKhachHang" Type="int" Nullable="false" />
+    <Property Name="MaPhieuThue" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CHITIET_BAOCAODOANHTHU">
+    <Key>
+      <PropertyRef Name="MaBCCTDoanhThu" />
+      <PropertyRef Name="MaLoaiPhong" />
+    </Key>
+    <Property Name="MaBCCTDoanhThu" Type="int" Nullable="false" />
+    <Property Name="MaLoaiPhong" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaBCDoanhThu" Type="int" Nullable="false" />
+    <Property Name="DoanhThuThang" Type="money" />
+    <Property Name="TiLe" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CHITIET_BAOCAOMATDOSUDUNG">
+    <Key>
+      <PropertyRef Name="MaBCCTMatDoSuDung" />
+      <PropertyRef Name="MaPhong" />
+    </Key>
+    <Property Name="MaBCCTMatDoSuDung" Type="int" Nullable="false" />
+    <Property Name="MaPhong" Type="int" Nullable="false" />
+    <Property Name="MaBCMatDoSuDung" Type="int" Nullable="false" />
+    <Property Name="SoNgayThue" Type="int" />
+    <Property Name="TiLe" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DANG_KI_DICH_VU">
+    <Key>
+      <PropertyRef Name="MaDangKi" />
+    </Key>
+    <Property Name="MaDangKi" Type="int" Nullable="false" />
+    <Property Name="MaDichVu" Type="int" Nullable="false" />
+    <Property Name="MaPhong" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'QUAN_LY_KHACH_SAN.dbo.DANH_MUC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="DANH_MUC">
+          <Property Name="DMLoaiPhong" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="DICH_VU">
+    <Key>
+      <PropertyRef Name="MaDichVu" />
+    </Key>
+    <Property Name="MaDichVu" Type="int" Nullable="false" />
+    <Property Name="TenDichVu" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DonViTinh" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DonGia" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HOA_DON">
+    <Key>
+      <PropertyRef Name="MaHoaDon" />
+    </Key>
+    <Property Name="MaHoaDon" Type="int" Nullable="false" />
+    <Property Name="TenKhachHang" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TriGia" Type="money" />
+  </EntityType>
+  <EntityType Name="KHACH_HANG">
+    <Key>
+      <PropertyRef Name="MaKhachHang" />
+    </Key>
+    <Property Name="MaKhachHang" Type="int" Nullable="false" />
+    <Property Name="TenKhachHang" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CMND" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaLoaiKhach" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOAI_KHACH_HANG">
+    <Key>
+      <PropertyRef Name="MaLoaiKhach" />
+    </Key>
+    <Property Name="MaLoaiKhach" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenLoaiKhach" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GhiChu" Type="ntext" />
+  </EntityType>
+  <EntityType Name="LOAI_PHONG">
+    <Key>
+      <PropertyRef Name="MaLoaiPhong" />
+    </Key>
+    <Property Name="MaLoaiPhong" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenLoaiPhong" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DonGia" Type="money" />
+  </EntityType>
+  <EntityType Name="NGUOI_DUNG">
+    <Key>
+      <PropertyRef Name="MaTaiKhoan" />
+    </Key>
+    <Property Name="MaTaiKhoan" Type="int" Nullable="false" />
+    <Property Name="TenTaiKhoan" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="MatKhau" Type="char" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PHIEU_THUE_PHONG">
+    <Key>
+      <PropertyRef Name="MaPhieuThue" />
+    </Key>
+    <Property Name="MaPhieuThue" Type="int" Nullable="false" />
+    <Property Name="NgayBatDauThue" Type="date" Nullable="false" />
+    <Property Name="MaPhong" Type="int" Nullable="false" />
+    <Property Name="NgayTraPhongDK" Type="date" />
+  </EntityType>
+  <EntityType Name="PHONG">
+    <Key>
+      <PropertyRef Name="MaPhong" />
+    </Key>
+    <Property Name="MaPhong" Type="int" Nullable="false" />
+    <Property Name="TinhTrang" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaLoaiPhong" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="GhiChu" Type="ntext" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="THAM_SO">
+    <Key>
+      <PropertyRef Name="SoKhachToiDa" />
+      <PropertyRef Name="PhuThu" />
+      <PropertyRef Name="HeSo" />
+    </Key>
+    <Property Name="SoKhachToiDa" Type="int" Nullable="false" />
+    <Property Name="PhuThu" Type="float" Nullable="false" />
+    <Property Name="HeSo" Type="float" Nullable="false" />
+    <Property Name="SoNgayThue" Type="int" />
+    <Property Name="PhuThuKhachThu" Type="int" />
+    <Property Name="SLKhachNuocNgoai" Type="int" />
+  </EntityType>
+  <Association Name="F_CHI_TIET_HOA_DON_1">
+    <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="1" />
+    <End Role="CHI_TIET_HOA_DON" Type="Self.CHI_TIET_HOA_DON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOA_DON">
+        <PropertyRef Name="MaHoaDon" />
+      </Principal>
+      <Dependent Role="CHI_TIET_HOA_DON">
+        <PropertyRef Name="MaHoaDon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_CHI_TIET_HOA_DON_2">
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+    <End Role="CHI_TIET_HOA_DON" Type="Self.CHI_TIET_HOA_DON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONG">
+        <PropertyRef Name="MaPhong" />
+      </Principal>
+      <Dependent Role="CHI_TIET_HOA_DON">
+        <PropertyRef Name="MaPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_CHI_TIET_PHIEU_THUE_1">
+    <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="1" />
+    <End Role="CHI_TIET_PHIEU_THUE" Type="Self.CHI_TIET_PHIEU_THUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACH_HANG">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="CHI_TIET_PHIEU_THUE">
+        <PropertyRef Name="MaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_CHI_TIET_PHIEU_THUE_2">
+    <End Role="PHIEU_THUE_PHONG" Type="Self.PHIEU_THUE_PHONG" Multiplicity="1" />
+    <End Role="CHI_TIET_PHIEU_THUE" Type="Self.CHI_TIET_PHIEU_THUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEU_THUE_PHONG">
+        <PropertyRef Name="MaPhieuThue" />
+      </Principal>
+      <Dependent Role="CHI_TIET_PHIEU_THUE">
+        <PropertyRef Name="MaPhieuThue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_CHITIET_BAOCAODOANHTHU">
+    <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" Type="Self.BAOCAO_DOANHTHUTHEOLOAIPHONG" Multiplicity="1" />
+    <End Role="CHITIET_BAOCAODOANHTHU" Type="Self.CHITIET_BAOCAODOANHTHU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAOCAO_DOANHTHUTHEOLOAIPHONG">
+        <PropertyRef Name="MaBCDoanhThu" />
+      </Principal>
+      <Dependent Role="CHITIET_BAOCAODOANHTHU">
+        <PropertyRef Name="MaBCDoanhThu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_CHITIET_BAOCAOMATDOSUDUNG">
+    <End Role="BAOCAO_MATDOSUDUNGPHONG" Type="Self.BAOCAO_MATDOSUDUNGPHONG" Multiplicity="1" />
+    <End Role="CHITIET_BAOCAOMATDOSUDUNG" Type="Self.CHITIET_BAOCAOMATDOSUDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAOCAO_MATDOSUDUNGPHONG">
+        <PropertyRef Name="MaBCMatDoSuDung" />
+      </Principal>
+      <Dependent Role="CHITIET_BAOCAOMATDOSUDUNG">
+        <PropertyRef Name="MaBCMatDoSuDung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_KHACH_HANG">
+    <End Role="LOAI_KHACH_HANG" Type="Self.LOAI_KHACH_HANG" Multiplicity="1" />
+    <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAI_KHACH_HANG">
+        <PropertyRef Name="MaLoaiKhach" />
+      </Principal>
+      <Dependent Role="KHACH_HANG">
+        <PropertyRef Name="MaLoaiKhach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_PHIEU_THUE_PHONG">
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+    <End Role="PHIEU_THUE_PHONG" Type="Self.PHIEU_THUE_PHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONG">
+        <PropertyRef Name="MaPhong" />
+      </Principal>
+      <Dependent Role="PHIEU_THUE_PHONG">
+        <PropertyRef Name="MaPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="F_PHONG">
+    <End Role="LOAI_PHONG" Type="Self.LOAI_PHONG" Multiplicity="1" />
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAI_PHONG">
+        <PropertyRef Name="MaLoaiPhong" />
+      </Principal>
+      <Dependent Role="PHONG">
+        <PropertyRef Name="MaLoaiPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DKDV_DV">
+    <End Role="DICH_VU" Type="Self.DICH_VU" Multiplicity="1" />
+    <End Role="DANG_KI_DICH_VU" Type="Self.DANG_KI_DICH_VU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DICH_VU">
+        <PropertyRef Name="MaDichVu" />
+      </Principal>
+      <Dependent Role="DANG_KI_DICH_VU">
+        <PropertyRef Name="MaDichVu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DKDV_P">
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+    <End Role="DANG_KI_DICH_VU" Type="Self.DANG_KI_DICH_VU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONG">
+        <PropertyRef Name="MaPhong" />
+      </Principal>
+      <Dependent Role="DANG_KI_DICH_VU">
+        <PropertyRef Name="MaPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="spCapNhatTinhTrangPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPhong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spCapNhatTSDonGia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TenLoaiPhong" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonGia" Type="money" Mode="In" />
+  </Function>
+  <Function Name="spCapNhatTSHeSo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HeSo" Type="float" Mode="In" />
+  </Function>
+  <Function Name="spCapNhatTSPhuThu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PhuThu" Type="float" Mode="In" />
+  </Function>
+  <Function Name="spCapNhatTSSoKhachToiDa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SoKhachToiDa" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDangKiDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaDichVu" Type="int" Mode="In" />
+    <Parameter Name="MaPhong" Type="int" Mode="In" />
+    <Parameter Name="SoLuong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDoanhThuTheoLoaiPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spDoanhThuTheoNamTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Thang" Type="int" Mode="In" />
+    <Parameter Name="Nam" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spSuaThongTinDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaDichVu" Type="int" Mode="In" />
+    <Parameter Name="TenDichVu" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonViTinh" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonGia" Type="money" Mode="In" />
+  </Function>
+  <Function Name="spSuaThongTinPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPhong" Type="int" Mode="In" />
+    <Parameter Name="TinhTrang" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
+    <Parameter Name="GhiChu" Type="ntext" Mode="In" />
+  </Function>
+  <Function Name="spSuaTTLoaiPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaLP" Type="nvarchar" Mode="In" />
+    <Parameter Name="TenLP" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonGia" Type="money" Mode="In" />
+  </Function>
+  <Function Name="spThemBCCTDTTheoLoaiPhongTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaBCCTDoanhThu" Type="int" Mode="In" />
+    <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaBCDoanhThu" Type="int" Mode="In" />
+    <Parameter Name="DoanhThuThang" Type="money" Mode="In" />
+    <Parameter Name="TiLe" Type="char" Mode="In" />
+  </Function>
+  <Function Name="spThemBCCTMDTheoPhongTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaBCCTMatDo" Type="int" Mode="In" />
+    <Parameter Name="MaPhong" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaBCMatDo" Type="int" Mode="In" />
+    <Parameter Name="SoNgayThue" Type="int" Mode="In" />
+    <Parameter Name="TiLe" Type="char" Mode="In" />
+  </Function>
+  <Function Name="spThemBCDoanhThuTheoLoaiPhongTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaBCDoanhThu" Type="int" Mode="In" />
+    <Parameter Name="Thang" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spThemBCMatDoSuDungPhongTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaBCCTMatDo" Type="int" Mode="In" />
+    <Parameter Name="Thang" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spThemChiTietHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaHoaDon" Type="int" Mode="In" />
+    <Parameter Name="SoNgayThue" Type="int" Mode="In" />
+    <Parameter Name="DonGia" Type="money" Mode="In" />
+    <Parameter Name="ThanhTien" Type="money" Mode="In" />
+    <Parameter Name="NgayThanhToan" Type="date" Mode="In" />
+    <Parameter Name="MaPhong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spThemCTPhieuThue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaCTPT" Type="int" Mode="In" />
+    <Parameter Name="MaKH" Type="int" Mode="In" />
+    <Parameter Name="MaPT" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spThemDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TenDichVu" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonViTinh" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonGia" Type="money" Mode="In" />
+  </Function>
+  <Function Name="spThemHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaHoaDon" Type="int" Mode="In" />
+    <Parameter Name="TenKhachHang" Type="nvarchar" Mode="In" />
+    <Parameter Name="TriGia" Type="money" Mode="In" />
+  </Function>
+  <Function Name="spThemKhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaKH" Type="int" Mode="In" />
+    <Parameter Name="TenKH" Type="nvarchar" Mode="In" />
+    <Parameter Name="CMND" Type="nvarchar" Mode="In" />
+    <Parameter Name="DiaChi" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaLK" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spThemLoaiPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaLP" Type="nvarchar" Mode="In" />
+    <Parameter Name="TenLP" Type="nvarchar" Mode="In" />
+    <Parameter Name="DonGia" Type="money" Mode="In" />
+  </Function>
+  <Function Name="spThemPhieuThue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPT" Type="int" Mode="In" />
+    <Parameter Name="NgayThue" Type="date" Mode="In" />
+    <Parameter Name="MaPhong" Type="int" Mode="In" />
+    <Parameter Name="NgayTraPhong" Type="date" Mode="In" />
+  </Function>
+  <Function Name="spThemPhongMoi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TinhTrang" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
+    <Parameter Name="GhiChu" Type="ntext" Mode="In" />
+  </Function>
+  <Function Name="spThietLapTTrangPhongBanDau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPhong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spTruNgayThangNam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NgayBDThue" Type="date" Mode="In" />
+  </Function>
+  <Function Name="spXoaCTPhieuThue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPhieuThue" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spXoaDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaDichVu" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spXoaDichVuPhongDK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPhong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spXoaKhachHang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaKhacHang" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spXoaLoaiPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaLP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spXoaPhieuThue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPhieuThue" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spXoaPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPhong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spXoaPhongTrongCTHoaDon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPhong" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="QUAN_LY_KHACH_SANModelStoreContainer">
+    <EntitySet Name="BAOCAO_DOANHTHUTHEOLOAIPHONG" EntityType="Self.BAOCAO_DOANHTHUTHEOLOAIPHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BAOCAO_MATDOSUDUNGPHONG" EntityType="Self.BAOCAO_MATDOSUDUNGPHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHI_TIET_HOA_DON" EntityType="Self.CHI_TIET_HOA_DON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHI_TIET_PHIEU_THUE" EntityType="Self.CHI_TIET_PHIEU_THUE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="Self.CHITIET_BAOCAODOANHTHU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHITIET_BAOCAOMATDOSUDUNG" EntityType="Self.CHITIET_BAOCAOMATDOSUDUNG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DANG_KI_DICH_VU" EntityType="Self.DANG_KI_DICH_VU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DICH_VU" EntityType="Self.DICH_VU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOA_DON" EntityType="Self.HOA_DON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHACH_HANG" EntityType="Self.KHACH_HANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAI_KHACH_HANG" EntityType="Self.LOAI_KHACH_HANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAI_PHONG" EntityType="Self.LOAI_PHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NGUOI_DUNG" EntityType="Self.NGUOI_DUNG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEU_THUE_PHONG" EntityType="Self.PHIEU_THUE_PHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THAM_SO" EntityType="Self.THAM_SO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[THAM_SO].[SoKhachToiDa] AS [SoKhachToiDa], 
+[THAM_SO].[PhuThu] AS [PhuThu], 
+[THAM_SO].[HeSo] AS [HeSo], 
+[THAM_SO].[SoNgayThue] AS [SoNgayThue], 
+[THAM_SO].[PhuThuKhachThu] AS [PhuThuKhachThu], 
+[THAM_SO].[SLKhachNuocNgoai] AS [SLKhachNuocNgoai]
+FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="F_CHI_TIET_HOA_DON_1" Association="Self.F_CHI_TIET_HOA_DON_1">
+      <End Role="HOA_DON" EntitySet="HOA_DON" />
+      <End Role="CHI_TIET_HOA_DON" EntitySet="CHI_TIET_HOA_DON" />
+    </AssociationSet>
+    <AssociationSet Name="F_CHI_TIET_HOA_DON_2" Association="Self.F_CHI_TIET_HOA_DON_2">
+      <End Role="PHONG" EntitySet="PHONG" />
+      <End Role="CHI_TIET_HOA_DON" EntitySet="CHI_TIET_HOA_DON" />
+    </AssociationSet>
+    <AssociationSet Name="F_CHI_TIET_PHIEU_THUE_1" Association="Self.F_CHI_TIET_PHIEU_THUE_1">
+      <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
+      <End Role="CHI_TIET_PHIEU_THUE" EntitySet="CHI_TIET_PHIEU_THUE" />
+    </AssociationSet>
+    <AssociationSet Name="F_CHI_TIET_PHIEU_THUE_2" Association="Self.F_CHI_TIET_PHIEU_THUE_2">
+      <End Role="PHIEU_THUE_PHONG" EntitySet="PHIEU_THUE_PHONG" />
+      <End Role="CHI_TIET_PHIEU_THUE" EntitySet="CHI_TIET_PHIEU_THUE" />
+    </AssociationSet>
+    <AssociationSet Name="F_CHITIET_BAOCAODOANHTHU" Association="Self.F_CHITIET_BAOCAODOANHTHU">
+      <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" EntitySet="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
+      <End Role="CHITIET_BAOCAODOANHTHU" EntitySet="CHITIET_BAOCAODOANHTHU" />
+    </AssociationSet>
+    <AssociationSet Name="F_CHITIET_BAOCAOMATDOSUDUNG" Association="Self.F_CHITIET_BAOCAOMATDOSUDUNG">
+      <End Role="BAOCAO_MATDOSUDUNGPHONG" EntitySet="BAOCAO_MATDOSUDUNGPHONG" />
+      <End Role="CHITIET_BAOCAOMATDOSUDUNG" EntitySet="CHITIET_BAOCAOMATDOSUDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="F_KHACH_HANG" Association="Self.F_KHACH_HANG">
+      <End Role="LOAI_KHACH_HANG" EntitySet="LOAI_KHACH_HANG" />
+      <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
+    </AssociationSet>
+    <AssociationSet Name="F_PHIEU_THUE_PHONG" Association="Self.F_PHIEU_THUE_PHONG">
+      <End Role="PHONG" EntitySet="PHONG" />
+      <End Role="PHIEU_THUE_PHONG" EntitySet="PHIEU_THUE_PHONG" />
+    </AssociationSet>
+    <AssociationSet Name="F_PHONG" Association="Self.F_PHONG">
+      <End Role="LOAI_PHONG" EntitySet="LOAI_PHONG" />
+      <End Role="PHONG" EntitySet="PHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DKDV_DV" Association="Self.FK_DKDV_DV">
+      <End Role="DICH_VU" EntitySet="DICH_VU" />
+      <End Role="DANG_KI_DICH_VU" EntitySet="DANG_KI_DICH_VU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DKDV_P" Association="Self.FK_DKDV_P">
+      <End Role="PHONG" EntitySet="PHONG" />
+      <End Role="DANG_KI_DICH_VU" EntitySet="DANG_KI_DICH_VU" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

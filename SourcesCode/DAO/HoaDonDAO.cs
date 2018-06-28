@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using System.Data.SqlClient;
+
 namespace DAO
 {
-    
     public class HoaDonDAO
     {
         static QUAN_LY_KHACH_SANEntities context = new QUAN_LY_KHACH_SANEntities();
@@ -30,7 +30,7 @@ namespace DAO
                          join lp in context.LOAI_PHONG on p.MaLoaiPhong equals lp.MaLoaiPhong
                          join ctpt in context.CHI_TIET_PHIEU_THUE on pt.MaPhieuThue equals ctpt.MaPhieuThue
                          join kh in context.KHACH_HANG on ctpt.MaKhachHang equals kh.MaKhachHang
-                        
+
                          where pt.MaPhong == infor.MaPhong
                          select new HoaDonDTO
                          {
@@ -79,7 +79,7 @@ namespace DAO
         public static bool XoaChiTietPhieuThue(HoaDonDTO inforHD)
         {
             SqlParameter maphieuthue = new SqlParameter("@MaPT", inforHD.MaPhieuThue);
-            
+
             try
             {
                 context.Database.ExecuteSqlCommand("spXoaCTPhieuThue @MaPT", maphieuthue);
@@ -112,12 +112,12 @@ namespace DAO
             SqlParameter songaythue = new SqlParameter("@SoNgayThue", inforHD.SoNgayDaThue);
             SqlParameter dongia = new SqlParameter("@DonGia", inforHD.DonGia);
             SqlParameter thanhtien = new SqlParameter("@ThanhTien", inforHD.ThanhTien);
-            
+
             SqlParameter ngaythanhtoan = new SqlParameter("@NgayThanhToan", inforHD.NgayThanhToan);
             SqlParameter maphong = new SqlParameter("@MaPhong", inforHD.MaPhong);
             try
             {
-                context.Database.ExecuteSqlCommand("spThemChiTietHD @MaHD , @SoNgayThue , @DonGia , @ThanhTien , @NgayThanhToan , @MaPhong", mahoadon, songaythue, dongia, thanhtien, ngaythanhtoan,maphong);
+                context.Database.ExecuteSqlCommand("spThemChiTietHD @MaHD , @SoNgayThue , @DonGia , @ThanhTien , @NgayThanhToan , @MaPhong", mahoadon, songaythue, dongia, thanhtien, ngaythanhtoan, maphong);
                 return true;
             }
             catch
@@ -147,7 +147,7 @@ namespace DAO
             var query = (from t in context.THAM_SO
                          select new HoaDonDTO
                          {
-                             HeSo= t.HeSo,
+                             HeSo = t.HeSo,
                          });
             return query.ToList();
         }
@@ -169,13 +169,13 @@ namespace DAO
         public static int DemSoLuongKhachNuocNgoai(HoaDonDTO infor)
         {
             int num = (from pt in context.PHIEU_THUE_PHONG
-                         join ctpt in context.CHI_TIET_PHIEU_THUE on pt.MaPhieuThue equals ctpt.MaPhieuThue
-                         join kh in context.KHACH_HANG on ctpt.MaKhachHang equals kh.MaKhachHang
-                         where pt.MaPhong == infor.MaPhong && kh.MaLoaiKhach == "LK002"
-                         select new HoaDonDTO
-                         {
+                       join ctpt in context.CHI_TIET_PHIEU_THUE on pt.MaPhieuThue equals ctpt.MaPhieuThue
+                       join kh in context.KHACH_HANG on ctpt.MaKhachHang equals kh.MaKhachHang
+                       where pt.MaPhong == infor.MaPhong && kh.MaLoaiKhach == "LK002"
+                       select new HoaDonDTO
+                       {
 
-                         }).Count();
+                       }).Count();
             return num;
 
         }
@@ -195,7 +195,7 @@ namespace DAO
             var query = (from t in context.THAM_SO
                          select new HoaDonDTO
                          {
-                            PhuThu = t.PhuThu,
+                             PhuThu = t.PhuThu,
                          });
             return query.ToList();
         }

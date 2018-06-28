@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
 using DAO;
+using DTO;
+
 namespace BUS
 {
     public class OderDichVuBUS
@@ -14,7 +15,7 @@ namespace BUS
             return OderDichVuDAO.LoadDanhSachMaPhong();
         }
 
-        public static List<OderDichVuDTO>  LoadDanhSachDichVu()
+        public static List<OderDichVuDTO> LoadDanhSachDichVu()
         {
             return OderDichVuDAO.LoadDanhSachDichVu();
         }

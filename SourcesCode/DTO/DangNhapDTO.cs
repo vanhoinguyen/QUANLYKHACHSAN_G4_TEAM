@@ -11,6 +11,5 @@ namespace DTO
         public int MaDangNhap { get; set; }
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
-        
     }
 }

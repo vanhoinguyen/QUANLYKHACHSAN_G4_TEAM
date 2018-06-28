@@ -14,6 +14,5 @@ namespace DTO
         public string CMND { get; set; }
         public string LoaiKhach { get; set; }
         public string MaLoaiKhach { get; set; }
-
     }
 }

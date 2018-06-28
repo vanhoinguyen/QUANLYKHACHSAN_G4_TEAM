@@ -8,11 +8,9 @@ namespace DTO
 {
     public class DichVuDTO
     {
-        //public int MaPhong { get; set; }
         public int MaDichVu { get; set; }
         public string TenDichVu { get; set; }
         public string DonViTinh { get; set; }
         public decimal DonGia { get; set; }
-
     }
 }

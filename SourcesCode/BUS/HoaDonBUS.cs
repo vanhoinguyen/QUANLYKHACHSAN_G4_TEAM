@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
 using DAO;
+using DTO;
+
 namespace BUS
 {
     public class HoaDonBUS
@@ -59,10 +60,10 @@ namespace BUS
             return HoaDonDAO.TinhHeSo();
         }
 
-        public static decimal ThanhTien(int snt, decimal dg, decimal pt, decimal hs , decimal pdv)
+        public static decimal ThanhTien(int snt, decimal dg, decimal pt, decimal hs, decimal pdv)
         {
             decimal thanhtien = 0;
-            if(snt == 0)
+            if (snt == 0)
             {
                 return (thanhtien = dg + pdv);
             }
@@ -70,7 +71,7 @@ namespace BUS
             {
                 thanhtien = dg * snt;
                 thanhtien = thanhtien + dg * pt + pdv;
-                if(hs != 0)
+                if (hs != 0)
                 {
                     thanhtien *= hs;
                     return thanhtien;
@@ -131,9 +132,7 @@ namespace BUS
 
         public static bool XoaPhieuThue(HoaDonDTO inforHD)
         {
-            return HoaDonDAO.XoaPhieuThue( inforHD);
+            return HoaDonDAO.XoaPhieuThue(inforHD);
         }
-
-        
     }
 }

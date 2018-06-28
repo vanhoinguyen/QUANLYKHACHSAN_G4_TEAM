@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6db32111af64478bad2dc3a10b6e715b" Name="Diagram1">
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.BAOCAO_DOANHTHUTHEOLOAIPHONG" Width="1.5" PointX="9.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.BAOCAO_MATDOSUDUNGPHONG" Width="1.5" PointX="8.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.CHI_TIET_HOA_DON" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.CHI_TIET_PHIEU_THUE" Width="1.5" PointX="7.5" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.CHITIET_BAOCAODOANHTHU" Width="1.5" PointX="12" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.CHITIET_BAOCAOMATDOSUDUNG" Width="1.5" PointX="11" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.DANG_KI_DICH_VU" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.DICH_VU" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.HOA_DON" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.KHACH_HANG" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.LOAI_KHACH_HANG" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.LOAI_PHONG" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.NGUOI_DUNG" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.PHIEU_THUE_PHONG" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.PHONG" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel1.THAM_SO" Width="1.5" PointX="2.75" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel1.F_CHITIET_BAOCAODOANHTHU" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel1.F_CHITIET_BAOCAOMATDOSUDUNG" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel1.F_CHI_TIET_HOA_DON_1" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel1.F_CHI_TIET_HOA_DON_2" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel1.F_CHI_TIET_PHIEU_THUE_1" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel1.F_CHI_TIET_PHIEU_THUE_2" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel1.FK_DKDV_DV" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel1.FK_DKDV_P" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel1.F_KHACH_HANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel1.F_PHONG" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel1.F_PHIEU_THUE_PHONG" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

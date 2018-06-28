@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
 using DAO;
+using DTO;
 
 namespace BUS
 {
@@ -27,7 +27,7 @@ namespace BUS
 
         public static bool ThemPhieuThuePhong(ChiTietPhieuThueDTO ct, PhieuThuePhongDTO p)
         {
-            int i =  DateTime.Compare (p.NgayThue, p.NgayTraPhong.Value);
+            int i = DateTime.Compare(p.NgayThue, p.NgayTraPhong.Value);
             if (i <= 0)
                 return PhieuThueDAO.ThemPhieuThuePhong(ct, p);
             return false;

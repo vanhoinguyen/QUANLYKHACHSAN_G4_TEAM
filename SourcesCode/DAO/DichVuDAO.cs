@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using System.Data.SqlClient;
+
 namespace DAO
 {
     public class DichVuDAO
@@ -42,7 +43,7 @@ namespace DAO
             }
         }
 
-        public static List <DichVuDTO> LayDonGia(int maDichVu)
+        public static List<DichVuDTO> LayDonGia(int maDichVu)
         {
             var query = (from t in context.DICH_VU
                          where t.MaDichVu == maDichVu

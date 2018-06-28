@@ -24,7 +24,7 @@ namespace DAO
                              TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
                              GhiChu = r.GhiChu,
                              DonGia = r.LOAI_PHONG.DonGia,
-                             
+
                          }).OrderBy(r => r.TenLoaiPhong);
             return query.ToList();
         }
@@ -266,8 +266,8 @@ namespace DAO
                              TinhTrang = r.TinhTrang,
                              GhiChu = r.GhiChu,
                              TenLoaiPhong = r.LOAI_PHONG.TenLoaiPhong,
-                             DonGia =  r.LOAI_PHONG.DonGia,
-                             
+                             DonGia = r.LOAI_PHONG.DonGia,
+
                          }).OrderByDescending(s => s.TinhTrang);
             return query.ToList();
         }
@@ -335,4 +335,3 @@ namespace DAO
         }
     }
 }
-

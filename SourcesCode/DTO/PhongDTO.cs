@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DTO
 {
@@ -14,6 +15,5 @@ namespace DTO
         public string GhiChu { get; set; }
         public decimal? DonGia { get; set; }
         public DateTime? NgayTraPhongDK { get; set; }
-        //public string DonGia2 { get; set; }
     }
 }

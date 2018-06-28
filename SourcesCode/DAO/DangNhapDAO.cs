@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAO
 {
-    
     public class DangNhapDAO
     {
         static QUAN_LY_KHACH_SANEntities context = new QUAN_LY_KHACH_SANEntities();
@@ -17,7 +16,7 @@ namespace DAO
                          {
                              TenDangNhap = t.TenTaiKhoan,
                              MatKhau = t.MatKhau,
-                             
+
                          });
             return query.ToList();
         }

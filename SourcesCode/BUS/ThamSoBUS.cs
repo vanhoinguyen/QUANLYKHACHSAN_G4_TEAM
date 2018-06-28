@@ -49,11 +49,11 @@ namespace BUS
             return ThamSoDAO.LoadDonGia(text);
         }
 
-        public static bool CapNhatTSDonGia(ThamSoDTO ts,string t)
+        public static bool CapNhatTSDonGia(ThamSoDTO ts, string t)
         {
             if (ts.DonGia <= 0)
                 return false;
-            return ThamSoDAO.CapNhatTSDonGia(ts,t);
+            return ThamSoDAO.CapNhatTSDonGia(ts, t);
         }
     }
 }

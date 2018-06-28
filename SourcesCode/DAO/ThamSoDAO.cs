@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using System.Data.SqlClient;
+
 namespace DAO
 {
     public class ThamSoDAO
@@ -18,7 +19,7 @@ namespace DAO
                          {
                              SLKhachToiDa = ts.SoKhachToiDa,
                          });
-            return query.ToList(); 
+            return query.ToList();
         }
 
         public static List<ThamSoDTO> LoadPhuThu()
@@ -33,7 +34,7 @@ namespace DAO
 
         public static bool CapNhatTSPhuThu(ThamSoDTO infor)
         {
-            SqlParameter phuthu = new SqlParameter("@PhuThu",infor.PhuThu);
+            SqlParameter phuthu = new SqlParameter("@PhuThu", infor.PhuThu);
             try
             {
                 context.Database.ExecuteSqlCommand("spCapNhatTSPhuThu @PhuThu", phuthu);
@@ -48,7 +49,7 @@ namespace DAO
         public static List<ThamSoDTO> LoadDonGia(string text)
         {
             var query = (from t in context.LOAI_PHONG
-                         
+
                          where t.TenLoaiPhong == text
                          select new ThamSoDTO
                          {
@@ -57,13 +58,13 @@ namespace DAO
             return query.ToList();
         }
 
-        public static bool CapNhatTSDonGia(ThamSoDTO ts,string t)
+        public static bool CapNhatTSDonGia(ThamSoDTO ts, string t)
         {
             SqlParameter dongia = new SqlParameter("@DonGia", ts.DonGia);
             SqlParameter tenloaiphong = new SqlParameter("@TenLoaiPhong", t);
             try
             {
-                context.Database.ExecuteSqlCommand("spCapNhatTSDonGia  @TenLoaiPhong ,@DonGia ", dongia,tenloaiphong);
+                context.Database.ExecuteSqlCommand("spCapNhatTSDonGia  @TenLoaiPhong ,@DonGia ", dongia, tenloaiphong);
                 return true;
             }
             catch
@@ -100,7 +101,7 @@ namespace DAO
 
         public static bool CapNhatTSSoKhachToiDa(ThamSoDTO infor)
         {
-            SqlParameter toida = new SqlParameter("@SoKhachToiDa",infor.SLKhachToiDa);
+            SqlParameter toida = new SqlParameter("@SoKhachToiDa", infor.SLKhachToiDa);
             try
             {
                 context.Database.ExecuteSqlCommand("spCapNhatTSSoKhachToiDa @SoKhachToiDa", toida);
