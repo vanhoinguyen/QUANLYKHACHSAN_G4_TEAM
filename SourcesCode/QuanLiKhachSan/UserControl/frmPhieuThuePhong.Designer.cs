@@ -86,7 +86,6 @@
             this.colXoa});
             this.dgvDanhSachPhieuThue.Location = new System.Drawing.Point(35, 353);
             this.dgvDanhSachPhieuThue.Name = "dgvDanhSachPhieuThue";
-            this.dgvDanhSachPhieuThue.ReadOnly = true;
             this.dgvDanhSachPhieuThue.Size = new System.Drawing.Size(870, 260);
             this.dgvDanhSachPhieuThue.TabIndex = 28;
             // 
@@ -94,42 +93,36 @@
             // 
             this.colTenKhachHang.HeaderText = "Tên Khách Hàng";
             this.colTenKhachHang.Name = "colTenKhachHang";
-            this.colTenKhachHang.ReadOnly = true;
             this.colTenKhachHang.Width = 200;
             // 
             // colTenLoaiKhach
             // 
             this.colTenLoaiKhach.HeaderText = "Tên Loại Khách";
             this.colTenLoaiKhach.Name = "colTenLoaiKhach";
-            this.colTenLoaiKhach.ReadOnly = true;
             this.colTenLoaiKhach.Width = 125;
             // 
             // colLoaiKhach
             // 
             this.colLoaiKhach.HeaderText = "Loại Khách";
             this.colLoaiKhach.Name = "colLoaiKhach";
-            this.colLoaiKhach.ReadOnly = true;
             this.colLoaiKhach.Width = 125;
             // 
             // colCMND
             // 
             this.colCMND.HeaderText = "CMND";
             this.colCMND.Name = "colCMND";
-            this.colCMND.ReadOnly = true;
             this.colCMND.Width = 125;
             // 
             // colDiaChi
             // 
             this.colDiaChi.HeaderText = "Địa Chỉ";
             this.colDiaChi.Name = "colDiaChi";
-            this.colDiaChi.ReadOnly = true;
             this.colDiaChi.Width = 200;
             // 
             // colXoa
             // 
             this.colXoa.HeaderText = "Xóa";
             this.colXoa.Name = "colXoa";
-            this.colXoa.ReadOnly = true;
             this.colXoa.Width = 50;
             // 
             // label6

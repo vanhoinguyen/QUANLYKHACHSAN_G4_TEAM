@@ -21,6 +21,7 @@ namespace QuanLiKhachSan
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             Application.Run(new UserControl.Login());
+           // UserControl.Login()
         }
     }
 }

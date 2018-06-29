@@ -37,12 +37,11 @@
             this.txtNam = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnXem = new DevExpress.XtraEditors.SimpleButton();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.grcLoaiPhong = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.grcDoanhThu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grcTenLoaiPhong = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grcTongDoanhThu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grcThang = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grcNam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grcTiLe = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -124,26 +123,6 @@
             this.txtTongTien.Size = new System.Drawing.Size(234, 27);
             this.txtTongTien.TabIndex = 21;
             // 
-            // btnLuu
-            // 
-            this.btnLuu.Appearance.BackColor = System.Drawing.Color.LightBlue;
-            this.btnLuu.Appearance.BackColor2 = System.Drawing.Color.SeaShell;
-            this.btnLuu.Appearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnLuu.Appearance.Options.UseBackColor = true;
-            this.btnLuu.Appearance.Options.UseBorderColor = true;
-            this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.Appearance.Options.UseForeColor = true;
-            this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(737, 178);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(146, 54);
-            this.btnLuu.TabIndex = 23;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
             // btnXem
             // 
             this.btnXem.Appearance.BackColor = System.Drawing.Color.LightBlue;
@@ -157,7 +136,7 @@
             this.btnXem.Appearance.Options.UseForeColor = true;
             this.btnXem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnXem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXem.ImageOptions.Image")));
-            this.btnXem.Location = new System.Drawing.Point(556, 178);
+            this.btnXem.Location = new System.Drawing.Point(628, 186);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(141, 54);
             this.btnXem.TabIndex = 24;
@@ -174,32 +153,31 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.grcLoaiPhong,
-            this.grcDoanhThu,
+            this.grcTenLoaiPhong,
+            this.grcTongDoanhThu,
             this.grcThang,
             this.grcNam,
             this.grcTiLe});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // grcLoaiPhong
+            // grcTenLoaiPhong
             // 
-            this.grcLoaiPhong.Caption = "Loại Phòng";
-            this.grcLoaiPhong.FieldName = "MaPhong";
-            this.grcLoaiPhong.Name = "grcLoaiPhong";
-            this.grcLoaiPhong.Visible = true;
-            this.grcLoaiPhong.VisibleIndex = 0;
+            this.grcTenLoaiPhong.Caption = "Tên Loại Phòng";
+            this.grcTenLoaiPhong.FieldName = "TenLoaiPhong";
+            this.grcTenLoaiPhong.Name = "grcTenLoaiPhong";
+            this.grcTenLoaiPhong.Visible = true;
+            this.grcTenLoaiPhong.VisibleIndex = 0;
             // 
-            // grcDoanhThu
+            // grcTongDoanhThu
             // 
-            this.grcDoanhThu.Caption = "Tổng Doanh Thu";
-            this.grcDoanhThu.ColumnEdit = this.repositoryItemTextEdit1;
-            this.grcDoanhThu.FieldName = "TongDoanhThu";
-            this.grcDoanhThu.Name = "grcDoanhThu";
-            this.grcDoanhThu.Visible = true;
-            this.grcDoanhThu.VisibleIndex = 1;
+            this.grcTongDoanhThu.Caption = "Tổng Doanh Thu";
+            this.grcTongDoanhThu.ColumnEdit = this.repositoryItemTextEdit1;
+            this.grcTongDoanhThu.FieldName = "TongDoanhThu";
+            this.grcTongDoanhThu.Name = "grcTongDoanhThu";
+            this.grcTongDoanhThu.Visible = true;
+            this.grcTongDoanhThu.VisibleIndex = 1;
             // 
             // grcThang
             // 
@@ -227,12 +205,12 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(215, 255);
+            this.gridControl1.Location = new System.Drawing.Point(295, 301);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(890, 332);
+            this.gridControl1.Size = new System.Drawing.Size(803, 297);
             this.gridControl1.TabIndex = 25;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -245,7 +223,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.btnXem);
-            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.txtNam);
             this.Controls.Add(this.cmbThang);
@@ -274,12 +251,11 @@
         private System.Windows.Forms.TextBox txtNam;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnXem;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn grcLoaiPhong;
-        private DevExpress.XtraGrid.Columns.GridColumn grcDoanhThu;
+        private DevExpress.XtraGrid.Columns.GridColumn grcTenLoaiPhong;
+        private DevExpress.XtraGrid.Columns.GridColumn grcTongDoanhThu;
         private DevExpress.XtraGrid.Columns.GridColumn grcThang;
         private DevExpress.XtraGrid.Columns.GridColumn grcNam;
         private DevExpress.XtraGrid.Columns.GridColumn grcTiLe;

@@ -9,7 +9,6 @@
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.BAOCAO_MATDOSUDUNGPHONG" Width="1.5" PointX="8.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.CHI_TIET_HOA_DON" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.CHI_TIET_PHIEU_THUE" Width="1.5" PointX="7.5" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.CHITIET_BAOCAODOANHTHU" Width="1.5" PointX="12" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.CHITIET_BAOCAOMATDOSUDUNG" Width="1.5" PointX="11" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.DANG_KI_DICH_VU" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.DICH_VU" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
@@ -21,7 +20,6 @@
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.PHIEU_THUE_PHONG" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.PHONG" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.THAM_SO" Width="1.5" PointX="2.75" PointY="8" IsExpanded="true" />
-        <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_CHITIET_BAOCAODOANHTHU" ManuallyRouted="false" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_CHITIET_BAOCAOMATDOSUDUNG" ManuallyRouted="false" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_CHI_TIET_HOA_DON_1" ManuallyRouted="false" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_CHI_TIET_HOA_DON_2" ManuallyRouted="false" />
@@ -32,6 +30,8 @@
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_KHACH_HANG" ManuallyRouted="false" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_PHONG" ManuallyRouted="false" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_PHIEU_THUE_PHONG" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.CHITIET_BAOCAODOANHTHU" Width="1.5" PointX="12" PointY="8.125" />
+        <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_CHITIET_BAOCAODOANHTHU" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -42,7 +42,7 @@ namespace BUS
             return BaoCaoDAO.DoanhThuTheoLoaiPhongTheoThang(ntm_min, ntm_max);
         }
 
-        public static List<BCDoanhThuDTO> LayMaBCDoanhThuKeTiep()
+        /*public static List<BCDoanhThuDTO> LayMaBCDoanhThuKeTiep()
         {
             return BaoCaoDAO.LayMaBCDoanhThuKeTiep();
         }
@@ -60,6 +60,6 @@ namespace BUS
         public static bool ThemCTBaoCaoDoanhThu(BCDoanhThuDTO infor)
         {
             return BaoCaoDAO.ThemCTBaoCaoDoanhThu(infor);
-        }
+        }*/
     }
 }

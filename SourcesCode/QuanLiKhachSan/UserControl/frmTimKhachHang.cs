@@ -242,7 +242,7 @@ namespace QuanLiKhachSan.UserControl
         {
             if (txtDiaChi.Text == "" && cmbLoaiKhach.Text == "" && txtTenKhachHang.Text == "")
             {
-                TimKiemTheoYeuCau(8);
+                TimKiemTheoYeuCau(9);
             }
             else if (txtDiaChi.Text != "" && cmbLoaiKhach.Text == "" && txtTenKhachHang.Text == "")
             {

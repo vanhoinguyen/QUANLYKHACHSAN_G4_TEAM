@@ -19,7 +19,8 @@ namespace DAO
                          group hd by p.LOAI_PHONG.TenLoaiPhong into g
                          select new BCDoanhThuDTO
                          {
-                             MaPhong = g.Key,
+                             TenLoaiPhong = g.Key,
+                           
                              TongDoanhThu = g.Sum(hd => hd.TriGia),
                          });
             return query.ToList();
@@ -34,13 +35,13 @@ namespace DAO
                         group hd by p.LOAI_PHONG.TenLoaiPhong into g
                         select new BCDoanhThuDTO
                         {
-                            MaPhong = g.Key,
+                            TenLoaiPhong = g.Key,
                             TongDoanhThu = g.Sum(hd => hd.TriGia),
                         };
             return query.ToList();
         }
 
-        public static List<BCDoanhThuDTO> LayMaBCDoanhThuKeTiep()
+        /*public static List<BCDoanhThuDTO> LayMaBCDoanhThuKeTiep()
         {
             var query = (from t in context.BAOCAO_DOANHTHUTHEOLOAIPHONG
                          select new BCDoanhThuDTO
@@ -81,14 +82,14 @@ namespace DAO
         public static bool ThemCTBaoCaoDoanhThu(BCDoanhThuDTO infor)
         {
             SqlParameter mabcct = new SqlParameter("@MaBCCTDoanhThu", infor.MaCTBCDoanhThu);
-            SqlParameter malp = new SqlParameter("@MaLP", infor.MaLoaiPhong);
+            SqlParameter malp = new SqlParameter("@TenLoaiPhong", infor.TenLoaiPhong);
             SqlParameter mabc = new SqlParameter("@MaBCDoanhThu", infor.MaBCDoanhThu);
             SqlParameter dt = new SqlParameter("@DoanhThu", infor.TongDoanhThu);
             SqlParameter tl = new SqlParameter("@TiLe", infor.TiLe);
 
             try
             {
-                context.Database.ExecuteSqlCommand("spThemBCCTDTTheoLoaiPhongTheoThang @MaBCCTDoanhThu, @MaLP, @MaBCDoanhThu, @DoanhThu, @TiLe",
+                context.Database.ExecuteSqlCommand("spThemBCCTDTTheoLoaiPhongTheoThang @MaBCCTDoanhThu, @TenLoaiPhong, @MaBCDoanhThu, @DoanhThu, @TiLe",
                                 mabcct, malp, mabc, dt, tl);
                 return true;
             }
@@ -96,6 +97,6 @@ namespace DAO
             {
                 return false;
             }
-        }
+        }*/
     }
 }

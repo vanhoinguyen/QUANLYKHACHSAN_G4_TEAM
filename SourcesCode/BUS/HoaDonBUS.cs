@@ -63,24 +63,11 @@ namespace BUS
         public static decimal ThanhTien(int snt, decimal dg, decimal pt, decimal hs, decimal pdv)
         {
             decimal thanhtien = 0;
-            if (snt == 0)
-            {
-                return (thanhtien = dg + pdv);
-            }
+            if (hs != 0)
+                thanhtien = dg * snt * (hs + pt) + pdv;
             else
-            {
-                thanhtien = dg * snt;
-                thanhtien = thanhtien + dg * pt + pdv;
-                if (hs != 0)
-                {
-                    thanhtien *= hs;
-                    return thanhtien;
-                }
-                else
-                {
-                    return thanhtien;
-                }
-            }
+                thanhtien = dg * snt * (1 + pt) + pdv;
+            return thanhtien;
         }
         /*public static decimal ThanhTien(int snt, decimal dg, decimal pt, decimal hs)
         {

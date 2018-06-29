@@ -194,7 +194,7 @@ namespace QuanLiKhachSan.UserControl
                 if (kt == "True")
                 {
                     txtTongTien.Text = (Convert.ToDecimal(txtTongTien.Text.Replace(" VNĐ",String.Empty)) - thanhtien).ToString() + " VNĐ";
-                    if (!(Convert.ToDecimal(txtTongTien.Text) > 0))
+                    if (!(Convert.ToDecimal(txtTongTien.Text.Replace(" VNĐ", String.Empty)) > 0))
                     {
                         txtTongTien.Text = "0 VNĐ";
                     }

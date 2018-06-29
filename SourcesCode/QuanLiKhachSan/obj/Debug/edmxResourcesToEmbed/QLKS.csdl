@@ -6,7 +6,7 @@
     </Key>
     <Property Name="MaBCDoanhThu" Type="Int32" Nullable="false" />
     <Property Name="ThangBaoCao" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="CHITIET_BAOCAODOANHTHU" Relationship="Self.F_CHITIET_BAOCAODOANHTHU" FromRole="BAOCAO_DOANHTHUTHEOLOAIPHONG" ToRole="CHITIET_BAOCAODOANHTHU" />
+    <NavigationProperty Name="CHITIET_BAOCAODOANHTHU" Relationship="QUAN_LY_KHACH_SANModel1.F_CHITIET_BAOCAODOANHTHU" FromRole="BAOCAO_DOANHTHUTHEOLOAIPHONG" ToRole="CHITIET_BAOCAODOANHTHU" />
   </EntityType>
   <EntityType Name="BAOCAO_MATDOSUDUNGPHONG">
     <Key>
@@ -40,18 +40,6 @@
     <Property Name="MaPhieuThue" Type="Int32" Nullable="false" />
     <NavigationProperty Name="KHACH_HANG" Relationship="Self.F_CHI_TIET_PHIEU_THUE_1" FromRole="CHI_TIET_PHIEU_THUE" ToRole="KHACH_HANG" />
     <NavigationProperty Name="PHIEU_THUE_PHONG" Relationship="Self.F_CHI_TIET_PHIEU_THUE_2" FromRole="CHI_TIET_PHIEU_THUE" ToRole="PHIEU_THUE_PHONG" />
-  </EntityType>
-  <EntityType Name="CHITIET_BAOCAODOANHTHU">
-    <Key>
-      <PropertyRef Name="MaBCCTDoanhThu" />
-      <PropertyRef Name="MaLoaiPhong" />
-    </Key>
-    <Property Name="MaBCCTDoanhThu" Type="Int32" Nullable="false" />
-    <Property Name="MaLoaiPhong" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="MaBCDoanhThu" Type="Int32" Nullable="false" />
-    <Property Name="DoanhThuThang" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="TiLe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-    <NavigationProperty Name="BAOCAO_DOANHTHUTHEOLOAIPHONG" Relationship="Self.F_CHITIET_BAOCAODOANHTHU" FromRole="CHITIET_BAOCAODOANHTHU" ToRole="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
   </EntityType>
   <EntityType Name="CHITIET_BAOCAOMATDOSUDUNG">
     <Key>
@@ -170,18 +158,6 @@
     <Property Name="PhuThuKhachThu" Type="Int32" />
     <Property Name="SLKhachNuocNgoai" Type="Int32" />
   </EntityType>
-  <Association Name="F_CHITIET_BAOCAODOANHTHU">
-    <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" Type="Self.BAOCAO_DOANHTHUTHEOLOAIPHONG" Multiplicity="1" />
-    <End Role="CHITIET_BAOCAODOANHTHU" Type="Self.CHITIET_BAOCAODOANHTHU" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="BAOCAO_DOANHTHUTHEOLOAIPHONG">
-        <PropertyRef Name="MaBCDoanhThu" />
-      </Principal>
-      <Dependent Role="CHITIET_BAOCAODOANHTHU">
-        <PropertyRef Name="MaBCDoanhThu" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="F_CHITIET_BAOCAOMATDOSUDUNG">
     <End Role="BAOCAO_MATDOSUDUNGPHONG" Type="Self.BAOCAO_MATDOSUDUNGPHONG" Multiplicity="1" />
     <End Role="CHITIET_BAOCAOMATDOSUDUNG" Type="Self.CHITIET_BAOCAOMATDOSUDUNG" Multiplicity="*" />
@@ -307,7 +283,6 @@
     <EntitySet Name="BAOCAO_MATDOSUDUNGPHONG" EntityType="Self.BAOCAO_MATDOSUDUNGPHONG" />
     <EntitySet Name="CHI_TIET_HOA_DON" EntityType="Self.CHI_TIET_HOA_DON" />
     <EntitySet Name="CHI_TIET_PHIEU_THUE" EntityType="Self.CHI_TIET_PHIEU_THUE" />
-    <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="Self.CHITIET_BAOCAODOANHTHU" />
     <EntitySet Name="CHITIET_BAOCAOMATDOSUDUNG" EntityType="Self.CHITIET_BAOCAOMATDOSUDUNG" />
     <EntitySet Name="DANG_KI_DICH_VU" EntityType="Self.DANG_KI_DICH_VU" />
     <EntitySet Name="DICH_VU" EntityType="Self.DICH_VU" />
@@ -319,10 +294,6 @@
     <EntitySet Name="PHIEU_THUE_PHONG" EntityType="Self.PHIEU_THUE_PHONG" />
     <EntitySet Name="PHONGs" EntityType="Self.PHONG" />
     <EntitySet Name="THAM_SO" EntityType="Self.THAM_SO" />
-    <AssociationSet Name="F_CHITIET_BAOCAODOANHTHU" Association="Self.F_CHITIET_BAOCAODOANHTHU">
-      <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" EntitySet="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
-      <End Role="CHITIET_BAOCAODOANHTHU" EntitySet="CHITIET_BAOCAODOANHTHU" />
-    </AssociationSet>
     <AssociationSet Name="F_CHITIET_BAOCAOMATDOSUDUNG" Association="Self.F_CHITIET_BAOCAOMATDOSUDUNG">
       <End Role="BAOCAO_MATDOSUDUNGPHONG" EntitySet="BAOCAO_MATDOSUDUNGPHONG" />
       <End Role="CHITIET_BAOCAOMATDOSUDUNG" EntitySet="CHITIET_BAOCAOMATDOSUDUNG" />
@@ -408,7 +379,7 @@
     </FunctionImport>
     <FunctionImport Name="spThemBCCTDTTheoLoaiPhongTheoThang">
       <Parameter Name="MaBCCTDoanhThu" Mode="In" Type="Int32" />
-      <Parameter Name="MaLoaiPhong" Mode="In" Type="String" />
+      <Parameter Name="TenLoaiPhong" Mode="In" Type="String" />
       <Parameter Name="MaBCDoanhThu" Mode="In" Type="Int32" />
       <Parameter Name="DoanhThuThang" Mode="In" Type="Decimal" />
       <Parameter Name="TiLe" Mode="In" Type="String" />
@@ -504,9 +475,37 @@
     <FunctionImport Name="spXoaPhongTrongCTHoaDon">
       <Parameter Name="MaPhong" Mode="In" Type="Int32" />
     </FunctionImport>
+    <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="QUAN_LY_KHACH_SANModel1.CHITIET_BAOCAODOANHTHU" />
+    <AssociationSet Name="F_CHITIET_BAOCAODOANHTHU" Association="QUAN_LY_KHACH_SANModel1.F_CHITIET_BAOCAODOANHTHU">
+      <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" EntitySet="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
+      <End Role="CHITIET_BAOCAODOANHTHU" EntitySet="CHITIET_BAOCAODOANHTHU" />
+    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
     <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />
     <Property Type="Decimal" Name="DoanhThu" Nullable="true" Precision="19" />
   </ComplexType>
+  <EntityType Name="CHITIET_BAOCAODOANHTHU">
+    <Key>
+      <PropertyRef Name="MaBCCTDoanhThu" />
+    </Key>
+    <Property Name="MaBCCTDoanhThu" Type="Int32" Nullable="false" />
+    <Property Name="TenLoaiPhong" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaBCDoanhThu" Type="Int32" Nullable="false" />
+    <Property Name="DoanhThuThang" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TiLe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="BAOCAO_DOANHTHUTHEOLOAIPHONG" Relationship="QUAN_LY_KHACH_SANModel1.F_CHITIET_BAOCAODOANHTHU" FromRole="CHITIET_BAOCAODOANHTHU" ToRole="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
+  </EntityType>
+  <Association Name="F_CHITIET_BAOCAODOANHTHU">
+    <End Type="QUAN_LY_KHACH_SANModel1.BAOCAO_DOANHTHUTHEOLOAIPHONG" Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" Multiplicity="1" />
+    <End Type="QUAN_LY_KHACH_SANModel1.CHITIET_BAOCAODOANHTHU" Role="CHITIET_BAOCAODOANHTHU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAOCAO_DOANHTHUTHEOLOAIPHONG">
+        <PropertyRef Name="MaBCDoanhThu" />
+      </Principal>
+      <Dependent Role="CHITIET_BAOCAODOANHTHU">
+        <PropertyRef Name="MaBCDoanhThu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

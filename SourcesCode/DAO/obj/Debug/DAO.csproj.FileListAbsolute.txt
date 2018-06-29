@@ -22,3 +22,15 @@ C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\DAO\obj\Debug\DAO.csproj.
 C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\DAO\obj\Debug\DAO.dll
 C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\DAO\obj\Debug\DAO.pdb
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\bin\Debug\DAO.dll.config
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\bin\Debug\DAO.dll
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\bin\Debug\DAO.pdb
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\bin\Debug\DTO.dll
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\bin\Debug\EntityFramework.dll
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\bin\Debug\DTO.pdb
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\bin\Debug\EntityFramework.xml
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\obj\Debug\DAO.dll
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DAO\obj\Debug\DAO.pdb
