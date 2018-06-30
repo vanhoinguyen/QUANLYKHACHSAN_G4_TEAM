@@ -77,7 +77,7 @@ namespace QuanLiKhachSan.UserControl
                     dgvDanhSachPhieuThue.Rows.RemoveAt(j);
                     kt_chon = "false";
                     numRow--;
-                    j = -1;
+                    j -=1;
                     btnThemPhieuThue.Enabled = true;
                 }
             }
@@ -240,12 +240,12 @@ namespace QuanLiKhachSan.UserControl
 
         private void txtDiaChi_TextChanged(object sender, EventArgs e)
         {
-            Regex regex, regex1;
+            Regex regex, regex1,regex2;
             regex = new Regex(@"^\w{2,6}\s\w{2,6}$");
             regex1 = new Regex(@"^\w{2,6}\s\w{2,6}\s\w{2,6}");
-
+            regex2 = new Regex(@"^\w{2,6}$");
             Control ctrl = (Control)sender;
-            if (regex.IsMatch(ctrl.Text))
+            if (regex.IsMatch(ctrl.Text)|| regex1.IsMatch(ctrl.Text) || regex2.IsMatch(ctrl.Text) )
             {
                 errorProvider1.SetError(ctrl, "");
             }

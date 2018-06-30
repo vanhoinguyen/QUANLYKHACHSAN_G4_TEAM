@@ -26,3 +26,17 @@ C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\BUS\obj\Debug\BUS.csproj.
 C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\BUS\obj\Debug\BUS.dll
 C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\BUS\obj\Debug\BUS.pdb
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\bin\Debug\BUS.dll
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\bin\Debug\BUS.pdb
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\bin\Debug\DAO.dll
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\bin\Debug\DTO.dll
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\bin\Debug\EntityFramework.dll
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\bin\Debug\DAO.pdb
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\bin\Debug\DAO.dll.config
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\bin\Debug\DTO.pdb
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\bin\Debug\EntityFramework.xml
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\obj\Debug\BUS.dll
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\BUS\obj\Debug\BUS.pdb

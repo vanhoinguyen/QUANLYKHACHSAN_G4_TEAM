@@ -121,18 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnLuu.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAXdEVYdFRpdGxlAFNhdmUgQWxsO1NhdmU7QWxsbhT1
-        oQAAASJJREFUWEftltEJwzAMRLNZoF+dpet0kM7RPQIZw/WVyFwuVoxTx6XQjwe6k3wy/vIQQvgqWbMn
-        WRPcb48x8owEQ/rJ3yMzi8zRclKgEodmOvRG+quehzM7W04K7AFfwjxunv7k7EMDXnD6k7MHDXYXWK+m
-        zzWjPjSoXlDqc82oDw2qF5T6XDPqQ4PqBaU+14z60KB6QanPNaM+NKheUMKbVR8a/M4FavCyVIPdQy3R
-        Hbb3fwHvAhfzj4IMzly8lQZ8YNP8FM1UDdzhFmimauAOt0AzVQN3uAWaqRq4wy3QTNXAHW6BZpKebCY7
-        HLmafxRkcObiocbXL+XzgTR8BrZHSUUcmvRQQ9KTK6mIQ3iyzc+4AasnV7JmT7JmT7JmP8LwAhVKUf4A
-        lC3QAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnXem.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABF0RVh0VGl0

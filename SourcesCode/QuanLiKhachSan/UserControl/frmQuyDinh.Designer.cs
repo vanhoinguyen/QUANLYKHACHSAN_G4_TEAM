@@ -70,6 +70,13 @@
             // 
             this.cmbThamSo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbThamSo.FormattingEnabled = true;
+            this.cmbThamSo.Items.AddRange(new object[] {
+            "Số lượng khách tối đa",
+            "Hệ số",
+            "Phụ thu",
+            "Loại phòng A",
+            "Loại phòng B",
+            "Loại phòng C"});
             this.cmbThamSo.Location = new System.Drawing.Point(138, 57);
             this.cmbThamSo.Name = "cmbThamSo";
             this.cmbThamSo.Size = new System.Drawing.Size(298, 27);

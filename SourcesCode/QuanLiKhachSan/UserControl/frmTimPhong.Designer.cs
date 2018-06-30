@@ -50,8 +50,10 @@
             this.grcGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grcNgayTraPhong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label6 = new System.Windows.Forms.Label();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -219,6 +221,8 @@
             this.gcDanhSachPhong.Location = new System.Drawing.Point(148, 268);
             this.gcDanhSachPhong.MainView = this.gvPhong;
             this.gcDanhSachPhong.Name = "gcDanhSachPhong";
+            this.gcDanhSachPhong.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1});
             this.gcDanhSachPhong.Size = new System.Drawing.Size(1022, 332);
             this.gcDanhSachPhong.TabIndex = 27;
             this.gcDanhSachPhong.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -265,7 +269,8 @@
             // 
             // grcDonGia
             // 
-            this.grcDonGia.Caption = "Đơn Gía";
+            this.grcDonGia.Caption = "Đơn giá";
+            this.grcDonGia.ColumnEdit = this.repositoryItemTextEdit1;
             this.grcDonGia.FieldName = "DonGia";
             this.grcDonGia.Name = "grcDonGia";
             this.grcDonGia.Visible = true;
@@ -297,6 +302,13 @@
             this.label6.Text = "TRA CỨU PHÒNG";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.DisplayFormat.FormatString = "0,0 VNĐ";
+            this.repositoryItemTextEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
             // frmTimPhong
             // 
             this.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -323,6 +335,7 @@
             this.Load += new System.EventHandler(this.frmTimPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,5 +364,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn grcDonGia;
         private DevExpress.XtraGrid.Columns.GridColumn grcGhiChu;
         private DevExpress.XtraGrid.Columns.GridColumn grcNgayTraPhong;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
     }
 }

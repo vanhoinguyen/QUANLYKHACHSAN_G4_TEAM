@@ -38,10 +38,9 @@
   <EntityType Name="CHITIET_BAOCAODOANHTHU">
     <Key>
       <PropertyRef Name="MaBCCTDoanhThu" />
-      <PropertyRef Name="MaLoaiPhong" />
     </Key>
     <Property Name="MaBCCTDoanhThu" Type="int" Nullable="false" />
-    <Property Name="MaLoaiPhong" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenLoaiPhong" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="MaBCDoanhThu" Type="int" Nullable="false" />
     <Property Name="DoanhThuThang" Type="money" />
     <Property Name="TiLe" Type="char" MaxLength="10" />
@@ -66,11 +65,6 @@
     <Property Name="MaPhong" Type="int" Nullable="false" />
     <Property Name="SoLuong" Type="int" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'QUAN_LY_KHACH_SAN.dbo.DANH_MUC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="DANH_MUC">
-          <Property Name="DMLoaiPhong" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
   <EntityType Name="DICH_VU">
     <Key>
       <PropertyRef Name="MaDichVu" />
@@ -332,7 +326,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
   </Function>
   <Function Name="spThemBCCTDTTheoLoaiPhongTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaBCCTDoanhThu" Type="int" Mode="In" />
-    <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
+    <Parameter Name="TenLoaiPhong" Type="nvarchar" Mode="In" />
     <Parameter Name="MaBCDoanhThu" Type="int" Mode="In" />
     <Parameter Name="DoanhThuThang" Type="money" Mode="In" />
     <Parameter Name="TiLe" Type="char" Mode="In" />

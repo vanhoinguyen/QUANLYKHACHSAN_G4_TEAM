@@ -174,6 +174,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(145, 86);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.ReadOnly = true;
             this.txtDiaChi.Size = new System.Drawing.Size(200, 70);
             this.txtDiaChi.TabIndex = 7;
             // 
@@ -182,6 +183,7 @@
             this.txtTenKhachHang.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKhachHang.Location = new System.Drawing.Point(145, 38);
             this.txtTenKhachHang.Name = "txtTenKhachHang";
+            this.txtTenKhachHang.ReadOnly = true;
             this.txtTenKhachHang.Size = new System.Drawing.Size(200, 27);
             this.txtTenKhachHang.TabIndex = 6;
             this.txtTenKhachHang.TextChanged += new System.EventHandler(this.txtTenKhachHang_TextChanged);
@@ -229,6 +231,7 @@
             this.txtSoNgayThue.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoNgayThue.Location = new System.Drawing.Point(137, 173);
             this.txtSoNgayThue.Name = "txtSoNgayThue";
+            this.txtSoNgayThue.ReadOnly = true;
             this.txtSoNgayThue.Size = new System.Drawing.Size(150, 27);
             this.txtSoNgayThue.TabIndex = 12;
             // 
@@ -237,6 +240,7 @@
             this.txtHeSo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHeSo.Location = new System.Drawing.Point(137, 129);
             this.txtHeSo.Name = "txtHeSo";
+            this.txtHeSo.ReadOnly = true;
             this.txtHeSo.Size = new System.Drawing.Size(150, 27);
             this.txtHeSo.TabIndex = 11;
             // 
@@ -245,6 +249,7 @@
             this.txtPhuThu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhuThu.Location = new System.Drawing.Point(137, 86);
             this.txtPhuThu.Name = "txtPhuThu";
+            this.txtPhuThu.ReadOnly = true;
             this.txtPhuThu.Size = new System.Drawing.Size(150, 27);
             this.txtPhuThu.TabIndex = 10;
             // 
@@ -253,6 +258,7 @@
             this.txtPhiDichVu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhiDichVu.Location = new System.Drawing.Point(137, 38);
             this.txtPhiDichVu.Name = "txtPhiDichVu";
+            this.txtPhiDichVu.ReadOnly = true;
             this.txtPhiDichVu.Size = new System.Drawing.Size(150, 27);
             this.txtPhiDichVu.TabIndex = 9;
             // 

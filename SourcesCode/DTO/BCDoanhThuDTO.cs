@@ -8,14 +8,14 @@ namespace DTO
 {
     public class BCDoanhThuDTO
     {
-        public string MaLoaiPhong { get; set; }
-        public string MaPhong { get; set; }
+        //public string MaLoaiPhong { get; set; }
+        public string TenLoaiPhong { get; set; }
 
         public decimal? TongDoanhThu { get; set; }
         public int? Thang { get; set; }
         public int? Nam { get; set; }
-        public int? MaBCDoanhThu { get; set; }
-        public int? MaCTBCDoanhThu { get; set; }
+        //public int? MaBCDoanhThu { get; set; }
+        //public int? MaCTBCDoanhThu { get; set; }
         public string TiLe { get; set; }
     }
 }

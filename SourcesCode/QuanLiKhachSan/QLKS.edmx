@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QUAN_LY_KHACH_SANModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QUAN_LY_KHACH_SANModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BAOCAO_DOANHTHUTHEOLOAIPHONG">
           <Key>
             <PropertyRef Name="MaBCDoanhThu" />
@@ -43,10 +43,9 @@
         <EntityType Name="CHITIET_BAOCAODOANHTHU">
           <Key>
             <PropertyRef Name="MaBCCTDoanhThu" />
-            <PropertyRef Name="MaLoaiPhong" />
           </Key>
           <Property Name="MaBCCTDoanhThu" Type="int" Nullable="false" />
-          <Property Name="MaLoaiPhong" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenLoaiPhong" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MaBCDoanhThu" Type="int" Nullable="false" />
           <Property Name="DoanhThuThang" Type="money" />
           <Property Name="TiLe" Type="char" MaxLength="10" />
@@ -71,11 +70,6 @@
           <Property Name="MaPhong" Type="int" Nullable="false" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'QUAN_LY_KHACH_SAN.dbo.DANH_MUC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="DANH_MUC">
-          <Property Name="DMLoaiPhong" Type="nvarchar" MaxLength="50" />
-        </EntityType>-->
         <EntityType Name="DICH_VU">
           <Key>
             <PropertyRef Name="MaDichVu" />
@@ -337,7 +331,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
         </Function>
         <Function Name="spThemBCCTDTTheoLoaiPhongTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MaBCCTDoanhThu" Type="int" Mode="In" />
-          <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
+          <Parameter Name="TenLoaiPhong" Type="nvarchar" Mode="In" />
           <Parameter Name="MaBCDoanhThu" Type="int" Mode="In" />
           <Parameter Name="DoanhThuThang" Type="money" Mode="In" />
           <Parameter Name="TiLe" Type="char" Mode="In" />
@@ -504,8 +498,7 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             <End Role="DANG_KI_DICH_VU" EntitySet="DANG_KI_DICH_VU" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QUAN_LY_KHACH_SANModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -515,7 +508,7 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           </Key>
           <Property Name="MaBCDoanhThu" Type="Int32" Nullable="false" />
           <Property Name="ThangBaoCao" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CHITIET_BAOCAODOANHTHU" Relationship="Self.F_CHITIET_BAOCAODOANHTHU" FromRole="BAOCAO_DOANHTHUTHEOLOAIPHONG" ToRole="CHITIET_BAOCAODOANHTHU" />
+          <NavigationProperty Name="CHITIET_BAOCAODOANHTHU" Relationship="QUAN_LY_KHACH_SANModel1.F_CHITIET_BAOCAODOANHTHU" FromRole="BAOCAO_DOANHTHUTHEOLOAIPHONG" ToRole="CHITIET_BAOCAODOANHTHU" />
         </EntityType>
         <EntityType Name="BAOCAO_MATDOSUDUNGPHONG">
           <Key>
@@ -549,18 +542,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <Property Name="MaPhieuThue" Type="Int32" Nullable="false" />
           <NavigationProperty Name="KHACH_HANG" Relationship="Self.F_CHI_TIET_PHIEU_THUE_1" FromRole="CHI_TIET_PHIEU_THUE" ToRole="KHACH_HANG" />
           <NavigationProperty Name="PHIEU_THUE_PHONG" Relationship="Self.F_CHI_TIET_PHIEU_THUE_2" FromRole="CHI_TIET_PHIEU_THUE" ToRole="PHIEU_THUE_PHONG" />
-        </EntityType>
-        <EntityType Name="CHITIET_BAOCAODOANHTHU">
-          <Key>
-            <PropertyRef Name="MaBCCTDoanhThu" />
-            <PropertyRef Name="MaLoaiPhong" />
-          </Key>
-          <Property Name="MaBCCTDoanhThu" Type="Int32" Nullable="false" />
-          <Property Name="MaLoaiPhong" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaBCDoanhThu" Type="Int32" Nullable="false" />
-          <Property Name="DoanhThuThang" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="TiLe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="BAOCAO_DOANHTHUTHEOLOAIPHONG" Relationship="Self.F_CHITIET_BAOCAODOANHTHU" FromRole="CHITIET_BAOCAODOANHTHU" ToRole="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
         </EntityType>
         <EntityType Name="CHITIET_BAOCAOMATDOSUDUNG">
           <Key>
@@ -679,18 +660,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <Property Name="PhuThuKhachThu" Type="Int32" />
           <Property Name="SLKhachNuocNgoai" Type="Int32" />
         </EntityType>
-        <Association Name="F_CHITIET_BAOCAODOANHTHU">
-          <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" Type="Self.BAOCAO_DOANHTHUTHEOLOAIPHONG" Multiplicity="1" />
-          <End Role="CHITIET_BAOCAODOANHTHU" Type="Self.CHITIET_BAOCAODOANHTHU" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="BAOCAO_DOANHTHUTHEOLOAIPHONG">
-              <PropertyRef Name="MaBCDoanhThu" />
-            </Principal>
-            <Dependent Role="CHITIET_BAOCAODOANHTHU">
-              <PropertyRef Name="MaBCDoanhThu" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="F_CHITIET_BAOCAOMATDOSUDUNG">
           <End Role="BAOCAO_MATDOSUDUNGPHONG" Type="Self.BAOCAO_MATDOSUDUNGPHONG" Multiplicity="1" />
           <End Role="CHITIET_BAOCAOMATDOSUDUNG" Type="Self.CHITIET_BAOCAOMATDOSUDUNG" Multiplicity="*" />
@@ -816,7 +785,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <EntitySet Name="BAOCAO_MATDOSUDUNGPHONG" EntityType="Self.BAOCAO_MATDOSUDUNGPHONG" />
           <EntitySet Name="CHI_TIET_HOA_DON" EntityType="Self.CHI_TIET_HOA_DON" />
           <EntitySet Name="CHI_TIET_PHIEU_THUE" EntityType="Self.CHI_TIET_PHIEU_THUE" />
-          <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="Self.CHITIET_BAOCAODOANHTHU" />
           <EntitySet Name="CHITIET_BAOCAOMATDOSUDUNG" EntityType="Self.CHITIET_BAOCAOMATDOSUDUNG" />
           <EntitySet Name="DANG_KI_DICH_VU" EntityType="Self.DANG_KI_DICH_VU" />
           <EntitySet Name="DICH_VU" EntityType="Self.DICH_VU" />
@@ -828,10 +796,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <EntitySet Name="PHIEU_THUE_PHONG" EntityType="Self.PHIEU_THUE_PHONG" />
           <EntitySet Name="PHONGs" EntityType="Self.PHONG" />
           <EntitySet Name="THAM_SO" EntityType="Self.THAM_SO" />
-          <AssociationSet Name="F_CHITIET_BAOCAODOANHTHU" Association="Self.F_CHITIET_BAOCAODOANHTHU">
-            <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" EntitySet="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
-            <End Role="CHITIET_BAOCAODOANHTHU" EntitySet="CHITIET_BAOCAODOANHTHU" />
-          </AssociationSet>
           <AssociationSet Name="F_CHITIET_BAOCAOMATDOSUDUNG" Association="Self.F_CHITIET_BAOCAOMATDOSUDUNG">
             <End Role="BAOCAO_MATDOSUDUNGPHONG" EntitySet="BAOCAO_MATDOSUDUNGPHONG" />
             <End Role="CHITIET_BAOCAOMATDOSUDUNG" EntitySet="CHITIET_BAOCAOMATDOSUDUNG" />
@@ -873,20 +837,20 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             <End Role="PHIEU_THUE_PHONG" EntitySet="PHIEU_THUE_PHONG" />
           </AssociationSet>
           <FunctionImport Name="spCapNhatTinhTrangPhong">
-            <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+          <Parameter Name="MaPhong" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spCapNhatTSDonGia">
             <Parameter Name="TenLoaiPhong" Mode="In" Type="String" />
             <Parameter Name="DonGia" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="spCapNhatTSHeSo">
-            <Parameter Name="HeSo" Mode="In" Type="Double" />
+          <Parameter Name="HeSo" Mode="In" Type="Double" />
           </FunctionImport>
           <FunctionImport Name="spCapNhatTSPhuThu">
-            <Parameter Name="PhuThu" Mode="In" Type="Double" />
+          <Parameter Name="PhuThu" Mode="In" Type="Double" />
           </FunctionImport>
           <FunctionImport Name="spCapNhatTSSoKhachToiDa">
-            <Parameter Name="SoKhachToiDa" Mode="In" Type="Int32" />
+          <Parameter Name="SoKhachToiDa" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spDangKiDichVu">
             <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
@@ -917,7 +881,7 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           </FunctionImport>
           <FunctionImport Name="spThemBCCTDTTheoLoaiPhongTheoThang">
             <Parameter Name="MaBCCTDoanhThu" Mode="In" Type="Int32" />
-            <Parameter Name="MaLoaiPhong" Mode="In" Type="String" />
+            <Parameter Name="TenLoaiPhong" Mode="In" Type="String" />
             <Parameter Name="MaBCDoanhThu" Mode="In" Type="Int32" />
             <Parameter Name="DoanhThuThang" Mode="In" Type="Decimal" />
             <Parameter Name="TiLe" Mode="In" Type="String" />
@@ -984,40 +948,68 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
             <Parameter Name="GhiChu" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spThietLapTTrangPhongBanDau">
-            <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+          <Parameter Name="MaPhong" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spTruNgayThangNam">
-            <Parameter Name="NgayBDThue" Mode="In" Type="DateTime" />
+          <Parameter Name="NgayBDThue" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="spXoaCTPhieuThue">
-            <Parameter Name="MaPhieuThue" Mode="In" Type="Int32" />
+          <Parameter Name="MaPhieuThue" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spXoaDichVu">
-            <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
+          <Parameter Name="MaDichVu" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spXoaDichVuPhongDK">
-            <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+          <Parameter Name="MaPhong" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spXoaKhachHang">
-            <Parameter Name="MaKhacHang" Mode="In" Type="Int32" />
+          <Parameter Name="MaKhacHang" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spXoaLoaiPhong">
-            <Parameter Name="MaLP" Mode="In" Type="String" />
+          <Parameter Name="MaLP" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="spXoaPhieuThue">
-            <Parameter Name="MaPhieuThue" Mode="In" Type="Int32" />
+          <Parameter Name="MaPhieuThue" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spXoaPhong" ReturnType="Collection(Int32)">
-            <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+          <Parameter Name="MaPhong" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="spXoaPhongTrongCTHoaDon">
-            <Parameter Name="MaPhong" Mode="In" Type="Int32" />
+          <Parameter Name="MaPhong" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="QUAN_LY_KHACH_SANModel1.CHITIET_BAOCAODOANHTHU" />
+          <AssociationSet Name="F_CHITIET_BAOCAODOANHTHU" Association="QUAN_LY_KHACH_SANModel1.F_CHITIET_BAOCAODOANHTHU">
+            <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" EntitySet="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
+            <End Role="CHITIET_BAOCAODOANHTHU" EntitySet="CHITIET_BAOCAODOANHTHU" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="spDoanhThuTheoLoaiPhong_Result">
           <Property Type="String" Name="MaLoaiPhong" Nullable="false" MaxLength="10" />
           <Property Type="Decimal" Name="DoanhThu" Nullable="true" Precision="19" />
         </ComplexType>
+        <EntityType Name="CHITIET_BAOCAODOANHTHU">
+          <Key>
+            <PropertyRef Name="MaBCCTDoanhThu" />
+          </Key>
+          <Property Name="MaBCCTDoanhThu" Type="Int32" Nullable="false" />
+          <Property Name="TenLoaiPhong" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaBCDoanhThu" Type="Int32" Nullable="false" />
+          <Property Name="DoanhThuThang" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TiLe" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="BAOCAO_DOANHTHUTHEOLOAIPHONG" Relationship="QUAN_LY_KHACH_SANModel1.F_CHITIET_BAOCAODOANHTHU" FromRole="CHITIET_BAOCAODOANHTHU" ToRole="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
+        </EntityType>
+        <Association Name="F_CHITIET_BAOCAODOANHTHU">
+          <End Type="QUAN_LY_KHACH_SANModel1.BAOCAO_DOANHTHUTHEOLOAIPHONG" Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" Multiplicity="1" />
+          <End Type="QUAN_LY_KHACH_SANModel1.CHITIET_BAOCAODOANHTHU" Role="CHITIET_BAOCAODOANHTHU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BAOCAO_DOANHTHUTHEOLOAIPHONG">
+              <PropertyRef Name="MaBCDoanhThu" />
+            </Principal>
+            <Dependent Role="CHITIET_BAOCAODOANHTHU">
+              <PropertyRef Name="MaBCDoanhThu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1059,17 +1051,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
                 <ScalarProperty Name="MaChiTietPT" ColumnName="MaChiTietPT" />
                 <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
                 <ScalarProperty Name="MaPhieuThue" ColumnName="MaPhieuThue" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="CHITIET_BAOCAODOANHTHU">
-            <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel1.CHITIET_BAOCAODOANHTHU">
-              <MappingFragment StoreEntitySet="CHITIET_BAOCAODOANHTHU">
-                <ScalarProperty Name="MaBCCTDoanhThu" ColumnName="MaBCCTDoanhThu" />
-                <ScalarProperty Name="MaLoaiPhong" ColumnName="MaLoaiPhong" />
-                <ScalarProperty Name="MaBCDoanhThu" ColumnName="MaBCDoanhThu" />
-                <ScalarProperty Name="DoanhThuThang" ColumnName="DoanhThuThang" />
-                <ScalarProperty Name="TiLe" ColumnName="TiLe" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1223,6 +1204,17 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
           <FunctionImportMapping FunctionImportName="spXoaPhieuThue" FunctionName="QUAN_LY_KHACH_SANModel1.Store.spXoaPhieuThue" />
           <FunctionImportMapping FunctionImportName="spXoaPhong" FunctionName="QUAN_LY_KHACH_SANModel1.Store.spXoaPhong" />
           <FunctionImportMapping FunctionImportName="spXoaPhongTrongCTHoaDon" FunctionName="QUAN_LY_KHACH_SANModel1.Store.spXoaPhongTrongCTHoaDon" />
+          <EntitySetMapping Name="CHITIET_BAOCAODOANHTHU">
+            <EntityTypeMapping TypeName="QUAN_LY_KHACH_SANModel1.CHITIET_BAOCAODOANHTHU">
+              <MappingFragment StoreEntitySet="CHITIET_BAOCAODOANHTHU">
+                <ScalarProperty Name="TiLe" ColumnName="TiLe" />
+                <ScalarProperty Name="DoanhThuThang" ColumnName="DoanhThuThang" />
+                <ScalarProperty Name="MaBCDoanhThu" ColumnName="MaBCDoanhThu" />
+                <ScalarProperty Name="TenLoaiPhong" ColumnName="TenLoaiPhong" />
+                <ScalarProperty Name="MaBCCTDoanhThu" ColumnName="MaBCCTDoanhThu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

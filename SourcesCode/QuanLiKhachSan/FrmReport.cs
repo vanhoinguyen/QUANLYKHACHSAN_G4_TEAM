@@ -31,25 +31,26 @@ namespace QuanLiKhachSan
         {
             CrystalReport rpt = new CrystalReport();
 
-            
-            //rpt.SetDataSource(db.CHI_TIET_HOA_DON);
-            var query = (from t in db.CHI_TIET_HOA_DON
 
+            //rpt.SetDataSource(db.CHI_TIET_HOA_DON);
+            //rpt.SetDataSource(db.HOA_DON);
+            var query = (from t in db.CHI_TIET_HOA_DON
+                         //join q in db.HOA_DON on t.MaHoaDon equals q.MaHoaDon
                          where t.MaHoaDon == dt
                          select new InHoaDonDTO
                          {
                              MaHoaDon = t.MaHoaDon,
-                             SoNgayDaThue = t.SoNgayThue,
+                             SoNgayThue = t.SoNgayThue,
                              ThanhTien = t.ThanhTien,
                              MaPhong = t.MaPhong,
-                             //TenKhachHang = y.TenKhachHang,
+                             //TenKhachHang = q.TenKhachHang,
                              DonGia = t.DonGia,
-                             NgayThanhToan = t.NgayThanhToan,
+                             
                          }
 
 
             );
-            rpt.SetDataSource(query);
+           rpt.SetDataSource(query);
             
             crystalReportViewer1.ReportSource = rpt;
             crystalReportViewer1.Show();

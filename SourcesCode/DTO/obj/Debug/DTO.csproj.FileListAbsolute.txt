@@ -10,3 +10,9 @@ C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\DTO\obj\Debug\DTO.csprojR
 C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\DTO\obj\Debug\DTO.dll
 C:\Users\Tee Max\Desktop\World Cup 2018\QuanLiKhachSan\DTO\obj\Debug\DTO.pdb
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\bin\Debug\DTO.dll
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\bin\Debug\DTO.pdb
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\obj\Debug\DTO.dll
+C:\Users\User\Downloads\QUANLYKHACHSAN_G4_TEAM-master\SourcesCode\DTO\obj\Debug\DTO.pdb

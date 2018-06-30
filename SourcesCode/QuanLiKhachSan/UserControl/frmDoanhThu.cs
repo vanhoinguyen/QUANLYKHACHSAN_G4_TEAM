@@ -44,7 +44,7 @@ namespace QuanLiKhachSan.UserControl
 
 
                 }
-                btnLuu.Enabled = false;
+                //btnLuu.Enabled = false;
                 txtTongTien.Text = string.Format("{0:0,0 VNĐ}", sum);
 
             }
@@ -54,7 +54,7 @@ namespace QuanLiKhachSan.UserControl
                 decimal sum = 0;
                 infor.Thang = Convert.ToInt32(cmbThang.Text);
                 infor.Nam = Convert.ToInt32(txtNam.Text);
-                try
+                /*try
                 {
                     dlst = BaoCaoBUS.LayMaBCDoanhThuKeTiep();
                     infor.MaBCDoanhThu = dlst[0].MaBCDoanhThu + 1;
@@ -65,7 +65,7 @@ namespace QuanLiKhachSan.UserControl
                 {
                     infor.MaBCDoanhThu = 1;
                     infor.MaCTBCDoanhThu = 1;
-                }
+                }*/
                 lst = BaoCaoBUS.DoanhThuTheoLoaiPhongTheoThang(infor);
                 for (int i = 0; i < lst.Count; i++)
                 {
@@ -83,16 +83,16 @@ namespace QuanLiKhachSan.UserControl
                     lst[i].TiLe = (cd).ToString() + "%";
                     lst[i].Thang = Convert.ToInt32(cmbThang.Text);
                     lst[i].Nam = Convert.ToInt32(txtNam.Text);
-                    lst[i].MaBCDoanhThu = infor.MaBCDoanhThu;
-                    lst[i].MaCTBCDoanhThu = infor.MaCTBCDoanhThu;
+                    //lst[i].MaBCDoanhThu = infor.MaBCDoanhThu;
+                    //lst[i].MaCTBCDoanhThu = infor.MaCTBCDoanhThu;
 
                 }
                 txtTongTien.Text = string.Format("{0:0,0 VNĐ}", sum);
-                btnLuu.Enabled = true;
+                //btnLuu.Enabled = true;
             }
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        /*private void btnLuu_Click(object sender, EventArgs e)
         {
 
             bool success = true;
@@ -111,13 +111,41 @@ namespace QuanLiKhachSan.UserControl
                 infor.MaCTBCDoanhThu = 1;
             }
 
-            infor.Thang = Convert.ToInt32(cmbThang.Text);
+            infor.Thang = int.Parse(cmbThang.Text);
+            /*if (BaoCaoBUS.ThemBaoCaoDoanhThu(infor) == true)
+                MessageBox.Show("1");
+            else
+                MessageBox.Show("2");
             if (BaoCaoBUS.ThemBaoCaoDoanhThu(infor))
             {
                 int n = lst.Count();
                 for (int i = 0; i < n; i++)
                 {
-                    infor.MaLoaiPhong = lst[i].MaLoaiPhong;
+                    infor.TenLoaiPhong = lst[i].TenLoaiPhong;
+                    infor.TongDoanhThu = lst[i].TongDoanhThu;
+                    infor.TiLe = lst[i].TiLe;
+
+
+                    if (!(BaoCaoBUS.ThemCTBaoCaoDoanhThu(infor)))
+                    {
+                        success = false;
+                        MessageBox.Show("Không thêm được chi tiết báo cáo doanh thu cho tháng " + infor.Thang + "", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                if (success == true)
+                {
+                    MessageBox.Show("Lưu dữ liệu báo cáo thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //btnLuu.Enabled = false;
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Không thêm được báo cáo doanh thu cho tháng " + infor.Thang + "", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int n = lst.Count();
+                for (int i = 0; i < n; i++)
+                {
+                    infor.TenLoaiPhong = lst[i].TenLoaiPhong;
                     infor.TongDoanhThu = lst[i].TongDoanhThu;
                     infor.TiLe = lst[i].TiLe;
 
@@ -133,12 +161,6 @@ namespace QuanLiKhachSan.UserControl
                     MessageBox.Show("Lưu dữ liệu báo cáo thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnLuu.Enabled = false;
                 }
-            }
-
-            else
-            {
-                MessageBox.Show("Không thêm được báo cáo doanh thu cho tháng " + infor.Thang + "", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
     }
-}
