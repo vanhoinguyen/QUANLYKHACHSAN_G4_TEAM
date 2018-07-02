@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTraPhong));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
@@ -57,6 +58,7 @@
             this.btnThanhToan = new DevExpress.XtraEditors.SimpleButton();
             this.btnThemHoaDon = new DevExpress.XtraEditors.SimpleButton();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
+            this.btnInHoaDon = new DevExpress.XtraEditors.SimpleButton();
             this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSoNgayThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +67,6 @@
             this.colHeSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colXoa = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btnInHoaDon = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -109,6 +110,7 @@
             // dtpNgayThanhToan
             // 
             this.dtpNgayThanhToan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayThanhToan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayThanhToan.Location = new System.Drawing.Point(151, 83);
             this.dtpNgayThanhToan.Name = "dtpNgayThanhToan";
             this.dtpNgayThanhToan.Size = new System.Drawing.Size(185, 27);
@@ -382,6 +384,7 @@
             // dgvHoaDon
             // 
             this.dgvHoaDon.AllowUserToAddRows = false;
+            this.dgvHoaDon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSTT,
@@ -392,13 +395,37 @@
             this.colHeSo,
             this.colThanhTien,
             this.colXoa});
+            this.dgvHoaDon.GridColor = System.Drawing.Color.White;
             this.dgvHoaDon.Location = new System.Drawing.Point(45, 347);
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.Size = new System.Drawing.Size(995, 242);
             this.dgvHoaDon.TabIndex = 26;
             // 
+            // btnInHoaDon
+            // 
+            this.btnInHoaDon.Appearance.BackColor = System.Drawing.Color.LightBlue;
+            this.btnInHoaDon.Appearance.BackColor2 = System.Drawing.Color.SeaShell;
+            this.btnInHoaDon.Appearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnInHoaDon.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInHoaDon.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnInHoaDon.Appearance.Options.UseBackColor = true;
+            this.btnInHoaDon.Appearance.Options.UseBorderColor = true;
+            this.btnInHoaDon.Appearance.Options.UseFont = true;
+            this.btnInHoaDon.Appearance.Options.UseForeColor = true;
+            this.btnInHoaDon.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnInHoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInHoaDon.ImageOptions.Image")));
+            this.btnInHoaDon.Location = new System.Drawing.Point(200, 287);
+            this.btnInHoaDon.Name = "btnInHoaDon";
+            this.btnInHoaDon.Size = new System.Drawing.Size(177, 30);
+            this.btnInHoaDon.TabIndex = 27;
+            this.btnInHoaDon.Text = "In hóa đơn";
+            this.btnInHoaDon.Visible = false;
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click_1);
+            // 
             // colSTT
             // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colSTT.DefaultCellStyle = dataGridViewCellStyle4;
             this.colSTT.HeaderText = "STT";
             this.colSTT.Name = "colSTT";
             // 
@@ -441,26 +468,6 @@
             this.colXoa.HeaderText = "Xóa";
             this.colXoa.Name = "colXoa";
             this.colXoa.Width = 80;
-            // 
-            // btnInHoaDon
-            // 
-            this.btnInHoaDon.Appearance.BackColor = System.Drawing.Color.LightBlue;
-            this.btnInHoaDon.Appearance.BackColor2 = System.Drawing.Color.SeaShell;
-            this.btnInHoaDon.Appearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnInHoaDon.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInHoaDon.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnInHoaDon.Appearance.Options.UseBackColor = true;
-            this.btnInHoaDon.Appearance.Options.UseBorderColor = true;
-            this.btnInHoaDon.Appearance.Options.UseFont = true;
-            this.btnInHoaDon.Appearance.Options.UseForeColor = true;
-            this.btnInHoaDon.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnInHoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInHoaDon.ImageOptions.Image")));
-            this.btnInHoaDon.Location = new System.Drawing.Point(200, 287);
-            this.btnInHoaDon.Name = "btnInHoaDon";
-            this.btnInHoaDon.Size = new System.Drawing.Size(177, 30);
-            this.btnInHoaDon.TabIndex = 27;
-            this.btnInHoaDon.Text = "In hóa đơn";
-            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // frmTraPhong
             // 

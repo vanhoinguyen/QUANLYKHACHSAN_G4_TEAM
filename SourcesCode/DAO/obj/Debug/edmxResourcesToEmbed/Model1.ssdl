@@ -35,16 +35,6 @@
     <Property Name="MaKhachHang" Type="int" Nullable="false" />
     <Property Name="MaPhieuThue" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="CHITIET_BAOCAODOANHTHU">
-    <Key>
-      <PropertyRef Name="MaBCCTDoanhThu" />
-    </Key>
-    <Property Name="MaBCCTDoanhThu" Type="int" Nullable="false" />
-    <Property Name="TenLoaiPhong" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="MaBCDoanhThu" Type="int" Nullable="false" />
-    <Property Name="DoanhThuThang" Type="money" />
-    <Property Name="TiLe" Type="char" MaxLength="10" />
-  </EntityType>
   <EntityType Name="CHITIET_BAOCAOMATDOSUDUNG">
     <Key>
       <PropertyRef Name="MaBCCTMatDoSuDung" />
@@ -197,18 +187,6 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="F_CHITIET_BAOCAODOANHTHU">
-    <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" Type="Self.BAOCAO_DOANHTHUTHEOLOAIPHONG" Multiplicity="1" />
-    <End Role="CHITIET_BAOCAODOANHTHU" Type="Self.CHITIET_BAOCAODOANHTHU" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="BAOCAO_DOANHTHUTHEOLOAIPHONG">
-        <PropertyRef Name="MaBCDoanhThu" />
-      </Principal>
-      <Dependent Role="CHITIET_BAOCAODOANHTHU">
-        <PropertyRef Name="MaBCDoanhThu" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="F_CHITIET_BAOCAOMATDOSUDUNG">
     <End Role="BAOCAO_MATDOSUDUNGPHONG" Type="Self.BAOCAO_MATDOSUDUNGPHONG" Multiplicity="1" />
     <End Role="CHITIET_BAOCAOMATDOSUDUNG" Type="Self.CHITIET_BAOCAOMATDOSUDUNG" Multiplicity="*" />
@@ -326,7 +304,7 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
   </Function>
   <Function Name="spThemBCCTDTTheoLoaiPhongTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaBCCTDoanhThu" Type="int" Mode="In" />
-    <Parameter Name="TenLoaiPhong" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaLoaiPhong" Type="nvarchar" Mode="In" />
     <Parameter Name="MaBCDoanhThu" Type="int" Mode="In" />
     <Parameter Name="DoanhThuThang" Type="money" Mode="In" />
     <Parameter Name="TiLe" Type="char" Mode="In" />
@@ -427,7 +405,6 @@ warning 6002: The table/view 'QUAN_LY_KHACH_SAN.dbo.THAM_SO' does not have a pri
     <EntitySet Name="BAOCAO_MATDOSUDUNGPHONG" EntityType="Self.BAOCAO_MATDOSUDUNGPHONG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHI_TIET_HOA_DON" EntityType="Self.CHI_TIET_HOA_DON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHI_TIET_PHIEU_THUE" EntityType="Self.CHI_TIET_PHIEU_THUE" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="CHITIET_BAOCAODOANHTHU" EntityType="Self.CHITIET_BAOCAODOANHTHU" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHITIET_BAOCAOMATDOSUDUNG" EntityType="Self.CHITIET_BAOCAOMATDOSUDUNG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DANG_KI_DICH_VU" EntityType="Self.DANG_KI_DICH_VU" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DICH_VU" EntityType="Self.DICH_VU" Schema="dbo" store:Type="Tables" />
@@ -463,10 +440,6 @@ FROM [dbo].[THAM_SO] AS [THAM_SO]</DefiningQuery>
     <AssociationSet Name="F_CHI_TIET_PHIEU_THUE_2" Association="Self.F_CHI_TIET_PHIEU_THUE_2">
       <End Role="PHIEU_THUE_PHONG" EntitySet="PHIEU_THUE_PHONG" />
       <End Role="CHI_TIET_PHIEU_THUE" EntitySet="CHI_TIET_PHIEU_THUE" />
-    </AssociationSet>
-    <AssociationSet Name="F_CHITIET_BAOCAODOANHTHU" Association="Self.F_CHITIET_BAOCAODOANHTHU">
-      <End Role="BAOCAO_DOANHTHUTHEOLOAIPHONG" EntitySet="BAOCAO_DOANHTHUTHEOLOAIPHONG" />
-      <End Role="CHITIET_BAOCAODOANHTHU" EntitySet="CHITIET_BAOCAODOANHTHU" />
     </AssociationSet>
     <AssociationSet Name="F_CHITIET_BAOCAOMATDOSUDUNG" Association="Self.F_CHITIET_BAOCAOMATDOSUDUNG">
       <End Role="BAOCAO_MATDOSUDUNGPHONG" EntitySet="BAOCAO_MATDOSUDUNGPHONG" />

@@ -29,13 +29,28 @@ namespace QuanLiKhachSan
 
         private void FrmReport_Load(object sender, EventArgs e)
         {
-            CrystalReport rpt = new CrystalReport();
+            CrystalReport1 rpt = new CrystalReport1();
 
 
-            //rpt.SetDataSource(db.CHI_TIET_HOA_DON);
-            //rpt.SetDataSource(db.HOA_DON);
+            
             var query = (from t in db.CHI_TIET_HOA_DON
-                         //join q in db.HOA_DON on t.MaHoaDon equals q.MaHoaDon
+                         join q in db.HOA_DON on t.MaHoaDon equals q.MaHoaDon
+                         where t.MaHoaDon == dt 
+                         select new InHoaDonDTO
+                         {
+                             MaHoaDon = t.MaHoaDon,
+                             SoNgayThue = t.SoNgayThue,
+                             ThanhTien = t.ThanhTien,
+                             MaPhong = t.MaPhong,
+                             TenKhachHang = q.TenKhachHang,
+                             DonGia = t.DonGia,
+                             
+                         }
+
+
+            );
+            /*var query = (from t in db.CHI_TIET_HOA_DON
+                             join q in db.HOA_DON on t.MaHoaDon equals q.MaHoaDon
                          where t.MaHoaDon == dt
                          select new InHoaDonDTO
                          {
@@ -43,14 +58,14 @@ namespace QuanLiKhachSan
                              SoNgayThue = t.SoNgayThue,
                              ThanhTien = t.ThanhTien,
                              MaPhong = t.MaPhong,
-                             //TenKhachHang = q.TenKhachHang,
+                             TenKhachHang = q.TenKhachHang,
                              DonGia = t.DonGia,
-                             
+
                          }
 
 
-            );
-           rpt.SetDataSource(query);
+            );*/
+            rpt.SetDataSource(query);
             
             crystalReportViewer1.ReportSource = rpt;
             crystalReportViewer1.Show();

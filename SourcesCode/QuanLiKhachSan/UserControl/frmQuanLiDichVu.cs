@@ -34,7 +34,7 @@ namespace QuanLiKhachSan.UserControl
 
         private void btnThemDichVu_Click(object sender, EventArgs e)
         {
-            if (btnThemDichVu.Text == "Thêm")
+            if (btnThemDichVu.Text == "Thêm dịch vụ")
             {
                 LamSachDL();
 
@@ -47,7 +47,7 @@ namespace QuanLiKhachSan.UserControl
             }
             else
             {
-                btnThemDichVu.Text = "Thêm";
+                btnThemDichVu.Text = "Thêm dịch vụ";
                 frmQuanLiDichVu_Load(sender, e);
                 //KhoiTaoLai();
                 btnCapNhatDichVu.Enabled = true;
@@ -71,7 +71,7 @@ namespace QuanLiKhachSan.UserControl
                     btnCapNhatDichVu.Enabled = true;
                     btnXoaDichVu.Enabled = true;
                     gcDanhSachDichVu.Enabled = true;
-                    btnThemDichVu.Text = "Thêm";
+                    btnThemDichVu.Text = "Thêm dịch vụ";
                 }
                 else
                     MessageBox.Show("Lỗi");
@@ -85,8 +85,9 @@ namespace QuanLiKhachSan.UserControl
                     frmQuanLiDichVu_Load(sender, e);
                     btnThemDichVu.Enabled = true;
                     btnCapNhatDichVu.Enabled = true;
+                    btnXoaDichVu.Enabled = true;
                     gcDanhSachDichVu.Enabled = true;
-                    btnCapNhatDichVu.Text = "Sửa";
+                    btnCapNhatDichVu.Text = "Cập nhật";
                 }
                 else
                     MessageBox.Show("Lỗi");
@@ -168,17 +169,11 @@ namespace QuanLiKhachSan.UserControl
 
         private void txtTenDichVu_TextChanged(object sender, EventArgs e)
         {
-            Regex regex, regex1, regex2, regex3, regex4;
-            regex = new Regex(@"^\w{2,10}\s\w{2,10}$");
-            regex1 = new Regex(@"^\w{2,10}\s\w{2,10}\s\w{2,10}$");
-            regex2 = new Regex(@"^\w{2,10}\s\w{2,10}\s\w{2,10}\s\w{2,10}$");
-            regex3 = new Regex(@"^\w{2,10}\s\w{2,10}\s\w{2,10}\s\w{2,10}\s\w{2,10}$");
-            regex4 = new Regex(@"^\w{2,10}$");
+            
             Control ctrl = (Control)sender;
 
-
-            if (regex.IsMatch(ctrl.Text) || regex1.IsMatch(ctrl.Text)
-          || regex2.IsMatch(ctrl.Text) || regex3.IsMatch(ctrl.Text) || regex4.IsMatch(ctrl.Text))
+            
+            if(txtTenDichVu.Text.Length>=1)
             {
                 errorProvider1.SetError(ctrl, "");
             }
@@ -191,23 +186,17 @@ namespace QuanLiKhachSan.UserControl
 
         private void txtDonViTinh_TextChanged(object sender, EventArgs e)
         {
-            Regex regex, regex1, regex2, regex3, regex4;
-            regex = new Regex(@"^\w{2,10}\s\w{2,10}$");
-            regex1 = new Regex(@"^\w{2,10}\s\w{2,10}\s\w{2,10}$");
-            regex2 = new Regex(@"^\w{2,10}\s\w{2,10}\s\w{2,10}\s\w{2,10}$");
-            regex3 = new Regex(@"^\w{2,10}\s\w{2,10}\s\w{2,10}\s\w{2,10}\s\w{2,10}$");
-            regex4 = new Regex(@"^\w{2,10}$");
+            
             Control ctrl = (Control)sender;
 
 
-            if (regex.IsMatch(ctrl.Text) || regex1.IsMatch(ctrl.Text)
-          || regex2.IsMatch(ctrl.Text) || regex3.IsMatch(ctrl.Text) || regex4.IsMatch(ctrl.Text))
+            if(txtDonViTinh.Text.Length >= 1)
             {
-                errorProvider1.SetError(ctrl, "");
+                errorProvider2.SetError(ctrl, "");
             }
             else
             {
-                errorProvider1.SetError(ctrl,
+                errorProvider2.SetError(ctrl,
                   "Đơn vị tính không hợp lệ");
             }
         }
@@ -215,7 +204,7 @@ namespace QuanLiKhachSan.UserControl
         private void txtDonGia_TextChanged(object sender, EventArgs e)
         {
             Regex regex, regex1;
-            regex = new Regex(@"^\d{4,12}$");
+            regex = new Regex(@"^\d{1,12}$");
             regex1 = new Regex(@"^\d{1,3},\d{1,3}\s[A-Z]");
             Control ctrl = (Control)sender;
             if (regex.IsMatch(ctrl.Text)|| regex1.IsMatch(ctrl.Text))

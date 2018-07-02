@@ -52,6 +52,18 @@ namespace DAO
             return query.ToList();
         }
 
+        public static List<PhongDTO> LoadDonGia(string text)
+        {
+            var query = (from t in context.LOAI_PHONG
+
+                         where t.TenLoaiPhong == text
+                         select new PhongDTO
+                         {
+                             DonGia = t.DonGia,
+                         });
+            return query.ToList();
+        }
+
         public static bool SuaThongTinPhong(PhongDTO infor)
         {
             SqlParameter maphong = new SqlParameter("@MaPhong", infor.MaPhong);

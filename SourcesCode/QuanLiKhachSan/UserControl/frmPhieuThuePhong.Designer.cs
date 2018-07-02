@@ -76,6 +76,7 @@
             // dgvDanhSachPhieuThue
             // 
             this.dgvDanhSachPhieuThue.AllowUserToAddRows = false;
+            this.dgvDanhSachPhieuThue.BackgroundColor = System.Drawing.Color.White;
             this.dgvDanhSachPhieuThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachPhieuThue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTenKhachHang,
@@ -84,6 +85,7 @@
             this.colCMND,
             this.colDiaChi,
             this.colXoa});
+            this.dgvDanhSachPhieuThue.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvDanhSachPhieuThue.Location = new System.Drawing.Point(35, 353);
             this.dgvDanhSachPhieuThue.Name = "dgvDanhSachPhieuThue";
             this.dgvDanhSachPhieuThue.Size = new System.Drawing.Size(870, 260);

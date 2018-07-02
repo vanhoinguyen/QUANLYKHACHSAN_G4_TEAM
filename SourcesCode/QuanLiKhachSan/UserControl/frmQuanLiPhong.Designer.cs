@@ -160,6 +160,7 @@
             this.cmbLoaiPhong.Name = "cmbLoaiPhong";
             this.cmbLoaiPhong.Size = new System.Drawing.Size(191, 27);
             this.cmbLoaiPhong.TabIndex = 10;
+            this.cmbLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiPhong_SelectedIndexChanged);
             // 
             // btnThemPhong
             // 

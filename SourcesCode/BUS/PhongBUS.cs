@@ -58,9 +58,9 @@ namespace BUS
             return PhongDAO.DanhSachPhong();
         }
 
-        public static List<ThamSoDTO> LoadDonGia(string text)
+        public static List<PhongDTO> LoadDonGia(string text)
         {
-            throw new NotImplementedException();
+            return PhongDAO.LoadDonGia(text);
         }
 
         public static bool ThemPhong(PhongDTO infor)

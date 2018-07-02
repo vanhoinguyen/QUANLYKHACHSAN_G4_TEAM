@@ -18,21 +18,9 @@ using System;
 public partial class BAOCAO_DOANHTHUTHEOLOAIPHONG
 {
 
-    public BAOCAO_DOANHTHUTHEOLOAIPHONG()
-    {
-
-        this.CHITIET_BAOCAODOANHTHU = new HashSet<CHITIET_BAOCAODOANHTHU>();
-
-    }
-
-
     public int MaBCDoanhThu { get; set; }
 
     public int ThangBaoCao { get; set; }
-
-
-
-    public virtual ICollection<CHITIET_BAOCAODOANHTHU> CHITIET_BAOCAODOANHTHU { get; set; }
 
 }
 

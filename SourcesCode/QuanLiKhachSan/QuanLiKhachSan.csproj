@@ -172,6 +172,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLKS.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ReportModel.cs" />
     <Compile Include="spDoanhThuTheoLoaiPhong_Result.cs">
       <DependentUpon>QLKS.tt</DependentUpon>
     </Compile>
@@ -320,7 +321,9 @@
     <EmbeddedResource Include="UserControl\frmTroGiup.resx">
       <DependentUpon>frmTroGiup.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

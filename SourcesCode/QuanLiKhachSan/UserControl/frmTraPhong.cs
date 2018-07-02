@@ -130,7 +130,7 @@ namespace QuanLiKhachSan.UserControl
                     frmTraPhong_Load(sender, e);
                     DialogResult dialog = MessageBox.Show("Bạn có muốn in hóa đơn không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if(dialog == DialogResult.Yes)
-                        btnInHoaDon_Click(sender, e);
+                        btnInHoaDon_Click_1(sender, e);
                     ThietLapButton(false);
                     txtTenKhachHang.Text = "";
                     txtDiaChi.Text = "";
@@ -193,7 +193,7 @@ namespace QuanLiKhachSan.UserControl
                 catch { }
                 if (kt == "True")
                 {
-                    txtTongTien.Text = (Convert.ToDecimal(txtTongTien.Text.Replace(" VNĐ",String.Empty)) - thanhtien).ToString() + " VNĐ";
+                    txtTongTien.Text = String.Format ("{0:0,0}",(Convert.ToDecimal(txtTongTien.Text.Replace(" VNĐ",String.Empty)) - thanhtien)).ToString() + " VNĐ";
                     if (!(Convert.ToDecimal(txtTongTien.Text.Replace(" VNĐ", String.Empty)) > 0))
                     {
                         txtTongTien.Text = "0 VNĐ";
@@ -327,7 +327,9 @@ namespace QuanLiKhachSan.UserControl
             }
         }
 
-        private void btnInHoaDon_Click(object sender, EventArgs e)
+        
+
+        private void btnInHoaDon_Click_1(object sender, EventArgs e)
         {
             FrmReport frmReport = new FrmReport();
             FrmReport.dt = HoaDonBUS.LayMaHDCuoiCung().Value;

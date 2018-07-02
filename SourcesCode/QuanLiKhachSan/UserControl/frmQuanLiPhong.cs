@@ -154,7 +154,7 @@ namespace QuanLiKhachSan.UserControl
 
         private void btnXoaPhong_Click(object sender, EventArgs e)
         {
-            if (txtMaPhong.Text != "")
+            if (txtMaPhong.Text != "" && txtTinhTrang.Text == "Trống")
             {
                 PhongDTO infor = LayThongTinPhong();
                 DialogResult result = (MessageBox.Show("Bạn có muốn xóa phòng " + txtMaPhong.Text + " không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
@@ -167,14 +167,18 @@ namespace QuanLiKhachSan.UserControl
                             frmQuanLiPhong_Load(sender, e);
                             KhoiTaoLai();
                         }
-                }
+                }             
+            }
+            if (txtTinhTrang.Text == "Đầy")
+            {
+                MessageBox.Show("Không thể xóa phòng đang được đặt", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void gvDanhSachPhong_Click(object sender, EventArgs e)
         {
             string tinhtrang = gvDanhSachPhong.GetRowCellValue(gvDanhSachPhong.FocusedRowHandle, gvDanhSachPhong.Columns["TinhTrang"]).ToString();
-            if (tinhtrang != "Đầy")
+            
             {
                 txtMaPhong.Text = gvDanhSachPhong.GetRowCellValue(gvDanhSachPhong.FocusedRowHandle, gvDanhSachPhong.Columns["MaPhong"]).ToString();
                 cmbLoaiPhong.Text = gvDanhSachPhong.GetRowCellValue(gvDanhSachPhong.FocusedRowHandle, gvDanhSachPhong.Columns["TenLoaiPhong"]).ToString();
@@ -182,6 +186,20 @@ namespace QuanLiKhachSan.UserControl
                 txtDonGia.Text = string.Format("{0:0,0}", gvDanhSachPhong.GetRowCellValue(gvDanhSachPhong.FocusedRowHandle, gvDanhSachPhong.Columns["DonGia"]));
                 txtGhiChu.Text = gvDanhSachPhong.GetRowCellValue(gvDanhSachPhong.FocusedRowHandle, gvDanhSachPhong.Columns["GhiChu"]).ToString();
             }
+           
+        }
+
+        private void cmbLoaiPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<PhongDTO>  ldg = PhongBUS.LoadDonGia("A");
+            List<PhongDTO> ldg1 = PhongBUS.LoadDonGia("B");
+            List<PhongDTO> ldg2 = PhongBUS.LoadDonGia("C");
+            if (cmbLoaiPhong.Text == "A")
+                txtDonGia.Text = string.Format("{0:0,0 VNĐ}" ,ldg[0].DonGia.Value);
+            if (cmbLoaiPhong.Text == "B")
+                txtDonGia.Text = string.Format("{0:0,0 VNĐ}",ldg1[0].DonGia.Value);
+            if (cmbLoaiPhong.Text == "C")
+                txtDonGia.Text = string.Format("{0:0,0 VNĐ}",ldg2[0].DonGia.Value);
         }
     }
 }

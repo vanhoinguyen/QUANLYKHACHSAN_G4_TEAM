@@ -30,8 +30,6 @@
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_KHACH_HANG" ManuallyRouted="false" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_PHONG" ManuallyRouted="false" />
         <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_PHIEU_THUE_PHONG" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="QUAN_LY_KHACH_SANModel.CHITIET_BAOCAODOANHTHU" Width="1.5" PointX="12" PointY="8.125" />
-        <AssociationConnector Association="QUAN_LY_KHACH_SANModel.F_CHITIET_BAOCAODOANHTHU" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -66,8 +66,6 @@ public partial class QUAN_LY_KHACH_SANEntities : DbContext
 
     public DbSet<THAM_SO> THAM_SO { get; set; }
 
-    public DbSet<CHITIET_BAOCAODOANHTHU> CHITIET_BAOCAODOANHTHU { get; set; }
-
 
     public virtual int spCapNhatTinhTrangPhong(Nullable<int> maPhong)
     {
@@ -256,7 +254,7 @@ public partial class QUAN_LY_KHACH_SANEntities : DbContext
     }
 
 
-    public virtual int spThemBCCTDTTheoLoaiPhongTheoThang(Nullable<int> maBCCTDoanhThu, string tenLoaiPhong, Nullable<int> maBCDoanhThu, Nullable<decimal> doanhThuThang, string tiLe)
+    public virtual int spThemBCCTDTTheoLoaiPhongTheoThang(Nullable<int> maBCCTDoanhThu, string maLoaiPhong, Nullable<int> maBCDoanhThu, Nullable<decimal> doanhThuThang, string tiLe)
     {
 
         var maBCCTDoanhThuParameter = maBCCTDoanhThu.HasValue ?
@@ -264,9 +262,9 @@ public partial class QUAN_LY_KHACH_SANEntities : DbContext
             new ObjectParameter("MaBCCTDoanhThu", typeof(int));
 
 
-        var tenLoaiPhongParameter = tenLoaiPhong != null ?
-            new ObjectParameter("TenLoaiPhong", tenLoaiPhong) :
-            new ObjectParameter("TenLoaiPhong", typeof(string));
+        var maLoaiPhongParameter = maLoaiPhong != null ?
+            new ObjectParameter("MaLoaiPhong", maLoaiPhong) :
+            new ObjectParameter("MaLoaiPhong", typeof(string));
 
 
         var maBCDoanhThuParameter = maBCDoanhThu.HasValue ?
@@ -284,7 +282,7 @@ public partial class QUAN_LY_KHACH_SANEntities : DbContext
             new ObjectParameter("TiLe", typeof(string));
 
 
-        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemBCCTDTTheoLoaiPhongTheoThang", maBCCTDoanhThuParameter, tenLoaiPhongParameter, maBCDoanhThuParameter, doanhThuThangParameter, tiLeParameter);
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spThemBCCTDTTheoLoaiPhongTheoThang", maBCCTDoanhThuParameter, maLoaiPhongParameter, maBCDoanhThuParameter, doanhThuThangParameter, tiLeParameter);
     }
 
 
