@@ -19,6 +19,7 @@ _**CÔNG CỤ VÀ CÔNG NGHỆ SỬ DỤNG**_:
 + Ngôn ngữ C# trên nền tảng .NET Framework 4.5.2
 + Entity Framework 5.0.0
 + DevExpress 17.1
++ Crystal report for Visual Studio 2017
 
 _**MÔI TRƯỜNG CÀI ĐẶT**_:
 + Hệ điều hành Windows từ 7 trở về sau, phiên bản 32/64 bit.
