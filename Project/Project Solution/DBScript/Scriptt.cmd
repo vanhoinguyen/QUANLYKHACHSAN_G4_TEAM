@@ -1,0 +1,1 @@
+SQLCMD -E -S TEEMAX -i Script.sql
